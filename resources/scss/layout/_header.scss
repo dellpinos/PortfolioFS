@@ -1,0 +1,123 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+
+
+    &__video {
+
+        position: relative;
+        //max-height: 70rem;
+        max-height: 100vh;
+        min-height: 50rem;
+        overflow: hidden;
+
+        img { // reemplazar por video
+
+            width: auto;
+            display: block;
+            
+            @include m.tablet {
+                width: 100%;
+                
+            }
+        }
+    }
+
+    &__overlay {
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: rgb(112, 4, 87);
+        background: linear-gradient(261deg, rgba(112, 4, 87, 0.5452774859943977) 4%, rgba(210, 62, 1, 0.2399553571428571) 100%);
+
+    }
+
+    &__texto {
+        @include m.texto-fluido(1.6rem, 5rem);
+        font-family: v.$fuente_headings;
+        color: v.$blanco;
+        font-weight: v.$regular;
+        text-align: center;
+    }
+
+    &__nombre {
+        font-weight: v.$bold;
+        color: v.$amarillo;
+    }
+
+    &__contenedor-boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: auto;
+    
+    }
+
+
+
+    &__boton {
+        display: flex;
+        align-items: center;
+
+        color: v.$blanco;
+
+        border: 2px solid v.$blanco;
+        padding: 1rem 3rem;
+        cursor: pointer;
+
+        
+        transition: background-color 1s ease-out;
+
+        i {
+            transition: transform .6s ease-out;
+        }
+
+        &:hover {
+            background-color: rgba(v.$amarillo, 0.5); // convierte a rgba un color hexa
+           // background-color: v.$rosa;
+
+            i {
+                transform: rotate(450deg);
+            }
+        }
+
+
+    }
+
+
+    
+
+    &__icono {
+        color: v.$blanco;
+        font-size: 3rem;
+        margin-left: 1rem;
+
+    }
+
+    &__contenido-video {
+
+    }
+
+    &__contenido-header {
+
+    }
+
+    &__nav {
+        display: flex;
+        gap: 3rem;
+        font-size: 2rem;
+        padding: 2rem 6rem;
+        margin-bottom: 4rem;
+
+
+    }
+
+}

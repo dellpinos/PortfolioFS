@@ -26,13 +26,18 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
 
-        <div class="video">
-            <div class="overlay">
-                <div class="contenedor contenido-video">
-                    <h2>Bienvenido y Mi Nombre</h2>
-                    <p>Boton o enlace hacia abajo</p>
+        <div class="header__video">
+            <div class="header__overlay">
+                <div class="contenedor-xl header__contenido-video">
+                    <p class="header__texto">Hola, soy <span class="header__nombre">Martin del Pino</span></p>
+                    <p class="header__texto">Desarrollador Backend - Frontend</p>
+                    <div class="header__contenedor-boton">
+                        <p class="header__boton">Ver mi trabajo <i class=" header__icono fa-solid fa-circle-arrow-right"></i></p>
+                        
+
+                    </div>
                 </div>
             </div>
 
@@ -41,14 +46,21 @@
                 <source src="video/concierto.ogg" type="video/ogg">
                 <source src="video/concierto.webm" type="video/webm">
             </video> --}}
+
+            
+
+            <img src="video/cubos.png" alt="Imagen Fondo">
+
+
+            
         </div>
 
-        <div class="contenedor contenido-header">
+        <div class="contenedor-xl header__contenido-header">
 
-            <nav class="navegacion-principal">
-                <a href="#">Line Up</a>
-                <a href="#">Galeria</a>
-                <a href="#">Boletos</a>
+            <nav class="header__nav">
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contacto</a>
             </nav>
         </div>
 
