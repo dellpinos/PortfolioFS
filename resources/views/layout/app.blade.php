@@ -73,11 +73,9 @@
     </header>
 
     <main>
-        <div class="contenedor-xl"> {{-- contenedor principal --}}
 
             @yield('contenido')
 
-        </div>
 
 
     </main>

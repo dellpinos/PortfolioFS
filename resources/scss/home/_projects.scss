@@ -1,0 +1,73 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.projects {
+
+    &__contenedor-xl {
+
+        background-color: lighten( v.$azul, 40%);
+        width: 100%;
+    }
+
+    &__contenedor {
+
+        width: 80%;
+
+        margin: 0 auto;
+
+
+    }
+
+    &__headings {
+        margin: 2rem 8rem;
+        display: flex;
+        justify-content: space-around;
+        text-transform: uppercase;
+
+        p {
+            font-size: 2rem;
+            font-weight: v.$bold;
+            padding: 1rem;
+        }
+
+
+    }
+
+    &__grid {
+
+
+        @include m.grid(3, 0);
+        
+    }
+
+    &__project {
+        padding: 10rem 3rem;
+        background-color: v.$azul;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
+        }
+
+        p {
+            color: v.$naranja;
+
+        }
+
+        a {
+            text-transform: uppercase;
+            border: 2px solid v.$naranja;
+            padding: .5rem 3rem;
+            color: v.$naranja;
+            margin-top: 3rem;
+            font-size: 2rem;
+        }
+
+    }
+
+}

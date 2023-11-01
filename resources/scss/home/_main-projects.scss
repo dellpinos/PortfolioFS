@@ -1,0 +1,38 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.main-projects {
+
+    
+    &__contenedor {
+
+        display: flex;
+        justify-content: center;
+
+
+    }
+    
+    
+    &__grid {
+
+
+       width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 3rem 0;
+
+
+        a {
+
+            font-size: 4rem;
+           // background-color: lighten(v.$rosa, 40%);
+            border: 2px solid v.$naranja2;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            color: v.$naranja2;
+            font-weight: v.$black;
+
+        }
+    }
+}

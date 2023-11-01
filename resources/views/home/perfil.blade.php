@@ -8,6 +8,7 @@
             <img src="img/perfil.png" alt="Imagen Perfil">
     
         </div>
+        <h4>Quien soy?</h4>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis commodi eum harum sapiente magnam quod ipsa alias iure voluptas hic iste nesciunt voluptates itaque obcaecati dolores, temporibus officiis! Explicabo, soluta.</p>
 
