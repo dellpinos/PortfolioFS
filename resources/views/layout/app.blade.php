@@ -41,21 +41,27 @@
                 </div>
             </div>
 
-{{--             <video autoplay muted loop>
-                <source src="video/concierto.mp4" type="video/mp4">
-                <source src="video/concierto.ogg" type="video/ogg">
-                <source src="video/concierto.webm" type="video/webm">
-            </video> --}}
+            <video autoplay muted loop>
+{{--                 <source src="video/cubos_hd.webm" type="video/webm"> --}}
+{{--                         <source src="video/cubos_hd.mp4" type="video/mp4"> --}}
+
+    <source src="video/lineas_slow_hd2.mp4" type="video/mp4">
+        
+{{--     <source src="video/lineas_hd.webm" type="video/webm"> --}}
+{{--     <source src="video/black_net_slow_hd.webm" type="video/webm">
+    <source src="video/black_net_slow_hd.mp4" type="video/mp4"> --}}
+
+            </video>
 
             
 
-            <img src="video/cubos.png" alt="Imagen Fondo">
+{{--             <img src="video/cubos.png" alt="Imagen Fondo"> --}}
 
 
             
         </div>
 
-        <div class="contenedor-xl header__contenido-header">
+        <div class="header__contenido-header">
 
             <nav class="header__nav">
                 <a href="#">About</a>
@@ -67,7 +73,7 @@
     </header>
 
     <main>
-        <div> {{-- contenedor principal --}}
+        <div class="contenedor-xl"> {{-- contenedor principal --}}
 
             @yield('contenido')
 

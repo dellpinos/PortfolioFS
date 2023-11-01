@@ -12,14 +12,15 @@
         min-height: 50rem;
         overflow: hidden;
 
-        img { // reemplazar por video
+        video {
+            // reemplazar por video
 
             width: auto;
             display: block;
-            
+
             @include m.tablet {
                 width: 100%;
-                
+
             }
         }
     }
@@ -34,9 +35,17 @@
         justify-content: center;
         align-items: center;
 
-        background: rgb(112, 4, 87);
-        background: linear-gradient(261deg, rgba(112, 4, 87, 0.5452774859943977) 4%, rgba(210, 62, 1, 0.2399553571428571) 100%);
+        // Bg - cubos - rosa
+        // background: rgb(231, 114, 239);
+        // background: linear-gradient(90deg, rgba(231, 114, 239, 0.4976584383753502) 2%, rgba(239, 68, 68, 0.5004595588235294) 62%);
 
+        // Bg - lineas - oscuro
+       // background: rgb(68,68,68);
+       // background: linear-gradient(90deg, rgba(68,68,68,0.3996192226890757) 2%, rgba(68,68,68,0.7049413515406162) 62%);
+
+       // Bg - lineas - claro
+       background: rgb(68,68,68);
+       background: linear-gradient(90deg, rgba(68,68,68,0.35) 2%, rgba(68,68,68,0.5) 62%);
     }
 
     &__texto {
@@ -48,8 +57,11 @@
     }
 
     &__nombre {
-        font-weight: v.$bold;
-        color: v.$amarillo;
+        // font-weight: v.$bold;
+        //  color: v.$amarillo;
+        color: darken(v.$naranja, 5%);
+       // color: v.$naranja;
+         font-size: 5.5rem;
     }
 
     &__contenedor-boton {
@@ -58,7 +70,7 @@
         align-items: center;
         gap: 2rem;
         width: auto;
-    
+
     }
 
 
@@ -73,7 +85,7 @@
         padding: 1rem 3rem;
         cursor: pointer;
 
-        
+
         transition: background-color 1s ease-out;
 
         i {
@@ -81,8 +93,10 @@
         }
 
         &:hover {
-            background-color: rgba(v.$amarillo, 0.5); // convierte a rgba un color hexa
-           // background-color: v.$rosa;
+            //sbackground-color: rgba(v.$amarillo, 0.5); // convierte a rgba un color hexa
+
+            background-color: rgba(v.$naranja, 0.5);
+            // background-color: v.$rosa;
 
             i {
                 transform: rotate(450deg);
@@ -93,7 +107,7 @@
     }
 
 
-    
+
 
     &__icono {
         color: v.$blanco;
@@ -102,20 +116,35 @@
 
     }
 
-    &__contenido-video {
+    &__contenido-video {}
 
-    }
-
-    &__contenido-header {
-
-    }
+    &__contenido-header {}
 
     &__nav {
         display: flex;
-        gap: 3rem;
+        gap: 6rem;
         font-size: 2rem;
         padding: 2rem 6rem;
         margin-bottom: 4rem;
+        // background-color: v.$grisOscuro;
+        background-color: v.$naranja2;
+
+        box-shadow: 0px 2px 8px 2px v.$grisOscuro;
+
+        a {
+            font-weight: v.$regular;
+            color: v.$blanco;
+
+            transition: color .3s ease-out;
+
+
+            &:hover {
+
+                color: v.$grisOscuro;
+
+
+            }
+        }
 
 
     }

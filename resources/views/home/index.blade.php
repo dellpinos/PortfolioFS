@@ -1,9 +1,11 @@
 @extends('layout.app')
 
-
 @section('contenido')
 
+@include('home.skills')
+
+@include('home.perfil')
 
 
-<h3>Hola</h3>
+
 @endsection
