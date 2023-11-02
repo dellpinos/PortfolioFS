@@ -1,5 +1,6 @@
 
-<h2>Proyectos</h2>
+<h2 data-aos="zoom-in-right">Proyectos</h2>
+
 
 <div class="projects__contenedor">
 
@@ -8,7 +9,7 @@
         <p>Todos</p>
         <p>PHP - SASS</p>
         <p>Laravel</p>
-        <p>JavaScript</p>
+        <p id="javascript" >JavaScript</p>
     
     </div>
 

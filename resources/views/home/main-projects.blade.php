@@ -1,6 +1,6 @@
 
 
-<h2>Proyectos Principales</h2>
+<h2 data-aos="zoom-in-right">Proyectos Principales</h2>
 
 <div class="main-projects__contenedor">
 
