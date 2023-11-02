@@ -1,1 +1,1 @@
-<h2 data-aos="zoom-in-right">Contacto</h2>
+<h2 data-aos="flip-down">Contacto</h2>

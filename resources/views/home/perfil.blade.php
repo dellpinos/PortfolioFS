@@ -1,12 +1,16 @@
 
-<h2 data-aos="zoom-in-right">Perfil</h2>
+<h2 data-aos="flip-down">Perfil</h2>
 
 <div class="perfil__contenedor" data-aos="fade-right">
 
     <div class="perfil__contenedor-desc" data-aos="fade-right">
         <div class="perfil__contenedor-img" >
 
-            <img src="img/perfil.png" alt="Imagen Perfil">
+            <picture>
+                <source srcset="img/perfil.webp" type="image/webp">
+                <source srcset="img/perfil.png" type="image/png">
+                <img loading="lazy" width="200" height="300" src="img/perfil.png" alt="Imagen Perfil">
+            </picture>
     
         </div>
         <h4>Quien soy?</h4>
@@ -16,18 +20,18 @@
     </div>
 
     <ul class="perfil__listado">
-        <li>PHP 8</li>
         <li>JavaScript</li>
-        <li>SASS</li>
-        <li>HTML</li>
-        <li>SQL</li>
-        <li>MySQL</li>
         <li>Laravel 9</li>
-        <li>Git</li>
-        <li>Tailwind</li>
-        <li>MVC</li>
         <li>Rest API</li>
+        <li>SASS</li>
+        <li>PHP 8</li>
+        <li>MVC</li>
+        <li>HTML</li>
+        <li>MySQL</li>
         <li>POO</li>
+        <li>Tailwind</li>
+        <li>SQL</li>
+        <li>Git</li>    
         <li>Docker</li>
     </ul>
 

@@ -1,6 +1,6 @@
 
 
-<h2 data-aos="zoom-in-right">Proyectos Principales</h2>
+<h2 data-aos="flip-down">Proyectos Personales</h2>
 
 <div class="main-projects__contenedor">
 
@@ -8,7 +8,6 @@
 
         <a href="#">TusListas</a>
         <a href="#">TaskTrack</a>
-        <a href="#">DevsTagram</a>
 
     </div>
 

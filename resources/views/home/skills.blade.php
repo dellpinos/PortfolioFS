@@ -1,6 +1,6 @@
 
 
-<h2 data-aos="zoom-in-right">Skills</h2>
+<h2 data-aos="flip-down">Skills</h2>
 
 
 <div class="skills__grid">

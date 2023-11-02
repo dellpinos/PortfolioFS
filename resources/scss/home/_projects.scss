@@ -8,6 +8,9 @@
 
         background-color: lighten( v.$azul, 40%);
         width: 100%;
+
+        padding-bottom: 6rem;
+
     }
 
     &__contenedor {
@@ -42,12 +45,37 @@
     }
 
     &__project {
-        padding: 10rem 3rem;
-        background-color: v.$azul;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        //padding: 6rem;
+        // background-color: v.$azul;
+         display: flex;
+        // flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+        max-width: 40rem;
+        max-height: 35rem;
+
+        overflow: hidden;
+
+
+
+        
+
+
+
+    }
+
+    &__img {
+
+        width: auto;
+
+
+
+
+    }
+    &__project-text {
+
+
 
         h4 {
             font-size: 2rem;
