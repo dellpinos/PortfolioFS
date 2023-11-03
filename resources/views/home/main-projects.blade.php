@@ -1,6 +1,6 @@
 
 
-<h2 data-aos="flip-down">Proyectos Personales</h2>
+<h2 >Proyectos Personales</h2>
 
 <div class="main-projects__contenedor">
 

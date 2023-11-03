@@ -4,6 +4,8 @@
 .skills {
 
 
+
+
     &__grid {
         display: flex;
         justify-content: space-between;
@@ -27,8 +29,8 @@
     }
 
     &__vector {
-        font-size: 8rem;
-        padding: 7.5rem 8rem;
+        font-size: 5rem;
+        padding: 5rem;
         border-radius: 50%;
         background-color: v.$grisOscuro;
         color: v.$naranja2;

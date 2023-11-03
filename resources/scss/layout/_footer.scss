@@ -1,0 +1,44 @@
+@use '../base/variables' as v;
+
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 7rem;
+    background-color: v.$grisOscuro;
+    color: v.$blanco;
+
+    p {
+        font-size: 2rem;
+    }
+
+    a {
+        position: absolute;
+        top: -30px;
+    }
+
+
+    &__nombre {
+        color: v.$naranja2;
+
+    }
+
+    &__icono {
+
+        font-size: 6rem;
+        color: v.$naranja2;
+        transition: transform .6s ease-out;
+
+        &:hover {
+
+            cursor: pointer;
+            transition: transform .6s ease-out;
+            transform: rotate(360deg);
+        
+        }
+
+    }
+}
+
+
+

@@ -1,9 +1,9 @@
 
-<h2 data-aos="flip-down">Perfil</h2>
+<h2 >Perfil</h2>
 
-<div class="perfil__contenedor" data-aos="fade-right">
+<div class="perfil__contenedor" >
 
-    <div class="perfil__contenedor-desc" data-aos="fade-right">
+    <div class="perfil__contenedor-desc" >
         <div class="perfil__contenedor-img" >
 
             <picture>

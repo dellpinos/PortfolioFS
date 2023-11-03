@@ -3,6 +3,15 @@
 
 .header {
 
+    & .fijo {
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+
+
+    }
+
 
     &__video {
 
@@ -78,6 +87,7 @@
     &__boton {
         display: flex;
         align-items: center;
+        font-size: 1.6rem;
 
         color: v.$blanco;
 
@@ -121,11 +131,12 @@
     &__contenido-header {}
 
     &__nav {
+
+
         display: flex;
         gap: 6rem;
         font-size: 2rem;
         padding: 2rem 6rem;
-        margin-bottom: 4rem;
          background-color: v.$grisOscuro;
         // background-color: v.$naranja2;
 

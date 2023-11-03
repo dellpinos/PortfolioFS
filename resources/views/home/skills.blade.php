@@ -1,11 +1,11 @@
 
 
-<h2 data-aos="flip-down">Skills</h2>
+<h2 id="skills" >Skills</h2>
 
 
 <div class="skills__grid">
 
-    <div class="skills__card" data-aos="zoom-out-right"> {{-- cada card --}}
+    <div class="skills__card" > {{-- cada card --}}
         <div class="skills__contenedor-vector">
             <i class="skills__vector fa-solid fa-bolt"></i>
         </div>
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="skills__card" data-aos="zoom-out-right"> {{-- cada card --}}
+    <div class="skills__card" > {{-- cada card --}}
         <div class="skills__contenedor-vector">
             <i class="skills__vector fa-solid fa-mobile-screen"></i>
         </div>
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="skills__card" data-aos="zoom-out-left"> {{-- cada card --}}
+    <div class="skills__card" > {{-- cada card --}}
         <div class="skills__contenedor-vector">
             <i class="skills__vector fa-regular fa-lightbulb"></i>
         </div>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="skills__card" data-aos="zoom-out-left"> {{-- cada card --}}
+    <div class="skills__card" > {{-- cada card --}}
         <div class="skills__contenedor-vector">
             <i class="skills__vector fa-solid fa-rocket"></i>
         </div>
@@ -46,4 +46,3 @@
     </div>
 
 </div>
-

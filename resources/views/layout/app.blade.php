@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="header" class="header">
 
         <div class="header__video">
             <div class="header__overlay">
@@ -34,7 +34,7 @@
                     <p class="header__texto">Hola, soy <span class="header__nombre">Martin del Pino</span></p>
                     <p class="header__texto">Desarrollador Backend - Frontend</p>
                     <div class="header__contenedor-boton">
-                        <p class="header__boton">Ver mi trabajo <i class=" header__icono fa-solid fa-circle-arrow-right"></i></p>
+                        <a href="#skills" class="header__boton">Ver mi trabajo <i class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
                         
 
                     </div>
@@ -64,6 +64,8 @@
         <div class="header__contenido-header">
 
             <nav class="header__nav">
+
+                <a href="#skills">Skills</a>
                 <a href="#">About</a>
                 <a href="#">Portfolio</a>
                 <a href="#">Contacto</a>
@@ -80,8 +82,16 @@
 
     </main>
 
-    <footer>
-        {{-- <span class="footer__nombre">Martín del Pino</span> - Todos los derechos reservados {{ now()->year }} --}}
+
+
+    <footer class="footer">
+        <a href="#header">
+            <i class=" footer__icono fa-solid fa-circle-arrow-up"></i>
+        </a>
+
+
+
+        <p><span class="footer__nombre">Martín del Pino</span> - Todos los derechos reservados {{ now()->year }}</p>
 
     </footer>
     @vite('resources/js/app.js')

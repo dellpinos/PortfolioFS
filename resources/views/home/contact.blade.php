@@ -1,1 +1,8 @@
-<h2 data-aos="flip-down">Contacto</h2>
+<h2 >Contacto</h2>
+
+<div class="contacto__contenedor">
+
+    
+
+
+</div>

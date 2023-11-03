@@ -1,5 +1,5 @@
 
-<h2 data-aos="flip-down">Proyectos</h2>
+<h2 >Proyectos</h2>
 
 
 <div class="projects__contenedor">
