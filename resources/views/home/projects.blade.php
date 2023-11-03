@@ -1,5 +1,5 @@
 
-<h2 >Proyectos</h2>
+<h2 >Portfolio</h2>
 
 
 <div class="projects__contenedor">

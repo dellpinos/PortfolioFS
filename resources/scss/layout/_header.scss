@@ -7,8 +7,8 @@
         left: 0;
         top: 0;
         position: fixed;
-        width: 100%;
 
+        width: 100%;
 
     }
 
@@ -116,9 +116,6 @@
 
     }
 
-
-
-
     &__icono {
         color: v.$blanco;
         font-size: 3rem;
@@ -151,7 +148,7 @@
 
             &:hover {
 
-                color: v.$azul;
+                color: v.$naranja;
 
             }
         }

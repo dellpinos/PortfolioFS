@@ -6,8 +6,17 @@
 
     <div class="main-projects__grid">
 
-        <a href="#">TusListas</a>
-        <a href="#">TaskTrack</a>
+        <div class="main-projects__card">
+            <a href="#">TusListas</a>
+
+        </div>
+
+        <div class="main-projects__card">
+
+            <a href="#">TaskTrack</a>
+
+        </div>
+
 
     </div>
 

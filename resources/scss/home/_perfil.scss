@@ -39,15 +39,10 @@
         }
         margin: 0 auto;
 
-        background-image: url(../img/bg_6.png);
-
-        background-position: center top;
-        background-size: cover;
+        background-image: url(../img/bg_8.png);
         background-repeat: no-repeat;
 
     }
-
-    
 
     &__listado {
 
@@ -63,10 +58,11 @@
         }
 
         & :nth-child(odd) {
-            background-color: v.$azul;
+            background-color: v.$naranja3;
         }
         & :nth-child(even) {
-            background-color: lighten(v.$azul, 15%);
+
+            background-color: v.$naranja;
         }
 
     }

@@ -1,0 +1,34 @@
+@use '../base/variables' as v;
+
+.contacto {
+
+    &__contenedor {
+
+        background-image: url(../img/bg_11.png);
+        background-position: center;
+        background-size: 200rem;
+        background-repeat: no-repeat;
+
+        height: 30rem;
+
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+        align-items: end;
+
+
+    }
+
+    &__icono {
+
+        font-size: 6rem;
+        color: v.$naranja2;
+        transition: color 1.5s ease, transform .5s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-10px);
+            color: v.$naranja;
+        }
+    }
+}
