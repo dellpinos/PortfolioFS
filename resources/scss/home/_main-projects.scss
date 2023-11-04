@@ -8,35 +8,27 @@
 
         padding-top: 6rem;
 
-
-
         h2 {
             margin: 2rem 0 0 0;
-
             padding-top: 7rem;
         }
 
     }
 
-
     &__contenedor {
 
         display: flex;
         justify-content: center;
-
         background-image: url(../img/bg_13.svg);
         background-position: center;
         background-size: 200rem;
         background-repeat: no-repeat;
-
         padding: 20rem 0 25rem 0;
-
 
     }
 
 
     &__grid {
-
 
         width: 100%;
         display: flex;
@@ -50,7 +42,9 @@
 
         border-radius: 2rem;
         padding: 3rem 2rem;
-        box-shadow: 1px 1px 8px 2px v.$negro;
+
+        box-shadow: -1px -1px 2px 1px v.$gris inset;
+        // box-shadow: 1px 1px 8px 2px v.$negro;
 
         p {
             padding: 2rem 4rem;
@@ -65,90 +59,110 @@
 
                 color: v.$naranja2;
             }
-
         }
-    
-
-}
-
-&__tl {
-    background-color: v.$azulTL;
-    color: v.$blanco;
-
-
-    &:hover {
-
-        i {
-
-            color: v.$naranja2;
-            cursor: pointer;
-            transform: rotate(15deg);
-        }
-
-
     }
 
-    a {
+    &__tl {
+        background-color: v.$azulTL;
         color: v.$blanco;
+
+        &:hover {
+
+            & .main-projects__icono {
+
+                color: v.$naranja2;
+                cursor: pointer;
+                transform: rotate(15deg);
+            }
+
+            & .main-projects__icono--oculto {
+                transition: opacity 2s ease;
+                opacity: 1;
+
+            }
+        }
+
+        a {
+            color: v.$blanco;
+        }
     }
 
+    &__tt {
 
-}
+        background-color: v.$blanco;
 
-&__tt {
-
-    background-color: v.$blanco;
+        
 
 
-    &:hover {
+        &:hover {
 
-        i {
+            & .main-projects__icono {
 
-            color: v.$naranja2;
-            cursor: pointer;
-            transform: rotate(15deg);
+                color: v.$naranja2;
+                cursor: pointer;
+                transform: rotate(15deg);
+
+
+            }
+
+            & .main-projects__icono--oculto {
+                transition: opacity 2s ease;
+                opacity: 1;
+
+            }
         }
 
 
+        a {
+            color: v.$negro;
+        }
+
     }
 
-
-    a {
-        color: v.$negro;
-    }
-
-}
-
-&__contenedor-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3rem 3rem 1rem 3rem;
-
-
-}
-
-&__contenedor-img {}
-
-&__icono {
-    font-size: 4rem;
-
-    transition: color .5s ease, transform .5s ease;
-
-    &:hover {
-
-        color: v.$naranja!important;
-        cursor: pointer;
+    &__contenedor-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem 3rem 1rem 3rem;
 
 
     }
-}
 
-&__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
+    &__contenedor-img {}
+
+    &__iconos {
+        display: flex;
+        gap: 1rem;
+
+    }
+
+    &__icono {
+        font-size: 4rem;
+
+        transition: color .5s ease, transform .5s ease;
+
+        &:hover {
+
+            color: v.$naranja !important;
+            cursor: pointer;
+
+            
+
+        }
+
+        &--oculto {
+
+            opacity: 0;
+            transition: opacity .5s ease;
+            font-size: 4rem;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
 }

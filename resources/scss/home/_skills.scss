@@ -10,7 +10,7 @@
     &__grid {
         display: flex;
         justify-content: space-between;
-        margin: 5rem 0;
+        margin: 6rem 8rem;
         
     }
 
@@ -24,13 +24,14 @@
     }
 
     &__contenedor-vector {
+        margin: 0 5rem;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        width: 15rem;
-        height: 15rem;
+        width: 10rem;
+        height: 10rem;
 
         border-radius: 50%;
 
@@ -49,7 +50,7 @@
     }
 
     &__vector {
-        font-size: 8rem;
+        font-size: 5rem;
         color: v.$naranja;
 
 

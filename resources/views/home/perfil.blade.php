@@ -2,7 +2,7 @@
 <div class="perfil__contenedor" >
 
     <div class="perfil__contenedor-desc" >
-        <div class="perfil__contenedor-img" >
+        <div class="perfil__contenedor-img" data-aos="flip-left">
 
             <picture>
                 <source srcset="img/perfil.webp" type="image/webp">
@@ -17,7 +17,7 @@
 
     </div>
 
-    <ul class="perfil__listado">
+    <ul class="perfil__listado" >
         <li>JavaScript</li>
         <li>Laravel 9</li>
         <li>Rest API</li>
@@ -27,10 +27,7 @@
         <li>HTML</li>
         <li>MySQL</li>
         <li>POO</li>
-        <li>Tailwind</li>
-        <li>SQL</li>
-        <li>Git</li>    
-        <li>Docker</li>
+        <li>Git</li>
     </ul>
 
 
