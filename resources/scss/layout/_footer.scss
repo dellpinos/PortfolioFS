@@ -27,13 +27,14 @@
 
         font-size: 6rem;
         color: v.$naranja2;
-        transition: transform .6s ease-out;
+        transition: transform .6s ease-out, color .5s ease-out;
 
         &:hover {
 
             cursor: pointer;
-            transition: transform .6s ease-out;
+            transition: transform .6s ease-out, color .5s ease-out;
             transform: rotate(360deg);
+            color: v.$naranja;
         
         }
 

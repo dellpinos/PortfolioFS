@@ -1,7 +1,5 @@
 
-
-<h2 id="skills" >Skills</h2>
-
+<h2 class="skills__heading" id="skills" >Perfil</h2>
 
 <div class="skills__grid">
 

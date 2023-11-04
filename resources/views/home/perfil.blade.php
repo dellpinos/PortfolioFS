@@ -1,6 +1,4 @@
 
-<h2 >Perfil</h2>
-
 <div class="perfil__contenedor" >
 
     <div class="perfil__contenedor-desc" >

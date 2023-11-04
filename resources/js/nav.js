@@ -9,14 +9,14 @@
     function iniciarApp() {
 
         navegacionFija();
-       // scrollNav();
+        scrollNav();
 
     }
 
     function navegacionFija () {
         const barra = document.querySelector('.header__nav');
         const skills = document.querySelector('#skills');
-        const header = document.querySelector('#header');
+        const header = document.querySelector('.header__overlay');
         //const body = document.querySelector('body');
     
         window.addEventListener('scroll', function() {
@@ -36,14 +36,18 @@
     }
     
     function scrollNav() {
-        const enlaces = document.querySelectorAll('.header__nav a');
+        const enlaces = document.querySelectorAll('.scroll-smooth');
         enlaces.forEach(enlace => {
             enlace.addEventListener('click', function(e) {
+
+                console.log(e);
+                //console.log(enlace);
                 e.preventDefault();
+
                 
                 const seccionScroll = e.target.attributes.href.value;
                 const seccion = document.querySelector(seccionScroll);
-                seccion.scrollIntoView({ behavior: "smooth"});
+                seccion.scrollIntoView({ behavior: "smooth", block: "start"});
             });
         });
     }

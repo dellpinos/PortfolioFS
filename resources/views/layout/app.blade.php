@@ -34,9 +34,8 @@
                     <p class="header__texto">Hola, soy <span class="header__nombre">Martin del Pino</span></p>
                     <p class="header__texto">Desarrollador Backend - Frontend</p>
                     <div class="header__contenedor-boton">
-                        <a href="#skills" class="header__boton">Ver mi trabajo <i class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
+                        <a href="#skills" class="header__boton scroll-smooth">Ver mi trabajo <i href="#skills" class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
                         
-
                     </div>
                 </div>
             </div>
@@ -65,10 +64,10 @@
 
             <nav class="header__nav">
 
-                <a href="#skills">Skills</a>
-                <a href="#">About</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contacto</a>
+                <a class="scroll-smooth" href="#skills">Perfil</a>
+                <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>
+                <a class="scroll-smooth" href="#galeria">Portfolio</a>
+                <a class="scroll-smooth" href="#contacto">Contacto</a>
             </nav>
         </div>
 
@@ -85,8 +84,8 @@
 
 
     <footer class="footer">
-        <a href="#header">
-            <i class=" footer__icono fa-solid fa-circle-arrow-up"></i>
+        <a href="#header" class="scroll-smooth">
+            <i href="#header" class="footer__icono fa-solid fa-circle-arrow-up"></i>
         </a>
 
 

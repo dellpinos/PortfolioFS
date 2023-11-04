@@ -1,10 +1,10 @@
 
-<h2 >Portfolio</h2>
+<h2 class="projects__heading" id="galeria">Portfolio</h2>
 
 
 <div class="projects__contenedor">
 
-    <div class="projects__headings">
+    <div class="projects__filtros">
 
         <p>Todos</p>
         <p>PHP - SASS</p>

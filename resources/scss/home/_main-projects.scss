@@ -3,40 +3,152 @@
 
 .main-projects {
 
-    
+
+    &__contenedor-xl {
+
+        padding-top: 6rem;
+
+
+
+        h2 {
+            margin: 2rem 0 0 0;
+
+            padding-top: 7rem;
+        }
+
+    }
+
+
     &__contenedor {
 
         display: flex;
         justify-content: center;
 
+        background-image: url(../img/bg_13.svg);
+        background-position: center;
+        background-size: 200rem;
+        background-repeat: no-repeat;
+
+        padding: 20rem 0 25rem 0;
+
 
     }
-    
-    
+
+
     &__grid {
 
 
-       width: 100%;
+        width: 100%;
         display: flex;
-        justify-content: space-around;
-        margin: 3rem 0;
+        justify-content: space-between;
+        margin: 5rem;
+        gap: 10rem;
 
-
-        a {
-
-            font-size: 4rem;
-           // background-color: lighten(v.$rosa, 40%);
-            border: 2px solid v.$naranja2;
-            text-align: center;
-            padding: 2rem;
-            border-radius: 1rem;
-            color: v.$naranja2;
-            font-weight: v.$black;
-
-        }
     }
 
     &__card {
-        border: 2px solid blue;
+
+        border-radius: 2rem;
+        padding: 3rem 2rem;
+        box-shadow: 1px 1px 8px 2px v.$negro;
+
+        p {
+            padding: 2rem 4rem;
+        }
+
+        a {
+            font-size: 2rem;
+            font-weight: v.$bold;
+            transition: color .5s ease;
+
+            &:hover {
+
+                color: v.$naranja2;
+            }
+
+        }
+    
+
+}
+
+&__tl {
+    background-color: v.$azulTL;
+    color: v.$blanco;
+
+
+    &:hover {
+
+        i {
+
+            color: v.$naranja2;
+            cursor: pointer;
+            transform: rotate(15deg);
+        }
+
+
     }
+
+    a {
+        color: v.$blanco;
+    }
+
+
+}
+
+&__tt {
+
+    background-color: v.$blanco;
+
+
+    &:hover {
+
+        i {
+
+            color: v.$naranja2;
+            cursor: pointer;
+            transform: rotate(15deg);
+        }
+
+
+    }
+
+
+    a {
+        color: v.$negro;
+    }
+
+}
+
+&__contenedor-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 3rem 1rem 3rem;
+
+
+}
+
+&__contenedor-img {}
+
+&__icono {
+    font-size: 4rem;
+
+    transition: color .5s ease, transform .5s ease;
+
+    &:hover {
+
+        color: v.$naranja!important;
+        cursor: pointer;
+
+
+    }
+}
+
+&__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
 }

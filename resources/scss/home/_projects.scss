@@ -4,9 +4,13 @@
 
 .projects {
 
+    &__heading {
+        padding-top: 7rem;
+    }
+
     &__contenedor-xl {
 
-        background-color: lighten( v.$azul, 40%);
+       //  background-color: lighten( v.$grisOscuro, 30%);
         width: 100%;
 
         padding-bottom: 6rem;
@@ -16,13 +20,12 @@
     &__contenedor {
 
         width: 80%;
-
         margin: 0 auto;
 
 
     }
 
-    &__headings {
+    &__filtros {
         margin: 2rem 8rem;
         display: flex;
         justify-content: space-around;
@@ -56,11 +59,6 @@
         max-height: 35rem;
 
         overflow: hidden;
-
-
-
-        
-
 
 
     }
