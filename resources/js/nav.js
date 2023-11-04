@@ -11,22 +11,23 @@
         navegacionFija();
         scrollNav();
         enlaceActivo();
+        barraCarga();
 
     }
 
-    function navegacionFija () {
-        const barra = document.querySelector('.header__nav');
+    function navegacionFija() {
+        const barra = document.querySelector('.header__contenido-header');
         const skills = document.querySelector('#skills');
         const header = document.querySelector('.header__overlay');
-    
-        window.addEventListener('scroll', function() {
 
-            if( header.getBoundingClientRect().bottom < 0 ) {
+        window.addEventListener('scroll', function () {
+
+            if (header.getBoundingClientRect().bottom < 0) {
 
                 barra.classList.add('fijo');
-                skills.classList.add('nav-scroll'); 
+                skills.classList.add('nav-scroll');
 
-            } 
+            }
             else {
                 barra.classList.remove('fijo');
                 skills.classList.remove('nav-scroll');
@@ -34,18 +35,18 @@
 
         });
     }
-    
+
     function scrollNav() {
         const enlaces = document.querySelectorAll('.scroll-smooth');
         enlaces.forEach(enlace => {
-            enlace.addEventListener('click', function(e) {
+            enlace.addEventListener('click', function (e) {
 
                 e.preventDefault();
 
-                
+
                 const seccionScroll = e.target.attributes.href.value;
                 const seccion = document.querySelector(seccionScroll);
-                seccion.scrollIntoView({ behavior: "smooth", block: "start"});
+                seccion.scrollIntoView({ behavior: "smooth", block: "start" });
             });
         });
     }
@@ -58,52 +59,49 @@
         enlaces.forEach(enlace => {
 
             const elemento = enlace.attributes.href.value;
+            const seccion = document.querySelector(elemento + "-contenedor");
 
-            const seccion = document.querySelector(elemento);
+            window.addEventListener('scroll', function () {
 
+                const rect = seccion.getBoundingClientRect();
 
-            window.addEventListener('scroll', function() {
-
-            const rect = seccion.getBoundingClientRect();
-  
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-              // El elemento está en la vista
-              enlace.classList.add('color-orange');
-            } else {
-              // El elemento ya no está en la vista
-              enlace.classList.remove('color-orange');
-            }
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    // El elemento está en la vista
+                    enlace.classList.add('color-orange');
+                } else {
+                    // El elemento ya no está en la vista
+                    enlace.classList.remove('color-orange');
+                }
+            });
         });
-
-            
-
-
-            // window.addEventListener('scroll', function() {
-
-            //     if( seccion.getBoundingClientRect().top < 0  && seccion.getBoundingClientRect().bottom < 0) {
-    
-
-            //         enlace.classList.add('color-orange');
-    
-            //     } 
-            //     else {
-            //         enlace.classList.remove('color-orange');
-            //     }
-    
-            // });
-
-
-
-
-        });
-
-
-
-        // seleccionar elementos / headings
-
-
     }
 
-    
 
+
+    function barraCarga() {
+
+        const barra = document.querySelector('#barra-carga');
+
+        window.addEventListener('scroll', actualizarLineaCarga);
+
+        function actualizarLineaCarga() {
+
+            console.log("scroll");
+            const alturaPagina = document.documentElement.scrollHeight;
+            const alturaVentana = window.innerHeight;
+            const posicionUsuario = window.scrollY;
+            // Calcula el porcentaje de progreso del usuario
+            const porcentajeProgreso = (posicionUsuario / (alturaPagina - alturaVentana)) * 100;
+
+            
+    
+            // Aplica el porcentaje de progreso como ancho de la línea
+            barra.style.width = `${porcentajeProgreso}%`;
+
+        }
+    }
 })();
+
+
+
+

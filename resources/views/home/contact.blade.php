@@ -1,6 +1,6 @@
 <h2 id="contacto">Contacto</h2>
 
-<div class="contacto__contenedor">
+<div id="contacto-contenedor" class="contacto__contenedor">
 
     <p>Want to work together?</p>
 

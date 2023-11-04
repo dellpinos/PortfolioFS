@@ -135,10 +135,8 @@
         font-size: 2rem;
         padding: 2rem 6rem;
          background-color: v.$grisOscuro;
-        // background-color: v.$naranja2;
 
-       // box-shadow: 0px 2px 8px 2px v.$grisOscuro;
-       border-bottom: 4px solid v.$naranja2;
+       // border-bottom: 4px solid v.$naranja2;
 
         a {
             font-weight: v.$regular;
@@ -153,4 +151,18 @@
             }
         }
     }
+
+    &__nav-contenedor-carga {
+        height: .5rem;
+        width: 100%;
+        background-color: v.$grisOscuro;
+
+    }
+
+    &__nav-carga {
+        height: 100%;
+        background-color: v.$naranja2;
+        width: 20px;
+    }
+
 }

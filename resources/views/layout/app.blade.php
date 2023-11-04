@@ -61,14 +61,16 @@
         </div>
 
         <div class="header__contenido-header">
-
             <nav class="header__nav">
-
                 <a class="scroll-smooth" href="#skills">Perfil</a>
                 <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>
                 <a class="scroll-smooth" href="#galeria">Portfolio</a>
                 <a class="scroll-smooth" href="#contacto">Contacto</a>
             </nav>
+
+            <div class="header__nav-contenedor-carga">
+                <div id="barra-carga" class="header__nav-carga"></div>
+            </div>
         </div>
 
     </header>

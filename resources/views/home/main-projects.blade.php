@@ -1,4 +1,4 @@
-<div class="main-projects__contenedor-xl">
+<div class="main-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
     <h2 id="proyectos-personales">Proyectos Personales</h2>
 

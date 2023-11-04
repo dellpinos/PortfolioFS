@@ -2,7 +2,7 @@
 <h2 class="projects__heading" id="galeria">Portfolio</h2>
 
 
-<div class="projects__contenedor">
+<div id="galeria-contenedor" class="projects__contenedor">
 
     <div class="projects__filtros">
 

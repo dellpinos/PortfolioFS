@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('contenido')
-    <section class="contenedor-xl"> {{-- contenedor principal --}}
+    <section class="contenedor-xl" id="skills-contenedor"> {{-- contenedor principal --}}
 
         @include('home.skills')
 
