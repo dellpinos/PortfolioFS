@@ -24,7 +24,7 @@
 
     &__icono {
 
-        color: v.$blanco;
+        color: v.$grisOscuro;
 
         width: 15rem;
         height: 15rem;
@@ -35,10 +35,12 @@
         align-items: center;
         box-shadow: 1px 1px 5px 1px v.$blanco inset;
 
-        transition: background-color .3s ease;
+        transition: background-color .3s ease, color .3s ease;
 
         &:hover {
 
+
+            color: lighten(v.$grisOscuro, 10%);
             cursor: pointer;
             background-color: lighten(v.$grisOscuro, 10%);
 

@@ -6,7 +6,9 @@
         let firstSelect = '';
         let secondSelect = '';
         let flag = 0;
+        let arraySelec = [];
 
+        // Un array que guarde los resultados
 
 
 
@@ -18,6 +20,52 @@
 
             cuadro.addEventListener('click', (e) => {
 
+                //e.target.classList.add('b-rojo');
+                e.target.classList.add('c-azul');
+
+                
+
+                if(!flag) {
+                    firstSelect = e.target;
+
+                    flag = 1;
+                } else {
+
+                    secondSelect = e.target;
+
+                    console.log(firstSelect.classList[1] + "<<1 ");
+                    console.log(secondSelect.classList[1] + "<<2 ");
+
+                    if(firstSelect.classList[1] === secondSelect.classList[1]) {
+
+                        arraySelec.push(firstSelect);
+                        arraySelec.push(secondSelect);
+
+                        
+                        console.log('iguales');
+
+                    } else {
+
+                        console.log('no son iguales');
+
+                    }
+                    
+                    setTimeout(() => {
+                        
+                        flag = 0;
+                        firstSelect.classList.remove('b-rojo');
+                        secondSelect.classList.remove('b-rojo');
+                        
+                        firstSelect.classList.remove('c-azul');
+                        secondSelect.classList.remove('c-azul');
+    
+    
+                        firstSelect = '';
+                        secondSelect = '';
+                    }, 500);
+                    
+
+                }
                 // El cuadro se gira con una animacion
                 
                 // Se hace visible el icono
@@ -30,11 +78,23 @@
 
                 // Evaluar si el jugador ha ganado
 
-                console.log(e.target);
+                prueba();
+
+
 
             });
 
         });
+
+        function prueba() {
+
+            arraySelec.forEach(elem => {
+
+                elem.classList.add('c-rojo');
+
+                console.log(elem);
+            });
+        }
 
     });
 
