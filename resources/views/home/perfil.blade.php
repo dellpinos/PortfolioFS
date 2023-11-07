@@ -18,17 +18,16 @@
     </div>
 
     <ul class="perfil__listado" >
-        <li>JavaScript</li>
-        <li>Laravel 9</li>
-        <li>Rest API</li>
-        <li>SASS</li>
-        <li>PHP 8</li>
-        <li>MVC</li>
-        <li>HTML</li>
-        <li>MySQL</li>
-        <li>POO</li>
-        <li>Git</li>
+        <li data-aos="fade-left">JavaScript</li>
+        <li data-aos="fade-left">Laravel 9</li>
+        <li data-aos="fade-left">Rest API</li>
+        <li data-aos="fade-left">SASS / CSS</li>
+        <li data-aos="fade-left">PHP 8</li>
+        <li data-aos="fade-left">MVC</li>
+        <li data-aos="fade-left">HTML</li>
+        <li data-aos="fade-left">MySQL</li>
+        <li data-aos="fade-left">POO</li>
+        <li data-aos="fade-left">Git</li>
+        <li data-aos="fade-left">Docker</li>
     </ul>
-
-
 </div>

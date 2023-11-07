@@ -4,10 +4,14 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 
+
+
+
+
 const opciones = {
     
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 500,
     freeMode: true,
     loop: false,
     watchOverflow: true,
@@ -46,6 +50,8 @@ const opciones = {
 }
 
 const swiper = new Swiper('.swiper', opciones);
+
+
 
 
 swiper.on('click', function () {

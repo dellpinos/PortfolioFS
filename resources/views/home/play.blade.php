@@ -40,3 +40,4 @@
     Este array se mapea con los elementos del grid, la idea es que se generen 2 de cada uno y puedan ser
     al azar. Para esto habria que generar el array aleatoriamente.
     --}}
+

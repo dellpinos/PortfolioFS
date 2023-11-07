@@ -3,13 +3,16 @@
 
 
 .slider {
-    margin-top: 3rem;
-    width: 90%;
+    width: 70rem;
+    height: 50rem;
+
+
+
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: v.$blanco!important;
+    color: v.$naranja!important;
     display: none!important;
 
     @include m.tablet {
@@ -20,11 +23,3 @@
 .swiper-pagination {
     color: v.$blanco!important;
 }
-
-
-
-.swiper {
-    width: 600px;
-    height: 300px;
-  }
-
