@@ -7,9 +7,9 @@ import 'swiper/css/navigation';
 const opciones = {
     
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 0,
     freeMode: true,
-    loop: true,
+    loop: false,
     watchOverflow: true,
     speed: 500,
 
@@ -46,6 +46,7 @@ const opciones = {
 }
 
 const swiper = new Swiper('.swiper', opciones);
+
 
 swiper.on('click', function () {
 //    swiper.init();

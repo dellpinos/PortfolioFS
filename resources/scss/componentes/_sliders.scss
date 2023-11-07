@@ -1,0 +1,30 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.slider {
+    margin-top: 3rem;
+    width: 90%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: v.$blanco!important;
+    display: none!important;
+
+    @include m.tablet {
+        display: block!important;
+    }
+
+}
+.swiper-pagination {
+    color: v.$blanco!important;
+}
+
+
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+
