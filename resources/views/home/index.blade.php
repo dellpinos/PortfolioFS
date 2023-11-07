@@ -17,7 +17,7 @@
 
     </section>
 
-    @include('home.play')
+    {{-- @include('home.play') --}}
 
     @include('home.contact')
 

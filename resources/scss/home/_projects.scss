@@ -10,7 +10,7 @@
 
     &__contenedor-xl {
 
-       //  background-color: lighten( v.$grisOscuro, 30%);
+        //  background-color: lighten( v.$grisOscuro, 30%);
         width: 100%;
 
         padding-bottom: 6rem;
@@ -31,70 +31,119 @@
         display: flex;
         justify-content: space-around;
         text-transform: uppercase;
+        
+        transition: all 1s ease;
 
         p {
+            border-radius: .5rem;
             font-size: 2rem;
-            font-weight: v.$bold;
-            padding: 1rem;
+            padding: 0 2rem;
+
+
+            &:hover {
+                cursor: pointer;
+            }
+
         }
 
+        &--activo {
+            color: v.$blanco;
+            background-color: v.$naranja;
+            transition: all 1s ease;
 
+        }
     }
 
     &__grid {
 
+        width: 120rem;
+        margin: 0 auto;
 
         @include m.grid(3, 0);
-        
+
     }
 
     &__project {
-        //padding: 6rem;
-        // background-color: v.$azul;
-         display: flex;
-        // flex-direction: column;
-         justify-content: center;
-         align-items: center;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-width: 40rem;
         max-height: 35rem;
-
         overflow: hidden;
-
+        position: relative;
 
     }
 
     &__img {
 
         width: auto;
+        opacity: 1;
+        transition: opacity 1.5s ease;
 
+        &--oculto {
+            opacity: 0;
+        }
+
+    }
+
+    &__overlay {
+
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        position: absolute;
+        top: center;
+        left: center;
+        opacity: 0;
+
+        transition: opacity 1s ease, gap 1s ease;
+
+        &--visible {
+
+            gap: 5rem;
+            opacity: 1;
+        }
+    }
+
+    &__info {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
 
 
     }
-    &__project-text {
+
+    &__info-titulo {
+        font-size: 2rem;
+    }
+
+    &__info-tecs {
+        color: v.$naranja;
 
 
+    }
 
-        h4 {
-            font-size: 2rem;
-            margin: 0 0 1rem 0;
+    &__info-btn {
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 2px solid v.$naranja;
+        border-radius: .5rem;
+        padding: .5rem 3rem;
+        color: v.$naranja;
+        margin-top: 3rem;
+        font-size: 2rem;
+        transition: color .5s ease, background-color .5s ease;
+
+        &:hover {
+
+            cursor: pointer;
+            background-color: v.$naranja;
+            color: v.$blanco;
+
         }
-
-        p {
-            color: v.$naranja;
-
-        }
-
-        a {
-            text-transform: uppercase;
-            border: 2px solid v.$naranja;
-            padding: .5rem 3rem;
-            color: v.$naranja;
-            margin-top: 3rem;
-            font-size: 2rem;
-        }
-
     }
 
 }

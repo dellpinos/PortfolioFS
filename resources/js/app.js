@@ -1,4 +1,5 @@
 import './aos';
 import './nav';
 import './icono';
-import './play';
+import './galeria';
+// import './play';
