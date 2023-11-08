@@ -12,10 +12,10 @@ const opciones = {
     
     slidesPerView: 1,
     spaceBetween: 500,
-    freeMode: true,
+    freeMode: false,
     loop: false,
     watchOverflow: true,
-    speed: 500,
+    speed: 800,
 
     keyboard: {
         enabled: true,

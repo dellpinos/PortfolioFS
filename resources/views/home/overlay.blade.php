@@ -10,6 +10,6 @@
         <div class="swiper-button-next"></div>
     </div>
 
-    <p class="projects__btn-cerrar" id="projects-btn-modal">X</p>
+    {{-- <p class="projects__btn-cerrar" id="projects-btn-modal">X</p> --}}
 
 </div>

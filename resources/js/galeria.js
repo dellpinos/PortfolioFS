@@ -179,7 +179,7 @@ import swiper from './swiper';
 
                 enlace.addEventListener('click', (e) => {
 
-                    mostrarImagen(project.imgs);
+                    mostrarImagen(project);
                 });
 
 
@@ -231,45 +231,105 @@ import swiper from './swiper';
 
             const nav = document.querySelector('.header__contenido-header'); // oculto la navegación
             nav.classList.add('display-none');
-            
+
             const contenedorSlider = document.querySelector('#projects-contenedor-slider');
-            
-            cargarImagenes(array, contenedorSlider);
-            
+
+            cargarImagenes(array, contenedorSlider, nav, overlay);
+
             // Boton para cerrar Ventana Modal
 
-            const cerrarModal = document.querySelector('#projects-btn-modal');
-            cerrarModal.onclick = function () {
-                const body = document.querySelector('body');
-                body.classList.remove('fijar-body');
+            // const cerrarModal = document.querySelector('#projects-btn-modal');
 
-                nav.classList.remove('display-none');
-                overlay.classList.add('display-none');
-                overlay.classList.remove('projects__overlay-gde');
-            };
+            // const cerrarModal = document.createElement('P');
+            // cerrarModal.classList.add('projects__btn-cerrar');
+
+
+            // cerrarModal.onclick = function () {
+            //     const body = document.querySelector('body');
+            //     body.classList.remove('fijar-body');
+
+            //     while (contenedorSlider.firstChild) {
+            //         contenedorSlider.firstChild.remove();
+            //     }
+            //     nav.classList.remove('display-none');
+            //     overlay.classList.add('display-none');
+            //     overlay.classList.remove('projects__overlay-gde');
+            // };
 
             // Añadirlo al html
             const body = document.querySelector('body');
             body.appendChild(overlay);
             body.classList.add('fijar-body');
 
+            swiper.update();
+
         }
 
-        function cargarImagenes(array, swiperSecundario) {
+        function cargarImagenes(array, swiperSecundario, nav, overlay) {
 
-            for (let i = 0; i < array.length; i++) {
+            const imgs = array.imgs;
+            const heading = array.heading;
+            const tecs = array.tecs;
+
+            for (let i = 0; i < imgs.length; i++) {
+                const contenedor = document.createElement('DIV');
+                contenedor.classList.add('projects__slide-contenedor', 'swiper-slide');
+
+                const info = document.createElement('DIV');
+                info.classList.add('projects__slide-info');
+
+                const titulo = document.createElement('H4');
+                titulo.classList.add('projects__slide-heading');
+                titulo.textContent = heading;
+
+                const tecnologias = document.createElement('P');
+                tecnologias.classList.add('projects__slide-tecs');
+                tecnologias.textContent = tecs;
+
+                const btnContenedor = document.createElement('DIV');
+                btnContenedor.classList.add('projects__btn-contenedor');
+
+                const cerrarModal = document.createElement('P');
+                cerrarModal.classList.add('projects__btn-cerrar');
+                cerrarModal.innerHTML = '<i class="fa-regular fa-rectangle-xmark"></i>';
+
+                cerrarModal.onclick = function () {
+
+                    console.log("eliminar");
+                    const body = document.querySelector('body');
+                    body.classList.remove('fijar-body');
+
+                    while (swiperSecundario.firstChild) {
+                        swiperSecundario.firstChild.remove();
+                    }
+                    nav.classList.remove('display-none');
+                    overlay.classList.add('display-none');
+                    overlay.classList.remove('projects__overlay-gde');
+                };
+
+                info.appendChild(titulo);
+                info.appendChild(tecnologias);
+                btnContenedor.appendChild(cerrarModal);
+                info.appendChild(btnContenedor);
+
 
                 const imagen = document.createElement('picture');
-                imagen.classList.add('swiper-slide');
+                // imagen.classList.add('swiper-slide');
                 imagen.innerHTML = `
-                    <source srcset="img/grande/${array[i]}.avif" type="image/avif">
-                    <source srcset="img/grande/${array[i]}.webp" type="image/webp">
-                    <img loading="lazy" height="500" src="img/grande/${array[i]}.jpg" alt="Imagen Galeria">
+                    <source srcset="img/grande/${imgs[i]}.avif" type="image/avif">
+                    <source srcset="img/grande/${imgs[i]}.webp" type="image/webp">
+                    <img loading="lazy" height="500" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
                 `;
 
-                swiperSecundario.appendChild(imagen);
+                contenedor.appendChild(imagen);
+                contenedor.appendChild(info);
+
+                swiperSecundario.appendChild(contenedor);
+
 
             }
+            //console.log(info);
+
         }
 
 
