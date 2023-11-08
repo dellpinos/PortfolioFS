@@ -18,7 +18,7 @@ const opciones = {
     speed: 800,
 
     keyboard: {
-        enabled: true,
+        enabled: false,
         onlyInViewport: false,
     },
 
@@ -26,27 +26,9 @@ const opciones = {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-        hideOnClick: true,
+        hideOnClick: false,
         
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        type: 'bullets',
-        dynamicBullets: true,
-    },
-    // breakpoints: {
-
-    //     768: {
-    //         slidesPerView: 2
-    //     },
-    //     1024: {
-    //         slidesPerView: 3
-    //     },
-    //     1200: {
-    //         slidesPerView: 3
-    //     }
-    // }
+    }
 }
 
 const swiper = new Swiper('.swiper', opciones);

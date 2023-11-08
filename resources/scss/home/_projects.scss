@@ -78,7 +78,7 @@
 
         width: auto;
         opacity: 1;
-        transition: opacity 1.5s ease;
+        transition: opacity .5s ease;
 
         &--oculto {
             opacity: 0;
@@ -97,7 +97,7 @@
         left: center;
         opacity: 0;
 
-        transition: opacity 1s ease, gap 1s ease;
+        transition: opacity .5s ease, gap .5s ease;
 
         &--visible {
 
@@ -233,7 +233,7 @@
         font-size: 4rem;
         color: v.$negro;
         cursor: pointer;
-        transition: color .5s ease;
+        transition: color .3s ease;
 
 
         &:hover {

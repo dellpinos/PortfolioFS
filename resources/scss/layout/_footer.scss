@@ -1,21 +1,20 @@
 @use '../base/variables' as v;
 
 .footer {
-    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 7rem;
+    align-items: center;
+    padding: 4rem 0 7rem 0;
     background-color: v.$grisOscuro;
     color: v.$blanco;
+    gap: 2rem;
 
     p {
         font-size: 2rem;
     }
 
-    a {
-        position: absolute;
-        top: -260px;
-    }
+
 
 
     &__nombre {

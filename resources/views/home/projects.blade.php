@@ -1,5 +1,5 @@
 
-<h2 class="projects__heading" id="galeria">Portfolio</h2>
+<h2 class="projects__heading" id="galeria" data-aos="flip-down">Portfolio</h2>
 
 
 <div id="galeria-contenedor" class="projects__contenedor">

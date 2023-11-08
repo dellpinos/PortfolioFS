@@ -1,6 +1,6 @@
 <div class="main-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales">Proyectos Personales</h2>
+    <h2 id="proyectos-personales" data-aos="flip-down">Proyectos Personales</h2>
 
     <div class="main-projects__contenedor">
         <div class="main-projects__grid">

@@ -17,11 +17,11 @@
 
     </section>
 
-{{--     @include('home.play') --}}
 
     @include('home.contact')
 
+    @include('home.play')
+
     @include('home.overlay')
-
-
+    
 @endsection

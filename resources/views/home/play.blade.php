@@ -1,4 +1,4 @@
-<h2>Play</h2>
+
 
 <div class="play__contenedor">
 

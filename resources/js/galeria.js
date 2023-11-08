@@ -204,11 +204,6 @@ import swiper from './swiper';
                     img.classList.add('projects__img--oculto');
                     overlay.classList.add('projects__overlay--visible');
 
-                    // imagen.onclick = function () {
-                    //     mostrarImagen(element);
-                    // }
-                    // // console.log(img, element);
-
 
                 });
                 imagen.addEventListener('mouseleave', () => {
