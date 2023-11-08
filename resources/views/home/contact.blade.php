@@ -1,7 +1,7 @@
 
 
-<div id="contacto" class="contacto__contenedor">
-    <h2 class="contacto__heading" data-aos="flip-down">Contacto</h2>
+<div id="contacto-contenedor" class="contacto__contenedor">
+    <h2 class="contacto__heading" id="contacto" data-aos="flip-down">Contacto</h2>
 
 
     <form action="/" method="POST" class="contacto__formulario-contenedor">
