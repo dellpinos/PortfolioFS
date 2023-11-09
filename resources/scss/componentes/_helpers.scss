@@ -12,7 +12,7 @@
     display: none;
 }
 
-.color-orange {
+.c-orange {
     color: v.$naranja!important;
 }
 
@@ -20,16 +20,36 @@
     color: v.$amarillo!important;
 }
 
+.c-azulF {
+    color: v.$azulF!important;
+}
+
 .c-azul {
-    color: v.$azul;
+    color: v.$azul!important;
+}
+
+.c-gris {
+    color: v.$gris!important;
 }
 
 .c-rojo {
-    color: v.$naranja2;
+    color: v.$naranja2!important;
 }
 
 .c-rosa {
-    color: v.$rosa;
+    color: v.$rosa!important;
+}
+
+.c-white {
+    color: v.$blanco!important;
+}
+
+.c-black {
+    color: v.$negro!important;
+}
+
+.c-green {
+    color: v.$verde!important;
 }
 
 .t-y {
@@ -39,3 +59,4 @@
 .b-rojo {
     border: 2px solid v.$naranja;
 }
+

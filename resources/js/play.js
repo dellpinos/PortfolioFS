@@ -4,24 +4,24 @@
 
         // Map
         const brands = {
-            '0': ['fa-brands', 'fa-square-js'],
-            '1': ['fa-brands', 'fa-sass'],
-            '2': ['fa-brands', 'fa-css3'],
-            '3': ['fa-brands', 'fa-html5'],
-            '4': ['fa-brands', 'fa-php'],
-            '5': ['fa-brands', 'fa-git'],
-            '6': ['fa-brands', 'fa-github'],
-            '7': ['fa-brands', 'fa-laravel'],
-            '8': ['fa-brands', 'fa-galactic-republic'],
-            '9': ['fa-brands', 'fa-jedi-order'],
-            '10': ['fa-brands', 'fa-firefox-browser'],
-            '11': ['fa-brands', 'fa-apple'],
-            '12': ['fa-solid', 'fa-code'],
-            '13': ['fa-brands', 'fa-docker'],
-            '14': ['fa-brands', 'fa-stack-overflow'],
-            '15': ['fa-solid', 'fa-database'],
-            '16': ['fa-brands', 'fa-steam'],
-            '17': ['fa-brands', 'fa-slack']
+            '0': ['fa-brands', 'fa-square-js', 'c-ama'],
+            '1': ['fa-brands', 'fa-sass', 'c-rosa'],
+            '2': ['fa-brands', 'fa-css3', 'c-azulF'],
+            '3': ['fa-brands', 'fa-html5', 'c-rojo'],
+            '4': ['fa-brands', 'fa-php', 'c-azulF'],
+            '5': ['fa-brands', 'fa-git-alt', 'c-orange'],
+            '6': ['fa-brands', 'fa-github', 'c-black'],
+            '7': ['fa-brands', 'fa-laravel', 'c-rojo'],
+            '8': ['fa-brands', 'fa-galactic-republic', 'c-white'],
+            '9': ['fa-brands', 'fa-jedi-order', 'c-rojo'],
+            '10': ['fa-brands', 'fa-firefox-browser', 'c-azulF'],
+            '11': ['fa-brands', 'fa-apple', 'c-white'],
+            '12': ['fa-solid', 'fa-code', 'c-green'],
+            '13': ['fa-brands', 'fa-docker', 'c-azul'],
+            '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
+            '15': ['fa-solid', 'fa-database', 'c-gris'],
+            '16': ['fa-brands', 'fa-steam', 'c-azul'],
+            '17': ['fa-brands', 'fa-slack', 'c-white']
         };
 
         let firstSelect = '';
@@ -42,61 +42,68 @@
 
             cuadros[i].addEventListener('click', (e) => {
 
-                const clases = brands[arrayAleatorio[i]].join(" "); // mapeo los brands con el array aleatorio
+                if (e.target.tagName === "DIV") { // Evita el click en el icono
 
-                cuadros[i].innerHTML = `<i class="${clases}"></i>`; // asigna el nuevo icono
+                    const clases = brands[arrayAleatorio[i]].join(" "); // mapeo los brands con el array aleatorio
 
-                e.target.classList.add('play__icono-azul');
+                    cuadros[i].innerHTML = `<i class="${clases}"></i>`; // asigna el nuevo icono
 
-                if (!flag) {
-                    firstSelect = clases;
-                    firstElement = e.target;
-                    firstIndice = i;
-                    flag = 1;
+                    e.target.classList.add('play__icono-azul');
 
-                } else if (flag && firstIndice !== i) { // Evita presione el mismo cuadro dos veces
+                    if (!flag) {
+                        firstSelect = clases;
+                        firstElement = e.target;
+                        firstIndice = i;
+                        flag = 1;
 
-                    secondSelect = clases;
-                    secondElement = e.target;
+                    } else if (flag && firstIndice !== i) { // Evita presione el mismo cuadro dos veces
 
-                    if (firstSelect === secondSelect) {
+                        secondSelect = clases;
+                        secondElement = e.target;
 
-                        // Son iguales
+                        if (firstSelect === secondSelect) {
 
-                        arraySelec.push(firstElement);
-                        arraySelec.push(secondElement);
+                            // Son iguales
 
-                    } else {
+                            firstElement.classList.add('data-check');
+                            secondElement.classList.add('data-check');
 
-                        // No son iguales
+                            arraySelec.push(firstElement);
+                            arraySelec.push(secondElement);
+
+
+                        } else {
+
+                            // No son iguales
+
+                            setTimeout(() => {
+
+                                while (firstElement.firstChild && !firstElement.classList.contains('data-check')) {
+                                    firstElement.firstChild.remove(); // elimina el icono anterior
+                                }
+                                while (secondElement.firstChild && !secondElement.classList.contains('data-check')) {
+                                    secondElement.firstChild.remove(); // elimina el icono anterior
+                                }
+
+                            }, 500);
+                        }
 
                         setTimeout(() => {
 
-                            while (firstElement.firstChild) {
-                                firstElement.firstChild.remove(); // elimina el icono anterior
-                            }
-                            while (secondElement.firstChild) {
-                                secondElement.firstChild.remove(); // elimina el icono anterior
-                            }
+                            flag = 0;
 
+                            firstElement.classList.remove('play__icono-azul');
+                            secondElement.classList.remove('play__icono-azul');
+
+                            firstSelect = '';
+                            secondSelect = '';
+                            firstElement = '';
+                            secondElement = '';
                         }, 500);
                     }
 
-                    setTimeout(() => {
-
-                        flag = 0;
-
-                        firstElement.classList.remove('play__icono-azul');
-                        secondElement.classList.remove('play__icono-azul');
-
-                        firstSelect = '';
-                        secondSelect = '';
-                        firstElement = '';
-                        secondElement = '';
-                    }, 500);
+                    coincidencias();
                 }
-
-                coincidencias();
 
             });
         }
@@ -121,7 +128,7 @@
 
             return arrayAleatorio;
         }
-        
+
         function coincidencias() {
 
             arraySelec.forEach(elem => {
@@ -141,6 +148,8 @@
         }
 
         function gridCompletado() {
+
+
 
             // Gano
 

@@ -67,10 +67,10 @@
 
                 if (rect.top < window.innerHeight && rect.bottom >= 0) {
                     // El elemento está en la vista
-                    enlace.classList.add('color-orange');
+                    enlace.classList.add('c-orange');
                 } else {
                     // El elemento ya no está en la vista
-                    enlace.classList.remove('color-orange');
+                    enlace.classList.remove('c-orange');
                 }
             });
         });

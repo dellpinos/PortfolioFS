@@ -24,7 +24,7 @@
 
     &__icono {
 
-        color: v.$grisOscuro;
+
         border: .5px solid v.$grisOscuro;
 
         width: 7rem;
@@ -41,20 +41,24 @@
         &:hover {
 
 
-            color: rgba(v.$naranja, .5);
+            border: 1px solid rgba(v.$naranja, .7);
+            box-shadow: 1px 1px 5px 1px v.$naranja;
+            background-color: rgba(v.$naranja, .1);
             cursor: pointer;
-            //background-color: lighten(v.$grisOscuro, 10%);
+            border-radius: .5rem;
+
 
 
         }
     }
 
     &__icono-azul {
-        color: v.$azul!important;
+        color: v.$naranja!important;
     }
 
     &__icono-rojo {
-        color: v.$rojo!important;
+
+        background-color: lighten(v.$grisOscuro, 5%);
     }
 
     &__icono-victoria {
