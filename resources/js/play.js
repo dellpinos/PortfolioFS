@@ -2,7 +2,6 @@
 
     document.addEventListener('DOMContentLoaded', () => {
 
-
         // Map
         const brands = {
             '0': ['fa-brands', 'fa-square-js'],
@@ -25,150 +24,143 @@
             '17': ['fa-brands', 'fa-slack']
         };
 
-        // un disparador que genera el array
-
-        // Crear un array aleatorio con estos 18 numeros
-
-        // Un listener cuando el usuario presiona un boton para mostrar el brand correspondiente
-
-        function generarArray() {
-
-            const numeros = [...Array(18).keys()]; // Genera un array de números del 0 al 17
-            const arrayAleatorio = [];
-          
-            while (numeros.length > 0) {
-              const primerIndice = Math.floor(Math.random() * numeros.length); // Genera un índice aleatorio para el primer número
-              const numero1 = numeros.splice(primerIndice, 1)[0]; // Elimina el primer número del array original
-              arrayAleatorio.push(numero1);
-          
-              if (numeros.length === 0) break; // Si no quedan más números, termina
-          
-              const segundoIndice = Math.floor(Math.random() * numeros.length); // Genera un índice aleatorio para el segundo número
-              const numero2 = numeros.splice(segundoIndice, 1)[0]; // Elimina el segundo número del array original
-              arrayAleatorio.push(numero2);
-            }
-          
-            return arrayAleatorio;
-
-
-        }
-
-        const arrayAleatorio = generarArray();
-        console.log(arrayAleatorio);
-        /////////
-
-
-
-          
-
-        return;
-
-
-
-
-
-
-
-
-
-        /////////
-
-
-
-
         let firstSelect = '';
         let secondSelect = '';
+        let firstElement = '';
+        let secondElement = '';
+        let firstIndice = '';
         let flag = 0;
+        let contadorVictorias = 0;
         let arraySelec = [];
 
-        // Un array que guarde los resultados
-
-
-
-        // Juego memoria
-
+        const arrayAleatorio = generarArray();
         const cuadros = document.querySelectorAll('.play__icono');
 
-        cuadros.forEach(cuadro => {
+        // Comprueba las clases de los elementos clickeados, si no se clickea en el icono no hay clase que comparar
 
-            cuadro.addEventListener('click', (e) => {
+        for (let i = 0; i < cuadros.length; i++) {
 
-                //e.target.classList.add('b-rojo');
-                e.target.classList.add('c-azul');
+            cuadros[i].addEventListener('click', (e) => {
 
+                const clases = brands[arrayAleatorio[i]].join(" "); // mapeo los brands con el array aleatorio
 
+                cuadros[i].innerHTML = `<i class="${clases}"></i>`; // asigna el nuevo icono
+
+                e.target.classList.add('play__icono-azul');
 
                 if (!flag) {
-                    firstSelect = e.target;
-
+                    firstSelect = clases;
+                    firstElement = e.target;
+                    firstIndice = i;
                     flag = 1;
-                } else {
 
-                    secondSelect = e.target;
+                } else if (flag && firstIndice !== i) { // Evita presione el mismo cuadro dos veces
 
-                    console.log(firstSelect.classList[1] + "<<1 ");
-                    console.log(secondSelect.classList[1] + "<<2 ");
+                    secondSelect = clases;
+                    secondElement = e.target;
 
-                    if (firstSelect.classList[1] === secondSelect.classList[1]) {
+                    if (firstSelect === secondSelect) {
 
-                        arraySelec.push(firstSelect);
-                        arraySelec.push(secondSelect);
+                        // Son iguales
 
-
-                        console.log('iguales');
+                        arraySelec.push(firstElement);
+                        arraySelec.push(secondElement);
 
                     } else {
 
-                        console.log('no son iguales');
+                        // No son iguales
 
+                        setTimeout(() => {
+
+                            while (firstElement.firstChild) {
+                                firstElement.firstChild.remove(); // elimina el icono anterior
+                            }
+                            while (secondElement.firstChild) {
+                                secondElement.firstChild.remove(); // elimina el icono anterior
+                            }
+
+                        }, 500);
                     }
 
                     setTimeout(() => {
 
                         flag = 0;
-                        firstSelect.classList.remove('b-rojo');
-                        secondSelect.classList.remove('b-rojo');
 
-                        firstSelect.classList.remove('c-azul');
-                        secondSelect.classList.remove('c-azul');
-
+                        firstElement.classList.remove('play__icono-azul');
+                        secondElement.classList.remove('play__icono-azul');
 
                         firstSelect = '';
                         secondSelect = '';
+                        firstElement = '';
+                        secondElement = '';
                     }, 500);
-
-
                 }
-                // El cuadro se gira con una animacion
 
-                // Se hace visible el icono
+                coincidencias();
 
-                // Evalua a que flag para asignar la selección
-
-                // Busca coincidencia
-
-                // Mantener los coincidente sa la vista, de lo contrario reiniciar esos cuadros
-
-                // Evaluar si el jugador ha ganado
-
-                prueba();
-
-
-
-            });
-
-        });
-
-        function prueba() {
-
-            arraySelec.forEach(elem => {
-
-                elem.classList.add('c-rojo');
-
-                console.log(elem);
             });
         }
 
+
+        function generarArray() {
+            const numerosDisponibles = [];
+            const arrayAleatorio = [];
+
+            // Genera un array con numeros del 0 al 17
+            for (let i = 0; i <= 17; i++) {
+                numerosDisponibles.push(i, i);
+            }
+
+            // Genera un array con 36 numeros utilizando los disponibles (2 de cada uno)
+            for (let i = 0; i < 36; i++) {
+
+                const indice = Math.floor(Math.random() * numerosDisponibles.length); // Calcula el indice
+                const numeroElegido = numerosDisponibles.splice(indice, 1)[0]; // Extrae el numero del primeer array para evitar que se reutilice
+                arrayAleatorio.push(numeroElegido);
+            }
+
+            return arrayAleatorio;
+        }
+        
+        function coincidencias() {
+
+            arraySelec.forEach(elem => {
+
+                elem.classList.remove('play__icono-azul');
+                elem.classList.add('play__icono-rojo');
+
+
+            });
+
+            console.log(arraySelec);
+
+            if (arraySelec.length >= 36) {
+                gridCompletado();
+
+            }
+        }
+
+        function gridCompletado() {
+
+            // Gano
+
+            contadorVictorias++;
+
+            cuadros.forEach(cuadro => {
+                cuadro.classList.remove('play__icono-rojo');
+            });
+            cuadros.forEach(cuadro => {
+
+                setTimeout(() => {
+                    cuadro.classList.add('play__icono-victoria');
+                }, 250);
+
+            });
+
+            // imprimir boton de reinicio
+
+
+        }
     });
 
 })();

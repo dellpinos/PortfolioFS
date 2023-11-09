@@ -17,7 +17,7 @@
 
         // @include m.grid(6, .2rem);
         display: grid;
-        grid-template-columns: repeat(24, 5rem);
+        grid-template-columns: repeat(12, 7rem);
 
 
     }
@@ -27,10 +27,10 @@
         color: v.$grisOscuro;
         border: .5px solid v.$grisOscuro;
 
-        width: 5rem;
-        height: 5rem;
+        width: 7rem;
+        height: 7rem;
         background-color: v.$grisOscuro;
-        font-size: 3rem;
+        font-size: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,13 +41,24 @@
         &:hover {
 
 
-            color: lighten(v.$grisOscuro, 10%);
+            color: rgba(v.$naranja, .5);
             cursor: pointer;
-            background-color: lighten(v.$grisOscuro, 10%);
+            //background-color: lighten(v.$grisOscuro, 10%);
 
 
         }
+    }
 
+    &__icono-azul {
+        color: v.$azul!important;
+    }
 
+    &__icono-rojo {
+        color: v.$rojo!important;
+    }
+
+    &__icono-victoria {
+        color: v.$amarillo!important;
+        box-shadow: 1px 1px 5px 1px v.$amarillo inset;
     }
 }
