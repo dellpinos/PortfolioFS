@@ -1,0 +1,73 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.skills {
+
+    &__heading {
+       // padding-top: 7rem;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        margin: 6rem 8rem;
+        
+    }
+
+    &__card {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    &__contenedor-vector {
+        margin: 0 5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 10rem;
+        height: 10rem;
+
+        border-radius: 50%;
+
+        background-color: v.$grisOscuro;
+        box-shadow: 2px 2px 10px v.$naranja inset;
+        transition: box-shadow 1s ease-in-out;
+    
+        &:hover {
+            box-shadow: 2px 2px 10px v.$naranja inset,
+             2px 2px 20px 8px v.$naranja;
+
+
+    
+        }
+
+    }
+
+    &__vector {
+        font-size: 5rem;
+        color: v.$naranja;
+
+
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h3 {
+
+            font-size: 3rem;
+            margin: 2rem 0;
+        }
+        p {
+            padding: 0 2rem;
+        }
+
+    }
+}

@@ -1,0 +1,62 @@
+@use '../base/variables' as v;
+
+.nav-scroll {
+    padding-top: 69px;
+}
+
+.fijar-body {
+    overflow: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.c-orange {
+    color: v.$naranja!important;
+}
+
+.c-ama {
+    color: v.$amarillo!important;
+}
+
+.c-azulF {
+    color: v.$azulF!important;
+}
+
+.c-azul {
+    color: v.$azul!important;
+}
+
+.c-gris {
+    color: v.$gris!important;
+}
+
+.c-rojo {
+    color: v.$naranja2!important;
+}
+
+.c-rosa {
+    color: v.$rosa!important;
+}
+
+.c-white {
+    color: v.$blanco!important;
+}
+
+.c-black {
+    color: v.$negro!important;
+}
+
+.c-green {
+    color: v.$verde!important;
+}
+
+.t-y {
+    transform: translateY(-2rem);
+}
+
+.b-rojo {
+    border: 2px solid v.$naranja;
+}
+

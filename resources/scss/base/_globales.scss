@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+
+}
+
+body {
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: v.$fuente_textos;
+    margin: 0;
+
+}
+textarea, input, label, a {
+    font-family: v.$fuente_textos;
+}
+select, input[type="checkbox"] {
+    cursor: pointer;
+}
+input[type="radio"] {
+    cursor: pointer;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+  }
+  
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+p {
+    margin: 0;
+}

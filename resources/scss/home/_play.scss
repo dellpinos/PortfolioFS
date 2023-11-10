@@ -1,0 +1,68 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.play {
+
+    &__contenedor {
+
+        display: flex;
+        align-items: center;
+        background-color: v.$grisOscuro;
+
+    }
+
+    &__grid {
+        margin: 3rem auto 0 auto;
+
+        // @include m.grid(6, .2rem);
+        display: grid;
+        grid-template-columns: repeat(12, 7rem);
+
+
+    }
+
+    &__icono {
+
+
+        border: .5px solid v.$grisOscuro;
+
+        width: 7rem;
+        height: 7rem;
+        background-color: v.$grisOscuro;
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 5px 1px v.$negro inset;
+
+        transition: background-color .3s ease, color .3s ease;
+
+        &:hover {
+
+
+            border: 1px solid rgba(v.$naranja, .7);
+            box-shadow: 1px 1px 5px 1px v.$naranja;
+            background-color: rgba(v.$naranja, .1);
+            cursor: pointer;
+            border-radius: .5rem;
+
+
+
+        }
+    }
+
+    &__icono-azul {
+        color: v.$naranja!important;
+    }
+
+    &__icono-rojo {
+
+        background-color: lighten(v.$grisOscuro, 5%);
+    }
+
+    &__icono-victoria {
+        color: v.$amarillo!important;
+        box-shadow: 1px 1px 5px 1px v.$amarillo inset;
+    }
+}

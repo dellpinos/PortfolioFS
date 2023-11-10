@@ -1,0 +1,40 @@
+@use '../base/variables' as v;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 7rem 0;
+    background-color: v.$grisOscuro;
+    color: v.$blanco;
+    gap: 2rem;
+
+    p {
+        font-size: 2rem;
+    }
+
+    &__nombre {
+        color: v.$naranja2;
+
+    }
+
+    &__icono {
+
+        font-size: 6rem;
+        color: v.$naranja2;
+        transition: transform .6s ease-out, color .5s ease-out;
+
+        &:hover {
+
+            cursor: pointer;
+            transition: transform .6s ease-out, color .5s ease-out;
+            transform: rotate(360deg);
+            color: v.$naranja;
+        
+        }
+    }
+}
+
+
+
