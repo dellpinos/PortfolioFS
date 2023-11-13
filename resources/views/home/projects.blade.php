@@ -8,8 +8,8 @@
 
         <p id="img-all">Todos</p>
         <p id="img-php">PHP - SASS</p>
-        <p id="img-laravel">Laravel</p>
-        <p id="img-js" >JavaScript</p>
+        <p id="img-js">JavaScript - CSS</p>
+        <p id="img-laravel" >Laravel</p>
     
     </div>
 

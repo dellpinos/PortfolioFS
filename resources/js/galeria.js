@@ -9,60 +9,60 @@ import swiper from './swiper';
 
         // Informacion de cada Proyecto
         const imgFull = {
-            '0': {
-                'imgs': ['0', '1', '2', '3'],
-                'heading': "Bienes Raices",
-                'tecs': "PHP / Js"
-            },
             '1': {
-                'imgs': ['3', '4', '5'],
-                'heading': "Blog Cafe",
-                'tecs': "PHP / Js"
+                'imgs': ['0', '1', '2', '3'],
+                'heading': "Tus Listas",
+                'tecs': "Laravel - JavaScript - SASS"
             },
             '2': {
-                'imgs': ['6', '7', '8'],
-                'heading': "Blog Cafe",
-                'tecs': "PHP / Js"
+                'imgs': ['3', '4', '5'],
+                'heading': "TaskTrack",
+                'tecs': "PHP - JavaScript - SASS"
             },
             '3': {
-                'imgs': ['9', '10', '11', '12', '13'],
-                'heading': "Blog Cafe",
-                'tecs': "PHP / Js"
+                'imgs': ['6', '7', '8'],
+                'heading': "DevWebCamp",
+                'tecs': "PHP - JavaScript - SASS"
             },
             '4': {
-                'imgs': ['14', '15', '16'],
-                'heading': "Otro Nombre 2",
-                'tecs': "PHP / Js"
+                'imgs': ['9', '10', '11', '12', '13'],
+                'heading': "Blog Cafe",
+                'tecs': "HTML - CSS"
             },
             '5': {
-                'imgs': ['17', '18', '19'],
-                'heading': "Otro Nombre 3",
-                'tecs': "PHP"
+                'imgs': ['14', '15', '16'],
+                'heading': "Bienes Raices",
+                'tecs': "PHP - SASS"
             },
             '6': {
-                'imgs': ['20', '21', '22'],
-                'heading': "DevStagram",
-                'tecs': "Laravel"
+                'imgs': ['17', '18', '19'],
+                'heading': "AppSalón",
+                'tecs': "JavaScript - HTML - CSS"
             },
             '7': {
-                'imgs': ['23', '24', '25', '26'],
-                'heading': "Blog Cafe",
-                'tecs': "PHP / Js"
+                'imgs': ['20', '21', '22'],
+                'heading': "DevStagram",
+                'tecs': "Laravel - TailwindCSS"
             },
             '8': {
-                'imgs': ['27', '28', '29'],
-                'heading': "Blog Cafe 14",
-                'tecs': "PHP / Js / SASS"
+                'imgs': ['23', '24', '25', '26'],
+                'heading': "Festival",
+                'tecs': "JavaScript - CSS"
             },
+            // '8': {
+            //     'imgs': ['27', '28', '29'],
+            //     'heading': "Blog Cafe 14",
+            //     'tecs': "PHP / Js / SASS"
+            // },
 
         }
 
-        const imgAll = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+        const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
         // Filtros
-        const imgJs = ['0', '1', '2', '5'];
-        const imgLaravel = ['3', '6', '1'];
-        const imgPhp = ['4', '7', '8'];
+        const imgPhp = ['2', '3', '5', '6'];
+        const imgJs = ['1', '3', '2', '6', '8', '4'];
+        const imgLaravel = ['1', '7'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');
@@ -165,7 +165,6 @@ import swiper from './swiper';
                 titulo.classList.add('projects__info-titulo');
                 titulo.textContent = project.heading;
 
-
                 const tecs = document.createElement('P');
                 tecs.classList.add('projects__info-tecs');
                 tecs.textContent = project.tecs;
@@ -182,31 +181,42 @@ import swiper from './swiper';
                     mostrarImagen(project);
                 });
 
-
                 overlay.appendChild(containerInfo);
                 overlay.appendChild(enlace);
+
+                const webP = document.createElement('SOURCE');
+                webP.setAttribute('srcset', `img/thumb/${element}_thumb.webp`);
+                webP.setAttribute('type', 'image/webp');
+
+                const avif = document.createElement('SOURCE');
+                avif.setAttribute('srcset', `img/thumb/${element}_thumb.avif`);
+                avif.setAttribute('type', 'image/avif');
 
                 const img = document.createElement('IMG');
                 img.classList.add('projects__img');
                 img.setAttribute("loading", "lazy");
-                img.setAttribute("width", "400");
-                img.setAttribute("height", "350");
-                img.setAttribute("src", `img/thumb/${element}_thumb.png`);
+                img.setAttribute("width", "350");
+                img.setAttribute("height", "300");
+                img.setAttribute("src", `img/thumb/${element}_thumb.jpg`);
                 img.setAttribute("alt", "Imagen Galeria");
 
                 container.appendChild(overlay);
-                container.appendChild(img);
-                imagen.appendChild(container);
-                grid.appendChild(imagen);
+                imagen.appendChild(avif);
+                imagen.appendChild(webP);
+                imagen.appendChild(img);
+                
+                container.appendChild(imagen);
 
-                imagen.addEventListener('mouseenter', () => {
+                grid.appendChild(container);
+
+                container.addEventListener('mouseenter', () => {
 
                     img.classList.add('projects__img--oculto');
                     overlay.classList.add('projects__overlay--visible');
 
 
                 });
-                imagen.addEventListener('mouseleave', () => {
+                container.addEventListener('mouseleave', () => {
 
                     img.classList.remove('projects__img--oculto');
                     overlay.classList.remove('projects__overlay--visible');
