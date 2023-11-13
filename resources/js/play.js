@@ -31,16 +31,135 @@
         let firstIndice = '';
         let flag = 0;
         let contadorVictorias = 0;
+        let contadorClicks = 0;
         let arraySelec = [];
 
-        const arrayAleatorio = generarArray();
-        const cuadros = document.querySelectorAll('.play__icono');
+        let arrayAleatorio = generarArray();
+        let cuadros = document.querySelectorAll('.play__icono');
+        const grid = document.querySelector('.play__grid');
+        const desplegar = document.querySelector('#play-desplegar');
+
+        // clicks maximos por lvl
+        const lvl2 = 150;
+        const lvl3 = 120;
+        const lvl4 = 90;
+
+        desplegar.addEventListener('click', () => {
+
+            grid.classList.toggle('play__grid--activo');
+
+        });
+
+        function gameOver() {
+
+            while (desplegar.firstChild) {
+                desplegar.removeChild(desplegar.firstChild);
+            }
+
+            const gameOver = document.createElement('P');
+            gameOver.textContent = "Game Over";
+            gameOver.classList.add('play__game-over');
+
+            desplegar.appendChild(gameOver);
+
+            // recargar pagina
+            setTimeout(() => {
+                // location.reload();
+
+            }, 4000);
+
+
+        }
+
+        function lvlSuperado() {
+
+            // reiniciar todas las variables globales
+            firstSelect = '';
+            secondSelect = '';
+            firstElement = '';
+            secondElement = '';
+            firstIndice = '';
+            flag = 0;
+            contadorClicks = 0;
+            arraySelec = [];
+
+            // reiniciar estilos
+            cuadros.forEach(cuadro => {
+                cuadro.classList.remove('play__icono-victoria');
+                cuadro.classList.remove('data-check');
+                while (cuadro.firstChild) {
+                    cuadro.removeChild(cuadro.firstChild);
+
+                }
+            });
+
+            // crear un nuevo array aleatorio
+            arrayAleatorio = generarArray();
+
+        }
+
+        function activarContador() {
+
+            while (desplegar.firstChild) {
+                desplegar.removeChild(desplegar.firstChild);
+            }
+
+            desplegar.classList.add('play__desplegar--contadores');
+
+            const parrafoVictorias = document.createElement('P');
+            parrafoVictorias.classList.add('play__contador');
+            parrafoVictorias.textContent = "Victorias: " + contadorVictorias;
+
+            const parrafoClicks = document.createElement('P');
+            parrafoClicks.classList.add('play__contador');
+            parrafoClicks.id = 'play-contador-clicks'
+            if (contadorVictorias === 1) {
+
+                parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl2;
+            } else if (contadorVictorias === 2) {
+
+                parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl3;
+            } else if (contadorVictorias > 2) {
+
+                parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl4;
+            }
+
+            desplegar.appendChild(parrafoVictorias);
+            desplegar.appendChild(parrafoClicks);
+        }
 
         // Comprueba las clases de los elementos clickeados, si no se clickea en el icono no hay clase que comparar
 
         for (let i = 0; i < cuadros.length; i++) {
 
             cuadros[i].addEventListener('click', (e) => {
+
+                // contador de clicks
+                contadorClicks++;
+                if (contadorVictorias > 0) {
+
+                    const parrafoClicks = document.querySelector('#play-contador-clicks');
+
+                    if (contadorVictorias === 1) {
+
+                        parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl2;
+                        if (contadorClicks > lvl2) {
+                            gameOver();
+                        }
+                    } else if (contadorVictorias === 2) {
+
+                        parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl3;
+                        if (contadorClicks > lvl3) {
+                            gameOver();
+                        }
+                    } else if (contadorVictorias > 2) {
+
+                        parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl4;
+                        if (contadorClicks > lvl4) {
+                            gameOver();
+                        }
+                    }
+                }
 
                 if (e.target.tagName === "DIV") { // Evita el click en el icono
 
@@ -136,10 +255,7 @@
                 elem.classList.remove('play__icono-azul');
                 elem.classList.add('play__icono-rojo');
 
-
             });
-
-            console.log(arraySelec);
 
             if (arraySelec.length >= 36) {
                 gridCompletado();
@@ -149,11 +265,8 @@
 
         function gridCompletado() {
 
-
-
             // Gano
 
-            contadorVictorias++;
 
             cuadros.forEach(cuadro => {
                 cuadro.classList.remove('play__icono-rojo');
@@ -166,7 +279,15 @@
 
             });
 
-            // imprimir boton de reinicio
+            setTimeout(() => {
+
+                contadorVictorias++;
+                // reinicia variables y estilos
+                lvlSuperado();
+                // eliminar el icono y reemplazarlo por un parrafo o dos que cuenten victorias y clicks
+                activarContador();
+
+            }, 3000);
 
 
         }
