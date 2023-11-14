@@ -57,7 +57,7 @@
             }
 
             cuadros.forEach(cuadro => {
-                cuadro.classList.remove('play__icono-game-over');
+                cuadro.classList.add('play__icono-game-over');
             });
 
             const gameOver = document.createElement('P');
