@@ -6,20 +6,20 @@
         const brands = {
             '0': ['fa-brands', 'fa-square-js', 'c-ama'],
             '1': ['fa-brands', 'fa-sass', 'c-rosa'],
-            '2': ['fa-brands', 'fa-css3', 'c-azulF'],
+            '2': ['fa-brands', 'fa-css3', 'c-azul'],
             '3': ['fa-brands', 'fa-html5', 'c-rojo'],
-            '4': ['fa-brands', 'fa-php', 'c-azulF'],
+            '4': ['fa-brands', 'fa-php', 'c-azul'],
             '5': ['fa-brands', 'fa-git-alt', 'c-orange'],
             '6': ['fa-brands', 'fa-github', 'c-black'],
             '7': ['fa-brands', 'fa-laravel', 'c-rojo'],
             '8': ['fa-brands', 'fa-galactic-republic', 'c-white'],
             '9': ['fa-brands', 'fa-jedi-order', 'c-rojo'],
-            '10': ['fa-brands', 'fa-firefox-browser', 'c-azulF'],
+            '10': ['fa-brands', 'fa-firefox-browser', 'c-azul'],
             '11': ['fa-brands', 'fa-apple', 'c-white'],
             '12': ['fa-solid', 'fa-code', 'c-green'],
             '13': ['fa-brands', 'fa-docker', 'c-azul'],
             '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
-            '15': ['fa-solid', 'fa-database', 'c-gris'],
+            '15': ['fa-solid', 'fa-database', 'c-black'],
             '16': ['fa-brands', 'fa-steam', 'c-azul'],
             '17': ['fa-brands', 'fa-slack', 'c-white']
         };
@@ -56,6 +56,10 @@
                 desplegar.removeChild(desplegar.firstChild);
             }
 
+            cuadros.forEach(cuadro => {
+                cuadro.classList.remove('play__icono-game-over');
+            });
+
             const gameOver = document.createElement('P');
             gameOver.textContent = "Game Over";
             gameOver.classList.add('play__game-over');
@@ -63,10 +67,10 @@
             desplegar.appendChild(gameOver);
 
             // recargar pagina
-            setTimeout(() => {
+            // setTimeout(() => {
                 // location.reload();
 
-            }, 4000);
+            // }, 4000);
 
 
         }
@@ -265,9 +269,7 @@
 
         function gridCompletado() {
 
-            // Gano
-
-
+            // Ganador
             cuadros.forEach(cuadro => {
                 cuadro.classList.remove('play__icono-rojo');
             });
@@ -287,7 +289,7 @@
                 // eliminar el icono y reemplazarlo por un parrafo o dos que cuenten victorias y clicks
                 activarContador();
 
-            }, 3000);
+            }, 2500);
 
 
         }

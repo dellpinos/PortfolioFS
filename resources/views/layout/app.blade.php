@@ -8,7 +8,7 @@
 
     <meta name="description" content="Portfolio desarrollador web">
 
-    {{-- <link rel="icon" href="{{ asset('img/LogoSinFondo.png') }}" type="image/x-icon"> --}}
+    <link rel="icon" href="{{ asset('img/logoPortfolio.png') }}" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

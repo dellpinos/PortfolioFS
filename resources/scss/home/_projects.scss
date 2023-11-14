@@ -171,14 +171,14 @@
     &__slide-contenedor {
 
         display: flex;
-        background-color: v.$blanco;
+        background-color: rgba(v.$negro, .7);
         align-items: center;
 
         picture {
             display: flex;
             justify-content: center;
 
-            max-width: 80rem;
+            max-width: 110rem;
         }
 
     }

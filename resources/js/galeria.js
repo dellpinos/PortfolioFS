@@ -5,61 +5,60 @@ import swiper from './swiper';
 
     document.addEventListener('DOMContentLoaded', () => {
 
-        let imgVisibles = [];
-
         // Informacion de cada Proyecto
         const imgFull = {
             '1': {
-                'imgs': ['0', '1', '2', '3'],
-                'heading': "Tus Listas",
+                'imgs': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+                'heading': "TusListas",
                 'tecs': "Laravel - JavaScript - SASS"
             },
             '2': {
-                'imgs': ['3', '4', '5'],
+                'imgs': ['14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'],
                 'heading': "TaskTrack",
                 'tecs': "PHP - JavaScript - SASS"
             },
             '3': {
-                'imgs': ['6', '7', '8'],
+                'imgs': ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
                 'heading': "DevWebCamp",
                 'tecs': "PHP - JavaScript - SASS"
             },
             '4': {
-                'imgs': ['9', '10', '11', '12', '13'],
+                'imgs': ['37', '38', '39', '40', '41', '42'],
                 'heading': "Blog Cafe",
                 'tecs': "HTML - CSS"
             },
             '5': {
-                'imgs': ['14', '15', '16'],
+                'imgs': ['43', '44', '45', '46', '47', '48', '49', '50'],
                 'heading': "Bienes Raices",
                 'tecs': "PHP - SASS"
             },
             '6': {
-                'imgs': ['17', '18', '19'],
+                'imgs': ['51', '52', '53', '54', '55'],
                 'heading': "AppSalón",
                 'tecs': "JavaScript - HTML - CSS"
             },
             '7': {
-                'imgs': ['20', '21', '22'],
+                'imgs': ['56', '57', '58', '59', '60', '61'],
                 'heading': "DevStagram",
                 'tecs': "Laravel - TailwindCSS"
             },
             '8': {
-                'imgs': ['23', '24', '25', '26'],
+                'imgs': ['62', '63', '64', '65'],
                 'heading': "Festival",
                 'tecs': "JavaScript - CSS"
             },
             // '8': {
-            //     'imgs': ['27', '28', '29'],
-            //     'heading': "Blog Cafe 14",
-            //     'tecs': "PHP / Js / SASS"
+            //     'imgs': [''],
+            //     'heading': "",
+            //     'tecs': ""
             // },
 
         }
 
-        const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
-
+        let imgVisibles = [];
+        
         // Filtros
+        const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
         const imgPhp = ['2', '3', '5', '6'];
         const imgJs = ['1', '3', '2', '6', '8', '4'];
         const imgLaravel = ['1', '7'];
@@ -221,12 +220,8 @@ import swiper from './swiper';
                     img.classList.remove('projects__img--oculto');
                     overlay.classList.remove('projects__overlay--visible');
                 });
-
-
             });
         }
-
-        ///////
 
         function mostrarImagen(array) {
 
@@ -241,32 +236,10 @@ import swiper from './swiper';
 
             cargarImagenes(array, contenedorSlider, nav, overlay);
 
-            // Boton para cerrar Ventana Modal
-
-            // const cerrarModal = document.querySelector('#projects-btn-modal');
-
-            // const cerrarModal = document.createElement('P');
-            // cerrarModal.classList.add('projects__btn-cerrar');
-
-
-            // cerrarModal.onclick = function () {
-            //     const body = document.querySelector('body');
-            //     body.classList.remove('fijar-body');
-
-            //     while (contenedorSlider.firstChild) {
-            //         contenedorSlider.firstChild.remove();
-            //     }
-            //     nav.classList.remove('display-none');
-            //     overlay.classList.add('display-none');
-            //     overlay.classList.remove('projects__overlay-gde');
-            // };
-
             // Añadirlo al html
             const body = document.querySelector('body');
             body.appendChild(overlay);
             body.classList.add('fijar-body');
-
-            swiper.update();
 
         }
 
@@ -300,7 +273,6 @@ import swiper from './swiper';
 
                 cerrarModal.onclick = function () {
 
-                    console.log("eliminar");
                     const body = document.querySelector('body');
                     body.classList.remove('fijar-body');
 
@@ -317,9 +289,8 @@ import swiper from './swiper';
                 btnContenedor.appendChild(cerrarModal);
                 info.appendChild(btnContenedor);
 
-
                 const imagen = document.createElement('picture');
-                // imagen.classList.add('swiper-slide');
+
                 imagen.innerHTML = `
                     <source srcset="img/grande/${imgs[i]}.avif" type="image/avif">
                     <source srcset="img/grande/${imgs[i]}.webp" type="image/webp">
@@ -331,70 +302,7 @@ import swiper from './swiper';
 
                 swiperSecundario.appendChild(contenedor);
 
-
             }
-            //console.log(info);
-
         }
-
-
-        ////////
-
-
-        // function mostrarImagen(array) {
-
-        //     const swiperPrincipal = document.createElement('DIV');
-        //     swiperPrincipal.classList.add('swiper', 'slider');
-
-        //     const swiperSecundario = document.createElement('DIV');
-        //     swiperSecundario.classList.add('swiper-wrapper'); // Contiene las imagenes, un array de pictures
-
-        //     const paginacion = document.createElement('DIV');
-        //     paginacion.classList.add('swiper-paginacion');
-
-        //     const btnPrev = document.createElement('DIV');
-        //     btnPrev.classList.add('swiper-button-prev');
-
-        //     const btnNext = document.createElement('DIV');
-        //     btnNext.classList.add('swiper-button-next');
-
-        //     swiperPrincipal.appendChild(swiperSecundario);
-        //     swiperPrincipal.appendChild(paginacion);
-        //     swiperPrincipal.appendChild(btnPrev);
-        //     swiperPrincipal.appendChild(btnNext);
-
-        //     cargarImagenes(array, swiperSecundario);
-
-        //     // Crea overlay con la imagen
-        //     const overlay = document.createElement('DIV');
-        //     overlay.appendChild(swiperPrincipal);
-        //     overlay.classList.add('projects__overlay-gde');
-        //     overlay.onclick = function () {
-        //         // const body = document.querySelector('body');
-        //         // body.classList.remove('fijar-body');
-        //         // overlay.remove();
-        //     }
-
-        //     // Boton para cerrar Ventana Modal
-        //     const cerrarModal = document.createElement('P');
-        //     cerrarModal.textContent = 'X';
-        //     cerrarModal.classList.add('btn-cerrar');
-        //     cerrarModal.onclick = function () {
-        //         const body = document.querySelector('body');
-        //         body.classList.remove('fijar-body');
-        //         overlay.remove();
-        //     };
-        //     overlay.appendChild(cerrarModal);
-
-        //     // Añadirlo al html
-        //     const body = document.querySelector('body');
-        //     body.appendChild(overlay);
-        //     body.classList.add('fijar-body');
-
-
-        // }
-
-
-
     });
 })();
