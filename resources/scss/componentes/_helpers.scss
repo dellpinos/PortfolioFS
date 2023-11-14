@@ -4,23 +4,9 @@
     padding-top: 69px;
 }
 
-.alerta__error {
-
-    font-size: 1.2rem;
-    margin: .3rem 0 .3rem 0;
-    border-radius: .5rem;
-    padding: .5rem;
-    text-align: center;
-    color: v.$blanco;
-    background-color: v.$naranja2;
-
+.no-scroll {
+    overflow-y: hidden;
 }
-
-.borde__error {
-
-    border-color: v.$naranja2;
-}
-
 
 .fijar-body {
     overflow: hidden;

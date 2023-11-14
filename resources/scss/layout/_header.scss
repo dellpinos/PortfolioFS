@@ -41,7 +41,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         // Bg - cubos - rosa
@@ -49,16 +49,20 @@
         // background: linear-gradient(90deg, rgba(231, 114, 239, 0.4976584383753502) 2%, rgba(239, 68, 68, 0.5004595588235294) 62%);
 
         // Bg - lineas - oscuro
-       // background: rgb(68,68,68);
-       // background: linear-gradient(90deg, rgba(68,68,68,0.3996192226890757) 2%, rgba(68,68,68,0.7049413515406162) 62%);
+        // background: rgb(68,68,68);
+        // background: linear-gradient(90deg, rgba(68,68,68,0.3996192226890757) 2%, rgba(68,68,68,0.7049413515406162) 62%);
 
-       // Bg - lineas - claro
-       background: rgb(68,68,68);
-       background: linear-gradient(90deg, rgba(68,68,68,0.35) 2%, rgba(68,68,68,0.5) 62%);
+        // Bg - lineas - claro
+        background: rgb(68, 68, 68);
+        background: linear-gradient(90deg, rgba(68, 68, 68, 0.35) 2%, rgba(68, 68, 68, 0.5) 62%);
+
+        @include m.tablet {
+            justify-content: center
+        }
     }
 
     &__texto {
-        @include m.texto-fluido(1.6rem, 5rem);
+        @include m.texto-fluido(1.4rem, 5rem);
         font-family: v.$fuente_headings;
         color: v.$blanco;
         font-weight: v.$regular;
@@ -66,11 +70,9 @@
     }
 
     &__nombre {
-        // font-weight: v.$bold;
-        //  color: v.$amarillo;
         color: darken(v.$naranja, 5%);
-       // color: v.$naranja;
-         font-size: 5.5rem;
+        @include m.texto-fluido(1.4rem, 5.5rem);
+        
     }
 
     &__contenedor-boton {
@@ -79,16 +81,14 @@
         align-items: center;
         gap: 2rem;
         width: auto;
+        margin-top: 4rem;
 
     }
-
-
 
     &__boton {
         display: flex;
         align-items: center;
         font-size: 1.6rem;
-
         color: v.$blanco;
 
         border: 2px solid v.$blanco;
@@ -103,10 +103,9 @@
         }
 
         &:hover {
-            //sbackground-color: rgba(v.$amarillo, 0.5); // convierte a rgba un color hexa
 
             background-color: rgba(v.$naranja, 0.5);
-            // background-color: v.$rosa;
+
 
             i {
                 transform: rotate(450deg);
@@ -123,32 +122,75 @@
 
     }
 
-    &__contenido-video {}
+    &__contenido-video {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
-    &__contenido-header {}
+
+        @include m.tablet {
+            height: auto;
+        }
+    }
+
+    &__contenido-header {
+
+        &--activo {
+            height: 100vh;
+            overflow: hidden;
+
+        }
+    }
 
     &__nav {
 
-
-        display: flex;
         gap: 6rem;
         font-size: 2rem;
-        padding: 2rem 6rem;
-         background-color: v.$grisOscuro;
-
-       // border-bottom: 4px solid v.$naranja2;
-
+        background-color: v.$grisOscuro;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 4rem;
+        height: 100%;
+        
+        @include m.tablet {
+            justify-content: flex-start;
+            padding: 2rem 6rem;
+        }
+        
         a {
+            display: none;
             font-weight: v.$regular;
             color: v.$blanco;
-
+            
             transition: color .3s ease-out;
-
+            
             &:hover {
-
                 color: v.$naranja;
-
+                
             }
+            
+            @include m.tablet { /// Cambia navegacion por un icono
+                display: block;
+            }
+        }
+
+
+    }
+
+    &__nav-menu-movil {
+        display: block;
+        color: v.$blanco;
+        font-size: 4.5rem;
+        transition: transform 1s ease;
+
+        @include m.tablet {
+            display: none!important;
+        }
+
+        &--activo {
+            transform: rotate(90deg);
+
         }
     }
 

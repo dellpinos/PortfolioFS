@@ -9,10 +9,31 @@
     function iniciarApp() {
 
         navegacionFija();
+        navegacionMovil();
         scrollNav();
         enlaceActivo();
         barraCarga();
 
+    }
+
+    function navegacionMovil() {
+
+        const barra = document.querySelector('.header__contenido-header');
+        const btnMovil = document.querySelector('.header__nav-menu-movil');
+        const nav = document.querySelector('.header__nav');
+        const body = document.querySelector('body');
+
+        btnMovil.addEventListener('click', () => {
+            // console.log('click');
+
+
+            // btnMovil.classList.toggle('header__nav-menu-movil--activo');
+
+            // barra.classList.toggle('header__contenido-header--activo');
+            // body.classList.toggle('.no-scroll');
+            // barra.classList.add('fijo');
+
+        });
     }
 
     function navegacionFija() {
