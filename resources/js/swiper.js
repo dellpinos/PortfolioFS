@@ -4,10 +4,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 
-
-
-
-
 const opciones = {
     
     slidesPerView: 1,

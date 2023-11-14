@@ -1,5 +1,5 @@
 
-<h2 class="skills__heading" id="skills" data-aos="flip-down" >Perfil</h2>
+<h2 class="skills__heading" id="skills" data-aos="fade-right" >Perfil</h2>
 
 <div class="skills__grid">
 
