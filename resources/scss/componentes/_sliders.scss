@@ -1,0 +1,28 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.slider {
+    // width: 70rem;
+    // height: 50rem;
+    // height: 65rem;
+    max-height: 65rem;
+    max-width: 95rem;
+
+
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: v.$naranja!important;
+    display: none!important;
+
+    @include m.tablet {
+        display: block!important;
+    }
+
+}
+.swiper-pagination {
+    color: v.$blanco!important;
+}

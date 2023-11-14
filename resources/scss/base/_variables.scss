@@ -1,10 +1,9 @@
 
 // Fuentes
-// $fuente_textos: 'Roboto', sans-serif;
-// $fuente_headings: 'Montserrat', sans-serif;
+$fuente_textos: 'Raleway', sans-serif;
+$fuente_headings: 'Open Sans', sans-serif;
 
-
-$light: 300;
+$light: 200;
 $regular: 400;
 $bold: 700;
 $black: 900;
@@ -16,31 +15,30 @@ $tablet: 770px;
 $desktop: 1024px;
 
 // Colores
-
 $blanco: #FFFFFF;
 $negro: #000;
 
-// $blancoFondo: #F7F7F7;
-// $grisOscuroVerde: #283F47;
-// $grisOscuroAzul: #1f2937;
-// $grisMedio: #374251;
-// $grisClaro: #6B7280;
-// $grisBlanco: #9CA3AF;
-// $grisBlancoClaro: #E6E8ED;
+$amarillo: #fecd4d;
+$dorado: #ad9245;
+$violeta: #8c41e5;
+$rosa: #e772ef;
+$azul: #5e81b0;
+$azulF: #1857b5;
+$naranja: #ff735c;
 
-// $gris: #64748B;
-// $gris-claro: #F8FAFC;
+$rojo: #EF4444;
+$verde: #078F22;
 
-// $azul: #0284C7;
-// $rojo: #EF4444;
-// $verde: #078F22;
-// $amarillo: #D9A421;
-// $naranja: #ffa500;
-
-// $azulSobrio: #025c99;
-// $rojoSobrio: #c42323;
-// $verdeSobrio: #086e29;
-// $amarilloSobrio: #b3881c;
-// $naranjaSobrio: #ff8000;
+$grisClaro: #dbdbdb;
+$gris: #7c7c7c;
+$grisOscuro: #444444;
 
 $separacion: 5rem;
+
+// Otros colores
+$naranja2: #D52F1E;
+$naranja3: #CE2227;
+$magenta: #BB002C;
+$rosa: #CC3B6C;
+
+$azulTL: #1f2937;

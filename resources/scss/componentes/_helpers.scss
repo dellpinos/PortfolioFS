@@ -1,0 +1,80 @@
+@use '../base/variables' as v;
+
+.nav-scroll {
+    padding-top: 69px;
+}
+
+.alerta__error {
+
+    font-size: 1.2rem;
+    margin: .3rem 0 .3rem 0;
+    border-radius: .5rem;
+    padding: .5rem;
+    text-align: center;
+    color: v.$blanco;
+    background-color: v.$naranja2;
+
+}
+
+.borde__error {
+
+    border-color: v.$naranja2;
+}
+
+
+.fijar-body {
+    overflow: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.c-orange {
+    color: v.$naranja!important;
+}
+
+.c-ama {
+    color: v.$amarillo!important;
+}
+
+.c-azulF {
+    color: v.$azulF!important;
+}
+
+.c-azul {
+    color: v.$azul!important;
+}
+
+.c-gris {
+    color: v.$gris!important;
+}
+
+.c-rojo {
+    color: v.$naranja2!important;
+}
+
+.c-rosa {
+    color: v.$rosa!important;
+}
+
+.c-white {
+    color: v.$blanco!important;
+}
+
+.c-black {
+    color: v.$negro!important;
+}
+
+.c-green {
+    color: v.$verde!important;
+}
+
+.t-y {
+    transform: translateY(-2rem);
+}
+
+.b-rojo {
+    border: 2px solid v.$naranja;
+}
+

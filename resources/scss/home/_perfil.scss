@@ -1,0 +1,72 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.perfil {
+
+    &__contenedor {
+        @include m.grid(2, 2rem)
+
+    }
+
+    &__contenedor-desc {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+            font-size: 3rem;
+            margin: 2rem 0 0 0;
+            text-align: center;
+        }
+
+
+        p {
+            padding: 2rem;
+            text-align: center;
+
+        }
+
+    }
+
+    &__contenedor-img {
+
+        img {
+
+            width: 40rem;
+            height: 40rem;
+        }
+        margin: 0 auto;
+
+        background-image: url(../img/bg_8.png);
+        background-repeat: no-repeat;
+
+    }
+
+    &__listado {
+
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        gap: 1rem;
+        font-size: 1.8rem;
+        width: 80%;
+
+        li {
+
+            padding: .5rem 1rem .5rem 2rem;
+            color: v.$blanco;
+            font-weight: v.$bold;
+        }
+
+        & :nth-child(odd) {
+            background-color: v.$naranja3;
+        }
+        & :nth-child(even) {
+
+            background-color: v.$naranja;
+        }
+
+    }
+}

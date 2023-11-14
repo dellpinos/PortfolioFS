@@ -1,0 +1,129 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.play {
+
+    &__contenedor {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: v.$grisOscuro;
+
+    }
+
+    &__desplegar {
+        margin-top: 3rem;
+        padding: 1rem;
+        width: 84rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 1rem;
+        border: 1px solid rgba(v.$naranja, .2);
+        color: rgba(v.$naranja, .2);
+        transition: color .5s ease, border .5s ease;
+        
+        &:hover {
+            cursor: pointer;
+            border: 1px solid rgba(v.$naranja, .5);
+            color: v.$naranja;
+            transition: color .5s ease, border .5s ease;
+            
+        }
+
+        &--contadores {
+            justify-content: space-between;
+            border: 1px solid rgba(v.$amarillo, .5);
+            padding: 1.7rem 3rem;
+        }
+
+        &--gameOVer {
+
+            border: 1px solid rgba(v.$rojo, .5);
+
+        }
+    }
+
+    &__game-over {
+        color: v.$rojo;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: v.$bold;
+        width: 100%;
+
+    }
+
+    &__desplegar-icono {
+        font-size: 5rem;
+
+    }
+
+    &__grid {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 3rem auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(12, 7rem);
+
+        transition: max-height 1s ease, opacity 1.5s ease;
+
+    }
+
+    &__grid--activo {
+        max-height: 25rem;
+        opacity: 1;
+
+        transition: max-height 1s ease, opacity 1.5s ease;
+
+    }
+
+    &__contador {
+        font-size: 2rem;
+        color: v.$amarillo;
+    }
+
+    &__icono {
+
+        border: .5px solid v.$grisOscuro;
+
+        width: 7rem;
+        height: 7rem;
+        background-color: v.$grisOscuro;
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 5px 1px v.$negro inset;
+        transition: background-color .3s ease, color .3s ease;
+
+        &:hover {
+
+            border: 1px solid rgba(v.$naranja, .7);
+            box-shadow: 1px 1px 5px 1px v.$naranja;
+            background-color: rgba(v.$naranja, .1);
+            cursor: pointer;
+            border-radius: .5rem;
+
+        }
+    }
+
+    &__icono-azul {
+        color: v.$naranja!important;
+    }
+
+    &__icono-rojo {
+
+        background-color: lighten(v.$grisOscuro, 5%);
+    }
+
+    &__icono-victoria {
+        color: v.$amarillo!important;
+        box-shadow: 1px 1px 5px 1px v.$amarillo inset;
+    }
+
+    &__icono-game-over {
+        color: v.$naranja2!important;
+        box-shadow: 1px 1px 5px 1px v.$naranja2 inset!important;
+    }
+}
