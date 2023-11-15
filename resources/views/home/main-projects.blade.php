@@ -4,7 +4,7 @@
 
     <div class="main-projects__contenedor">
         <div class="main-projects__grid">
-            <div class="main-projects__card main-projects__tl" data-aos="flip-left">
+            <div class="main-projects__card main-projects__tl" data-aos="flip-right">
                 <div class="main-projects__contenedor-heading">
 
                     <div class="main-projects__contenedor-img">
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="main-projects__card main-projects__tt" data-aos="flip-right">
+            <div class="main-projects__card main-projects__tt" data-aos="flip-left">
                 <div class="main-projects__contenedor-heading">
 
                     <div class="main-projects__contenedor-img">

@@ -30,11 +30,11 @@
 
         @if (session('contact_success'))
             <div class="header__alert header__alert--success">
-                {{session('contact_success')}}
+                {{ session('contact_success') }}
             </div>
         @elseif (session('contact_error'))
             <div class="header__alert header__alert--error">
-                {{ session('contact_error')}}
+                {{ session('contact_error') }}
             </div>
         @endif
 
@@ -74,7 +74,7 @@
         <div class="header__contenido-header">
             <nav class="header__nav">
 
-                    <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
+                <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
 
                 <a class="scroll-smooth" href="#skills">Perfil</a>
                 <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>

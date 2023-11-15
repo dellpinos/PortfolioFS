@@ -43,6 +43,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        z-index: 99;
 
         // Bg - cubos - rosa
         // background: rgb(231, 114, 239);
@@ -137,8 +138,9 @@
     &__contenido-header {
 
         &--activo {
-            height: 100vh;
-            overflow: hidden;
+
+            // height: 100vh;
+
 
         }
     }

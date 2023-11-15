@@ -23,15 +23,47 @@
         const nav = document.querySelector('.header__nav');
         const body = document.querySelector('body');
 
+
+
+
+
         btnMovil.addEventListener('click', () => {
             // console.log('click');
+            btnMovil.classList.toggle('header__nav-menu-movil--activo');
+
+            // scrollea hasta dejar la barra en la parte superior de la pantalla
+            if (barra) {
+                let rect = barra.getBoundingClientRect();
+                let scrollTop = document.documentElement.scrollTop;
+                let targetPosition = rect.top + scrollTop;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+
+            // body.classList.remove('no-scroll');
+
+            // window.addEventListener('scroll', () => {
+
+            //     if(barra.getBoundingClientRect().top === 0) {
+    
+            //         body.classList.add('no-scroll');
+            //     }
+            // })
 
 
-            // btnMovil.classList.toggle('header__nav-menu-movil--activo');
+
+
+            // - cambio el dns de staging-dellpinos.com (tuslistas) a tuslistas.staging-dellpinos.com
+            // - cree el nuevo subdomio
+            // cambie los dominios, cuidado con el ssl
+
+
 
             // barra.classList.toggle('header__contenido-header--activo');
-            // body.classList.toggle('.no-scroll');
-            // barra.classList.add('fijo');
+            //barra.classList.add('fijo');
 
         });
     }
@@ -107,15 +139,13 @@
 
         function actualizarLineaCarga() {
 
-            console.log("scroll");
             const alturaPagina = document.documentElement.scrollHeight;
             const alturaVentana = window.innerHeight;
             const posicionUsuario = window.scrollY;
             // Calcula el porcentaje de progreso del usuario
             const porcentajeProgreso = (posicionUsuario / (alturaPagina - alturaVentana)) * 100;
 
-            
-    
+
             // Aplica el porcentaje de progreso como ancho de la línea
             barra.style.width = `${porcentajeProgreso}%`;
 
