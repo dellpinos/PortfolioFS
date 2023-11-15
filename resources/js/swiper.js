@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 const opciones = {
     
     slidesPerView: 1,
-    spaceBetween: 500,
+    spaceBetween: 30,
     freeMode: false,
     loop: false,
     watchOverflow: true,
@@ -24,7 +24,24 @@ const opciones = {
         prevEl: '.swiper-button-prev',
         hideOnClick: false,
         
-    }
+    },
+    breakpoints: {
+
+        // 320: {
+        //   slidesPerView: 2,
+        //   spaceBetween: 20
+        // },
+
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 500
+        },
+
+        // 640: {
+        //   slidesPerView: 4,
+        //   spaceBetween: 40
+        // }
+      }
 }
 
 const swiper = new Swiper('.swiper', opciones);

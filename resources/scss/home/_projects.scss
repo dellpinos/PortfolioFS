@@ -213,14 +213,23 @@
         display: flex;
         background-color: rgba(v.$negro, .7);
         align-items: center;
+        max-width: 30rem;
+
+
+        @include m.tablet {
+            max-width: 110rem;
+        }
+
 
         picture {
             display: flex;
             justify-content: center;
-
+            height: 15rem;
+            
             max-width: 30rem;
             
             @include m.tablet {
+                height: 50rem;
                 max-width: 110rem;
                 
             }
@@ -233,9 +242,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 1rem;
         background-color: v.$blanco;
-        gap: 1rem;
+        padding: .5rem;
+        gap: .5rem;
+
+        
+        @include m.tablet {
+            padding: 1rem;
+            gap: 1rem;
+        }
 
 
     }
@@ -243,11 +258,13 @@
     &__slide-heading {
 
         color: v.$negro;
-        font-size: 2.5rem;
+        font-size: 1.6rem;
         margin: 0;
-
-
-
+        
+        @include m.tablet {
+            font-size: 2.5rem;
+            
+        }
     }
 
     &__slide-tecs {
@@ -257,20 +274,28 @@
 
     &__btn-contenedor {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        
+        @include m.tablet {
+            justify-content: flex-end;
+            
+        }
     }
     
     &__btn-cerrar {
         
         line-height: 0;
-
-
         width: fit-content;
-        font-size: 4rem;
+        font-size: 2.5rem;
         color: v.$negro;
         cursor: pointer;
         transition: color .3s ease;
+        margin-top: 3rem;
 
+        @include m.tablet {
+            font-size: 4rem;
+            margin: 0;
+        }
 
         &:hover {
             color: rgba(v.$gris, 0.5);

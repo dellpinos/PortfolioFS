@@ -297,7 +297,8 @@ import swiper from './swiper';
                 imagen.innerHTML = `
                     <source srcset="img/grande/${imgs[i]}.avif" type="image/avif">
                     <source srcset="img/grande/${imgs[i]}.webp" type="image/webp">
-                    <img loading="lazy" height="500" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
+                    <img loading="lazy" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
+                    <div class="swiper-lazy-preloader"></div>
                 `;
 
                 contenedor.appendChild(imagen);
