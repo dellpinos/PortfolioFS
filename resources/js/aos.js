@@ -9,20 +9,17 @@ import 'aos/dist/aos.css';
 
 
     // En pantalas pequeñas reemplaza los fade para evitar el desplzamiento horizontal
-    // if(anchoPantalla <= 768) {
+    if(anchoPantalla <= 768) {
 
-    //   const fades = document.querySelectorAll('[data-aos="fade-right"], [data-aos="fade-left"]');
+      const fades = document.querySelectorAll('[data-aos="fade-right"], [data-aos="fade-left"]');
 
-    //   fades.forEach( element => {
+      fades.forEach( element => {
   
-    //     element.setAttribute('data-aos', 'flip-up');
+        element.setAttribute('data-aos', 'flip-up');
   
-    //   });
+      });
 
-    // }
-
-
-
+    }
 
     let config = {
               // Global settings:
