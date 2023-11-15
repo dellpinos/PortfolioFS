@@ -59,8 +59,11 @@ import swiper from './swiper';
         
         // Filtros
         const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
+        // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
+        // Js - CSS
         const imgJs = ['1', '3', '2', '6', '8', '4'];
+        // Laravel
         const imgLaravel = ['1', '7'];
 
         const filtAll = document.querySelector('#img-all');
@@ -294,7 +297,8 @@ import swiper from './swiper';
                 imagen.innerHTML = `
                     <source srcset="img/grande/${imgs[i]}.avif" type="image/avif">
                     <source srcset="img/grande/${imgs[i]}.webp" type="image/webp">
-                    <img loading="lazy" height="500" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
+                    <img loading="lazy" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
+                    <div class="swiper-lazy-preloader"></div>
                 `;
 
                 contenedor.appendChild(imagen);

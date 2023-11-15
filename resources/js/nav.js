@@ -21,21 +21,17 @@
         const barra = document.querySelector('.header__contenido-header');
         const btnMovil = document.querySelector('.header__nav-menu-movil');
         const nav = document.querySelector('.header__nav');
-        const body = document.querySelector('body');
-
-
-
 
 
         btnMovil.addEventListener('click', () => {
-            // console.log('click');
+
             btnMovil.classList.toggle('header__nav-menu-movil--activo');
 
             // scrollea hasta dejar la barra en la parte superior de la pantalla
             if (barra) {
                 let rect = barra.getBoundingClientRect();
                 let scrollTop = document.documentElement.scrollTop;
-                let targetPosition = rect.top + scrollTop;
+                let targetPosition = rect.top + scrollTop; // posicion actual + distancia al top
 
                 window.scrollTo({
                     top: targetPosition,
@@ -43,27 +39,31 @@
                 });
             }
 
-            // body.classList.remove('no-scroll');
-
-            // window.addEventListener('scroll', () => {
-
-            //     if(barra.getBoundingClientRect().top === 0) {
-    
-            //         body.classList.add('no-scroll');
-            //     }
-            // })
+            nav.classList.toggle('header__nav--activo');
 
 
+            // Cierra la navegacion movil cuando hay scroll sin incluir el scroll del header
 
+                window.addEventListener('scroll', () => {
+
+                   // console.log(window.scrollY); // 790
+
+                    // console.log(header.getBoundingClientRect());
+
+                    if (header.getBoundingClientRect().bottom < 0) {
+
+                        btnMovil.classList.remove('header__nav-menu-movil--activo');
+        
+                        nav.classList.remove('header__nav--activo');
+
+
+                    }
+                });
 
             // - cambio el dns de staging-dellpinos.com (tuslistas) a tuslistas.staging-dellpinos.com
             // - cree el nuevo subdomio
             // cambie los dominios, cuidado con el ssl
 
-
-
-            // barra.classList.toggle('header__contenido-header--activo');
-            //barra.classList.add('fijo');
 
         });
     }
