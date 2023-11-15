@@ -121,6 +121,8 @@
         font-size: 3rem;
         margin-left: 1rem;
 
+
+
     }
 
     &__contenido-video {
@@ -151,17 +153,41 @@
         font-size: 2rem;
         background-color: v.$grisOscuro;
         display: flex;
-        justify-content: flex-end;
-        padding: 1rem 4rem;
-        height: 100%;
+
+        
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding-bottom: 0;
+        transition: max-height 1s ease, opacity 2.5s ease, padding-bottom .5s ease, gap 10s ease;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
         
         @include m.tablet {
             justify-content: flex-start;
+            flex-direction: row;
             padding: 2rem 6rem;
+            max-height: 10rem;
+            opacity: 1;
+        }
+        
+        
+        &--activo {
+            max-height: 30rem;
+
+            gap: 2rem;
+            opacity: 1;
+            background-color: rgba(v.$grisOscuro, .9);
+            padding-bottom: 2rem;
+            
+            transition: max-height 2s ease, opacity 2s ease, padding-bottom 2s ease, gap .5s ease;
+
         }
         
         a {
-            display: none;
             font-weight: v.$regular;
             color: v.$blanco;
             
@@ -173,18 +199,34 @@
             }
             
             @include m.tablet { /// Cambia navegacion por un icono
-                display: block;
+
             }
         }
 
 
     }
 
+    &__nav-contenedor-movil {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+        max-height: 10rem;
+        background-color: rgba(v.$grisOscuro, .9);
+        
+        @include m.tablet {
+            background-color: v.$grisOscuro;
+            max-height: 0;
+            
+        }
+    }
+    
     &__nav-menu-movil {
         display: block;
         color: v.$blanco;
         font-size: 4.5rem;
         transition: transform 1s ease;
+        margin: 1.5rem 4rem;
 
         @include m.tablet {
             display: none!important;
@@ -193,6 +235,9 @@
         &--activo {
             transform: rotate(90deg);
 
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
 

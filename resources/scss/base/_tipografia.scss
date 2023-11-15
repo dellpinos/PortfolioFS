@@ -14,18 +14,34 @@ h1 {
 }
 
 h2 {
-    font-size: 5rem;
     text-align: center;
-    margin: 4rem 0 4rem 0;
+    margin: 2rem 0 2rem 0;
     color: v.$negro;
+    font-size: 3rem;
+    
+    @include m.tablet {
+        
+        margin: 4rem 0 4rem 0;
+        font-size: 5rem;
+    }
 
 }
 
 h3 {
-    font-size: 4rem;
+    font-size: 2rem;
+
+    @include m.tablet {
+        font-size: 4rem;
+    }
 }
 
 p {
-    font-size: 1.6rem;
-    line-height: 1.8;
+
+    font-size: 1.4rem;
+    line-height: 1.6;
+
+    @include m.tablet {
+        font-size: 1.6rem;
+        line-height: 1.8;
+    }
 }

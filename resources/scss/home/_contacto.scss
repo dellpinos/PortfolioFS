@@ -1,79 +1,7 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .contacto {
-
-    &__heading {
-        color: v.$blanco;
-        background-color: v.$grisOscuro;
-        padding: 7rem 0 2rem 0;
-        margin: 0;
-    }
-
-    &__formulario-contenedor {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        width: 50rem;
-        margin-bottom: 4rem;
-
-    }
-
-    &__campo {
-        font-size: 1.6rem;
-        padding: 1rem;
-        background-color: v.$grisOscuro;
-        border: 3px solid v.$grisOscuro;
-        border-radius: 1rem;
-        color: v.$blanco;
-        opacity: 0;
-        transition: all 1s ease;
-
-        &--activo {
-
-            box-shadow: 3px 3px 10px 3px rgba(v.$negro, .2) inset,
-            10px 10px 15px 5px rgba(v.$negro, .1) inset,
-            3px 3px 15px 5px rgba(v.$negro, .2),
-            10px 10px 15px 5px rgba(v.$negro, .1);
-
-            opacity: 1;
-            transition: box-shadow 4s ease, opacity 1s ease;
-
-        }
-    }
-
-    &__btn-contenedor {
-        display: flex;
-        justify-content: flex-end;
-
-    }
-
-    &__btn {
-        width: auto;
-        padding: 1rem;
-        background-color: transparent;
-        border: 2px solid v.$naranja;
-        color: v.$naranja;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        font-weight: v.$bold;
-        border-radius: 1rem;
-        opacity: 0;
-        transition: opacity 1s ease, box-shadow 1s ease,color .3s ease, background-color .3s ease;
-        
-        &:hover {
-            color: v.$blanco;
-            background-color: rgba(v.$naranja, 40%);
-            cursor: pointer;
-        }
-
-        &--activo {
-
-            box-shadow: 1px 1px 5px 3px rgba(v.$naranja, .5);
-            opacity: 1;
-            transition: opacity 3s ease, box-shadow 3s ease, color .3s ease, background-color .3s ease;
-
-        }
-    }
 
     &__contenedor {
         background-color: v.$grisOscuro;
@@ -107,6 +35,96 @@
 
         }
     }
+
+    &__heading {
+        color: v.$blanco;
+        background-color: v.$grisOscuro;
+        padding: 4rem 0 2rem 0;
+        margin: 0;
+        
+        @include m.tablet {
+            padding: 7rem 0 2rem 0;
+            
+        }
+    }
+
+    &__formulario-contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 95%;
+        margin-bottom: 4rem;
+        
+        @include m.tablet {
+            width: 50rem;
+            
+        }
+
+    }
+
+    &__campo {
+        font-size: 1.6rem;
+        padding: 1rem;
+        background-color: v.$grisOscuro;
+        border: 3px solid v.$grisOscuro;
+        border-radius: 1rem;
+        color: v.$blanco;
+        opacity: 0;
+        transition: all 1s ease;
+
+        &--activo {
+
+            box-shadow: 3px 3px 10px 3px rgba(v.$negro, .2) inset,
+            10px 10px 15px 5px rgba(v.$negro, .1) inset,
+            3px 3px 15px 5px rgba(v.$negro, .2),
+            10px 10px 15px 5px rgba(v.$negro, .1);
+
+            opacity: 1;
+            transition: box-shadow 4s ease, opacity 1s ease;
+
+        }
+    }
+
+    &__btn-contenedor {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 1rem;
+        background-color: transparent;
+        border: 2px solid v.$naranja;
+        color: v.$naranja;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: v.$bold;
+        border-radius: 1rem;
+        opacity: 0;
+        transition: opacity 1s ease, box-shadow 1s ease,color .3s ease, background-color .3s ease;
+        
+        @include m.tablet {
+            width: auto;
+            
+        }
+        
+        &:hover {
+            color: v.$blanco;
+            background-color: rgba(v.$naranja, 40%);
+            cursor: pointer;
+        }
+
+        &--activo {
+
+            box-shadow: 1px 1px 5px 3px rgba(v.$naranja, .5);
+            opacity: 1;
+            transition: opacity 3s ease, box-shadow 3s ease, color .3s ease, background-color .3s ease;
+
+        }
+    }
+
+
 
     &__iconos {
         display: flex;

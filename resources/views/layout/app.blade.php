@@ -72,10 +72,12 @@
         </div>
 
         <div class="header__contenido-header">
-            <nav class="header__nav">
+            <div class="header__nav-contenedor-movil">
 
                 <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
+            </div>
 
+            <nav class="header__nav">
                 <a class="scroll-smooth" href="#skills">Perfil</a>
                 <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>
                 <a class="scroll-smooth" href="#galeria">Portfolio</a>

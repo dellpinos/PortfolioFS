@@ -5,8 +5,14 @@
 .perfil {
 
     &__contenedor {
-        @include m.grid(2, 2rem)
 
+        display: flex;
+        flex-direction: column;
+        
+        @include m.tablet {
+            @include m.grid(2, 2rem)
+            
+        }
     }
 
     &__contenedor-desc {
@@ -16,15 +22,25 @@
         justify-content: center;
 
         h4 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 2rem 0 0 0;
             text-align: center;
+            
+            @include m.tablet {
+                font-size: 3rem;
+                
+            }
         }
 
 
         p {
-            padding: 2rem;
+            padding: 1.4rem;
             text-align: center;
+
+            @include m.tablet {
+                font-size: 2rem;
+                
+            }
 
         }
 
@@ -33,12 +49,17 @@
     &__contenedor-img {
 
         img {
+            width: 25rem;
+            height: 25rem;
 
-            width: 40rem;
-            height: 40rem;
+            @include m.tablet {
+                width: 40rem;
+                height: 40rem;
+                
+            }
         }
-        margin: 0 auto;
 
+        margin: 0 auto;
         background-image: url(../img/bg_8.png);
         background-repeat: no-repeat;
 
@@ -48,16 +69,28 @@
 
         display: flex;
         flex-direction: column;
-        margin: 2rem auto;
+        margin: 1rem auto 3rem auto;
         gap: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         width: 80%;
+        padding: 0;
+
+        
+        @include m.tablet {
+            margin: 2rem auto;
+            width: 80%;
+            font-size: 1.8rem;
+            padding-left: 4rem;
+        }
 
         li {
-
-            padding: .5rem 1rem .5rem 2rem;
             color: v.$blanco;
             font-weight: v.$bold;
+            padding: .5rem;
+            
+            @include m.tablet {
+                padding: .5rem 1rem .5rem 2rem;
+            }
         }
 
         & :nth-child(odd) {
