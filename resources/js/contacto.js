@@ -17,7 +17,7 @@
 
                 window.addEventListener('scroll', function () {
 
-                    if (campo.getBoundingClientRect().bottom <= (middlePantalla + 200)) {
+                    if (campo.getBoundingClientRect().bottom <= (middlePantalla + 400)) {
 
                         campo.classList.add('contacto__campo--activo');
 

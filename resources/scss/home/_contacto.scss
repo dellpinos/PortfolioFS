@@ -39,7 +39,6 @@
             transition: box-shadow 4s ease, opacity 1s ease;
 
         }
-
     }
 
     &__btn-contenedor {
@@ -90,31 +89,9 @@
         gap: 1rem;
         justify-content: end;
 
-        // &:hover {
-
-        //     .contacto__campo {
-        //         box-shadow: 3px 3px 10px 3px rgba(v.$negro, .2) inset,
-        //         10px 10px 15px 5px rgba(v.$negro, .1) inset,
-        //         3px 3px 15px 5px rgba(v.$negro, .2),
-        //         10px 10px 15px 5px rgba(v.$negro, .1);
-
-        //         opacity: 1;
-        //         transition: box-shadow 4s ease, opacity 1s ease;
-
-        //     }
-        //     .contacto__btn {
-
-        //         box-shadow: 1px 1px 5px 3px rgba(v.$naranja, .5);
-        //         opacity: 1;
-        //         transition: opacity 3s ease, box-shadow 3s ease, color .3s ease, background-color .3s ease;
-
-        //     }
-            
-        // }
-
         &:hover {
 
-            p {
+            .contacto__work-together {
 
                 opacity: 1;
                 transition: opacity 2s ease;
@@ -122,17 +99,13 @@
             }
         }
 
-
-
-
-        p {
+        .contacto__work-together {
             opacity: 0;
             overflow: hidden;
             color: v.$naranja2;
             transition: opacity 2s ease;
 
         }
-
     }
 
     &__iconos {
