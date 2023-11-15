@@ -46,6 +46,10 @@
 
                 window.addEventListener('scroll', () => {
 
+                   // console.log(window.scrollY); // 790
+
+                    // console.log(header.getBoundingClientRect());
+
                     if (header.getBoundingClientRect().bottom < 0) {
 
                         btnMovil.classList.remove('header__nav-menu-movil--activo');
@@ -54,8 +58,6 @@
 
 
                     }
-
-                    
                 });
 
             // - cambio el dns de staging-dellpinos.com (tuslistas) a tuslistas.staging-dellpinos.com

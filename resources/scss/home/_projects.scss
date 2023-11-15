@@ -80,9 +80,11 @@
 
     &__grid {
 
+        width: 95%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
         
         
@@ -99,10 +101,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 35rem;
+        max-width: 30rem;
         max-height: 30rem;
         overflow: hidden;
         position: relative;
+
+        @include m.tablet {
+
+            max-width: 35rem;
+            max-height: 30rem;
+            
+        }
         
 
     }
@@ -144,8 +153,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-
 
     }
 
@@ -211,7 +218,12 @@
             display: flex;
             justify-content: center;
 
-            max-width: 110rem;
+            max-width: 30rem;
+            
+            @include m.tablet {
+                max-width: 110rem;
+                
+            }
         }
 
     }
