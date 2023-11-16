@@ -18,7 +18,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet">
 
-
     <title>Martin del Pino</title>
 
     @vite('resources/scss/app.scss')
@@ -38,8 +37,6 @@
             </div>
         @endif
 
-
-
         <div class="header__video">
             <div class="header__overlay">
                 <div class="contenedor-xl header__contenido-video">
@@ -58,14 +55,9 @@
             </div>
 
             <video autoplay muted loop>
-                {{--                 <source src="video/cubos_hd.webm" type="video/webm"> --}}
-                {{--                         <source src="video/cubos_hd.mp4" type="video/mp4"> --}}
 
-                <source src="video/lineas_slow_hd2.mp4" type="video/mp4">
-
-                {{--     <source src="video/lineas_hd.webm" type="video/webm"> --}}
-                {{--     <source src="video/black_net_slow_hd.webm" type="video/webm">
-    <source src="video/black_net_slow_hd.mp4" type="video/mp4"> --}}
+                <source src="video/circulo_azul.webm" type="video/webm">
+                <source src="video/circulo_azul.mp4" type="video/mp4">
 
             </video>
 
@@ -97,21 +89,15 @@
 
     </main>
 
-
-
     <footer class="footer">
         <a href="#header" class="scroll-smooth">
             <i href="#header" class="footer__icono fa-solid fa-circle-arrow-up"></i>
         </a>
 
-
-
         <p><span class="footer__nombre">Martín del Pino</span> - Todos los derechos reservados {{ now()->year }}</p>
 
     </footer>
     @vite('resources/js/app.js')
-
-
 
 </body>
 

@@ -101,7 +101,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 30rem;
+        max-width: 35rem;
         max-height: 30rem;
         overflow: hidden;
         position: relative;
@@ -130,9 +130,11 @@
 
     &__overlay {
 
+        width: 100%;
         z-index: 10;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10rem;
         position: absolute;
         top: center;
@@ -163,10 +165,10 @@
     &__info-tecs {
         color: v.$naranja;
 
-
     }
 
     &__info-btn {
+        width: 70%;
         text-transform: uppercase;
         background-color: transparent;
         border: 2px solid v.$naranja;
@@ -176,6 +178,10 @@
         margin-top: 3rem;
         font-size: 2rem;
         transition: color .5s ease, background-color .5s ease;
+
+        @include m.tablet {
+            width: 60%;
+        }
 
         &:hover {
 
@@ -204,7 +210,7 @@
         align-items: center;
 
         background-color: rgb( 0 0 0 / 0.5);
-
+        
 
     }
 
@@ -213,22 +219,19 @@
         display: flex;
         background-color: rgba(v.$negro, .7);
         align-items: center;
-        max-width: 30rem;
+        max-width: 47rem;
 
-
-        @include m.tablet {
+        @include m.phoneHorizontal {
             max-width: 110rem;
         }
-
 
         picture {
             display: flex;
             justify-content: center;
             height: 15rem;
+            max-width: 47rem;
             
-            max-width: 30rem;
-            
-            @include m.tablet {
+            @include m.phoneHorizontal {
                 height: 50rem;
                 max-width: 110rem;
                 

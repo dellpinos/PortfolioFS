@@ -8,10 +8,9 @@
 
         display: flex;
         flex-direction: column;
-        
+
         @include m.tablet {
             @include m.grid(2, 2rem)
-            
         }
     }
 
@@ -25,10 +24,10 @@
             font-size: 2rem;
             margin: 2rem 0 0 0;
             text-align: center;
-            
+
             @include m.tablet {
                 font-size: 3rem;
-                
+
             }
         }
 
@@ -39,29 +38,28 @@
 
             @include m.tablet {
                 font-size: 2rem;
-                
+
             }
-
         }
-
     }
 
     &__contenedor-img {
 
         img {
-            width: 25rem;
-            height: 25rem;
+            width: 35rem;
+            height: 35rem;
 
             @include m.tablet {
                 width: 40rem;
                 height: 40rem;
-                
+
             }
         }
 
         margin: 0 auto;
         background-image: url(../img/bg_8.png);
         background-repeat: no-repeat;
+        border-radius: 1rem;
 
     }
 
@@ -75,7 +73,7 @@
         width: 80%;
         padding: 0;
 
-        
+
         @include m.tablet {
             margin: 2rem auto;
             width: 80%;
@@ -87,19 +85,34 @@
             color: v.$blanco;
             font-weight: v.$bold;
             padding: .5rem;
-            
+            border-radius: .5rem;
+
             @include m.tablet {
                 padding: .5rem 1rem .5rem 2rem;
-                
+
             }
         }
 
         & :nth-child(odd) {
-            background-color: v.$naranja3;
+            background-color: hsla(4, 75%, 47%, 1);
+            background-image:
+                radial-gradient(at 22% 7%, hsla(5, 75%, 47%, 1) 0px, transparent 50%),
+                radial-gradient(at 27% 89%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 65% 0%, hsla(0, 0%, 100%, 0.6) 0px, transparent 50%),
+                radial-gradient(at 1% 38%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(4, 75%, 47%, 1) 0px, transparent 50%);
         }
+
         & :nth-child(even) {
 
-            background-color: v.$naranja;
+            background-color: hsla(8, 100%, 68%, 1);
+            background-image:
+                radial-gradient(at 0% 50%, hsla(311, 0%, 100%, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 8%, hsla(5, 75%, 47%, 1) 0px, transparent 50%),
+                radial-gradient(at 42% 100%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 65% 0%, hsla(0, 0%, 100%, 0.6) 0px, transparent 50%),
+                radial-gradient(at 1% 38%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(4, 75%, 47%, 1) 0px, transparent 50%);
         }
 
     }
