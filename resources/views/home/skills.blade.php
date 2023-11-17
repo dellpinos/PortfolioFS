@@ -8,6 +8,7 @@
         data-aos-anchor-placement="top-bottom" data-aos-delay="0">
             <i class="skills__vector fa-solid fa-bolt"></i>
         </div>
+
         <div class="skills__text">
             <h3>Fast</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor.</p>
