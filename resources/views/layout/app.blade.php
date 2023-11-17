@@ -10,11 +10,16 @@
 
     <link rel="icon" href="{{ asset('img/icon_tab.png') }}" type="image/x-icon">
 
-    <link rel="preload" as="video" href="video/circulo_azul.mp4" type="video/mp4">
-    <link rel="preload" as="video" href="video/circulo_azul.webm" type="video/webm">
+    {{-- <link rel="preload" href="video/circulo_azul.mp4" type="video/mp4" as="video">
+    <link rel="preload" href="video/circulo_azul.webm" type="video/webm" as="video"> --}}
+    <link rel="preload" as="video" href="{{ asset('video/circulo_azul.mp4') }}">
+    <link rel="preload" as="video" href="{{ asset('video/circulo_azul.webm') }}">
 
-    <link rel="preload" as="video" href="video/circulo_azul_movil.mp4" type="video/mp4">
-    <link rel="preload" as="video" href="video/circulo_azul_movil.webm" type="video/webm">
+    <link rel="preload" as="video" href="{{ asset('video/circulo_azul_movil.mp4') }}">
+    <link rel="preload" as="video" href="{{ asset('video/circulo_azul_movil.webm') }}">
+
+    {{-- <link rel="preload" href="video/circulo_azul_movil.mp4" type="video/mp4" as="video">
+    <link rel="preload" href="video/circulo_azul_movil.webm" type="video/webm" as="video"> --}}
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -73,7 +78,7 @@
 
                 <source src="video/circulo_azul_movil.webm" type="video/webm" media="(max-width: 449px)">
                 <source src="video/circulo_azul_movil.mp4" type="video/mp4" media="(max-width: 449px)">
-                    
+
             </video>
 
         </div>
