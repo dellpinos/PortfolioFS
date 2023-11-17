@@ -5,9 +5,9 @@
         <div class="perfil__contenedor-img" data-aos="flip-left">
 
             <picture>
-                <source srcset="{{ asset ('img/perfil.webp') }}" type="image/webp">
-                <source srcset="{{ asset('img/perfil.png') }}" type="image/png">
-                <img loading="lazy" width="200" height="300" src="{{ asset('img/perfil.png') }}" alt="Imagen Perfil">
+                <source srcset="img/perfil.webp" type="image/webp">
+                <source srcset="img/perfil.png" type="image/png">
+                <img loading="lazy" width="200" height="300" src="img/perfil.png" alt="Imagen Perfil">
             </picture>
     
         </div>
