@@ -48,17 +48,15 @@
         align-items: center;
         z-index: 99;
 
-        // Bg - cubos - rosa
-        // background: rgb(231, 114, 239);
-        // background: linear-gradient(90deg, rgba(231, 114, 239, 0.4976584383753502) 2%, rgba(239, 68, 68, 0.5004595588235294) 62%);
-
-        // Bg - lineas - oscuro
-        // background: rgb(68,68,68);
-        // background: linear-gradient(90deg, rgba(68,68,68,0.3996192226890757) 2%, rgba(68,68,68,0.7049413515406162) 62%);
-
         // Bg - lineas - claro
-        background: rgb(68, 68, 68);
-        background: linear-gradient(90deg, rgba(68, 68, 68, 0.35) 2%, rgba(68, 68, 68, 0.5) 62%);
+        // background: rgb(68, 68, 68);
+        // background: linear-gradient(90deg, rgba(68, 68, 68, 0.35) 2%, rgba(68, 68, 68, 0.5) 62%);
+
+//         background: rgb(40,111,235);
+// background: linear-gradient(17deg, rgba(40,111,235,0.0970982142857143) 27%, rgba(40,111,235,0.32679009103641454) 56%);
+
+background: rgb(40,111,235);
+background: linear-gradient(17deg, rgba(40,111,235,0.4052214635854342) 24%, rgba(31,82,170,0.702140231092437) 56%);
 
         @include m.tablet {
             justify-content: center
