@@ -10,7 +10,7 @@
                 <div class="main-projects__contenedor-heading">
 
                     <div class="main-projects__contenedor-img">
-                        <img src="img/logoTL_2.png" alt="Logo Tus Listas" width="200" height="70">
+                        <img loading="lazy" src="img/logoTL_2.png" alt="Logo Tus Listas" width="200" height="70">
                     </div>
 
                     <div class="main-projects__iconos">
@@ -44,7 +44,7 @@
                 <div class="main-projects__contenedor-heading">
 
                     <div class="main-projects__contenedor-img">
-                        <img src="img/logoTT_1.png" alt="Logo Tus Listas" width="260" height="70">
+                        <img loading="lazy" src="img/logoTT_1.png" alt="Logo Tus Listas" width="260" height="70">
                     </div>
 
                     <div class="main-projects__iconos">
