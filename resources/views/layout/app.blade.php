@@ -12,11 +12,11 @@
 
     {{-- <link rel="preload" href="video/circulo_azul.mp4" type="video/mp4" as="video">
     <link rel="preload" href="video/circulo_azul.webm" type="video/webm" as="video"> --}}
-    <link rel="preload" as="video" href="{{ asset('video/circulo_azul.mp4') }}">
-    <link rel="preload" as="video" href="{{ asset('video/circulo_azul.webm') }}">
+    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul.mp4') }}">
+    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul.webm') }}">
 
-    <link rel="preload" as="video" href="{{ asset('video/circulo_azul_movil.mp4') }}">
-    <link rel="preload" as="video" href="{{ asset('video/circulo_azul_movil.webm') }}">
+    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.mp4') }}">
+    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.webm') }}">
 
     {{-- <link rel="preload" href="video/circulo_azul_movil.mp4" type="video/mp4" as="video">
     <link rel="preload" href="video/circulo_azul_movil.webm" type="video/webm" as="video"> --}}
@@ -73,11 +73,12 @@
 
             <video autoplay muted loop>
 
-                <source src="video/circulo_azul.webm" type="video/webm" media="(min-width: 450px)">
-                <source src="video/circulo_azul.mp4" type="video/mp4" media="(min-width: 450px)">
+                <source src="video/circulo_azul_movil.webm" type="video/webm" media="(max-width:449px)">
+                <source src="video/circulo_azul_movil.mp4" type="video/mp4" media="(max-width:449px)">
+                    
+                <source src="video/circulo_azul.webm" type="video/webm" media="(min-width:450px)">
+                <source src="video/circulo_azul.mp4" type="video/mp4" media="(min-width:450px)">
 
-                <source src="video/circulo_azul_movil.webm" type="video/webm" media="(max-width: 449px)">
-                <source src="video/circulo_azul_movil.mp4" type="video/mp4" media="(max-width: 449px)">
 
             </video>
 
