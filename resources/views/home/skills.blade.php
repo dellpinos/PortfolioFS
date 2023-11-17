@@ -4,7 +4,8 @@
 <div class="skills__grid">
 
     <div class="skills__card" > {{-- cada card --}}
-        <div class="skills__contenedor-vector" data-aos="flip-left">
+        <div class="skills__contenedor-vector" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" data-aos-delay="0">
             <i class="skills__vector fa-solid fa-bolt"></i>
         </div>
         <div class="skills__text">
@@ -14,7 +15,8 @@
     </div>
 
     <div class="skills__card" > {{-- cada card --}}
-        <div class="skills__contenedor-vector" data-aos="flip-left">
+        <div class="skills__contenedor-vector" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" data-aos-delay="500">
             <i class="skills__vector fa-solid fa-mobile-screen"></i>
         </div>
         <div class="skills__text">
@@ -24,7 +26,8 @@
     </div>
 
     <div class="skills__card" > {{-- cada card --}}
-        <div class="skills__contenedor-vector" data-aos="flip-left">
+        <div class="skills__contenedor-vector" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
             <i class="skills__vector fa-regular fa-lightbulb"></i>
         </div>
         <div class="skills__text">
@@ -34,7 +37,8 @@
     </div>
 
     <div class="skills__card" > {{-- cada card --}}
-        <div class="skills__contenedor-vector" data-aos="flip-left">
+        <div class="skills__contenedor-vector" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" data-aos-delay="1500">
             <i class="skills__vector fa-solid fa-rocket"></i>
         </div>
         <div class="skills__text">

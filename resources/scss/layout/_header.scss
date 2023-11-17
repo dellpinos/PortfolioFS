@@ -12,23 +12,26 @@
 
     }
 
-
     &__video {
 
         position: relative;
-        //max-height: 70rem;
         max-height: 100vh;
         min-height: 50rem;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         video {
             // reemplazar por video
 
             width: auto;
-            display: block;
+           // display: block;
+
 
             @include m.tablet {
                 width: 100%;
+
 
             }
         }
@@ -183,7 +186,7 @@
             background-color: rgba(v.$grisOscuro, .9);
             padding-bottom: 2rem;
             
-            transition: max-height 2s ease, opacity 2s ease, padding-bottom 2s ease, gap .5s ease;
+            transition: max-height 1s ease, opacity 1s ease, padding-bottom 1s ease, gap .5s ease;
 
         }
         

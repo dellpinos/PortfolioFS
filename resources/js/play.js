@@ -10,16 +10,16 @@
             '3': ['fa-brands', 'fa-html5', 'c-rojo'],
             '4': ['fa-brands', 'fa-php', 'c-azul'],
             '5': ['fa-brands', 'fa-git-alt', 'c-orange'],
-            '6': ['fa-brands', 'fa-github', 'c-black'],
+            '6': ['fa-brands', 'fa-github', 'c-oscuro'],
             '7': ['fa-brands', 'fa-laravel', 'c-rojo'],
             '8': ['fa-brands', 'fa-galactic-republic', 'c-white'],
             '9': ['fa-brands', 'fa-jedi-order', 'c-rojo'],
-            '10': ['fa-brands', 'fa-firefox-browser', 'c-azul'],
+            '10': ['fa-brands', 'fa-xbox', 'c-green'],
             '11': ['fa-brands', 'fa-apple', 'c-white'],
             '12': ['fa-solid', 'fa-code', 'c-green'],
             '13': ['fa-brands', 'fa-docker', 'c-azul'],
             '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
-            '15': ['fa-solid', 'fa-database', 'c-black'],
+            '15': ['fa-solid', 'fa-database', 'c-oscuro'],
             '16': ['fa-brands', 'fa-steam', 'c-azul'],
             '17': ['fa-brands', 'fa-slack', 'c-white']
         };
@@ -29,7 +29,8 @@
         let firstElement = '';
         let secondElement = '';
         let firstIndice = '';
-        let flag = 0;
+        let flag = false; // diferencia primer click del segundo
+        let flagTimeout = 0;
         let contadorVictorias = 0;
         let contadorClicks = 0;
         let arraySelec = [];
@@ -138,6 +139,10 @@
 
             cuadros[i].addEventListener('click', (e) => {
 
+                if (!flagTimeout) {
+
+                
+
                 // contador de clicks
                 contadorClicks++;
                 if (contadorVictorias > 0) {
@@ -208,8 +213,10 @@
                                     secondElement.firstChild.remove(); // elimina el icono anterior
                                 }
 
-                            }, 500);
+                            }, 400);
                         }
+
+                        flagTimeout = true;
 
                         setTimeout(() => {
 
@@ -222,10 +229,13 @@
                             secondSelect = '';
                             firstElement = '';
                             secondElement = '';
+
+                            flagTimeout = false;
                         }, 500);
                     }
 
                     coincidencias();
+                }
                 }
 
             });

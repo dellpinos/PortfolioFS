@@ -178,9 +178,27 @@ import swiper from './swiper';
                 enlace.classList.add('projects__info-btn');
                 enlace.textContent = "Ver";
 
+                window.addEventListener('resize', () => {
+                    enlace.textContent = "Ver";
+
+                });
+
                 enlace.addEventListener('click', (e) => {
 
-                    mostrarImagen(project);
+                    // condición que evita pantallas muy angostas
+                    if(window.innerWidth < 480) {
+                        // Deberias girar tu telefono
+
+                        enlace.innerHTML = `
+                            <p>Gira tu dispositivo</p>
+                            <i class="fa-solid fa-rotate-left"></i>
+                        `;
+
+                    } else {
+
+                        mostrarImagen(project);
+                    }
+
                 });
 
                 overlay.appendChild(containerInfo);

@@ -6,12 +6,15 @@ import 'swiper/css/navigation';
 
 const opciones = {
     
-    slidesPerView: 1,
-    spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 5,
     freeMode: false,
     loop: false,
     watchOverflow: true,
     speed: 800,
+
+
+    // max-width y slides per view y spacebetween
 
     keyboard: {
         enabled: false,
