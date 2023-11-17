@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Portfolio desarrollador web">
+    <meta name="description" content="Portfolio desarrollador web fullstack">
 
-    <link rel="icon" href="{{ asset('img/logoPortfolio.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img/icon_tab.png') }}" type="image/x-icon">
+
+    <link rel="preload" as="video" href="video/circulo_azul.mp4" type="video/mp4">
+    <link rel="preload" as="video" href="video/circulo_azul.webm" type="video/webm">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +25,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Martin del Pino</title>
 
