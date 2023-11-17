@@ -12,11 +12,15 @@
 
     {{-- <link rel="preload" href="video/circulo_azul.mp4" type="video/mp4" as="video">
     <link rel="preload" href="video/circulo_azul.webm" type="video/webm" as="video"> --}}
-    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul.mp4') }}">
-    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul.webm') }}">
+    <link rel="preload" as="video" href="{{ asset('video/circulo_azul.mp4') }}">
+    <link rel="preload" as="video" href="{{ asset('video/circulo_azul.webm') }}">
+    
+    <link rel="preload" as="image" href="{{ asset('img/perfil.webp') }}">
+    <link rel="preload" as="image" href="{{ asset('img/perfil.png') }}">
 
-    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.mp4') }}">
-    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.webm') }}">
+
+    {{-- <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.mp4') }}">
+    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.webm') }}"> --}}
 
     {{-- <link rel="preload" href="video/circulo_azul_movil.mp4" type="video/mp4" as="video">
     <link rel="preload" href="video/circulo_azul_movil.webm" type="video/webm" as="video"> --}}
