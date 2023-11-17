@@ -6,8 +6,8 @@ import 'swiper/css/navigation';
 
 const opciones = {
     
-  slidesPerView: 3,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  spaceBetween: 5,
     freeMode: false,
     loop: false,
     watchOverflow: true,

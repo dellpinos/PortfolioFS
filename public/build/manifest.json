@@ -24,19 +24,19 @@
     "src": "resources/img/bg_8.png"
   },
   "resources/js/app.css": {
-    "file": "assets/app-12cc53a5.css",
+    "file": "assets/app-bb4df054.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-12cc53a5.css"
+      "assets/app-bb4df054.css"
     ],
-    "file": "assets/app-76017628.js",
+    "file": "assets/app-86252204.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-42615978.css",
+    "file": "assets/app-6cfb44ab.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }
