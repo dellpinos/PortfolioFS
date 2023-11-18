@@ -15,7 +15,6 @@
 
     &__contenedor-xl {
 
-        //  background-color: lighten( v.$grisOscuro, 30%);
         width: 100%;
         padding-bottom: 2rem;
         margin-bottom: 4rem;
@@ -25,8 +24,6 @@
             padding-bottom: 6rem;
             margin-bottom: 15rem;
         }
-
-
     }
 
     &__contenedor {
@@ -38,31 +35,41 @@
             width: 80%;
             
         }
-
-
     }
 
     &__filtros {
         margin: 1rem 1rem;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
         text-transform: uppercase;
-        transition: all 1s ease;
-        text-align: center;
-        gap: 1rem;
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+
+        
+        @include m.phone {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+        
         
         @include m.tablet {
-            flex-direction: row;
+            
+            justify-content: space-around;
             margin: 2rem 8rem;
             gap: 0;
         }
 
         p {
+            transition: color 1s ease, background-color 1s ease;
+
+  
             border-radius: .5rem;
             font-size: 2rem;
             padding: 0 2rem;
-
+            text-align: center;
 
             &:hover {
                 cursor: pointer;
@@ -70,12 +77,25 @@
 
         }
 
+
+
+
+    }
+    &__contenedor-filtro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
         &--activo {
+            
             color: v.$blanco;
             background-color: v.$naranja;
-            transition: all 1s ease;
+            transition: color 1s ease, background-color 1s ease;
 
         }
+
     }
 
     &__grid {
@@ -94,17 +114,12 @@
             
         }
 
-
         @include m.phoneHorizontal {
             width: 105rem;
 
             @include m.grid(3, 0);
             
         }
-        
-        
-
-
     }
 
     &__project {
@@ -122,8 +137,6 @@
             max-height: 30rem;
             
         }
-        
-
     }
 
     &__img {
@@ -228,8 +241,6 @@
 
         background-color: rgba(v.$negro, .7);
 
-
-
         @include m.phoneHorizontal {
             max-width: 110rem;
         }
@@ -237,7 +248,7 @@
         picture {
             display: flex;
             justify-content: center;
-            height: 15rem;
+            height: 25rem;
             max-width: 47rem;
             
             @include m.phoneHorizontal {
@@ -252,14 +263,20 @@
     &__slide-info {
         border-top: 1px dotted v.$gris;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: v.$blanco;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: darken(v.$blanco, 10%);
         padding: .5rem;
         gap: .5rem;
 
         
-        @include m.tablet {
+        @include m.phoneHorizontal {
+            align-items: inherit;
+            flex-direction: column;
+            justify-content: center;
             padding: 1rem;
             gap: 1rem;
         }
@@ -269,7 +286,7 @@
 
     &__slide-heading {
 
-        color: v.$negro;
+        color: v.$grisOscuro;
         font-size: 1.6rem;
         margin: 0;
         
@@ -280,16 +297,19 @@
     }
 
     &__slide-tecs {
-        color: v.$negro;
+        color: v.$naranja;
         margin: 0;
     }
 
     &__btn-contenedor {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+
         
         @include m.tablet {
             justify-content: flex-end;
+            flex-direction: row;
             
         }
     }
@@ -298,15 +318,14 @@
         
         line-height: 0;
         width: fit-content;
-        font-size: 2.5rem;
-        color: v.$negro;
+        font-size: 3.5rem;
+        color: v.$naranja;
         cursor: pointer;
         transition: color .3s ease;
-        margin-top: 3rem;
-
+        
         @include m.tablet {
             font-size: 4rem;
-            margin: 0;
+            padding: 0 2rem 2rem 0;
         }
 
         &:hover {

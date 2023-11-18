@@ -18,11 +18,9 @@ body {
     flex-direction: column;
     font-family: v.$fuente_textos;
     margin: 0;
-    overflow-x: hidden;
 
-    @include m.tablet {
-        overflow-x: auto;
-    }
+
+
 
 }
 textarea, input, label, a {

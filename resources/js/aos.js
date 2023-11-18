@@ -8,14 +8,15 @@ import 'aos/dist/aos.css';
     const anchoPantalla = window.innerWidth;
 
 
-    // En pantalas pequeñas reemplaza los fade para evitar el desplzamiento horizontal
-    if(anchoPantalla <= 768) {
+    // En pantalas pequeñas y móvil horizontal reemplaza los fade para evitar el desplzamiento horizontal
+    if(anchoPantalla <= 900) {
 
       const fades = document.querySelectorAll('[data-aos="fade-right"], [data-aos="fade-left"]');
 
       fades.forEach( element => {
   
         element.setAttribute('data-aos', 'flip-up');
+        element.setAttribute('data-aos-offset', 20);
   
       });
 

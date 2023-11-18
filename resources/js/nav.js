@@ -22,6 +22,10 @@
         const btnMovil = document.querySelector('.header__nav-menu-movil');
         const nav = document.querySelector('.header__nav');
 
+        // Loop
+        animarNav(0);
+
+
 
         btnMovil.addEventListener('click', () => {
 
@@ -41,31 +45,37 @@
 
             nav.classList.toggle('header__nav--activo');
 
+            // Cierra la navegacion movil cuando hay scroll
+            window.addEventListener('scroll', () => {
 
-            // Cierra la navegacion movil cuando hay scroll sin incluir el scroll del header
+                if (header.getBoundingClientRect().bottom < 0 || header.getBoundingClientRect().top < 0) {
 
-                window.addEventListener('scroll', () => {
+                    btnMovil.classList.remove('header__nav-menu-movil--activo');
 
-                   // console.log(window.scrollY); // 790
+                    nav.classList.remove('header__nav--activo');
 
-                    // console.log(header.getBoundingClientRect());
-
-                    if (header.getBoundingClientRect().bottom < 0) {
-
-                        btnMovil.classList.remove('header__nav-menu-movil--activo');
-        
-                        nav.classList.remove('header__nav--activo');
-
-
-                    }
-                });
-
-            // - cambio el dns de staging-dellpinos.com (tuslistas) a tuslistas.staging-dellpinos.com
-            // - cree el nuevo subdomio
-            // cambie los dominios, cuidado con el ssl
-
-
+                }
+            });
         });
+    }
+    // Animación texto navegación móvil
+    function animarNav(iteracion) {
+
+        const texto = document.querySelector('#header-texto-movil');
+
+        const pasos = [">_", ">M_", ">M ", ">Md_", ">Md ", ">MdP_", ">MdP ", ">MdP", ">MdP_", ">MdP_", ">Md_", ">M_", ">_", "> "];
+
+        if (iteracion < pasos.length) {
+            setTimeout(() => {
+                texto.textContent = pasos[iteracion];
+                animarNav(iteracion + 1);
+            }, 400);
+        } else {
+
+            setTimeout(() => {
+                animarNav(0);
+            }, 500);
+        }
     }
 
     function navegacionFija() {
@@ -129,8 +139,6 @@
         });
     }
 
-
-
     function barraCarga() {
 
         const barra = document.querySelector('#barra-carga');
@@ -145,14 +153,9 @@
             // Calcula el porcentaje de progreso del usuario
             const porcentajeProgreso = (posicionUsuario / (alturaPagina - alturaVentana)) * 100;
 
-
             // Aplica el porcentaje de progreso como ancho de la línea
             barra.style.width = `${porcentajeProgreso}%`;
 
         }
     }
 })();
-
-
-
-

@@ -10,27 +10,14 @@
 
     <link rel="icon" href="{{ asset('img/icon_tab.png') }}" type="image/x-icon">
 
-    {{-- <link rel="preload" href="video/circulo_azul.mp4" type="video/mp4" as="video">
-    <link rel="preload" href="video/circulo_azul.webm" type="video/webm" as="video"> --}}
-    {{-- <link rel="preload" as="video" href="{{ asset('video/circulo_azul.mp4') }}"> --}}
-
-
     <link rel="preload" href="video/circulo_azul_720.mp4" as="video">
 
     <link rel="preload" as="image" href="img/perfil.webp">
 
-
-
-    {{-- <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.mp4') }}">
-    <link rel="preload" as="fetch" href="{{ asset('video/circulo_azul_movil.webm') }}"> --}}
-
-    {{-- <link rel="preload" href="video/circulo_azul_movil.mp4" type="video/mp4" as="video">
-    <link rel="preload" href="video/circulo_azul_movil.webm" type="video/webm" as="video"> --}}
-
-    {{-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'"> --}}
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,14 +66,8 @@
 
             <video autoplay muted loop>
 
-                {{-- <source src="video/circulo_azul_movil.mp4" type="video/mp4" media="(max-width:479px)">
-                <source src="video/circulo_azul_movil.webm" type="video/webm" media="(max-width:479px)"> --}}
-{{-- 
-                <source src="video/circulo_azul.mp4" type="video/mp4" media="(min-width:480px)">
-                <source src="video/circulo_azul.webm" type="video/webm" media="(min-width:480px)"> --}}
-
-                    <source src="video/circulo_azul_720.mp4" type="video/mp4">
-                        {{-- <source src="video/circulo_azul.webm" type="video/webm"> --}}
+                <source src="video/circulo_azul_720.mp4" type="video/mp4">
+                {{-- <source src="video/circulo_azul.webm" type="video/webm"> --}}
 
             </video>
 
@@ -94,6 +75,7 @@
 
         <div class="header__contenido-header">
             <div class="header__nav-contenedor-movil">
+                <p id="header-texto-movil">> MdP_</p>
 
                 <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
             </div>

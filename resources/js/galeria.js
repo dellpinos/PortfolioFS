@@ -56,7 +56,7 @@ import swiper from './swiper';
         }
 
         let imgVisibles = [];
-        
+
         // Filtros
         const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
         // PHP - SASS
@@ -116,31 +116,31 @@ import swiper from './swiper';
 
             if (JSON.stringify(imgVisibles) === JSON.stringify(imgAll)) {
 
-                filtAll.classList.add('projects__filtros--activo');
-                filtPhp.classList.remove('projects__filtros--activo');
-                filtLaravel.classList.remove('projects__filtros--activo');
-                filtJs.classList.remove('projects__filtros--activo');
+                filtAll.classList.add('projects__contenedor-filtro--activo');
+                filtPhp.classList.remove('projects__contenedor-filtro--activo');
+                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
+                filtJs.classList.remove('projects__contenedor-filtro--activo');
 
             } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgPhp)) {
 
-                filtPhp.classList.add('projects__filtros--activo');
-                filtAll.classList.remove('projects__filtros--activo');
-                filtLaravel.classList.remove('projects__filtros--activo');
-                filtJs.classList.remove('projects__filtros--activo');
+                filtPhp.classList.add('projects__contenedor-filtro--activo');
+                filtAll.classList.remove('projects__contenedor-filtro--activo');
+                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
+                filtJs.classList.remove('projects__contenedor-filtro--activo');
 
             } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgLaravel)) {
 
-                filtLaravel.classList.add('projects__filtros--activo');
-                filtPhp.classList.remove('projects__filtros--activo');
-                filtAll.classList.remove('projects__filtros--activo');
-                filtJs.classList.remove('projects__filtros--activo');
+                filtLaravel.classList.add('projects__contenedor-filtro--activo');
+                filtPhp.classList.remove('projects__contenedor-filtro--activo');
+                filtAll.classList.remove('projects__contenedor-filtro--activo');
+                filtJs.classList.remove('projects__contenedor-filtro--activo');
 
             } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgJs)) {
 
-                filtJs.classList.add('projects__filtros--activo');
-                filtLaravel.classList.remove('projects__filtros--activo');
-                filtPhp.classList.remove('projects__filtros--activo');
-                filtAll.classList.remove('projects__filtros--activo');
+                filtJs.classList.add('projects__contenedor-filtro--activo');
+                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
+                filtPhp.classList.remove('projects__contenedor-filtro--activo');
+                filtAll.classList.remove('projects__contenedor-filtro--activo');
 
             }
         }
@@ -179,15 +179,34 @@ import swiper from './swiper';
                 enlace.textContent = "Ver";
 
                 window.addEventListener('resize', () => {
+
+                    // enlace.scrollIntoView({ behavior: 'smooth' });
                     enlace.textContent = "Ver";
 
                 });
 
                 enlace.addEventListener('click', (e) => {
 
-                    // condición que evita pantallas muy angostas
-                    if(window.innerWidth < 480) {
-                        // Deberias girar tu telefono
+                    // Al girar la pantalla centra el slide clickeado
+                    window.addEventListener('resize', () => {
+
+
+                        const slide = enlace.parentNode.parentNode;
+                        const rect = slide.getBoundingClientRect();
+
+                        // Altura del elemento con respecto al documento
+                        const alturaConRespectoAlDocumento = rect.top + window.scrollY;
+                        const posicionCentrada = alturaConRespectoAlDocumento - window.innerHeight / 2 + rect.height / 2;
+
+                        window.scrollTo({
+                            top: posicionCentrada,
+                            behavior: 'smooth'
+                        });
+
+                    });
+
+                    // Condición que evita pantallas muy angostas
+                    if (window.innerWidth < 480) {
 
                         enlace.innerHTML = `
                             <p>Gira tu dispositivo</p>
@@ -224,7 +243,7 @@ import swiper from './swiper';
                 imagen.appendChild(avif);
                 imagen.appendChild(webP);
                 imagen.appendChild(img);
-                
+
                 container.appendChild(imagen);
 
                 grid.appendChild(container);
@@ -290,7 +309,7 @@ import swiper from './swiper';
 
                 const cerrarModal = document.createElement('P');
                 cerrarModal.classList.add('projects__btn-cerrar');
-                cerrarModal.innerHTML = '<i class="fa-regular fa-rectangle-xmark"></i>';
+                cerrarModal.innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
 
                 cerrarModal.onclick = function () {
 
