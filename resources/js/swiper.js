@@ -34,7 +34,7 @@ import 'swiper/css/navigation';
 
       480: {
         slidesPerView: 1,
-        spaceBetween: 500
+        spaceBetween: 5
       },
 
       // 640: {
