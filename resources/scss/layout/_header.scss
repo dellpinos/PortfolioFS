@@ -3,6 +3,7 @@
 
 .header {
 
+
     & .fijo {
         left: 0;
         top: 0;
@@ -45,11 +46,11 @@
         align-items: center;
         z-index: 99;
 
-        @include m.tablet {
+        // @include m.tablet {
             
-            background: rgb(40, 111, 235);
-            background: linear-gradient(17deg, rgba(40, 111, 235, 0.4052214635854342) 24%, rgba(31, 82, 170, 0.702140231092437) 56%);
-        }
+        //     background: rgb(40, 111, 235);
+        //     background: linear-gradient(17deg, rgba(40, 111, 235, 0.4052214635854342) 24%, rgba(31, 82, 170, 0.702140231092437) 56%);
+        // }
         background: rgb(40,111,235);
         background: linear-gradient(17deg, rgba(40,111,235,0.24975927871148462) 24%, rgba(31,82,170,0.4038209033613446) 56%);
 
@@ -214,7 +215,7 @@
         background-color: v.$grisOscuro;
 
         p {
-            margin: 1.5rem 4rem;
+            margin: 1.5rem 0 1.5rem 4rem;
             font-size: 3rem;
             color: v.$blanco;
             font-weight: v.$bold;

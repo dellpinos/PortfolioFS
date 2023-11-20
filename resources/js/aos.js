@@ -15,8 +15,11 @@ import 'aos/dist/aos.css';
 
       fades.forEach( element => {
   
-        element.setAttribute('data-aos', 'flip-up');
-        element.setAttribute('data-aos-offset', 20);
+        // element.setAttribute('data-aos', 'flip-up');
+        // element.setAttribute('data-aos-offset', 20);
+
+        element.removeAttribute('data-aos');
+        element.removeAttribute('data-offset');
   
       });
 

@@ -9,6 +9,8 @@
         display: flex;
         flex-direction: column;
 
+        width: 100%; // <<<
+
         @include m.tablet {
             @include m.grid(2, 2rem)
         }
@@ -21,6 +23,7 @@
         justify-content: center;
 
         h4 {
+            width: 100%;
             font-size: 2rem;
             margin: 2rem 0 0 0;
             text-align: center;
@@ -33,7 +36,7 @@
 
 
         p {
-            padding: 1.4rem;
+            padding: 1.4rem 0;
             text-align: center;
 
             @include m.tablet {
@@ -46,8 +49,8 @@
     &__contenedor-img {
 
         img {
-            width: 35rem;
-            height: 35rem;
+            width: 32rem;
+            height: 32rem;
 
             @include m.tablet {
                 width: 40rem;
