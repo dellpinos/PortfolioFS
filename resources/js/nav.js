@@ -8,27 +8,97 @@
 
     function iniciarApp() {
 
+        const anchoPantalla = window.innerWidth;
+        if (anchoPantalla <= 900) {
+            navegacionMovil();
+
+        } else {
+            scrollNav();
+
+        }
+
+
         navegacionFija();
-        navegacionMovil();
-        scrollNav();
+
         enlaceActivo();
         barraCarga();
+
 
     }
 
     function navegacionMovil() {
 
         const barra = document.querySelector('.header__nav-contenedor-movil');
-
         const btnMovil = document.querySelector('.header__nav-menu-movil');
         const nav = document.querySelector('.header__nav');
+        const links = document.querySelectorAll('.header__nav a');
 
         // Loop
         animarNav(0);
 
+        links.forEach(enlace => {
+
+            enlace.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                const seccionScroll = e.target.attributes.href.value;
+                const seccion = document.querySelector(seccionScroll);
+                seccion.scrollIntoView({ behavior: "smooth", block: "center" });
+                
+
+
+                btnMovil.classList.toggle('header__nav-menu-movil--activo');
+
+                nav.classList.toggle('header__nav--activo');
+
+            });
+        });
+
+
+
+
+
+
+        // e.preventDefault();
+
+        // const headerHeight = nav.offsetHeight;
+        // const seccionScroll = e.target.attributes.href.value;
+        // const seccion = document.querySelector(seccionScroll);
+        // // seccion.scrollIntoView({ behavior: "smooth", block: "start" });
+
+
+        // // const objetivo = document.querySelector(href);
+
+        // if (seccion) {
+
+        //     seccion.scrollIntoView({
+        //         behavior: 'smooth',
+        //         block: 'start',
+        //         inline: 'start',
+        //     });
+
+        //     // window.scrollBy(0, -headerHeight);
+
+
+        // }
+
+
+
+
+        // e.preventDefault();
+
+
+
+
+
+
+
         barra.addEventListener('click', () => {
 
             btnMovil.classList.toggle('header__nav-menu-movil--activo');
+
+            nav.classList.toggle('header__nav--activo');
 
             // scrollea hasta dejar la barra en la parte superior de la pantalla
             // if (barra) {
@@ -42,7 +112,6 @@
             //     });
             // }
 
-            nav.classList.toggle('header__nav--activo');
 
             // Cierra la navegacion movil cuando hay scroll
             // window.addEventListener('scroll', () => {
@@ -69,7 +138,7 @@
                 texto.textContent = pasos[iteracion];
                 animarNav(iteracion + 1);
             }, 250);
-            
+
         } else {
 
             setTimeout(() => {
@@ -101,6 +170,8 @@
 
     function scrollNav() {
         const enlaces = document.querySelectorAll('.scroll-smooth');
+
+
         enlaces.forEach(enlace => {
             enlace.addEventListener('click', function (e) {
 

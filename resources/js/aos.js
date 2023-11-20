@@ -20,7 +20,7 @@ import 'aos/dist/aos.css';
 
         element.removeAttribute('data-aos');
         element.removeAttribute('data-offset');
-
+  
       });
 
     }
