@@ -75,7 +75,7 @@
 
         <div class="header__contenido-header">
             <div class="header__nav-contenedor-movil">
-                <p id="header-texto-movil">> MdP_</p>
+                <p id="header-texto-movil">>MdP_</p>
 
                 <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
             </div>
