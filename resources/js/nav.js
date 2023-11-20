@@ -18,44 +18,43 @@
 
     function navegacionMovil() {
 
-        const barra = document.querySelector('.header__contenido-header');
+        const barra = document.querySelector('.header__nav-contenedor-movil');
+
         const btnMovil = document.querySelector('.header__nav-menu-movil');
         const nav = document.querySelector('.header__nav');
 
         // Loop
         animarNav(0);
 
-
-
-        btnMovil.addEventListener('click', () => {
+        barra.addEventListener('click', () => {
 
             btnMovil.classList.toggle('header__nav-menu-movil--activo');
 
             // scrollea hasta dejar la barra en la parte superior de la pantalla
-            if (barra) {
-                let rect = barra.getBoundingClientRect();
-                let scrollTop = document.documentElement.scrollTop;
-                let targetPosition = rect.top + scrollTop; // posicion actual + distancia al top
+            // if (barra) {
+            //     let rect = barra.getBoundingClientRect();
+            //     let scrollTop = document.documentElement.scrollTop;
+            //     let targetPosition = rect.top + scrollTop; // posicion actual + distancia al top
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            //     window.scrollTo({
+            //         top: targetPosition,
+            //         behavior: 'smooth'
+            //     });
+            // }
 
             nav.classList.toggle('header__nav--activo');
 
             // Cierra la navegacion movil cuando hay scroll
-            window.addEventListener('scroll', () => {
+            // window.addEventListener('scroll', () => {
 
-                if (header.getBoundingClientRect().bottom < 0 || header.getBoundingClientRect().top < 0) {
+            //     if (header.getBoundingClientRect().bottom < 0 || header.getBoundingClientRect().top < 0) {
 
-                    btnMovil.classList.remove('header__nav-menu-movil--activo');
+            //         btnMovil.classList.remove('header__nav-menu-movil--activo');
 
-                    nav.classList.remove('header__nav--activo');
+            //         nav.classList.remove('header__nav--activo');
 
-                }
-            });
+            //     }
+            // });
         });
     }
     // Animación texto navegación móvil
@@ -63,13 +62,14 @@
 
         const texto = document.querySelector('#header-texto-movil');
 
-        const pasos = [">_", ">M_", ">M ", ">Md_", ">Md ", ">MdP_", ">MdP ", ">MdP", ">MdP_", ">MdP_", ">Md_", ">M_", ">_", "> "];
+        const pasos = [">_", ">M_", ">M ", ">Md_", ">Md ", ">MdP_", ">MdP", ">MdP", ">MdP_", ">MdP_", ">Md_", ">M_", ">_", "> ", ">_", ">d_", ">d ", ">de_", ">de ", ">del_", ">del ", ">dell_", ">dell ", ">dellp_", ">dellp ", ">dellpi_", ">dellpi ", ">dellpin_", ">dellpin ", ">dellpino_", ">dellpino ", ">dellpinos", ">dellpinos", ">dellpinos_", ">dellpinos_", ">dellpino_", ">dellpin_", ">dellpi_", ">dellp_", ">dell_", ">del_", ">de_", ">d_", ">_", "> "];
 
         if (iteracion < pasos.length) {
             setTimeout(() => {
                 texto.textContent = pasos[iteracion];
                 animarNav(iteracion + 1);
-            }, 400);
+            }, 250);
+            
         } else {
 
             setTimeout(() => {
@@ -105,7 +105,6 @@
             enlace.addEventListener('click', function (e) {
 
                 e.preventDefault();
-
 
                 const seccionScroll = e.target.attributes.href.value;
                 const seccion = document.querySelector(seccionScroll);

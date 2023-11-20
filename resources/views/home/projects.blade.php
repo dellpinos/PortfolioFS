@@ -14,7 +14,7 @@
 
         </div>
         <div class="projects__contenedor-filtro" data-aos="fade-left">
-            <p id="img-js" >JavaScript - CSS</p>
+            <p id="img-js" >JS - CSS</p>
 
         </div>
         <div class="projects__contenedor-filtro" data-aos="fade-left">

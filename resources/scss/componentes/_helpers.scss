@@ -1,7 +1,12 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .nav-scroll {
-    padding-top: 69px;
+    padding-top: 83px;
+
+    @include m.tablet {
+        padding-top: 69px;
+    }
 }
 
 .no-scroll {

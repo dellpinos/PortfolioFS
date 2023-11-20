@@ -205,7 +205,7 @@ import swiper from './swiper';
 
                     });
 
-                    // Condición que evita pantallas muy angostas
+                    // Condición que evita pantallas muy pequeñas
                     if (window.innerWidth < 480) {
 
                         enlace.innerHTML = `
@@ -323,6 +323,28 @@ import swiper from './swiper';
                     overlay.classList.add('display-none');
                     overlay.classList.remove('projects__overlay-gde');
                 };
+
+                                // click fuera del elemento para cerrar modal, esto no funciona correctamente
+                                // overlay.addEventListener('click', (e) => {
+
+                                //     console.log(e.target);
+
+                                //     if(contenedor.contains(e.target)) {
+                                        
+                                //         const body = document.querySelector('body');
+                                //         body.classList.remove('fijar-body');
+                    
+                                //         while (swiperSecundario.firstChild) {
+                                //             swiperSecundario.firstChild.remove();
+                                //         }
+                                //         nav.classList.remove('display-none');
+                                //         overlay.classList.add('display-none');
+                                //         overlay.classList.remove('projects__overlay-gde');
+                                //     }
+                                    
+                                // });
+
+
 
                 info.appendChild(titulo);
                 info.appendChild(tecnologias);
