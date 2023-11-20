@@ -45,8 +45,14 @@
         align-items: center;
         z-index: 99;
 
-        background: rgb(40, 111, 235);
-        background: linear-gradient(17deg, rgba(40, 111, 235, 0.4052214635854342) 24%, rgba(31, 82, 170, 0.702140231092437) 56%);
+        @include m.tablet {
+            
+            background: rgb(40, 111, 235);
+            background: linear-gradient(17deg, rgba(40, 111, 235, 0.4052214635854342) 24%, rgba(31, 82, 170, 0.702140231092437) 56%);
+        }
+        background: rgb(40,111,235);
+        background: linear-gradient(17deg, rgba(40,111,235,0.24975927871148462) 24%, rgba(31,82,170,0.4038209033613446) 56%);
+
 
         @include m.tablet {
             justify-content: center
@@ -171,7 +177,7 @@
 
             gap: 2rem;
             opacity: 1;
-            background-color: rgba(v.$grisOscuro, .9);
+            background-color: v.$grisOscuro;
             padding-bottom: 2rem;
 
             transition: max-height 1s ease, opacity 1s ease, padding-bottom 1s ease, gap .5s ease;
@@ -183,6 +189,8 @@
             color: v.$blanco;
 
             transition: color .3s ease-out;
+            width: 100%;
+            text-align: center;
 
             &:hover {
                 color: v.$naranja;
@@ -191,11 +199,10 @@
 
             @include m.tablet {
                 /// Cambia navegacion por un icono
+                width: auto;
 
             }
         }
-
-
     }
 
     &__nav-contenedor-movil {
@@ -204,7 +211,7 @@
         justify-content: space-between;
         overflow: hidden;
         max-height: 10rem;
-        background-color: rgba(v.$grisOscuro, .9);
+        background-color: v.$grisOscuro;
 
         p {
             margin: 1.5rem 4rem;
