@@ -46,11 +46,6 @@
         align-items: center;
         z-index: 99;
 
-        // @include m.tablet {
-            
-        //     background: rgb(40, 111, 235);
-        //     background: linear-gradient(17deg, rgba(40, 111, 235, 0.4052214635854342) 24%, rgba(31, 82, 170, 0.702140231092437) 56%);
-        // }
         background: rgb(40,111,235);
         background: linear-gradient(17deg, rgba(40,111,235,0.24975927871148462) 24%, rgba(31,82,170,0.4038209033613446) 56%);
 
@@ -151,7 +146,7 @@
         font-size: 2rem;
         background-color: v.$grisOscuro;
         display: flex;
-
+        justify-content: space-between;
 
         max-height: 0;
         overflow: hidden;
@@ -159,14 +154,11 @@
         padding-bottom: 0;
         transition: max-height 1s ease, opacity 2.5s ease, padding-bottom .5s ease, gap 10s ease;
 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
 
 
         @include m.tablet {
-            justify-content: flex-start;
-            flex-direction: row;
+
             padding: 2rem 6rem;
             max-height: 10rem;
             opacity: 1;
@@ -185,24 +177,52 @@
 
         }
 
+
+    }
+
+    &__nav-enlaces {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transition: color .3s ease-out;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        gap: 3rem;
+
         a {
+
             font-weight: v.$regular;
             color: v.$blanco;
+        }
 
-            transition: color .3s ease-out;
-            width: 100%;
-            text-align: center;
+        &:hover {
+            color: v.$naranja;
 
-            &:hover {
-                color: v.$naranja;
+        }
 
-            }
+        @include m.tablet {
+            /// Cambia navegacion por un icono
+            width: auto;
+            
+            flex-direction: row;
+            
 
-            @include m.tablet {
-                /// Cambia navegacion por un icono
-                width: auto;
+        }
+    }
 
-            }
+    &__nav-texto {
+        width: 15rem;
+        color: v.$blanco;
+        font-weight: v.$bold;
+        font-size: 2rem;
+        display: none;
+
+        @include m.tablet {
+            display: block;
+
         }
     }
 

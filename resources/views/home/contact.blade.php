@@ -27,16 +27,14 @@
         </div>
     </form>
 
-
     <p class="contacto__work-together">Want to work together?</p>
 
     <div class="contacto__iconos">
-        <i class="contacto__icono fa-brands fa-github"></i>
-        <i class="contacto__icono fa-brands fa-linkedin"></i>
-
+        <a href="https://github.com/dellpinos" target="_blank">
+            <i class="contacto__icono fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/martin-del-pino-158390293" target="_blank">
+            <i class="contacto__icono fa-brands fa-linkedin"></i>
+        </a>
     </div>
-
-
-
-
 </div>

@@ -25,7 +25,8 @@ import swiper from './swiper';
             '4': {
                 'imgs': ['37', '38', '39', '40', '41', '42'],
                 'heading': "Blog Cafe",
-                'tecs': "HTML - CSS"
+                'tecs': "HTML - CSS",
+                // 'link': "https://blogcafedellpinos.netlify.app/"
             },
             '5': {
                 'imgs': ['43', '44', '45', '46', '47', '48', '49', '50'],
