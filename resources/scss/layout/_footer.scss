@@ -1,17 +1,32 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0 7rem 0;
+    padding: 4rem 0 3rem 0;
     background-color: v.$grisOscuro;
     color: v.$blanco;
     gap: 2rem;
 
+    
+    @include m.tablet {
+        padding: 4rem 0 7rem 0;
+
+        
+    }
+
     p {
-        font-size: 2rem;
+        font-size: 1.4rem;
+        width: 95%;
+        text-align: center;
+        @include m.tablet {
+            width: auto;
+            font-size: 2rem;
+
+        }
     }
 
     &__nombre {
@@ -21,9 +36,14 @@
 
     &__icono {
 
-        font-size: 6rem;
+        font-size: 5rem;
         color: v.$naranja2;
         transition: transform .6s ease-out, color .5s ease-out;
+        
+        @include m.tablet {
+            font-size: 6rem;
+            
+        }
 
         &:hover {
 

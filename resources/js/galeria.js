@@ -25,7 +25,8 @@ import swiper from './swiper';
             '4': {
                 'imgs': ['37', '38', '39', '40', '41', '42'],
                 'heading': "Blog Cafe",
-                'tecs': "HTML - CSS"
+                'tecs': "HTML - CSS",
+                // 'link': "https://blogcafedellpinos.netlify.app/"
             },
             '5': {
                 'imgs': ['43', '44', '45', '46', '47', '48', '49', '50'],
@@ -56,11 +57,14 @@ import swiper from './swiper';
         }
 
         let imgVisibles = [];
-        
+
         // Filtros
         const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
+        // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
+        // Js - CSS
         const imgJs = ['1', '3', '2', '6', '8', '4'];
+        // Laravel
         const imgLaravel = ['1', '7'];
 
         const filtAll = document.querySelector('#img-all');
@@ -113,31 +117,31 @@ import swiper from './swiper';
 
             if (JSON.stringify(imgVisibles) === JSON.stringify(imgAll)) {
 
-                filtAll.classList.add('projects__filtros--activo');
-                filtPhp.classList.remove('projects__filtros--activo');
-                filtLaravel.classList.remove('projects__filtros--activo');
-                filtJs.classList.remove('projects__filtros--activo');
+                filtAll.classList.add('projects__contenedor-filtro--activo');
+                filtPhp.classList.remove('projects__contenedor-filtro--activo');
+                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
+                filtJs.classList.remove('projects__contenedor-filtro--activo');
 
             } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgPhp)) {
 
-                filtPhp.classList.add('projects__filtros--activo');
-                filtAll.classList.remove('projects__filtros--activo');
-                filtLaravel.classList.remove('projects__filtros--activo');
-                filtJs.classList.remove('projects__filtros--activo');
+                filtPhp.classList.add('projects__contenedor-filtro--activo');
+                filtAll.classList.remove('projects__contenedor-filtro--activo');
+                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
+                filtJs.classList.remove('projects__contenedor-filtro--activo');
 
             } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgLaravel)) {
 
-                filtLaravel.classList.add('projects__filtros--activo');
-                filtPhp.classList.remove('projects__filtros--activo');
-                filtAll.classList.remove('projects__filtros--activo');
-                filtJs.classList.remove('projects__filtros--activo');
+                filtLaravel.classList.add('projects__contenedor-filtro--activo');
+                filtPhp.classList.remove('projects__contenedor-filtro--activo');
+                filtAll.classList.remove('projects__contenedor-filtro--activo');
+                filtJs.classList.remove('projects__contenedor-filtro--activo');
 
             } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgJs)) {
 
-                filtJs.classList.add('projects__filtros--activo');
-                filtLaravel.classList.remove('projects__filtros--activo');
-                filtPhp.classList.remove('projects__filtros--activo');
-                filtAll.classList.remove('projects__filtros--activo');
+                filtJs.classList.add('projects__contenedor-filtro--activo');
+                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
+                filtPhp.classList.remove('projects__contenedor-filtro--activo');
+                filtAll.classList.remove('projects__contenedor-filtro--activo');
 
             }
         }
@@ -175,9 +179,46 @@ import swiper from './swiper';
                 enlace.classList.add('projects__info-btn');
                 enlace.textContent = "Ver";
 
+                window.addEventListener('resize', () => {
+
+                    // enlace.scrollIntoView({ behavior: 'smooth' });
+                    enlace.textContent = "Ver";
+
+                });
+
                 enlace.addEventListener('click', (e) => {
 
-                    mostrarImagen(project);
+                    // Al girar la pantalla centra el slide clickeado
+                    window.addEventListener('resize', () => {
+
+
+                        const slide = enlace.parentNode.parentNode;
+                        const rect = slide.getBoundingClientRect();
+
+                        // Altura del elemento con respecto al documento
+                        const alturaConRespectoAlDocumento = rect.top + window.scrollY;
+                        const posicionCentrada = alturaConRespectoAlDocumento - window.innerHeight / 2 + rect.height / 2;
+
+                        window.scrollTo({
+                            top: posicionCentrada,
+                            behavior: 'smooth'
+                        });
+
+                    });
+
+                    // Condición que evita pantallas muy pequeñas
+                    if (window.innerWidth < 480) {
+
+                        enlace.innerHTML = `
+                            <p>Gira tu dispositivo</p>
+                            <i class="fa-solid fa-rotate-left"></i>
+                        `;
+
+                    } else {
+
+                        mostrarImagen(project);
+                    }
+
                 });
 
                 overlay.appendChild(containerInfo);
@@ -203,7 +244,7 @@ import swiper from './swiper';
                 imagen.appendChild(avif);
                 imagen.appendChild(webP);
                 imagen.appendChild(img);
-                
+
                 container.appendChild(imagen);
 
                 grid.appendChild(container);
@@ -269,7 +310,7 @@ import swiper from './swiper';
 
                 const cerrarModal = document.createElement('P');
                 cerrarModal.classList.add('projects__btn-cerrar');
-                cerrarModal.innerHTML = '<i class="fa-regular fa-rectangle-xmark"></i>';
+                cerrarModal.innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
 
                 cerrarModal.onclick = function () {
 
@@ -294,7 +335,8 @@ import swiper from './swiper';
                 imagen.innerHTML = `
                     <source srcset="img/grande/${imgs[i]}.avif" type="image/avif">
                     <source srcset="img/grande/${imgs[i]}.webp" type="image/webp">
-                    <img loading="lazy" height="500" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
+                    <img loading="lazy" src="img/grande/${imgs[i]}.jpg" alt="Imagen Galeria">
+                    <div class="swiper-lazy-preloader"></div>
                 `;
 
                 contenedor.appendChild(imagen);
@@ -303,6 +345,27 @@ import swiper from './swiper';
                 swiperSecundario.appendChild(contenedor);
 
             }
+            // //  click fuera del elemento para cerrar modal, esto no funciona correctamente
+            // overlay.addEventListener('click', (e) => {
+
+            //     // console.log(e.target);
+            //     // console.log(contenedor);
+            //     console.log(contenedor.contains(e.target));
+
+            //     if (e.target !== contenedor) {
+
+            //         const body = document.querySelector('body');
+            //         body.classList.remove('fijar-body');
+
+            //         while (swiperSecundario.firstChild) {
+            //             swiperSecundario.firstChild.remove();
+            //         }
+            //         nav.classList.remove('display-none');
+            //         overlay.classList.add('display-none');
+            //         overlay.classList.remove('projects__overlay-gde');
+            //     }
+
+            // });
         }
     });
 })();

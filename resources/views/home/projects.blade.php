@@ -5,11 +5,22 @@
 <div id="galeria-contenedor" class="projects__contenedor">
 
     <div class="projects__filtros">
+        <div class="projects__contenedor-filtro" data-aos="fade-right">
+            <p id="img-all" >Todos</p>
 
-        <p id="img-all" data-aos="fade-right">Todos</p>
-        <p id="img-php" data-aos="fade-right">PHP - SASS</p>
-        <p id="img-js" data-aos="fade-left">JavaScript - CSS</p>
-        <p id="img-laravel" data-aos="fade-left">Laravel</p>
+        </div>
+        <div class="projects__contenedor-filtro" data-aos="fade-right">
+            <p id="img-php" >PHP - SASS</p>
+
+        </div>
+        <div class="projects__contenedor-filtro" data-aos="fade-left">
+            <p id="img-js" >JS - CSS</p>
+
+        </div>
+        <div class="projects__contenedor-filtro" data-aos="fade-left">
+            <p id="img-laravel" >Laravel</p>
+
+        </div>
     
     </div>
 

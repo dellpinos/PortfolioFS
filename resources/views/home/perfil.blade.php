@@ -1,23 +1,22 @@
+<div class="perfil__contenedor">
 
-<div class="perfil__contenedor" >
-
-    <div class="perfil__contenedor-desc" >
+    <div class="perfil__contenedor-desc">
         <div class="perfil__contenedor-img" data-aos="flip-left">
 
             <picture>
-                <source srcset="{{ asset ('img/perfil.webp') }}" type="image/webp">
-                <source srcset="{{ asset('img/perfil.png') }}" type="image/png">
-                <img loading="lazy" width="200" height="300" src="{{ asset('img/perfil.png') }}" alt="Imagen Perfil">
+                <source srcset="img/perfil.avif" type="image/avif">
+                <source srcset="img/perfil.webp" type="image/webp">
+                <img loading="lazy" width="400" height="600" src="img/perfil.png" alt="Imagen Perfil">
             </picture>
-    
+
         </div>
         <h4>Quien soy?</h4>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis commodi eum harum sapiente magnam quod ipsa alias iure voluptas hic iste nesciunt voluptates itaque obcaecati dolores, temporibus officiis! Explicabo, soluta.</p>
+        <p>Soy desarrollador Full Stack de Buenos Aires, Argentina. Me apasiona crear experiencias de usuario impactantes, desde la implementación de interfaces de usuario atractivas hasta la construcción de sólidas arquitecturas de backend. Siempre estoy buscando oportunidades para aprender, crecer y colaborar en proyectos emocionantes.</p>
 
     </div>
 
-    <ul class="perfil__listado" >
+    <ul class="perfil__listado">
         <li data-aos="fade-left">JavaScript</li>
         <li data-aos="fade-left">Laravel 9</li>
         <li data-aos="fade-left">Rest API</li>

@@ -7,6 +7,12 @@
     }
 }
 
+@mixin phoneHorizontal {
+    @media (min-width: v.$phoneHorizontal) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;

@@ -6,11 +6,21 @@
 
     &__contenedor-xl {
 
-        padding-top: 6rem;
+        padding-top: 2rem;
+
+        @include m.tablet {
+
+            padding-top: 6rem;
+        }
 
         h2 {
             margin: 2rem 0 0 0;
-            padding-top: 7rem;
+            padding: 1rem 0;
+
+            @include m.tablet {
+                padding-top: 7rem;
+
+            }
         }
 
     }
@@ -23,31 +33,58 @@
         background-position: center;
         background-size: 200rem;
         background-repeat: no-repeat;
-        padding: 20rem 0 25rem 0;
+        padding: 0 0 2rem 0;
+
+        @include m.tablet {
+            padding: 20rem 0 25rem 0;
+
+        }
 
     }
 
 
     &__grid {
 
-        width: 100%;
+        width: 95%;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         margin: 5rem;
-        gap: 10rem;
+        gap: 5rem;
+
+        @include m.tablet {
+
+
+            width: 100%;
+            flex-direction: row;
+
+        }
 
     }
 
     &__card {
 
         border-radius: 2rem;
-        padding: 3rem 2rem;
-
+        padding: 1rem .5rem 2rem .5rem;
         box-shadow: -1px -1px 2px 1px v.$gris inset;
-        // box-shadow: 1px 1px 8px 2px v.$negro;
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+            padding: 3rem 2rem;
+
+        }
 
         p {
-            padding: 2rem 4rem;
+            padding: 1rem 2rem;
+            text-align: center;
+
+            @include m.tablet {
+                padding: 2rem 4rem;
+                text-align: start;
+                width: 58rem;
+
+            }
         }
 
         a {
@@ -63,8 +100,11 @@
     }
 
     &__tl {
-        background-color: v.$azulTL;
         color: v.$blanco;
+
+        background: rgb(31,41,55);
+        background: linear-gradient(354deg, rgba(31,41,55,0.9430365896358543) 1%, rgba(31,41,55,1) 53%);
+    
 
         &:hover {
 
@@ -78,9 +118,9 @@
             & .main-projects__icono--oculto {
                 transition: opacity 2s ease;
                 opacity: 1;
-
             }
         }
+
 
         a {
             color: v.$blanco;
@@ -89,10 +129,8 @@
 
     &__tt {
 
-        background-color: v.$blanco;
-
-        
-
+        background: rgb(255,255,255);
+        background: linear-gradient(354deg, rgba(255,255,255,0.8225884103641457) 1%, rgba(255,255,255,1) 53%);
 
         &:hover {
 
@@ -123,7 +161,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 3rem 3rem 1rem 3rem;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 3rem 3rem 1rem 3rem; 
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 0;
+
+        }
 
 
     }
@@ -146,7 +193,7 @@
             color: v.$naranja !important;
             cursor: pointer;
 
-            
+
 
         }
 
@@ -159,10 +206,11 @@
     }
 
     &__text {
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 2rem;
     }
 }

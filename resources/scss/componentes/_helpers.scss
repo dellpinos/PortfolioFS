@@ -1,26 +1,17 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .nav-scroll {
-    padding-top: 69px;
+    padding-top: 83px;
+
+    @include m.tablet {
+        padding-top: 69px;
+    }
 }
 
-.alerta__error {
-
-    font-size: 1.2rem;
-    margin: .3rem 0 .3rem 0;
-    border-radius: .5rem;
-    padding: .5rem;
-    text-align: center;
-    color: v.$blanco;
-    background-color: v.$naranja2;
-
+.no-scroll {
+    overflow-y: hidden;
 }
-
-.borde__error {
-
-    border-color: v.$naranja2;
-}
-
 
 .fijar-body {
     overflow: hidden;
@@ -70,6 +61,10 @@
     color: v.$verde!important;
 }
 
+.c-oscuro {
+    color: v.$negroLight;
+}
+
 .t-y {
     transform: translateY(-2rem);
 }
@@ -77,4 +72,5 @@
 .b-rojo {
     border: 2px solid v.$naranja;
 }
+
 

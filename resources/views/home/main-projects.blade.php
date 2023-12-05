@@ -4,11 +4,13 @@
 
     <div class="main-projects__contenedor">
         <div class="main-projects__grid">
-            <div class="main-projects__card main-projects__tl" data-aos="flip-left">
+            <div class="main-projects__card main-projects__tl" data-aos="flip-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">
                 <div class="main-projects__contenedor-heading">
 
                     <div class="main-projects__contenedor-img">
-                        <img src="img/logoTL_2.png" alt="Logo Tus Listas" width="200" height="70">
+                        <img loading="lazy" src="img/logoTL_2.png" alt="Logo Tus Listas" width="200" height="70">
                     </div>
 
                     <div class="main-projects__iconos">
@@ -21,25 +23,29 @@
                         <i class="main-projects__icono--oculto c-rojo fa-brands fa-laravel"></i>
                         <i class="main-projects__icono--oculto c-ama fa-brands fa-square-js"></i>
                         <i class="main-projects__icono--oculto c-rosa fa-brands fa-sass"></i>
-                        <i class="main-projects__icono fa-brands fa-github"></i>
+                        <a href="https://github.com/dellpinos/tusListas" target="_blank">
+                            <i class="main-projects__icono fa-brands fa-github"></i>
+
+                        </a>
 
                     </div>
                 </div>
 
                 <div class="main-projects__text">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est consequuntur quo eos sit minus rem
-                        modi
-                        ipsa esse.</p>
-                    <a href="#">Login</a>
+                    <p>TusListas es una aplicación web para organizar el inventario de un comercio o empresa permitiendo clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras herramientas.</p>
+                    <a href="https://tuslistas.dellpinos.com/" target="_blank">Login</a>
 
                 </div>
             </div>
 
-            <div class="main-projects__card main-projects__tt" data-aos="flip-right">
+
+            <div class="main-projects__card main-projects__tt" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">
                 <div class="main-projects__contenedor-heading">
 
                     <div class="main-projects__contenedor-img">
-                        <img src="img/logoTT_1.png" alt="Logo Tus Listas" width="260" height="70">
+                        <img loading="lazy" src="img/logoTT_1.png" alt="Logo Tus Listas" width="260" height="70">
                     </div>
 
                     <div class="main-projects__iconos">
@@ -47,21 +53,18 @@
                         <i class="main-projects__icono--oculto c-ama fa-brands fa-square-js"></i>
                         <i class="main-projects__icono--oculto c-rosa fa-brands fa-sass"></i>
                         <i class="main-projects__icono--oculto c-rojo fa-brands fa-html5"></i>
-                        <i class="main-projects__icono fa-brands fa-github"></i>
+                        <a href="https://github.com/dellpinos/UpTask" target="_blank">
+                            <i class="main-projects__icono fa-brands fa-github"></i>
+                        </a>
 
                     </div>
 
                 </div>
                 <div class="main-projects__text">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est consequuntur quo eos sit minus rem
-                        modi
-                        ipsa esse.</p>
-                    <a href="#">Login</a>
-
+                    <p>Con TaskTrack, puedes crear proyectos y asignar tareas de forma rápida y sencilla. La creación inteligente de tareas utiliza ChatGPT para sugerirte nuevas tareas basándose en tu proyecto y su avance.</p>
+                    <a href="https://tasktrack.dellpinos.com/" target="_blank">Login</a>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>

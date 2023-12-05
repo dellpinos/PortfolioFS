@@ -1,20 +1,59 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .contacto {
+
+    &__contenedor {
+        background-color: v.$grisOscuro;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-end;
+
+        &:hover {
+
+            .contacto__work-together {
+
+                opacity: 1;
+                transition: opacity 2s ease;
+
+            }
+        }
+
+        .contacto__work-together {
+            opacity: 0;
+            overflow: hidden;
+            color: v.$naranja2;
+            transition: opacity 2s ease;
+
+        }
+    }
 
     &__heading {
         color: v.$blanco;
         background-color: v.$grisOscuro;
-        padding: 7rem 0 2rem 0;
+        padding: 4rem 0 2rem 0;
         margin: 0;
+        
+        @include m.tablet {
+            padding: 7rem 0 2rem 0;
+            
+        }
     }
 
     &__formulario-contenedor {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 50rem;
+        width: 95%;
         margin-bottom: 4rem;
+        
+        @include m.tablet {
+            width: 50rem;
+            
+        }
 
     }
 
@@ -39,7 +78,6 @@
             transition: box-shadow 4s ease, opacity 1s ease;
 
         }
-
     }
 
     &__btn-contenedor {
@@ -49,7 +87,7 @@
     }
 
     &__btn {
-        width: auto;
+        width: 100%;
         padding: 1rem;
         background-color: transparent;
         border: 2px solid v.$naranja;
@@ -60,6 +98,11 @@
         border-radius: 1rem;
         opacity: 0;
         transition: opacity 1s ease, box-shadow 1s ease,color .3s ease, background-color .3s ease;
+        
+        @include m.tablet {
+            width: auto;
+            
+        }
         
         &:hover {
             color: v.$blanco;
@@ -76,70 +119,13 @@
         }
     }
 
-    &__contenedor {
-        background-color: v.$grisOscuro;
 
-        // background-image: url(../img/bg_11.png);
-        // background-position: center;
-        // background-size: 200rem;
-        // background-repeat: no-repeat;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        justify-content: end;
-
-        // &:hover {
-
-        //     .contacto__campo {
-        //         box-shadow: 3px 3px 10px 3px rgba(v.$negro, .2) inset,
-        //         10px 10px 15px 5px rgba(v.$negro, .1) inset,
-        //         3px 3px 15px 5px rgba(v.$negro, .2),
-        //         10px 10px 15px 5px rgba(v.$negro, .1);
-
-        //         opacity: 1;
-        //         transition: box-shadow 4s ease, opacity 1s ease;
-
-        //     }
-        //     .contacto__btn {
-
-        //         box-shadow: 1px 1px 5px 3px rgba(v.$naranja, .5);
-        //         opacity: 1;
-        //         transition: opacity 3s ease, box-shadow 3s ease, color .3s ease, background-color .3s ease;
-
-        //     }
-            
-        // }
-
-        &:hover {
-
-            p {
-
-                opacity: 1;
-                transition: opacity 2s ease;
-
-            }
-        }
-
-
-
-
-        p {
-            opacity: 0;
-            overflow: hidden;
-            color: v.$naranja2;
-            transition: opacity 2s ease;
-
-        }
-
-    }
 
     &__iconos {
         display: flex;
         gap: 4rem;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
 
     }
 

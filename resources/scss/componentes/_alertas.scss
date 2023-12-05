@@ -1,0 +1,35 @@
+@use '../base/variables' as v;
+
+.alerta__error {
+
+    font-size: 1.2rem;
+    margin: .3rem 0 .3rem 0;
+    border-radius: .5rem;
+    padding: .5rem;
+    text-align: center;
+    color: v.$blanco!important;
+    background-color: v.$naranja2;
+
+}
+
+.borde__error {
+    border-color: v.$naranja2;
+}
+
+.header__alert {
+
+    text-align: center;
+    font-size: 1.6rem;
+    padding: .5rem 0;
+    color: v.$blanco;
+
+
+    &--success {
+        background-color: v.$verde;
+
+    }
+
+    &--error {
+        background-color: v.$naranja2;
+    }
+}
