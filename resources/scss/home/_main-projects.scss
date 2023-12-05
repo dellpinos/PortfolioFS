@@ -50,9 +50,10 @@
         justify-content: space-between;
         flex-direction: column;
         margin: 5rem;
-        gap: 10rem;
+        gap: 5rem;
 
         @include m.tablet {
+
 
             width: 100%;
             flex-direction: row;
@@ -65,9 +66,9 @@
 
         border-radius: 2rem;
         padding: 1rem .5rem 2rem .5rem;
-
         box-shadow: -1px -1px 2px 1px v.$gris inset;
-        // box-shadow: 1px 1px 8px 2px v.$negro;
+        display: flex;
+        flex-direction: column;
 
         @include m.tablet {
             padding: 3rem 2rem;
@@ -81,6 +82,7 @@
             @include m.tablet {
                 padding: 2rem 4rem;
                 text-align: start;
+                width: 58rem;
 
             }
         }
@@ -98,7 +100,6 @@
     }
 
     &__tl {
-        // background-color: v.$azulTL;
         color: v.$blanco;
 
         background: rgb(31,41,55);
@@ -162,10 +163,11 @@
         align-items: center;
         flex-direction: column;
         gap: 1rem;
-        margin: 3rem 3rem 1rem 3rem;
+        margin: 3rem 3rem 1rem 3rem; 
 
         @include m.tablet {
             flex-direction: row;
+            justify-content: space-around;
             gap: 0;
 
         }
@@ -204,10 +206,11 @@
     }
 
     &__text {
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 2rem;
     }
 }

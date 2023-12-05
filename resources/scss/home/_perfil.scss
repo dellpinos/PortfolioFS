@@ -48,21 +48,31 @@
 
     &__contenedor-img {
 
-        img {
-            width: 32rem;
-            height: 32rem;
-
-            @include m.tablet {
-                width: 40rem;
-                height: 40rem;
-
-            }
-        }
-
         margin: 0 auto;
         background-image: url(../img/bg_8.png);
         background-repeat: no-repeat;
         border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+
+        @include m.tablet {
+            width: 50rem;
+            height: 50rem;
+
+        }
+
+        img {
+            width: 32rem;
+            height: 40rem;
+
+            @include m.tablet {
+                width: 40rem;
+                height: 50rem;
+
+
+
+            }
+        }
 
     }
 
@@ -78,10 +88,12 @@
 
 
         @include m.tablet {
-            margin: 2rem auto;
+
             width: 80%;
             font-size: 1.8rem;
             padding-left: 4rem;
+            gap: 2rem;
+            justify-content: center;
         }
 
         li {

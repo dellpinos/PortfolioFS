@@ -10,8 +10,8 @@
         </div>
 
         <div class="skills__text">
-            <h3>Fast</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor.</p>
+            <h3>Rápido</h3>
+            <p>La velocidad de carga y una interacción cómoda son mi prioridad.</p>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
         </div>
         <div class="skills__text">
             <h3>Responsive</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor.</p>
+            <p>Mis diseños se adaptan a cualquier dispositivo, ya sea grande o pequeño.</p>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
         </div>
         <div class="skills__text">
             <h3>Intuitivo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor.</p>
+            <p>Prefiero las cosas simples y fáciles de entender cuando se trata de UX/UI.</p>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
         </div>
         <div class="skills__text">
             <h3 id="skill-dinamico">Dinámico</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor.</p>
+            <p>No creo que los sitios web tengan que ser aburridos y estáticos. ¡Me encanta darles un toque de vida!</p>
         </div>
     </div>
 
