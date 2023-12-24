@@ -1,6 +1,5 @@
 import swiper from './swiper';
 
-
 (function () {
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -48,24 +47,31 @@ import swiper from './swiper';
                 'heading': "Festival",
                 'tecs': "JavaScript - CSS"
             },
-            // '8': {
+            '9': {
+                'imgs': ['66', '67', '68', '69', '70', '71', '72', '73', '74' ,'75'],
+                'heading': "!Jobs",
+                'tecs': "Laravel - Livewire - TailwindCSS"
+            },
+            // '10': {
             //     'imgs': [''],
             //     'heading': "",
             //     'tecs': ""
             // },
+
+            // Agregar imagenes, agregar en el array y agregar en los filtros
 
         }
 
         let imgVisibles = [];
 
         // Filtros
-        const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8'];
+        const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS
         const imgJs = ['1', '3', '2', '6', '8', '4'];
         // Laravel
-        const imgLaravel = ['1', '7'];
+        const imgLaravel = ['1', '7', '9'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');
@@ -180,7 +186,8 @@ import swiper from './swiper';
                 enlace.textContent = "Ver";
 
                 window.addEventListener('resize', () => {
-
+                    
+                    // Al girar la pantalla del móvil
                     // enlace.scrollIntoView({ behavior: 'smooth' });
                     enlace.textContent = "Ver";
 
@@ -190,7 +197,6 @@ import swiper from './swiper';
 
                     // Al girar la pantalla centra el slide clickeado
                     window.addEventListener('resize', () => {
-
 
                         const slide = enlace.parentNode.parentNode;
                         const rect = slide.getBoundingClientRect();
@@ -254,7 +260,6 @@ import swiper from './swiper';
                     img.classList.add('projects__img--oculto');
                     overlay.classList.add('projects__overlay--visible');
 
-
                 });
                 container.addEventListener('mouseleave', () => {
 
@@ -305,6 +310,9 @@ import swiper from './swiper';
                 tecnologias.classList.add('projects__slide-tecs');
                 tecnologias.textContent = tecs;
 
+                const textoContenedor = document.createElement('DIV');
+                textoContenedor.classList.add('projects__slide-texto');
+
                 const btnContenedor = document.createElement('DIV');
                 btnContenedor.classList.add('projects__btn-contenedor');
 
@@ -317,16 +325,22 @@ import swiper from './swiper';
                     const body = document.querySelector('body');
                     body.classList.remove('fijar-body');
 
+                    contenedor.removeChild(imagen);
+                    contenedor.removeChild(info);
+
                     while (swiperSecundario.firstChild) {
                         swiperSecundario.firstChild.remove();
                     }
                     nav.classList.remove('display-none');
                     overlay.classList.add('display-none');
                     overlay.classList.remove('projects__overlay-gde');
+
+                    swiper.slideTo(0, 30, false);
                 };
 
-                info.appendChild(titulo);
-                info.appendChild(tecnologias);
+                textoContenedor.appendChild(titulo);
+                textoContenedor.appendChild(tecnologias);
+                info.appendChild(textoContenedor);
                 btnContenedor.appendChild(cerrarModal);
                 info.appendChild(btnContenedor);
 
@@ -343,6 +357,8 @@ import swiper from './swiper';
                 contenedor.appendChild(info);
 
                 swiperSecundario.appendChild(contenedor);
+
+                swiper.updateSlides();
 
             }
             // //  click fuera del elemento para cerrar modal, esto no funciona correctamente

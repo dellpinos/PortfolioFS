@@ -4,3 +4,4 @@ import './nav';
 import './galeria';
 import './play';
 import './contacto';
+import './darkMode';

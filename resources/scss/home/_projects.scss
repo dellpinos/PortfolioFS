@@ -82,6 +82,10 @@
         align-items: center;
         justify-content: center;
 
+        &:hover {
+            font-weight: v.$bold;
+        }
+
 
         &--activo {
             
@@ -149,6 +153,7 @@
     &__overlay {
 
         width: 100%;
+        height: 100%;
         z-index: 10;
         display: flex;
         flex-direction: column;
@@ -158,6 +163,7 @@
         top: center;
         left: center;
         opacity: 0;
+        background-color: v.$blanco;
 
         transition: opacity .5s ease, gap .5s ease;
 
@@ -264,7 +270,7 @@
         align-items: center;
 
         background-color: darken(v.$blanco, 10%);
-        padding: .5rem;
+        padding: 1rem;
         gap: .5rem;
 
         
@@ -272,12 +278,26 @@
             align-items: inherit;
             flex-direction: column;
             justify-content: center;
-            padding: 1rem;
+            padding: 2.5rem;
             gap: 1rem;
+        }
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
         }
 
 
     }
+
+    &__slide-texto {
+        display: flex;
+        gap: 1rem;
+
+        @include m.tablet {
+            display: block;
+            gap: 0;
+        }
+    } 
 
     &__slide-heading {
 
@@ -300,11 +320,11 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        align-items: center;
 
         
         @include m.tablet {
-            justify-content: flex-end;
-            flex-direction: row;
+
             
         }
     }
@@ -317,10 +337,12 @@
         color: v.$naranja;
         cursor: pointer;
         transition: color .3s ease;
+
+
         
         @include m.tablet {
             font-size: 4rem;
-            padding: 0 2rem 2rem 0;
+
         }
 
         &:hover {

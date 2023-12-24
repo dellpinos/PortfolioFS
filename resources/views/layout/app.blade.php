@@ -53,7 +53,7 @@
 
                     <div>
                         <p class="header__texto">Hola, soy <span class="header__nombre">Martin del Pino</span></p>
-                        <p class="header__texto">Desarrollador Backend - Frontend</p>
+                        <p class="header__texto">Desarrollador Fullstack</p>
 
                     </div>
                     <div class="header__contenedor-boton">
@@ -73,7 +73,7 @@
         </div>
 
         <div class="header__contenido-header">
-            
+
             <div class="header__nav-contenedor-movil">
                 <p id="header-texto-movil">>MdP_</p>
                 <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
@@ -86,6 +86,7 @@
                     <a class="scroll-smooth" href="#galeria">Portfolio</a>
                     <a class="scroll-smooth" href="#contacto">Contacto</a>
                 </div>
+
 
                 <a href="https://github.com/dellpinos" target="_blank">
                     <p class="header__nav-texto" id="header-texto">>MdP_</p>
@@ -101,6 +102,9 @@
     </header>
 
     <main>
+        <div class="theme-container shadow-dark display-none">
+            <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg" alt="ERR">
+          </div>
 
         @yield('contenido')
 

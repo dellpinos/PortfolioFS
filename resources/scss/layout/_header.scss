@@ -196,12 +196,13 @@
 
             font-weight: v.$regular;
             color: v.$blanco;
+            &:hover {
+                color: v.$naranja;
+    
+            }
         }
 
-        &:hover {
-            color: v.$naranja;
-
-        }
+        
 
         @include m.tablet {
             /// Cambia navegacion por un icono
@@ -223,6 +224,10 @@
         @include m.tablet {
             display: block;
 
+        }
+
+        &:hover {
+            color: v.$naranja;
         }
     }
 
@@ -280,6 +285,11 @@
         height: 100%;
         background-color: v.$naranja2;
         width: 20px;
+    }
+
+    &__nav-derecha {
+        display: flex;
+        align-items: center;
     }
 
 }
