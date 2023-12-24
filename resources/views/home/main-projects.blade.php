@@ -1,6 +1,6 @@
 <div class="main-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales" data-aos="fade-right">Proyectos Personales</h2>
+    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">Proyectos Personales</h2>
 
     <div class="main-projects__contenedor">
         <div class="main-projects__grid">
@@ -33,7 +33,7 @@
 
                 <div class="main-projects__text">
                     <p>TusListas es una aplicación web para organizar el inventario de un comercio o empresa permitiendo clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras herramientas.</p>
-                    <a href="https://tuslistas.dellpinos.com/" target="_blank">Login</a>
+                    <a href="https://tuslistas.dellpinos.com/" target="_blank">Home</a>
 
                 </div>
             </div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="main-projects__text">
                     <p>Con TaskTrack, puedes crear proyectos y asignar tareas de forma rápida y sencilla. La creación inteligente de tareas utiliza ChatGPT para sugerirte nuevas tareas basándose en tu proyecto y su avance.</p>
-                    <a href="https://tasktrack.dellpinos.com/" target="_blank">Login</a>
+                    <a href="https://tasktrack.dellpinos.com/" target="_blank">Home</a>
                 </div>
             </div>
         </div>

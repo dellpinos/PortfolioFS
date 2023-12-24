@@ -10,9 +10,9 @@
             </picture>
 
         </div>
-        <h4>Quien soy?</h4>
+        <h4 class="dark-mode">Quien soy?</h4>
 
-        <p>Soy desarrollador Full Stack de Buenos Aires, Argentina. Me apasiona crear experiencias de usuario impactantes, desde la implementación de interfaces de usuario atractivas hasta la construcción de sólidas arquitecturas de backend. Siempre estoy buscando oportunidades para aprender, crecer y colaborar en proyectos emocionantes.</p>
+        <p class="dark-mode">Soy desarrollador Fullstack de Buenos Aires, Argentina. Me apasiona crear experiencias de usuario impactantes, desde la implementación de interfaces de usuario atractivas hasta la construcción de sólidas arquitecturas de backend. Siempre estoy buscando oportunidades para aprender, crecer y colaborar en proyectos emocionantes.</p>
 
     </div>
 
@@ -26,7 +26,7 @@
         <li data-aos="fade-left">HTML</li>
         <li data-aos="fade-left">MySQL</li>
         <li data-aos="fade-left">POO</li>
+        <li data-aos="fade-left">Livewire</li>
         <li data-aos="fade-left">Git</li>
-        <li data-aos="fade-left">Docker</li>
     </ul>
 </div>

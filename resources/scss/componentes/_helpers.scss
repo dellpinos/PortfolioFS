@@ -18,7 +18,7 @@
 }
 
 .display-none {
-    display: none;
+    display: none!important ;
 }
 
 .c-orange {
@@ -71,6 +71,9 @@
 
 .b-rojo {
     border: 2px solid v.$naranja;
+}
+.font-white {
+    color: v.$blanco!important;
 }
 
 
