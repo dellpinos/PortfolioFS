@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <!-- Google Analitics -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -47,7 +47,7 @@
 
         gtag('config', 'G-TT2K6QN74N');
     </script>
-    <!-- Google Analitics -->
+    <!-- Google Analytics -->
     <header id="header" class="header">
 
         @if (session('contact_success'))
