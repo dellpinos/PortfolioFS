@@ -35,6 +35,19 @@
 </head>
 
 <body>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TT2K6QN74N');
+    </script>
+    <!-- Google Analytics -->
     <header id="header" class="header">
 
         @if (session('contact_success'))
@@ -103,8 +116,9 @@
 
     <main>
         <div class="theme-container shadow-dark display-none">
-            <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg" alt="ERR">
-          </div>
+            <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
+                alt="ERR">
+        </div>
 
         @yield('contenido')
 
