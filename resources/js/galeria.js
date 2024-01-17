@@ -54,7 +54,7 @@ import swiper from './swiper';
             },
             '10': {
                 'imgs': ['76', '77', '78', '79', '80', '81'],
-                'heading': "digitalKitchen",
+                'heading': "Digital Kitchen",
                 'tecs': "Laravel - React"
             },
             // '11': {
@@ -63,7 +63,7 @@ import swiper from './swiper';
             //     'tecs': ""
             // },
 
-            // Agregar imagenes, agregar en el array y agregar en los filtros
+            /// Agregar imagenes, agregar en el array y agregar en los filtros 
 
         }
 
