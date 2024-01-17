@@ -48,11 +48,16 @@ import swiper from './swiper';
                 'tecs': "JavaScript - CSS"
             },
             '9': {
-                'imgs': ['66', '67', '68', '69', '70', '71', '72', '73', '74' ,'75'],
+                'imgs': ['66', '67', '68', '69', '70', '71', '72', '73', '74', '75'],
                 'heading': "!Jobs",
                 'tecs': "Laravel - Livewire - TailwindCSS"
             },
-            // '10': {
+            '10': {
+                'imgs': ['76', '77', '78', '79', '80', '81'],
+                'heading': "digitalKitchen",
+                'tecs': "Laravel - React"
+            },
+            // '11': {
             //     'imgs': [''],
             //     'heading': "",
             //     'tecs': ""
@@ -65,13 +70,13 @@ import swiper from './swiper';
         let imgVisibles = [];
 
         // Filtros
-        const imgAll = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        const imgAll = ['1', '2', '9', '3', '10', '6', '7', '4', '5', '8'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS
         const imgJs = ['1', '3', '2', '6', '8', '4'];
         // Laravel
-        const imgLaravel = ['1', '7', '9'];
+        const imgLaravel = ['1', '7', '10' , '9'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');
@@ -186,7 +191,7 @@ import swiper from './swiper';
                 enlace.textContent = "Ver";
 
                 window.addEventListener('resize', () => {
-                    
+
                     // Al girar la pantalla del móvil
                     // enlace.scrollIntoView({ behavior: 'smooth' });
                     enlace.textContent = "Ver";
@@ -361,27 +366,6 @@ import swiper from './swiper';
                 swiper.updateSlides();
 
             }
-            // //  click fuera del elemento para cerrar modal, esto no funciona correctamente
-            // overlay.addEventListener('click', (e) => {
-
-            //     // console.log(e.target);
-            //     // console.log(contenedor);
-            //     console.log(contenedor.contains(e.target));
-
-            //     if (e.target !== contenedor) {
-
-            //         const body = document.querySelector('body');
-            //         body.classList.remove('fijar-body');
-
-            //         while (swiperSecundario.firstChild) {
-            //             swiperSecundario.firstChild.remove();
-            //         }
-            //         nav.classList.remove('display-none');
-            //         overlay.classList.add('display-none');
-            //         overlay.classList.remove('projects__overlay-gde');
-            //     }
-
-            // });
         }
     });
 })();
