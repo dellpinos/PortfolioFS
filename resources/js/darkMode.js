@@ -36,7 +36,7 @@ function setLight() {
     themeIcon.src = sun;
 
     texts.forEach(text => {
-        console.log(text);
+
         text.classList.remove('font-white');
         
     });
