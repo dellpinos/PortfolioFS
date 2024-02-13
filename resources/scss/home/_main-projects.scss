@@ -43,16 +43,16 @@
 
         width: 95%;
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        justify-content: center;
+        // flex-direction: column;
         margin: 5rem;
-        gap: 5rem;
+        // gap: 5rem;
 
         @include m.tablet {
 
 
             width: 100%;
-            flex-direction: row;
+            // flex-direction: row;
 
         }
 
@@ -62,12 +62,16 @@
 
         border-radius: 2rem;
         padding: 1rem .5rem 2rem .5rem;
+
         box-shadow: -1px -1px 2px 1px v.$gris inset;
         display: flex;
         flex-direction: column;
 
+        gap: 4rem;
+
         @include m.tablet {
-            padding: 3rem 2rem;
+            // padding: 3rem 2rem;
+            padding: 5rem 5rem;
 
         }
 
