@@ -1,6 +1,6 @@
 <div class="main-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">Proyecto   Destacado</h2>
+    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">Proyecto Destacado</h2>
 
     <div class="main-projects__contenedor">
         <div class="main-projects__grid">
@@ -38,7 +38,24 @@
                     <p>TusListas es una aplicación web para organizar el inventario de un comercio o empresa permitiendo
                         clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras
                         herramientas.</p>
-                    <a href="https://tuslistas.dellpinos.com/" target="_blank">Home</a>
+
+                        {{-- <div class="main-projects__video">
+                                <iframe width="700" height="396" src="https://www.youtube.com/embed/UH6vv0EN7Bw" title="Recorrido rápido por la aplicación TusListas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div> --}}
+                        <div class="tour__contenedor-card">
+                            <div class="tour__card" id="tour-card">
+                                <i id="tour-play-icon" class="tour__play fa-solid fa-circle-play"></i>
+                    
+                                <img src="{{ asset('img/LogoSinFondo.png') }}" class="tour__card-logo" alt="Logo Tus Listas">
+                                <div class="tour__card-contenedor-text">
+                    
+                                    <h4 class="tour__card-heading">TusListas<br> vista rápida</h4>
+                                    <p class="tour__card-text">Una vista rápida de la aplicación. Descubre sus características clave, funcionalidades y cómo puede hacer tu vida más fácil.</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    <a href="https://tuslistas.dellpinos.com/" target="_blank">Ir a TusListas</a>
 
                 </div>
             </div>

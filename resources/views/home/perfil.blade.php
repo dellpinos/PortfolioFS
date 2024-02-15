@@ -1,7 +1,8 @@
 <div class="perfil__contenedor">
 
     <div class="perfil__contenedor-desc">
-        <div class="perfil__contenedor-img" data-aos="flip-left">
+        {{-- <div class="perfil__contenedor-img" data-aos="flip-left"> --}}
+        <div class="perfil__contenedor-img">
 
             <picture>
                 <source srcset="img/perfil.avif" type="image/avif">

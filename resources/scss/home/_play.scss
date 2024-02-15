@@ -9,8 +9,6 @@
         align-items: center;
         flex-direction: column;
         background-color: v.$grisOscuro;
-
-
     }
 
     &__desplegar {
@@ -23,7 +21,6 @@
         border: 1px solid rgba(v.$naranja, .2);
         color: rgba(v.$naranja, .2);
         transition: color .5s ease, border .5s ease;
-
         
         @include m.tablet {
             width: 84rem;
@@ -78,6 +75,7 @@
         margin: 3rem auto 0 auto;
         display: grid;
         grid-template-columns: repeat(4, 7rem);
+        border: 1px solid darken(v.$grisOscuro, 10%);
         
         transition: max-height 1s ease, opacity 1.5s ease;
         
@@ -103,8 +101,7 @@
 
     &__icono {
 
-        border: .5px solid v.$grisOscuro;
-
+        border: 1px solid darken(v.$grisOscuro, 10%);
         width: 7rem;
         height: 7rem;
         background-color: v.$grisOscuro;
@@ -112,7 +109,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 1px 1px 5px 1px v.$negro inset;
+        box-shadow: 0 0 15px lighten(v.$negro, 6%) ;
         transition: background-color .3s ease, color .3s ease;
 
         &:hover {

@@ -12,14 +12,14 @@
             '5': ['fa-brands', 'fa-git-alt', 'c-orange'],
             '6': ['fa-brands', 'fa-github', 'c-oscuro'],
             '7': ['fa-brands', 'fa-laravel', 'c-rojo'],
-            '8': ['fa-brands', 'fa-galactic-republic', 'c-white'],
-            '9': ['fa-brands', 'fa-jedi-order', 'c-rojo'],
+            '8': ['fa-brands', 'fa-node-js', 'c-green'],
+            '9': ['fa-brands', 'fa-gulp', 'c-rojo'],
             '10': ['fa-brands', 'fa-xbox', 'c-green'],
             '11': ['fa-brands', 'fa-apple', 'c-white'],
-            '12': ['fa-solid', 'fa-code', 'c-green'],
+            '12': ['fa-brands', 'fa-react', 'c-cyan'],
             '13': ['fa-brands', 'fa-docker', 'c-azul'],
             '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
-            '15': ['fa-solid', 'fa-database', 'c-oscuro'],
+            '15': ['fa-solid', 'fa-database', 'c-white'],
             '16': ['fa-brands', 'fa-steam', 'c-azul'],
             '17': ['fa-brands', 'fa-slack', 'c-white']
         };
@@ -279,29 +279,32 @@
 
         function gridCompletado() {
 
+            let delay = 0;
             // Ganador
             cuadros.forEach(cuadro => {
                 cuadro.classList.remove('play__icono-rojo');
             });
-            cuadros.forEach(cuadro => {
+            cuadros.forEach((cuadro, i) => {
 
                 setTimeout(() => {
                     cuadro.classList.add('play__icono-victoria');
-                }, 250);
+                }, delay);
+                delay += 100;
 
+                if(i === cuadros.length - 1) {
+
+                    setTimeout(() => {
+
+                        contadorVictorias++;
+                        // reinicia variables y estilos
+                        lvlSuperado();
+                        // eliminar el icono y reemplazarlo por un parrafo o dos que cuenten victorias y clicks
+                        activarContador();
+        
+                    }, delay + 300);
+
+                }
             });
-
-            setTimeout(() => {
-
-                contadorVictorias++;
-                // reinicia variables y estilos
-                lvlSuperado();
-                // eliminar el icono y reemplazarlo por un parrafo o dos que cuenten victorias y clicks
-                activarContador();
-
-            }, 2500);
-
-
         }
     });
 
