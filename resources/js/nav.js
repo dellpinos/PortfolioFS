@@ -54,6 +54,8 @@
 
             btnMovil.classList.toggle('header__nav-menu-movil--activo');
             nav.classList.toggle('header__nav--activo');
+
+            console.log('debug')
  
         });
     }
@@ -84,7 +86,8 @@
         const barra = document.querySelector('.header__contenido-header');
         const skills = document.querySelector('#skills');
         const header = document.querySelector('.header__overlay');
-        const container = document.getElementsByClassName("theme-container")[0];
+
+        const btnDM = document.querySelector('#DM-btn');
 
         window.addEventListener('scroll', function () {
 
@@ -92,13 +95,13 @@
 
                 barra.classList.add('fijo');
                 skills.classList.add('nav-scroll');
-                container.classList.remove('display-none');
+                btnDM.classList.remove('no-visible');
 
             }
             else {
                 barra.classList.remove('fijo');
                 skills.classList.remove('nav-scroll');
-                container.classList.add('display-none');
+                btnDM.classList.add('no-visible');
             }
         });
     }
@@ -111,9 +114,10 @@
 
                 e.preventDefault();
 
-                const seccionScroll = e.target.attributes.href.value;
-                const seccion = document.querySelector(seccionScroll);
-                seccion.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.scrollTo({
+                    top: document.querySelector(e.target.attributes.href.value).offsetTop - 30,
+                    behavior: 'smooth'
+                })
             });
         });
     }
