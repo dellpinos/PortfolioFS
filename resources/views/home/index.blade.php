@@ -11,6 +11,8 @@
 
     <section class="projects__contenedor-xl">
 
+        @include('home.dev-projects')
+
         @include('home.main-projects')
 
         @include('home.projects')

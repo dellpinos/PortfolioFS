@@ -1,4 +1,4 @@
-import swiper from './swiper';
+import { swiper } from './swiper';
 
 (function () {
 
@@ -62,16 +62,16 @@ import swiper from './swiper';
                 'heading': "JustBuyIt!",
                 'tecs': "Python - Django - CSS"
             },
-            // '11': {
-            //     'imgs': [''],
-            //     'heading': "",
-            //     'tecs': ""
-            // },
-            // '11': {
-            //     'imgs': [''],
-            //     'heading': "",
-            //     'tecs': ""
-            // },
+            '12': {
+                'imgs': ['88', '89', '90'],
+                'heading': "Gestor Gastos",
+                'tecs': "React - Typescript - TailwindCSS"
+            },
+            '13': {
+                'imgs': ['91', '92'],
+                'heading': "Contador Carlorias",
+                'tecs': "React - Typescript - TailwindCSS"
+            },
             // '': {
             //     'imgs': [''],
             //     'heading': "",
@@ -85,7 +85,7 @@ import swiper from './swiper';
         let imgVisibles = [];
 
         // Filtros
-        const imgAll = ['1', '11', '2', '9', '3', '10', '6', '7', '4', '5', '8'];
+        const imgAll = ['1', '11', '2', '12','9', '3', '10', '6', '13','7', '4', '5', '8'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS

@@ -18,14 +18,15 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Martin del Pino</title>
@@ -77,22 +78,21 @@
                 </div>
             </div>
 
-            <video autoplay muted loop>
-
+            <video autoplay muted loop preload="auto">
                 <source src="video/circulo_azul_720.mp4" type="video/mp4">
-
+                <source src="video/circulo_azul_720.webm" type="video/webm">
             </video>
 
         </div>
 
         <div class="header__contenido-header">
 
-            
+
             <div class="header__nav-contenedor-movil">
                 <p id="header-texto-movil">>MdP_</p>
                 <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
             </div>
-            
+
             <nav class="header__nav">
                 <div class="header__nav-enlaces">
                     <a class="scroll-smooth" href="#skills">Perfil</a>
@@ -100,14 +100,14 @@
                     <a class="scroll-smooth" href="#galeria">Portfolio</a>
                     <a class="scroll-smooth" href="#contacto">Contacto</a>
                 </div>
-                
+
                 <div class="header__contenedor-derecha">
                     <div class="header__contenedor-DM" id="DM-btn">
                         {{-- <i class="fa-solid fa-power-off header__icono-DM"></i> --}}
                         <i class="fa-solid fa-bolt header__icono-DM"></i>
 
                     </div>
-    
+
                     <a class="header__nav-texto-contenedor" href="https://github.com/dellpinos" target="_blank">
                         <p class="header__nav-texto" id="header-texto">>MdP_</p>
                     </a>

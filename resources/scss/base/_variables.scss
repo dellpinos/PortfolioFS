@@ -35,6 +35,9 @@ $grisOscuro: #444444;
 
 $separacion: 5rem;
 
+// Dark Mode
+$negroDM: #1e1e1e; // Este color se aplica desde Js, no desde aquí. Esta varriable no cumple ninguna función
+
 // Otros colores
 $naranja2: #D52F1E;
 $naranja3: #CE2227;
@@ -43,3 +46,17 @@ $rosa: #CC3B6C;
 // Paleta de TusListas
 $azulTL: #1f2937;
 $azulTLClaro: #0284C7;
+
+
+
+// Paleta de StuffScripts
+$fuenteStuff:"Encode Sans SC", sans-serif;
+$naranjaST: #d23e01;
+$grisOscuroST: #7D7470;
+$grisST: #696969;
+$amarilloST: #ffd53a;
+$doradoST: #fbb106;
+$DMazulOscuroST: #111828;
+$DMgrisOscuroST: #1c1916;
+$DMgrisMedioST: #282d35;
+$DMgrisClaroST: #384153;
