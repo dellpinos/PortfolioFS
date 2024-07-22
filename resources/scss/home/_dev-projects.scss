@@ -21,7 +21,7 @@
         position: relative;
         border-radius: 3rem;
         height: 25rem;
-        width: 95%;
+        width: 100%;
         border: 2px solid v.$azulTLClaro;
         background-color: v.$azulTLClaro;
         background: linear-gradient(130deg, v.$azulTL 50%, v.$azulTLClaro 50%),
@@ -53,6 +53,10 @@
         background: linear-gradient(130deg, v.$negro 50%, v.$doradoST 50%),
             linear-gradient(130deg, v.$negro 55%, v.$doradoST 40%);
         border: 2px solid v.$amarillo;
+
+        @include m.tablet {
+            
+        }
 
     }
     &__card-ticket {
@@ -102,9 +106,9 @@
         height: 20rem;
         font-size: 30rem;
         text-shadow: 0 0 5px v.$negro;
-        margin-left: 1rem;
-
+        
         @include m.tablet {
+            margin-left: 1rem;
             width: 30rem;
             height: 30rem;
         }
@@ -115,11 +119,27 @@
 
         @extend .tour__card-logo;
         width: 20rem;
-        // height: 20rem;
+        height: 15rem;
 
         @include m.tablet {
             width: 100%;
             height: 25rem;
+        }
+
+    }
+
+    &__card-logo-st {
+
+        @extend .tour__card-logo;
+        height: fit-content;
+        font-size: 15rem;
+        
+        @include m.tablet {
+            margin-left: 3rem;
+            width: 100%;
+            height: 25rem;
+            font-size: 20rem;
+
         }
 
     }
@@ -211,6 +231,7 @@
             background-position: center;
             background-size: 200rem;
             background-repeat: no-repeat;
+            
 
         }
 
@@ -223,22 +244,30 @@
     &__contenedor-stuff {
 
         @extend .dev-projects__contenedor;
-        background-image: url(../img/bg_stuff.svg);
-        font-family: v.$fuenteStuff;
-        background-size: auto;
+        background: none;
+
+
+        @include m.tablet {
+            background-image: url(../img/bg_stuff.svg);
+            font-family: v.$fuenteStuff;
+            background-size: auto;
+            
+        }
 
 
     }
 
     &__contenedor-ticket {
 
-        background-color: v.$rojo;
         @extend .dev-projects__contenedor;
         background-image: url(../img/bg_13_w.svg);
         background-repeat: repeat;
         background-size: auto;
-
-
+        
+        @include m.tablet {
+            background-color: v.$rojo;
+            
+        }
 
     }
 
@@ -246,13 +275,14 @@
         position: absolute;
         top: 50%;
         right: 0;
-        width: 5rem;
-        height: 15rem;
-        border-radius: 2rem 0 0 2rem;
-
-
-        // background: url('../img/r_arrow.svg') no-repeat center center, v.$naranja;
-
+        width: 2rem;
+        height: 7rem;
+        border-radius: .5rem 0 0 .5rem;
+        
+        @include m.tablet {
+            width: 5rem;
+            height: 15rem;
+        }
 
     }
 
@@ -260,13 +290,17 @@
         @extend .dev-projects__fix-tag;
 
         left: 0;
-        border-radius: 0 2rem 2rem 0;
+        border-radius: 0 .5rem .5rem 0;
         box-shadow: 0 0 10px v.$naranja;
         border: .5px solid v.$negro;
-
+        
         background: url('../img/l_arrow.svg') no-repeat center center, v.$naranja;
         background-size: contain;
-
+        
+        @include m.tablet {
+            border-radius: 0 2rem 2rem 0;
+            
+        }
 
     }
 
@@ -274,19 +308,22 @@
         @extend .dev-projects__fix-tag;
 
         right: 0;
-        border-radius: 2rem 0 0 2rem;
+        border-radius: .5rem 0 0 .5rem;
         box-shadow: 0 0 10px v.$negro;
-
+        
         background: url('../img/r_arrow.svg') no-repeat center center, v.$naranja;
         background-size: contain;
-
-
+        
+        @include m.tablet {
+            
+            border-radius: 2rem 0 0 2rem;
+        }
 
     }
 
     &__grid {
 
-        width: 95%;
+
         display: flex;
         justify-content: center;
         // flex-direction: column;
@@ -428,8 +465,8 @@
     &__ticket {
         color: v.$blanco;
 
-        background: rgb(242, 242, 242);
-        background: linear-gradient(354deg, rgba(242, 242, 242, .6) 1%, rgba(242, 242, 242, 1) 70%);
+        background: v.$rojo;
+        background: linear-gradient(354deg, rgba(239, 68, 68, .6) 60%, rgba(239, 68, 68, 1) 100%);
 
         @include m.tablet {
             background: rgb(0, 0, 0);
@@ -500,7 +537,7 @@
         text-align: center;
         width: 100%;
         margin: 0;
-        font-size: 5rem;
+        font-size: 3rem;
         // text-shadow: 0 0 6px v.$doradoST;
 
     }
@@ -546,11 +583,17 @@
 
     &__text {
         height: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        // gap: 2rem;
+        gap: 2rem;
+
+
+        @include m.tablet {
+            gap: 1rem;
+        }
     }
 
 }

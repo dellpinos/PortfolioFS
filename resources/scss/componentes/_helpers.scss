@@ -82,6 +82,11 @@
 .font-white {
     color: v.$blanco!important;
 }
+.hover-white {
+    &:hover {
+        color: v.$blanco!important;
+    }
+}
 
 // DM
 .font-dm-white {
