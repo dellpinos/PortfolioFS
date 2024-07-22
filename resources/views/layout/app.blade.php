@@ -86,8 +86,6 @@
         </div>
 
         <div class="header__contenido-header">
-
-
             <div class="header__nav-contenedor-movil">
                 <p id="header-texto-movil">>MdP_</p>
                 <i class="header__nav-menu-movil fa-solid fa-ellipsis-vertical"></i>
@@ -96,8 +94,8 @@
             <nav class="header__nav">
                 <div class="header__nav-enlaces">
                     <a class="scroll-smooth" href="#skills">Perfil</a>
-                    <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>
                     <a class="scroll-smooth" href="#galeria">Portfolio</a>
+                    <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>
                     <a class="scroll-smooth" href="#contacto">Contacto</a>
                 </div>
 
@@ -120,7 +118,6 @@
                 <div id="barra-carga" class="header__nav-carga"></div>
             </div>
         </div>
-
     </header>
 
     <main>

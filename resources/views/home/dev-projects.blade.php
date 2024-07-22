@@ -1,6 +1,6 @@
 <div class="dev-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">En desarrollo</h2>
+    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">Destacados</h2>
 
     <div class="swiperProjects mySwiper">
         <div class="swiper-wrapper">
@@ -36,10 +36,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>TusListas es una aplicación web para organizar el inventario de un comercio o empresa
-                                permitiendo
-                                clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras
-                                herramientas.</p>
+                            <p>TicketAdmin es una aplicación diseñada para simplificar la organización de eventos y la venta de entradas. Ofrece una plataforma robusta y fácil de usar para gestionar eventos de cualquier tamaño aceptando pago mediante MercadoPago.</p>
 
                             {{-- <div class="dev-projects__video">
                                 <iframe width="700" height="396" src="https://www.youtube.com/embed/UH6vv0EN7Bw" title="Recorrido rápido por la aplicación TusListas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -159,10 +156,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>TusListas es una aplicación web para organizar el inventario de un comercio o empresa
-                                permitiendo
-                                clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras
-                                herramientas.</p>
+                            <p>Este sitio es mi pequeño rincón en la web donde experimento con diferentes tecnologías y comparto proyectos que he creado.</p>
 
                             {{-- <div class="dev-projects__video">
                                 <iframe width="700" height="396" src="https://www.youtube.com/embed/UH6vv0EN7Bw" title="Recorrido rápido por la aplicación TusListas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -176,7 +170,7 @@
                                     <i class="fa-solid fa-gears tour__card-logo-st"></i>
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">TusListas<br> vista rápida</h4>
+                                        <h4 class="tour__card-heading">Stuff<br> vista rápida</h4>
                                         <p class="tour__card-text">Una vista rápida de la aplicación. Descubre sus
                                             características clave, funcionalidades y cómo puede ayudarte.
                                         </p>
