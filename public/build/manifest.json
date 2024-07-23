@@ -19,9 +19,25 @@
     "file": "assets/bg_13-7c508c59.svg",
     "src": "resources/img/bg_13.svg"
   },
+  "resources/img/bg_13_w.svg": {
+    "file": "assets/bg_13_w-917bf8c6.svg",
+    "src": "resources/img/bg_13_w.svg"
+  },
   "resources/img/bg_8.png": {
     "file": "assets/bg_8-5b7daa49.png",
     "src": "resources/img/bg_8.png"
+  },
+  "resources/img/bg_stuff.svg": {
+    "file": "assets/bg_stuff-e862a5b3.svg",
+    "src": "resources/img/bg_stuff.svg"
+  },
+  "resources/img/l_arrow.svg": {
+    "file": "assets/l_arrow-6c34a5a1.svg",
+    "src": "resources/img/l_arrow.svg"
+  },
+  "resources/img/r_arrow.svg": {
+    "file": "assets/r_arrow-a164edae.svg",
+    "src": "resources/img/r_arrow.svg"
   },
   "resources/js/app.css": {
     "file": "assets/app-bb4df054.css",
@@ -31,12 +47,12 @@
     "css": [
       "assets/app-bb4df054.css"
     ],
-    "file": "assets/app-c6977f20.js",
+    "file": "assets/app-ef0fb15e.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-e213740d.css",
+    "file": "assets/app-9c9b84aa.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }

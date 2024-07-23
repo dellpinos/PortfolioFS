@@ -22,10 +22,17 @@
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
+
+        <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+
         <div class="contacto__btn-contenedor">
             <input type="submit" class="contacto__btn" value="Enviar">
         </div>
     </form>
+
+
+
+
 
     <p class="contacto__work-together">Want to work together?</p>
 
