@@ -36,5 +36,8 @@
         <a href="https://www.linkedin.com/in/martin-del-pino-158390293" target="_blank">
             <i class="contacto__icono fa-brands fa-linkedin"></i>
         </a>
+        <a href="https://www.youtube.com/@martindelpino1395" target="_blank">
+            <i class="contacto__icono fa-brands fa-youtube"></i>
+        </a>
     </div>
 </div>

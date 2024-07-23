@@ -1,4 +1,4 @@
-import swiper from './swiper';
+import { swiper } from './swiper';
 
 (function () {
 
@@ -57,7 +57,22 @@ import swiper from './swiper';
                 'heading': "Digital Kitchen",
                 'tecs': "Laravel - React"
             },
-            // '11': {
+            '11': {
+                'imgs': ['82', '83', '84', '85', '86', '87'],
+                'heading': "JustBuyIt!",
+                'tecs': "Python - Django - CSS"
+            },
+            '12': {
+                'imgs': ['88', '89', '90'],
+                'heading': "Gestor Gastos",
+                'tecs': "React - Typescript - TailwindCSS"
+            },
+            '13': {
+                'imgs': ['91', '92'],
+                'heading': "Contador Carlorias",
+                'tecs': "React - Typescript - TailwindCSS"
+            },
+            // '': {
             //     'imgs': [''],
             //     'heading': "",
             //     'tecs': ""
@@ -70,13 +85,13 @@ import swiper from './swiper';
         let imgVisibles = [];
 
         // Filtros
-        const imgAll = ['1', '2', '9', '3', '10', '6', '7', '4', '5', '8'];
+        const imgAll = ['1', '11', '2', '12','9', '3', '10', '6', '13','7', '4', '5', '8'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS
         const imgJs = ['1', '3', '2', '6', '8', '4'];
         // Laravel
-        const imgLaravel = ['1', '7', '10' , '9'];
+        const imgLaravel = ['1', '7', '10', '9'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');
