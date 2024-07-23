@@ -12,25 +12,62 @@ class SendEmailController extends Controller
     static function index(Request $request)
     {
 
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|string|max:60|email',
-            'name' => 'required|string|max:30|min:3',
-            'mensaje' => 'required|string|min:5|max:600',
-        ]);
+        // reCaptcha
+        $secretKey = env('CAPTCHA_PRIVATE');
+        $recaptchaResponse = $request->recaptcha_response;
+    
+        // Configurar la solicitud
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = [
+            'secret' => $secretKey,
+            'response' => $recaptchaResponse
+        ];
+    
+        // Configuración de la solicitud HTTP
+        $options = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'POST',
+                'content' => http_build_query($data)
+            ]
+        ];
+    
+        // Crear el contexto de la solicitud
+        $context  = stream_context_create($options);
+    
+        // Enviar la solicitud y recibir la respuesta
+        $response = file_get_contents($url, false, $context);
+        $result = json_decode($response);
 
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput()->with('contact_error', 'Revisa los campos de contacto.');
-        }
 
-        $resultado =  Mail::to('dellpinos7@gmail.com')->send(new ContactoMail($request->email, $request->name, $request->mensaje)); // <<<< Como enviar emails
+        if ($result->success && $result->score >= 0.5) {
 
-        // Verifica el resultado
-        if ($resultado) {
-            // Success
-            return redirect()->back()->with('contact_success', 'El email se envió correctamente, te contactaré lo antes posible.');
+            // No es un bot
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|string|max:60|email',
+                'name' => 'required|string|max:30|min:3',
+                'mensaje' => 'required|string|min:5|max:2000',
+            ]);
+    
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput()->with('contact_error', 'Revisa los campos de contacto.');
+            }
+    
+            $resultado =  Mail::to('dellpinos7@gmail.com')->send(new ContactoMail($request->email, $request->name, $request->mensaje)); // <<<< Como enviar emails
+    
+            // Verifica el resultado
+            if ($resultado) {
+                // Success
+                return redirect()->back()->with('contact_success', 'El email se envió correctamente, te contactaré lo antes posible.');
+            } else {
+                // Error
+                return redirect()->back()->with('contact_error', 'Hubo un problema. Por favor, inténtalo de nuevo o puedes contactarme en alguna de mis Redes Sociales.');
+            }
         } else {
-            // Error
+
+            // Es un bot
             return redirect()->back()->with('contact_error', 'Hubo un problema. Por favor, inténtalo de nuevo o puedes contactarme en alguna de mis Redes Sociales.');
         }
+
     }
 }
