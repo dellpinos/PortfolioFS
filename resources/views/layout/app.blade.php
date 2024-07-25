@@ -11,7 +11,6 @@
     <link rel="icon" href="{{ asset('img/icon_tab.png') }}" type="image/x-icon">
 
     <link rel="preload" href="video/circulo_azul_720.mp4" as="video">
-
     <link rel="preload" as="image" href="img/perfil.webp">
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
@@ -20,13 +19,10 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet">
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Martin del Pino</title>
@@ -101,7 +97,6 @@
 
                 <div class="header__contenedor-derecha">
                     <div class="header__contenedor-DM" id="DM-btn">
-                        {{-- <i class="fa-solid fa-power-off header__icono-DM"></i> --}}
                         <i class="fa-solid fa-bolt header__icono-DM"></i>
 
                     </div>
@@ -109,11 +104,9 @@
                     <a class="header__nav-texto-contenedor" href="https://github.com/dellpinos" target="_blank">
                         <p class="header__nav-texto" id="header-texto">>MdP_</p>
                     </a>
-
                 </div>
 
             </nav>
-
             <div class="header__nav-contenedor-carga">
                 <div id="barra-carga" class="header__nav-carga"></div>
             </div>
@@ -121,10 +114,6 @@
     </header>
 
     <main>
-        {{-- <div class="theme-container shadow-dark display-none">
-            <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
-                alt="ERR">
-        </div> --}}
 
         @yield('contenido')
 
@@ -142,5 +131,4 @@
     @vite('resources/js/app.js')
 
 </body>
-
 </html>
