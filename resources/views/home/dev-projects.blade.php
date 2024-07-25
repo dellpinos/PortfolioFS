@@ -9,7 +9,6 @@
             <div class="dev-projects__contenedor-ticket swiper-slide">
 
                 <div class="dev-projects__fix-tag-l"></div>
-
                 <div class="dev-projects__grid">
 
                     <div class="dev-projects__card dev-projects__ticket">
@@ -36,14 +35,13 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>TicketAdmin es una aplicación diseñada para simplificar la organización de eventos y la venta de entradas. Ofrece una plataforma robusta y fácil de usar para gestionar eventos de cualquier tamaño aceptando pago mediante MercadoPago.</p>
+                            <p>TicketAdmin es una aplicación diseñada para simplificar la organización de eventos y la
+                                venta de entradas. Ofrece una plataforma robusta y fácil de usar para gestionar eventos
+                                de cualquier tamaño aceptando pago mediante MercadoPago.</p>
 
-                            {{-- <div class="dev-projects__video">
-                                <iframe width="700" height="396" src="https://www.youtube.com/embed/UH6vv0EN7Bw" title="Recorrido rápido por la aplicación TusListas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div> --}}
                             <div class="tour__contenedor-card">
                                 <div class="tour__card-ticket" id="tour-card-ticket">
-                                    <i id="tour-play-icon" class="tour__play fa-solid fa-circle-play"></i>
+                                    <i id="tour-play-icon-ticket" class="tour__play fa-solid fa-circle-play"></i>
 
                                     <img src="{{ asset('img/page.svg') }}" class="tour__card-logo-ta"
                                         alt="Logo Ticket Admin" loading="lazy">
@@ -51,7 +49,7 @@
 
                                         <h4 class="tour__card-heading">TicketAdmin<br> vista rápida</h4>
                                         <p class="tour__card-text">Una vista rápida de la aplicación. Descubre sus
-                                            características clave, funcionalidades y cómo puede ayudarte.
+                                            características clave y funcionalidades.
                                         </p>
                                     </div>
 
@@ -70,10 +68,7 @@
 
                 <div class="dev-projects__fix-tag-l"></div>
                 <div class="dev-projects__fix-tag-r"></div>
-                {{-- <div class="dev-projects__contenedor"> --}}
-
                 <div class="dev-projects__grid">
-
                     <div class="dev-projects__card dev-projects__tl">
                         <div class="dev-projects__contenedor-heading">
 
@@ -107,12 +102,9 @@
                                 clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras
                                 herramientas.</p>
 
-                            {{-- <div class="dev-projects__video">
-                                <iframe width="700" height="396" src="https://www.youtube.com/embed/UH6vv0EN7Bw" title="Recorrido rápido por la aplicación TusListas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div> --}}
                             <div class="tour__contenedor-card">
-                                <div class="tour__card" id="tour-card">
-                                    <i id="tour-play-icon" class="tour__play fa-solid fa-circle-play"></i>
+                                <div class="tour__card" id="tour-card-tuslistas">
+                                    <i id="tour-play-icon-tuslistas" class="tour__play fa-solid fa-circle-play"></i>
 
                                     <img src="{{ asset('img/LogoSinFondo.png') }}" class="tour__card-logo"
                                         alt="Logo Tus Listas" loading="lazy">
@@ -138,7 +130,6 @@
             <div class="dev-projects__contenedor-stuff swiper-slide">
                 <div class="dev-projects__fix-tag-r"></div>
 
-                {{-- <div class="dev-projects__contenedor"> --}}
                 <div class="dev-projects__grid">
                     <div class="dev-projects__card dev-projects__stuff">
                         <div class="dev-projects__contenedor-heading">
@@ -156,29 +147,24 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>Este sitio es mi pequeño rincón en la web donde experimento con diferentes tecnologías y comparto proyectos que he creado.</p>
+                            <p>Este sitio es mi pequeño rincón en la web donde experimento con diferentes tecnologías y
+                                comparto proyectos que he creado.</p>
 
-                            {{-- <div class="dev-projects__video">
-                                <iframe width="700" height="396" src="https://www.youtube.com/embed/UH6vv0EN7Bw" title="Recorrido rápido por la aplicación TusListas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div> --}}
                             <div class="tour__contenedor-card">
                                 <div class="tour__card-stuff" id="tour-card-stuff">
-                                    <i id="tour-play-icon" class="tour__play fa-solid fa-circle-play"></i>
-
-                                    {{-- <img src="{{ asset('img/LogoSinFondo.png') }}" class="tour__card-logo"
-                                        alt="Logo Tus Listas" loading="lazy"> --}}
+                                    <i id="tour-play-icon-stuff" class="tour__play fa-solid fa-circle-play"></i>
                                     <i class="fa-solid fa-gears tour__card-logo-st"></i>
                                     <div class="tour__card-contenedor-text">
 
                                         <h4 class="tour__card-heading">Stuff<br> vista rápida</h4>
-                                        <p class="tour__card-text">Una vista rápida de la aplicación. Descubre sus
-                                            características clave, funcionalidades y cómo puede ayudarte.
+                                        <p class="tour__card-text">Una vista rápida del sitio. Descubre sus
+                                            características clave y funcionalidades.
                                         </p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://stuffscripts.dellpinos.com/" target="_blank">Ir a Stuff</a>
+                            <a href="https://stuffscripts.dellpinos.com/" target="_blank">Ir a Stuff & Scripts</a>
                         </div>
                     </div>
                 </div>

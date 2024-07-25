@@ -4,7 +4,7 @@
 const imgFull = {
     // Informacion de cada Proyecto
     '1': {
-        'imgs': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+        'imgs': ['116', '117', '118', '1', '2', '3', '4', '5', '7', '8', '9', '120', '121', '122', '10', '11', '12', '13', '119'],
         'heading': "TusListas",
         'tecs': "Laravel - JavaScript - SASS"
     },
