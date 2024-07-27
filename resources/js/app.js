@@ -5,4 +5,5 @@ import './galeria';
 import './play';
 import './contacto';
 import './darkMode';
-import './mainProject';
+import './devProjects';
+// import './mainProject'; -- Deprecated

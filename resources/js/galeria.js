@@ -1,135 +1,56 @@
 import { swiper } from './swiper';
+import imgFull from './db_proyectos'; // Proyectos
 
 (function () {
-
     document.addEventListener('DOMContentLoaded', () => {
-
-        // Informacion de cada Proyecto
-        const imgFull = {
-            '1': {
-                'imgs': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
-                'heading': "TusListas",
-                'tecs': "Laravel - JavaScript - SASS"
-            },
-            '2': {
-                'imgs': ['14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'],
-                'heading': "TaskTrack",
-                'tecs': "PHP - JavaScript - SASS"
-            },
-            '3': {
-                'imgs': ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'],
-                'heading': "DevWebCamp",
-                'tecs': "PHP - JavaScript - SASS"
-            },
-            '4': {
-                'imgs': ['37', '38', '39', '40', '41', '42'],
-                'heading': "Blog Cafe",
-                'tecs': "HTML - CSS",
-                // 'link': "https://blogcafedellpinos.netlify.app/"
-            },
-            '5': {
-                'imgs': ['43', '44', '45', '46', '47', '48', '49', '50'],
-                'heading': "Bienes Raices",
-                'tecs': "PHP - SASS"
-            },
-            '6': {
-                'imgs': ['51', '52', '53', '54', '55'],
-                'heading': "AppSalón",
-                'tecs': "JavaScript - HTML - CSS"
-            },
-            '7': {
-                'imgs': ['56', '57', '58', '59', '60', '61'],
-                'heading': "DevStagram",
-                'tecs': "Laravel - TailwindCSS"
-            },
-            '8': {
-                'imgs': ['62', '63', '64', '65'],
-                'heading': "Festival",
-                'tecs': "JavaScript - CSS"
-            },
-            '9': {
-                'imgs': ['66', '67', '68', '69', '70', '71', '72', '73', '74', '75'],
-                'heading': "!Jobs",
-                'tecs': "Laravel - Livewire - TailwindCSS"
-            },
-            '10': {
-                'imgs': ['76', '77', '78', '79', '80', '81'],
-                'heading': "Digital Kitchen",
-                'tecs': "Laravel - React"
-            },
-            '11': {
-                'imgs': ['82', '83', '84', '85', '86', '87'],
-                'heading': "JustBuyIt!",
-                'tecs': "Python - Django - CSS"
-            },
-            '12': {
-                'imgs': ['88', '89', '90'],
-                'heading': "Gestor Gastos",
-                'tecs': "React - Typescript - TailwindCSS"
-            },
-            '13': {
-                'imgs': ['91', '92'],
-                'heading': "Contador Carlorias",
-                'tecs': "React - Typescript - TailwindCSS"
-            },
-            // '': {
-            //     'imgs': [''],
-            //     'heading': "",
-            //     'tecs': ""
-            // },
-
-            /// Agregar imagenes, agregar en el array y agregar en los filtros 
-
-        }
 
         let imgVisibles = [];
 
+        // Los nuevos proyectos que se hayan agregado en db_proyectos deben agregarse en los filtros que correspondan
         // Filtros
-        const imgAll = ['1', '11', '2', '12','9', '3', '10', '6', '13','7', '4', '5', '8'];
+        const imgAll = ['1', '15', '11', '2', '14', '12', '9', '3', '10', '6', '13', '7', '4', '5', '8'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS
-        const imgJs = ['1', '3', '2', '6', '8', '4'];
+        const imgJs = ['1', '15', '14', '3', '2', '6', '8'];
         // Laravel
-        const imgLaravel = ['1', '7', '10', '9'];
+        const imgLaravel = ['1', '15', '7', '10', '9'];
+        // React
+        const imgReact = ['10', '12', '13'];
+        // Python
+        const imgPython = ['11'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');
         const filtLaravel = document.querySelector('#img-laravel');
         const filtJs = document.querySelector('#img-js');
+        const filtReact = document.querySelector('#img-react');
+        const filtPython = document.querySelector('#img-python');
         const grid = document.querySelector('.projects__grid');
+
+        const filtros = [
+            { element: filtAll, filtro: imgAll },
+            { element: filtPhp, filtro: imgPhp },
+            { element: filtLaravel, filtro: imgLaravel },
+            { element: filtJs, filtro: imgJs },
+            { element: filtPython, filtro: imgPython },
+            { element: filtReact, filtro: imgReact }
+        ];
 
         imgVisibles = imgAll;
         crearGaleria();
         filtroActual();
 
-        filtAll.addEventListener('click', () => {
+        filtros.forEach( item => {
 
-            limpiarGaleria();
-            imgVisibles = imgAll;
-            filtroActual();
-            crearGaleria();
-        });
-        filtPhp.addEventListener('click', () => {
+            // Listener para cada filtro
+            item.element.addEventListener('click', () => {
 
-            limpiarGaleria();
-            imgVisibles = imgPhp;
-            filtroActual();
-            crearGaleria();
-        });
-        filtLaravel.addEventListener('click', () => {
-
-            limpiarGaleria();
-            imgVisibles = imgLaravel;
-            filtroActual();
-            crearGaleria();
-        });
-        filtJs.addEventListener('click', () => {
-
-            limpiarGaleria();
-            imgVisibles = imgJs;
-            filtroActual();
-            crearGaleria();
+                limpiarGaleria();
+                imgVisibles = item.filtro;
+                filtroActual();
+                crearGaleria();
+            });
         });
 
         function limpiarGaleria() {
@@ -141,35 +62,14 @@ import { swiper } from './swiper';
 
         function filtroActual() {
 
-            if (JSON.stringify(imgVisibles) === JSON.stringify(imgAll)) {
-
-                filtAll.classList.add('projects__contenedor-filtro--activo');
-                filtPhp.classList.remove('projects__contenedor-filtro--activo');
-                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
-                filtJs.classList.remove('projects__contenedor-filtro--activo');
-
-            } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgPhp)) {
-
-                filtPhp.classList.add('projects__contenedor-filtro--activo');
-                filtAll.classList.remove('projects__contenedor-filtro--activo');
-                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
-                filtJs.classList.remove('projects__contenedor-filtro--activo');
-
-            } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgLaravel)) {
-
-                filtLaravel.classList.add('projects__contenedor-filtro--activo');
-                filtPhp.classList.remove('projects__contenedor-filtro--activo');
-                filtAll.classList.remove('projects__contenedor-filtro--activo');
-                filtJs.classList.remove('projects__contenedor-filtro--activo');
-
-            } else if (JSON.stringify(imgVisibles) === JSON.stringify(imgJs)) {
-
-                filtJs.classList.add('projects__contenedor-filtro--activo');
-                filtLaravel.classList.remove('projects__contenedor-filtro--activo');
-                filtPhp.classList.remove('projects__contenedor-filtro--activo');
-                filtAll.classList.remove('projects__contenedor-filtro--activo');
-
-            }
+            filtros.forEach(item => {
+                // Compara ambos arrays en forma de strings (busca coincidencia en todos los elementos), si ambos arrays son iguales (los mismos elementos) puede haber un error
+                if (JSON.stringify(imgVisibles) === JSON.stringify(item.filtro)) {
+                    item.element.classList.add('projects__contenedor-filtro--activo');
+                } else {
+                    item.element.classList.remove('projects__contenedor-filtro--activo');
+                }
+            });
         }
 
         function crearGaleria() {
@@ -212,7 +112,7 @@ import { swiper } from './swiper';
                     enlace.textContent = "Ver";
 
                 });
-
+                
                 enlace.addEventListener('click', (e) => {
 
                     // Al girar la pantalla centra el slide clickeado
@@ -229,7 +129,6 @@ import { swiper } from './swiper';
                             top: posicionCentrada,
                             behavior: 'smooth'
                         });
-
                     });
 
                     // Condición que evita pantallas muy pequeñas
@@ -239,12 +138,9 @@ import { swiper } from './swiper';
                             <p>Gira tu dispositivo</p>
                             <i class="fa-solid fa-rotate-left"></i>
                         `;
-
                     } else {
-
                         mostrarImagen(project);
                     }
-
                 });
 
                 overlay.appendChild(containerInfo);
@@ -379,7 +275,6 @@ import { swiper } from './swiper';
                 swiperSecundario.appendChild(contenedor);
 
                 swiper.updateSlides();
-
             }
         }
     });
