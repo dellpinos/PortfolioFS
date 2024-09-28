@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+
+.lang__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: inherit;
+    border: .5px solid v.$grisOscuro;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 1s ease;
+    cursor: pointer;
+    color: v.$blanco;
+
+    p {
+        margin: 0;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    &:hover {
+        color: v.$naranja;
+        border: .5px solid v.$naranja;
+        box-shadow: 0 0 5px v.$naranja;
+        
+    }
+}
+
+.lang__icon {
+    font-size: 2rem;
+
+
+}

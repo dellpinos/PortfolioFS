@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Portfolio desarrollador web fullstack">
+    <meta name="description" content="Portfolio developer web fullstack">
 
-    <link rel="icon" href="{{ asset('img/icon_tab.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img/avatar.svg') }}" type="image/x-icon">
 
     <link rel="preload" href="video/circulo_azul_720.mp4" as="video">
     <link rel="preload" as="image" href="img/perfil.webp">
@@ -25,7 +25,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Martin del Pino</title>
+    <title>Martín del Pino</title>
 
     @vite('resources/scss/app.scss')
 
@@ -45,6 +45,7 @@
         gtag('config', 'G-TT2K6QN74N');
     </script>
     <!-- Google Analytics -->
+
     <header id="header" class="header">
 
         @if (session('contact_success'))
@@ -62,12 +63,12 @@
                 <div class="contenedor-xl header__contenido-video">
 
                     <div>
-                        <p class="header__texto">Hola, soy <span class="header__nombre">Martin del Pino</span></p>
-                        <p class="header__texto">Desarrollador Fullstack</p>
+                        <p class="header__texto">{{ __('text.hello' ) }} <span class="header__nombre">Martín del Pino</span></p>
+                        <p class="header__texto">{{ __('text.dev' ) }}</p>
 
                     </div>
                     <div class="header__contenedor-boton">
-                        <a href="#skills" class="header__boton scroll-smooth">Ver mi trabajo <i href="#skills"
+                        <a href="#skills" class="header__boton scroll-smooth">{{ __('text.job' ) }} <i href="#skills"
                                 class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
 
                     </div>
@@ -89,23 +90,35 @@
 
             <nav class="header__nav">
                 <div class="header__nav-enlaces">
-                    <a class="scroll-smooth" href="#skills">Perfil</a>
-                    <a class="scroll-smooth" href="#galeria">Portfolio</a>
-                    <a class="scroll-smooth" href="#proyectos-personales">Proyectos</a>
-                    <a class="scroll-smooth" href="#contacto">Contacto</a>
+                    <a class="scroll-smooth" href="#skills">{{ __('text.profile' ) }}</a>
+                    <a class="scroll-smooth" href="#galeria">{{ __('text.portfolio' ) }}</a>
+                    <a class="scroll-smooth" href="#proyectos-personales">{{ __('text.projects' ) }}</a>
+                    <a class="scroll-smooth" href="#contacto">{{ __('text.contact' ) }}</a>
                 </div>
 
                 <div class="header__contenedor-derecha">
                     <div class="header__contenedor-DM" id="DM-btn">
                         <i class="fa-solid fa-bolt header__icono-DM"></i>
-
                     </div>
 
                     <a class="header__nav-texto-contenedor" href="https://github.com/dellpinos" target="_blank">
                         <p class="header__nav-texto" id="header-texto">>MdP_</p>
                     </a>
-                </div>
 
+                    <div class="lang__container">
+                        @if (session('locale') == 'en')
+                            <a href="{{ route('home.language', 'es') }}" class="lang__btn">
+                                <p>EN</p>
+                                <i class="lang__icon fa-solid fa-globe"></i>
+                            </a>
+                        @else
+                            <a href="{{ route('home.language', 'en') }}" class="lang__btn">
+                                <p>ES</p>
+                                <i class="lang__icon fa-solid fa-globe"></i>
+                            </a>
+                        @endif
+                    </div>
+                </div>
             </nav>
             <div class="header__nav-contenedor-carga">
                 <div id="barra-carga" class="header__nav-carga"></div>
@@ -124,7 +137,7 @@
             <i href="#header" class="footer__icono fa-solid fa-circle-arrow-up"></i>
         </a>
 
-        <p><span class="footer__nombre">Martín del Pino</span> - Todos los derechos reservados {{ now()->year }}</p>
+        <p><span class="footer__nombre">Martín del Pino</span> - {{ __('text.copyright' ) }} {{ now()->year }}</p>
 
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>

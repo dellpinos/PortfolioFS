@@ -50,7 +50,7 @@ class SendEmailController extends Controller
             ]);
     
             if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput()->with('contact_error', 'Revisa los campos de contacto.');
+                return redirect()->back()->withErrors($validator)->withInput()->with('contact_error', __('text.email_fields'));
             }
     
             $resultado =  Mail::to('dellpinos7@gmail.com')->send(new ContactoMail($request->email, $request->name, $request->mensaje)); // <<<< Como enviar emails
@@ -58,15 +58,15 @@ class SendEmailController extends Controller
             // Verifica el resultado
             if ($resultado) {
                 // Success
-                return redirect()->back()->with('contact_success', 'El email se envió correctamente, te contactaré lo antes posible.');
+                return redirect()->back()->with('contact_success', __('text.email_success') );
             } else {
                 // Error
-                return redirect()->back()->with('contact_error', 'Hubo un problema. Por favor, inténtalo de nuevo o puedes contactarme en alguna de mis Redes Sociales.');
+                return redirect()->back()->with('contact_error', __('text.email_error') );
             }
         } else {
 
             // Es un bot
-            return redirect()->back()->with('contact_error', 'Hubo un problema. Por favor, inténtalo de nuevo o puedes contactarme en alguna de mis Redes Sociales.');
+            return redirect()->back()->with('contact_error', __('text.email_error') );
         }
 
     }

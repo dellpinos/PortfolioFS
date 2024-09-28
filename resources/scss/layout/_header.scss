@@ -3,18 +3,15 @@
 
 .header {
 
-
     & .fijo {
         left: 0;
         top: 0;
         position: fixed;
         z-index: 99;
         width: 100%;
-
     }
 
     &__video {
-
         width: 100%;
         position: relative;
         max-height: 100vh;
@@ -36,7 +33,6 @@
     }
 
     &__overlay {
-
         position: absolute;
         height: 100%;
         width: 100%;
@@ -48,7 +44,6 @@
 
         background: rgb(40,111,235);
         background: linear-gradient(17deg, rgba(40,111,235,0.24975927871148462) 24%, rgba(31,82,170,0.4038209033613446) 56%);
-
 
         @include m.tablet {
             justify-content: center
@@ -66,7 +61,6 @@
     &__nombre {
         color: darken(v.$naranja, 5%);
         @include m.texto-fluido(1.4rem, 5.5rem);
-
     }
 
     &__contenedor-boton {
@@ -76,7 +70,6 @@
         gap: 2rem;
         width: auto;
         margin-top: 4rem;
-
     }
 
     &__boton {
@@ -84,12 +77,9 @@
         align-items: center;
         font-size: 1.6rem;
         color: v.$blanco;
-
         border: 2px solid v.$blanco;
         padding: 1rem 3rem;
         cursor: pointer;
-
-
         transition: background-color 1s ease-out;
 
         i {
@@ -97,25 +87,17 @@
         }
 
         &:hover {
-
             background-color: rgba(v.$naranja, 0.5);
-
-
             i {
                 transform: rotate(450deg);
             }
         }
-
-
     }
 
     &__icono {
         color: v.$blanco;
         font-size: 3rem;
         margin-left: 1rem;
-
-
-
     }
 
     &__contenido-video {
@@ -123,7 +105,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
 
         @include m.tablet {
             height: auto;
@@ -135,19 +116,15 @@
         &--activo {
 
             // height: 100vh;
-
-
         }
     }
 
     &__nav {
-
         gap: 6rem;
         font-size: 2rem;
         background-color: v.$grisOscuro;
         display: flex;
         justify-content: space-between;
-
         max-height: 0;
         overflow: hidden;
         opacity: 0;
@@ -162,7 +139,6 @@
             opacity: 1;
         }
 
-
         &--activo {
             max-height: 30rem;
 
@@ -174,8 +150,6 @@
             transition: max-height 1s ease, opacity 1s ease, padding-bottom 1s ease, gap .5s ease;
 
         }
-
-
     }
 
     &__nav-enlaces {
@@ -183,7 +157,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         transition: color .3s ease-out;
         width: 100%;
         text-align: center;
@@ -191,7 +164,6 @@
         gap: 3rem;
 
         a {
-
             font-weight: v.$regular;
             color: v.$blanco;
             &:hover {
@@ -200,15 +172,11 @@
             }
         }
 
-        
-
         @include m.tablet {
             /// Cambia navegacion por un icono
             width: auto;
             
             flex-direction: row;
-            
-
         }
     }
 
@@ -226,7 +194,6 @@
 
         @include m.tablet {
             display: block;
-
         }
 
         &:hover {
@@ -252,7 +219,6 @@
         @include m.tablet {
             background-color: v.$grisOscuro;
             max-height: 0;
-
         }
     }
 
