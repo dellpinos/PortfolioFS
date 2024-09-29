@@ -1,11 +1,11 @@
 
-<h2 class="projects__heading dark-mode" id="galeria" data-aos="fade-right">Portfolio</h2>
+<h2 class="projects__heading dark-mode" id="galeria" data-aos="fade-right">{{ __('text.portfolio') }}</h2>
 
 <div id="galeria-contenedor" class="projects__contenedor">
 
     <div class="projects__filtros">
         <div class="projects__contenedor-filtro" data-aos="fade-right">
-            <p id="img-all" class="dark-mode" >Todos</p>
+            <p id="img-all" class="dark-mode" >{{ __('text.all') }}</p>
         </div>
         <div class="projects__contenedor-filtro" data-aos="fade-right">
             <p id="img-laravel" class="dark-mode" >Laravel</p>

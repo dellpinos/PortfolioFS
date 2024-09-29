@@ -4,11 +4,14 @@ import imgFull from './db_proyectos'; // Proyectos
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
 
+        // Detectar idioma para cambiar textos
+        const currentLang = document.documentElement.lang;
+
         let imgVisibles = [];
 
         // Los nuevos proyectos que se hayan agregado en db_proyectos deben agregarse en los filtros que correspondan
         // Filtros
-        const imgAll = ['1', '15', '11', '2', '14', '12', '9', '3', '10', '6', '13', '7', '4', '5', '8'];
+        const imgAll = ['1', '15', '11', '2', '14', '18' ,'12', '9', '3', '17', '16', '10', '6', '13', '7', '4', '5', '8'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS
@@ -16,9 +19,9 @@ import imgFull from './db_proyectos'; // Proyectos
         // Laravel
         const imgLaravel = ['1', '15', '7', '10', '9'];
         // React
-        const imgReact = ['10', '12', '13'];
+        const imgReact = ['10', '12', '13', '16'];
         // Python
-        const imgPython = ['11'];
+        const imgPython = ['11', '17', '18'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');
@@ -103,13 +106,25 @@ import imgFull from './db_proyectos'; // Proyectos
 
                 const enlace = document.createElement('BUTTON');
                 enlace.classList.add('projects__info-btn');
-                enlace.textContent = "Ver";
+
+                if (currentLang === 'es') {
+                    enlace.textContent = "Ver";
+                    
+                } else {
+                    enlace.textContent = "View";
+                }
 
                 window.addEventListener('resize', () => {
 
                     // Al girar la pantalla del móvil
                     // enlace.scrollIntoView({ behavior: 'smooth' });
-                    enlace.textContent = "Ver";
+
+                    if (currentLang === 'es') {
+                        enlace.textContent = "Ver";
+                        
+                    } else {
+                        enlace.textContent = "View";
+                    }
 
                 });
                 
@@ -134,8 +149,18 @@ import imgFull from './db_proyectos'; // Proyectos
                     // Condición que evita pantallas muy pequeñas
                     if (window.innerWidth < 480) {
 
+                        let txt;
+                        if (currentLang === 'es') {
+                            txt = "Gira tu dispositivo";
+                            
+                        } else {
+                            txt = "Rotate your device";
+                        }
+
+
+
                         enlace.innerHTML = `
-                            <p>Gira tu dispositivo</p>
+                            <p>${txt}</p>
                             <i class="fa-solid fa-rotate-left"></i>
                         `;
                     } else {

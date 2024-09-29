@@ -1,38 +1,32 @@
 <div id="contacto-contenedor" class="contacto__contenedor">
-    <h2 class="contacto__heading" id="contacto" data-aos="fade-right">Contacto</h2>
-
+    <h2 class="contacto__heading" id="contacto" data-aos="fade-right">{{ __('text.contact') }}</h2>
 
     <form action="/" method="POST" class="contacto__formulario-contenedor">
         @csrf
-        <input type="text" placeholder="Tu nombre" name="name"
+        <input type="text" placeholder="{{ __('text.ph_name') }}" name="name"
             class="contacto__campo @error('name') borde__error @enderror" value="{{ old('name') }}" required">
         @error('name')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
-        <input type="text" placeholder="Tu email" name="email"
+        <input type="text" placeholder="{{ __('text.ph_email') }}" name="email"
             class="contacto__campo @error('email') borde__error @enderror" value="{{ old('email') }}" required>
         @error('email')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
-        <textarea class="contacto__campo" cols="30" rows="10" placeholder="Escribe tu mensaje" name="mensaje"
+        <textarea class="contacto__campo" cols="30" rows="10" placeholder="{{ __('text.ph_msg') }}" name="mensaje"
             required>{{ old('mensaje') }}</textarea>
         @error('mensaje')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
-
         <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 
         <div class="contacto__btn-contenedor">
-            <input type="submit" class="contacto__btn" value="Enviar">
+            <input type="submit" class="contacto__btn" value="{{ __('text.btn_send') }}">
         </div>
     </form>
-
-
-
-
 
     <p class="contacto__work-together">Want to work together?</p>
 

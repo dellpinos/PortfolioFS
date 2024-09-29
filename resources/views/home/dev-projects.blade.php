@@ -1,6 +1,6 @@
 <div class="dev-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">Destacados</h2>
+    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">{{ __('text.main') }}</h2>
 
     <div class="swiperProjects mySwiper">
         <div class="swiper-wrapper">
@@ -35,9 +35,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>TicketAdmin es una aplicación diseñada para simplificar la organización de eventos y la
-                                venta de entradas. Ofrece una plataforma robusta y fácil de usar para gestionar eventos
-                                de cualquier tamaño aceptando pago mediante MercadoPago.</p>
+                            <p>{{ __('text.ta_desc') }}</p>
 
                             <div class="tour__contenedor-card">
                                 <div class="tour__card-ticket" id="tour-card-ticket">
@@ -47,15 +45,13 @@
                                         alt="Logo Ticket Admin" loading="lazy">
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">TicketAdmin<br> vista rápida</h4>
-                                        <p class="tour__card-text">Una vista rápida de la aplicación. Descubre sus
-                                            características clave y funcionalidades.
-                                        </p>
+                                        <h4 class="tour__card-heading">TicketAdmin<br> {{ __('text.view') }}</h4>
+                                        <p class="tour__card-text">{{ __('text.main_caract') }}</p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://ticketadmin.dellpinos.com/" target="_blank">Ir a TicketAdmin</a>
+                            <a href="https://ticketadmin.dellpinos.com/" target="_blank">{{ __('text.goto') }} TicketAdmin</a>
                         </div>
                     </div>
                 </div>
@@ -97,10 +93,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>TusListas es una aplicación web para organizar el inventario de un comercio o empresa
-                                permitiendo
-                                clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras
-                                herramientas.</p>
+                            <p>{{ __('text.tl_desc') }}</p>
 
                             <div class="tour__contenedor-card">
                                 <div class="tour__card" id="tour-card-tuslistas">
@@ -110,15 +103,13 @@
                                         alt="Logo Tus Listas" loading="lazy">
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">TusListas<br> vista rápida</h4>
-                                        <p class="tour__card-text">Una vista rápida de la aplicación. Descubre sus
-                                            características clave, funcionalidades y cómo puede ayudarte.
-                                        </p>
+                                        <h4 class="tour__card-heading">TusListas<br> {{ __('text.view') }}</h4>
+                                        <p class="tour__card-text">{{ __('text.main_caract') }}</p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://tuslistas.dellpinos.com/" target="_blank">Ir a TusListas</a>
+                            <a href="https://tuslistas.dellpinos.com/" target="_blank">{{ __('text.goto') }} TusListas</a>
                         </div>
                     </div>
                 </div>
@@ -147,8 +138,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>Este sitio es mi pequeño rincón en la web donde experimento con diferentes tecnologías y
-                                comparto proyectos que he creado.</p>
+                            <p>{{ __('text.ss_desc') }}</p>
 
                             <div class="tour__contenedor-card">
                                 <div class="tour__card-stuff" id="tour-card-stuff">
@@ -156,15 +146,13 @@
                                     <i class="fa-solid fa-gears tour__card-logo-st"></i>
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">Stuff<br> vista rápida</h4>
-                                        <p class="tour__card-text">Una vista rápida del sitio. Descubre sus
-                                            características clave y funcionalidades.
-                                        </p>
+                                        <h4 class="tour__card-heading">Stuff<br> {{ __('text.view') }}</h4>
+                                        <p class="tour__card-text">{{ __('text.main_caract') }}</p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://stuffscripts.dellpinos.com/" target="_blank">Ir a Stuff & Scripts</a>
+                            <a href="https://stuffscripts.dellpinos.com/" target="_blank">{{ __('text.goto') }} Stuff & Scripts</a>
                         </div>
                     </div>
                 </div>

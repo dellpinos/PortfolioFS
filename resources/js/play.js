@@ -2,6 +2,8 @@
 
     document.addEventListener('DOMContentLoaded', () => {
 
+        // Detectar idioma para cambiar textos
+        const currentLang = document.documentElement.lang;
         // Map
         const brands = {
             '0': ['fa-brands', 'fa-square-js', 'c-ama'],
@@ -44,6 +46,18 @@
         const lvl2 = 150;
         const lvl3 = 120;
         const lvl4 = 90;
+
+        // Traducción de textos
+        let txt1;
+        let txt2;
+
+        if(currentLang === 'es') {
+            txt1 = "Restantes ";
+            txt2 = "Victorias: "
+        } else {
+            txt1 = "Remaining ";
+            txt2 = "Wins: ";
+        }
 
         desplegar.addEventListener('click', () => {
 
@@ -105,6 +119,8 @@
 
         function activarContador() {
 
+
+
             while (desplegar.firstChild) {
                 desplegar.removeChild(desplegar.firstChild);
             }
@@ -113,20 +129,20 @@
 
             const parrafoVictorias = document.createElement('P');
             parrafoVictorias.classList.add('play__contador');
-            parrafoVictorias.textContent = "Victorias: " + contadorVictorias;
+            parrafoVictorias.textContent = txt2 + contadorVictorias;
 
             const parrafoClicks = document.createElement('P');
             parrafoClicks.classList.add('play__contador');
             parrafoClicks.id = 'play-contador-clicks'
             if (contadorVictorias === 1) {
 
-                parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl2;
+                parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl2;
             } else if (contadorVictorias === 2) {
 
-                parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl3;
+                parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl3;
             } else if (contadorVictorias > 2) {
 
-                parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl4;
+                parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl4;
             }
 
             desplegar.appendChild(parrafoVictorias);
@@ -151,19 +167,19 @@
 
                     if (contadorVictorias === 1) {
 
-                        parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl2;
+                        parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl2;
                         if (contadorClicks > lvl2) {
                             gameOver();
                         }
                     } else if (contadorVictorias === 2) {
 
-                        parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl3;
+                        parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl3;
                         if (contadorClicks > lvl3) {
                             gameOver();
                         }
                     } else if (contadorVictorias > 2) {
 
-                        parrafoClicks.textContent = "Restantes: " + contadorClicks + "/" + lvl4;
+                        parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl4;
                         if (contadorClicks > lvl4) {
                             gameOver();
                         }
