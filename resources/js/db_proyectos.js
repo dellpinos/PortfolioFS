@@ -78,6 +78,23 @@ const imgFull = {
         'heading': "TicketAdmin",
         'tecs': "Laravel - JavaScript - MercadoPago"
     },
+    '16': {
+        'imgs': ['123', '124', '125'],
+        'heading': "Cocktail",
+        'tecs': "React - TypeScript"
+    },
+    '17': {
+        'imgs': ['126', '127', '128'],
+        'heading': "MailFast",
+        'tecs': "Django - Python - JavaScript"
+    },
+    '18': {
+        'imgs': ['129', '130', '131', '132'],
+        'heading': "Twack",
+        'tecs': "Django - Python - JavaScript"
+    },
+
+
     // '16': {
     //     'imgs': [''],
     //     'heading': "",

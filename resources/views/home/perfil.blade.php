@@ -26,7 +26,7 @@
         <li data-aos="fade-left">Python</li>
         <li data-aos="fade-left">Rest API</li>
         <li data-aos="fade-left">MySQL</li>
-        <li data-aos="fade-left">Testing</li>
+        <li data-aos="fade-left">Unit Testing</li>
         <li data-aos="fade-left">SASS / CSS3</li>
         {{-- <li data-aos="fade-left">MVC</li> --}}
         <li data-aos="fade-left">HTML5</li>

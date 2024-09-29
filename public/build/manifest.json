@@ -28,15 +28,15 @@
     "src": "resources/img/bg_8.png"
   },
   "resources/img/bg_stuff.svg": {
-    "file": "assets/bg_stuff-e862a5b3.svg",
+    "file": "assets/bg_stuff-8ea5c8ea.svg",
     "src": "resources/img/bg_stuff.svg"
   },
   "resources/img/l_arrow.svg": {
-    "file": "assets/l_arrow-6c34a5a1.svg",
+    "file": "assets/l_arrow-19f5d6b7.svg",
     "src": "resources/img/l_arrow.svg"
   },
   "resources/img/r_arrow.svg": {
-    "file": "assets/r_arrow-a164edae.svg",
+    "file": "assets/r_arrow-5037eeed.svg",
     "src": "resources/img/r_arrow.svg"
   },
   "resources/js/app.css": {
@@ -47,12 +47,12 @@
     "css": [
       "assets/app-bb4df054.css"
     ],
-    "file": "assets/app-320730eb.js",
+    "file": "assets/app-d31314af.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-f0f30651.css",
+    "file": "assets/app-835cdb5d.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }

@@ -35,7 +35,6 @@
         enlaceActivo();
         barraCarga();
 
-
     }
 
     function navegacionMovil() {
@@ -43,7 +42,7 @@
         const barra = document.querySelector('.header__nav-contenedor-movil');
         const btnMovil = document.querySelector('.header__nav-menu-movil');
         const nav = document.querySelector('.header__nav');
-        const links = document.querySelectorAll('.header__nav a');
+        const links = document.querySelectorAll('.header__nav a.scroll-smooth');
 
         // Loop
         links.forEach(enlace => {
@@ -66,8 +65,6 @@
 
             btnMovil.classList.toggle('header__nav-menu-movil--activo');
             nav.classList.toggle('header__nav--activo');
-
-            console.log('debug')
  
         });
     }

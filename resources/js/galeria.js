@@ -11,7 +11,7 @@ import imgFull from './db_proyectos'; // Proyectos
 
         // Los nuevos proyectos que se hayan agregado en db_proyectos deben agregarse en los filtros que correspondan
         // Filtros
-        const imgAll = ['1', '15', '11', '2', '14', '12', '9', '3', '10', '6', '13', '7', '4', '5', '8'];
+        const imgAll = ['1', '15', '11', '2', '14', '18' ,'12', '9', '3', '17', '16', '10', '6', '13', '7', '4', '5', '8'];
         // PHP - SASS
         const imgPhp = ['2', '3', '5', '6'];
         // Js - CSS
@@ -19,9 +19,9 @@ import imgFull from './db_proyectos'; // Proyectos
         // Laravel
         const imgLaravel = ['1', '15', '7', '10', '9'];
         // React
-        const imgReact = ['10', '12', '13'];
+        const imgReact = ['10', '12', '13', '16'];
         // Python
-        const imgPython = ['11'];
+        const imgPython = ['11', '17', '18'];
 
         const filtAll = document.querySelector('#img-all');
         const filtPhp = document.querySelector('#img-php');

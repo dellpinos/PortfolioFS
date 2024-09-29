@@ -106,14 +106,16 @@
                     </a>
 
                     <div class="lang__container">
-                        @if (session('locale') == 'en')
-                            <a href="{{ route('home.language', 'es') }}" class="lang__btn">
-                                <p>EN</p>
+                        @if (session('locale') == 'es')
+
+                            <a href="{{ route('home.language', 'en') }}" class="lang__btn">
+                                <p>ES</p>
                                 <i class="lang__icon fa-solid fa-globe"></i>
                             </a>
                         @else
-                            <a href="{{ route('home.language', 'en') }}" class="lang__btn">
-                                <p>ES</p>
+                        
+                            <a href="{{ route('home.language', 'es') }}" class="lang__btn">
+                                <p>EN</p>
                                 <i class="lang__icon fa-solid fa-globe"></i>
                             </a>
                         @endif
