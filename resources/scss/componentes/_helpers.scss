@@ -72,6 +72,9 @@
 .c-cyan {
     color: v.$cyan;
 }
+.c-dor {
+    color: v.$doradoST!important;
+}
 .t-y {
     transform: translateY(-2rem);
 }
@@ -93,4 +96,7 @@
     color: v.$grisClaro!important;
 }
 
+.bg-dm-white {
+    background-color: v.$grisOscuro!important;
+}
 

@@ -1,163 +1,157 @@
-(function () {
 
-    document.addEventListener('DOMContentLoaded', () => {
+export default function play() {
+    // Detectar idioma para cambiar textos
+    const currentLang = document.documentElement.lang;
+    // Map
+    const brands = {
+        '0': ['fa-brands', 'fa-square-js', 'c-ama'],
+        '1': ['fa-brands', 'fa-sass', 'c-rosa'],
+        '2': ['fa-brands', 'fa-css3', 'c-azul'],
+        '3': ['fa-brands', 'fa-html5', 'c-rojo'],
+        '4': ['fa-brands', 'fa-php', 'c-azul'],
+        '5': ['fa-brands', 'fa-git-alt', 'c-orange'],
+        '6': ['fa-brands', 'fa-github', 'c-oscuro'],
+        '7': ['fa-brands', 'fa-laravel', 'c-rojo'],
+        '8': ['fa-brands', 'fa-node-js', 'c-green'],
+        '9': ['fa-brands', 'fa-gulp', 'c-rojo'],
+        '10': ['fa-brands', 'fa-xbox', 'c-green'],
+        '11': ['fa-brands', 'fa-apple', 'c-white'],
+        '12': ['fa-brands', 'fa-react', 'c-cyan'],
+        '13': ['fa-brands', 'fa-docker', 'c-azul'],
+        '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
+        '15': ['fa-solid', 'fa-database', 'c-white'],
+        '16': ['fa-brands', 'fa-steam', 'c-azul'],
+        '17': ['fa-brands', 'fa-slack', 'c-white']
+    };
 
-        // Detectar idioma para cambiar textos
-        const currentLang = document.documentElement.lang;
-        // Map
-        const brands = {
-            '0': ['fa-brands', 'fa-square-js', 'c-ama'],
-            '1': ['fa-brands', 'fa-sass', 'c-rosa'],
-            '2': ['fa-brands', 'fa-css3', 'c-azul'],
-            '3': ['fa-brands', 'fa-html5', 'c-rojo'],
-            '4': ['fa-brands', 'fa-php', 'c-azul'],
-            '5': ['fa-brands', 'fa-git-alt', 'c-orange'],
-            '6': ['fa-brands', 'fa-github', 'c-oscuro'],
-            '7': ['fa-brands', 'fa-laravel', 'c-rojo'],
-            '8': ['fa-brands', 'fa-node-js', 'c-green'],
-            '9': ['fa-brands', 'fa-gulp', 'c-rojo'],
-            '10': ['fa-brands', 'fa-xbox', 'c-green'],
-            '11': ['fa-brands', 'fa-apple', 'c-white'],
-            '12': ['fa-brands', 'fa-react', 'c-cyan'],
-            '13': ['fa-brands', 'fa-docker', 'c-azul'],
-            '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
-            '15': ['fa-solid', 'fa-database', 'c-white'],
-            '16': ['fa-brands', 'fa-steam', 'c-azul'],
-            '17': ['fa-brands', 'fa-slack', 'c-white']
-        };
+    let firstSelect = '';
+    let secondSelect = '';
+    let firstElement = '';
+    let secondElement = '';
+    let firstIndice = '';
+    let flag = false; // diferencia primer click del segundo
+    let flagTimeout = 0;
+    let contadorVictorias = 0;
+    let contadorClicks = 0;
+    let arraySelec = [];
 
-        let firstSelect = '';
-        let secondSelect = '';
-        let firstElement = '';
-        let secondElement = '';
-        let firstIndice = '';
-        let flag = false; // diferencia primer click del segundo
-        let flagTimeout = 0;
-        let contadorVictorias = 0;
-        let contadorClicks = 0;
-        let arraySelec = [];
+    let arrayAleatorio = generarArray();
+    let cuadros = document.querySelectorAll('.play__icono');
+    const grid = document.querySelector('.play__grid');
+    const desplegar = document.querySelector('#play-desplegar');
 
-        let arrayAleatorio = generarArray();
-        let cuadros = document.querySelectorAll('.play__icono');
-        const grid = document.querySelector('.play__grid');
-        const desplegar = document.querySelector('#play-desplegar');
+    // clicks maximos por lvl
+    const lvl2 = 150;
+    const lvl3 = 120;
+    const lvl4 = 90;
 
-        // clicks maximos por lvl
-        const lvl2 = 150;
-        const lvl3 = 120;
-        const lvl4 = 90;
+    // Traducción de textos
+    let txt1;
+    let txt2;
 
-        // Traducción de textos
-        let txt1;
-        let txt2;
+    if (currentLang === 'es') {
+        txt1 = "Restantes ";
+        txt2 = "Victorias: "
+    } else {
+        txt1 = "Remaining ";
+        txt2 = "Wins: ";
+    }
 
-        if(currentLang === 'es') {
-            txt1 = "Restantes ";
-            txt2 = "Victorias: "
-        } else {
-            txt1 = "Remaining ";
-            txt2 = "Wins: ";
+    desplegar.addEventListener('click', () => {
+
+        grid.classList.toggle('play__grid--activo');
+
+    });
+
+    function gameOver() {
+
+        while (desplegar.firstChild) {
+            desplegar.removeChild(desplegar.firstChild);
         }
 
-        desplegar.addEventListener('click', () => {
-
-            grid.classList.toggle('play__grid--activo');
-
+        cuadros.forEach(cuadro => {
+            cuadro.classList.add('play__icono-game-over');
         });
 
-        function gameOver() {
+        const gameOver = document.createElement('P');
+        gameOver.textContent = "Game Over";
+        gameOver.classList.add('play__game-over');
 
-            while (desplegar.firstChild) {
-                desplegar.removeChild(desplegar.firstChild);
+        desplegar.appendChild(gameOver);
+
+        // recargar pagina
+        // setTimeout(() => {
+        // location.reload();
+
+        // }, 4000);
+
+
+    }
+
+    function lvlSuperado() {
+
+        // reiniciar todas las variables globales
+        firstSelect = '';
+        secondSelect = '';
+        firstElement = '';
+        secondElement = '';
+        firstIndice = '';
+        flag = 0;
+        contadorClicks = 0;
+        arraySelec = [];
+
+        // reiniciar estilos
+        cuadros.forEach(cuadro => {
+            cuadro.classList.remove('play__icono-victoria');
+            cuadro.classList.remove('data-check');
+            while (cuadro.firstChild) {
+                cuadro.removeChild(cuadro.firstChild);
+
             }
+        });
 
-            cuadros.forEach(cuadro => {
-                cuadro.classList.add('play__icono-game-over');
-            });
+        // crear un nuevo array aleatorio
+        arrayAleatorio = generarArray();
 
-            const gameOver = document.createElement('P');
-            gameOver.textContent = "Game Over";
-            gameOver.classList.add('play__game-over');
+    }
 
-            desplegar.appendChild(gameOver);
+    function activarContador() {
 
-            // recargar pagina
-            // setTimeout(() => {
-                // location.reload();
-
-            // }, 4000);
-
-
+        while (desplegar.firstChild) {
+            desplegar.removeChild(desplegar.firstChild);
         }
 
-        function lvlSuperado() {
+        desplegar.classList.add('play__desplegar--contadores');
 
-            // reiniciar todas las variables globales
-            firstSelect = '';
-            secondSelect = '';
-            firstElement = '';
-            secondElement = '';
-            firstIndice = '';
-            flag = 0;
-            contadorClicks = 0;
-            arraySelec = [];
+        const parrafoVictorias = document.createElement('P');
+        parrafoVictorias.classList.add('play__contador');
+        parrafoVictorias.textContent = txt2 + contadorVictorias;
 
-            // reiniciar estilos
-            cuadros.forEach(cuadro => {
-                cuadro.classList.remove('play__icono-victoria');
-                cuadro.classList.remove('data-check');
-                while (cuadro.firstChild) {
-                    cuadro.removeChild(cuadro.firstChild);
+        const parrafoClicks = document.createElement('P');
+        parrafoClicks.classList.add('play__contador');
+        parrafoClicks.id = 'play-contador-clicks'
+        if (contadorVictorias === 1) {
 
-                }
-            });
+            parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl2;
+        } else if (contadorVictorias === 2) {
 
-            // crear un nuevo array aleatorio
-            arrayAleatorio = generarArray();
+            parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl3;
+        } else if (contadorVictorias > 2) {
 
+            parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl4;
         }
 
-        function activarContador() {
+        desplegar.appendChild(parrafoVictorias);
+        desplegar.appendChild(parrafoClicks);
+    }
 
+    // Comprueba las clases de los elementos clickeados, si no se clickea en el icono no hay clase que comparar
 
+    for (let i = 0; i < cuadros.length; i++) {
 
-            while (desplegar.firstChild) {
-                desplegar.removeChild(desplegar.firstChild);
-            }
+        cuadros[i].addEventListener('click', (e) => {
 
-            desplegar.classList.add('play__desplegar--contadores');
-
-            const parrafoVictorias = document.createElement('P');
-            parrafoVictorias.classList.add('play__contador');
-            parrafoVictorias.textContent = txt2 + contadorVictorias;
-
-            const parrafoClicks = document.createElement('P');
-            parrafoClicks.classList.add('play__contador');
-            parrafoClicks.id = 'play-contador-clicks'
-            if (contadorVictorias === 1) {
-
-                parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl2;
-            } else if (contadorVictorias === 2) {
-
-                parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl3;
-            } else if (contadorVictorias > 2) {
-
-                parrafoClicks.textContent = txt1 + contadorClicks + "/" + lvl4;
-            }
-
-            desplegar.appendChild(parrafoVictorias);
-            desplegar.appendChild(parrafoClicks);
-        }
-
-        // Comprueba las clases de los elementos clickeados, si no se clickea en el icono no hay clase que comparar
-
-        for (let i = 0; i < cuadros.length; i++) {
-
-            cuadros[i].addEventListener('click', (e) => {
-
-                if (!flagTimeout) {
-
-                
+            if (!flagTimeout) {
 
                 // contador de clicks
                 contadorClicks++;
@@ -252,76 +246,74 @@
 
                     coincidencias();
                 }
-                }
-
-            });
-        }
-
-
-        function generarArray() {
-            const numerosDisponibles = [];
-            const arrayAleatorio = [];
-
-            // Genera un array con numeros del 0 al 17
-            for (let i = 0; i <= 17; i++) {
-                numerosDisponibles.push(i, i);
             }
 
-            // Genera un array con 36 numeros utilizando los disponibles (2 de cada uno)
-            for (let i = 0; i < 36; i++) {
+        });
+    }
 
-                const indice = Math.floor(Math.random() * numerosDisponibles.length); // Calcula el indice
-                const numeroElegido = numerosDisponibles.splice(indice, 1)[0]; // Extrae el numero del primeer array para evitar que se reutilice
-                arrayAleatorio.push(numeroElegido);
-            }
 
-            return arrayAleatorio;
+    function generarArray() {
+        const numerosDisponibles = [];
+        const arrayAleatorio = [];
+
+        // Genera un array con numeros del 0 al 17
+        for (let i = 0; i <= 17; i++) {
+            numerosDisponibles.push(i, i);
         }
 
-        function coincidencias() {
+        // Genera un array con 36 numeros utilizando los disponibles (2 de cada uno)
+        for (let i = 0; i < 36; i++) {
 
-            arraySelec.forEach(elem => {
-
-                elem.classList.remove('play__icono-azul');
-                elem.classList.add('play__icono-rojo');
-
-            });
-
-            if (arraySelec.length >= 36) {
-                gridCompletado();
-
-            }
+            const indice = Math.floor(Math.random() * numerosDisponibles.length); // Calcula el indice
+            const numeroElegido = numerosDisponibles.splice(indice, 1)[0]; // Extrae el numero del primeer array para evitar que se reutilice
+            arrayAleatorio.push(numeroElegido);
         }
 
-        function gridCompletado() {
+        return arrayAleatorio;
+    }
 
-            let delay = 0;
-            // Ganador
-            cuadros.forEach(cuadro => {
-                cuadro.classList.remove('play__icono-rojo');
-            });
-            cuadros.forEach((cuadro, i) => {
+    function coincidencias() {
+
+        arraySelec.forEach(elem => {
+
+            elem.classList.remove('play__icono-azul');
+            elem.classList.add('play__icono-rojo');
+
+        });
+
+        if (arraySelec.length >= 36) {
+            gridCompletado();
+
+        }
+    }
+
+    function gridCompletado() {
+
+        let delay = 0;
+        // Ganador
+        cuadros.forEach(cuadro => {
+            cuadro.classList.remove('play__icono-rojo');
+        });
+        cuadros.forEach((cuadro, i) => {
+
+            setTimeout(() => {
+                cuadro.classList.add('play__icono-victoria');
+            }, delay);
+            delay += 100;
+
+            if (i === cuadros.length - 1) {
 
                 setTimeout(() => {
-                    cuadro.classList.add('play__icono-victoria');
-                }, delay);
-                delay += 100;
 
-                if(i === cuadros.length - 1) {
+                    contadorVictorias++;
+                    // reinicia variables y estilos
+                    lvlSuperado();
+                    // eliminar el icono y reemplazarlo por un parrafo o dos que cuenten victorias y clicks
+                    activarContador();
 
-                    setTimeout(() => {
+                }, delay + 300);
 
-                        contadorVictorias++;
-                        // reinicia variables y estilos
-                        lvlSuperado();
-                        // eliminar el icono y reemplazarlo por un parrafo o dos que cuenten victorias y clicks
-                        activarContador();
-        
-                    }, delay + 300);
-
-                }
-            });
-        }
-    });
-
-})();
+            }
+        });
+    }
+}

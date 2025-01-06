@@ -32,7 +32,8 @@ return [
     'ta_desc' => "TicketAdmin es una aplicación diseñada para simplificar la organización de eventos y la venta de entradas. Ofrece una plataforma robusta y fácil de usar para gestionar eventos de cualquier tamaño aceptando pago mediante MercadoPago.",
     'tl_desc' => "TusListas es una aplicación web para organizar el inventario de un comercio o empresa permitiendo clasificar los artículos de manera eficiente a través de una Agenda, un Buscador y otras herramientas.",
     'ss_desc' => "Este sitio es mi pequeño rincón en la web donde experimento con diferentes tecnologías y comparto proyectos que he creado.",
-    
+    'bs_desc' => 'BakeryStore es un marketplace donde los usuarios pueden potenciar sus emprendimientos caseros ofreciendo sus propios productos o buscando productos de otros vendedores. La aplicación está enfocada en negocios de comida casera, pero podría expandirse a otras áreas.',
+
     'contact' => "Contacto", // Contact
     'ph_name' => "Tu Nombre",
     'ph_email' => "Tu Email",

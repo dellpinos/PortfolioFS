@@ -31,28 +31,20 @@
     "file": "assets/bg_stuff-8ea5c8ea.svg",
     "src": "resources/img/bg_stuff.svg"
   },
-  "resources/img/l_arrow.svg": {
-    "file": "assets/l_arrow-19f5d6b7.svg",
-    "src": "resources/img/l_arrow.svg"
-  },
-  "resources/img/r_arrow.svg": {
-    "file": "assets/r_arrow-5037eeed.svg",
-    "src": "resources/img/r_arrow.svg"
-  },
   "resources/js/app.css": {
-    "file": "assets/app-bb4df054.css",
+    "file": "assets/app-71c90e5d.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-bb4df054.css"
+      "assets/app-71c90e5d.css"
     ],
-    "file": "assets/app-d31314af.js",
+    "file": "assets/app-3959911a.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-835cdb5d.css",
+    "file": "assets/app-00594d62.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }
