@@ -9,11 +9,9 @@
         margin: 2rem 0;
         width: 100%;
 
-
         @include m.tablet {
             margin: 5rem 0;
             width: auto;
-
         }
     }
 
@@ -35,15 +33,11 @@
         @include m.tablet {
             width: 70rem;
             height: 40rem;
-            // width: 60rem;
-            // height: 33.75rem;
             display: flex;
             justify-content: space-around;
             align-items: center;
             gap: 8rem;
-
         }
-
     }
 
     &__card-stuff {
@@ -55,7 +49,6 @@
         border: 2px solid v.$amarillo;
 
         @include m.tablet {}
-
     }
 
     &__card-ticket {
@@ -65,14 +58,12 @@
         background: linear-gradient(130deg, v.$grisClaro 50%, v.$rojo 50%),
             linear-gradient(130deg, v.$grisClaro 55%, v.$rojo 40%);
         border: 2px solid v.$rojo;
-
     }
 
     &__card-contenedor-text {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     &__card-heading {
@@ -92,7 +83,6 @@
     &__card-text {
         color: v.$blanco;
         padding: 0 1rem;
-
         display: none;
         border-left: 5rem;
 
@@ -112,11 +102,9 @@
             width: 30rem;
             height: 30rem;
         }
-
     }
 
     &__card-logo-ta {
-
         @extend .tour__card-logo;
         width: 20rem;
         height: 15rem;
@@ -125,11 +113,9 @@
             width: 100%;
             height: 25rem;
         }
-
     }
 
     &__card-logo-st {
-
         @extend .tour__card-logo;
         height: fit-content;
         font-size: 15rem;
@@ -139,9 +125,7 @@
             width: 100%;
             height: 25rem;
             font-size: 20rem;
-
         }
-
     }
 
     &__play {
@@ -152,14 +136,12 @@
         top: 50%;
         left: 50%;
         cursor: pointer;
-
         box-shadow: 0 0 5px rgba(v.$blanco, 1) inset;
         transition: box-shadow 0s ease;
         animation: pulso 2s infinite;
 
         @include m.tablet {
             font-size: 8rem;
-
         }
     }
 
@@ -176,16 +158,13 @@
 
         100% {
             transform: translate(-50%, -50%) scale(1);
-
         }
     }
 }
 
-
 .new-dev-projects {
 
     &__contenedor-xl {
-
         overflow: hidden;
         padding-top: 2rem;
 
@@ -199,37 +178,30 @@
 
             @include m.tablet {
                 padding-top: 7rem;
-
             }
         }
     }
-
 
     &__contenedor {
         background-image: url(../img/bg_13.svg);
         background-position: center;
         background-size: 200rem;
         background-repeat: no-repeat;
-
         background-attachment: fixed;
-
         padding-top: 10rem;
         margin-top: 5rem;
-
         display: flex;
         flex-direction: column;
         gap: 5rem;
-        
         opacity: 1;
         transition: opacity .5s ease-out;
-        
+
         @include m.tablet {
             padding-top: 6rem;
             gap: 15rem;
         }
 
         &--dark {
-
             @extend .new-dev-projects__contenedor;
             // Dark Mode
             background-image: url(../img/bg_13_w.svg);
@@ -238,74 +210,68 @@
             background-repeat: no-repeat;
 
             & .new-dev-projects__contenedor-desc {
-                background-color: rgba(124, 124, 124, .8)!important;
+                background-color: rgba(124, 124, 124, .8) !important;
 
                 p {
-                    color: v.$blanco!important;
+                    color: v.$blanco !important;
                 }
             }
         }
-
-
     }
 
     &__contenedor-prin {
-
         display: flex;
         flex-direction: column-reverse;
-
         gap: 2rem;
         padding: 1rem;
-        
-        
+
         @include m.tablet {
             display: grid;
             grid-template-columns: 2.5fr 1fr;
             gap: 5rem;
             padding: 6rem 5rem 6rem 0;
         }
-
     }
 
     &__contenedor-prin--der {
-
-
-
         gap: 2rem;
         padding: 1rem;
-        
-        
+
         @include m.tablet {
             display: grid;
             grid-template-columns: 2.5fr 1fr;
             gap: 5rem;
-
             direction: rtl;
             padding: 6rem 0 6rem 5rem;
+
+            & p {
+                direction: ltr;
+            }
         }
 
         & .new-dev-projects__card {
             border-radius: 2rem;
-            
+
             @include m.tablet {
                 border-radius: 2rem 0 0 2rem;
             }
         }
 
-        .new-dev-projects__contenedor-heading {
-
+        & .new-dev-projects__contenedor-heading {
             @include m.tablet {
                 flex-direction: row-reverse;
             }
         }
+
+        & .new-dev-projects__iconos {
+            flex-direction: row-reverse;
+        }
     }
 
     &__contenedor-box {
-
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     &__contenedor-desc {
@@ -326,49 +292,38 @@
     }
 
     &__card {
-
         padding: 1rem .5rem 2rem .5rem;
         box-shadow: 0 0 10px v.$grisClaro;
         border-radius: 2rem;
-        
+
         @include m.tablet {
-            
             padding: 3rem;
             border-radius: 0 2rem 2rem 0;
-
         }
 
         a {
             font-size: 2rem;
             font-weight: v.$bold;
-
             transition: color .5s ease;
 
-
             &:hover {
-
                 color: v.$naranja;
             }
 
             @include m.tablet {
-                // margin-top: 1rem;
                 padding: 2rem;
             }
         }
 
         &--dark {
-
             @extend .new-dev-projects__contenedor;
             // Dark Mode
             background-image: url(../img/bg_13_w.svg);
             background-position: center;
             background-size: 200rem;
             background-repeat: no-repeat;
-
-
         }
     }
-
 
     &__ticket {
         color: v.$blanco;
@@ -378,7 +333,6 @@
         &:hover {
 
             & .new-dev-projects__icono {
-
                 color: v.$naranja2;
                 cursor: pointer;
                 transform: rotate(15deg);
@@ -387,7 +341,6 @@
             & .new-dev-projects__icono--oculto {
                 transition: opacity 2s ease;
                 opacity: 1;
-
             }
         }
 
@@ -396,15 +349,12 @@
 
             &:hover {
                 color: v.$rojo;
-
             }
         }
     }
 
-
     &__tl {
         color: v.$blanco;
-
         background: rgb(31, 41, 55);
         background: linear-gradient(354deg, rgba(31, 41, 55, .6) 1%, rgba(31, 41, 55, 1) 70%);
 
@@ -417,7 +367,6 @@
         &:hover {
 
             & .new-dev-projects__icono {
-
                 color: v.$naranja2;
                 cursor: pointer;
                 transform: rotate(15deg);
@@ -436,7 +385,6 @@
 
     &__stuff {
         color: v.$doradoST;
-
         background: rgb(31, 41, 55);
         background: linear-gradient(354deg, rgba(31, 41, 55, .6) 1%, rgba(31, 41, 55, 1) 70%);
 
@@ -450,7 +398,6 @@
         &:hover {
 
             & .new-dev-projects__icono {
-
                 color: v.$naranja2;
                 cursor: pointer;
                 transform: rotate(15deg);
@@ -471,7 +418,6 @@
         }
     }
 
-
     &__contenedor-heading {
         display: flex;
         justify-content: space-between;
@@ -487,12 +433,10 @@
             justify-content: space-between;
             margin: 0;
             gap: 30rem;
-
         }
     }
 
     &__heading-st {
-
         font-family: v.$fuenteStuff;
         letter-spacing: 1rem;
         text-align: center;
@@ -500,21 +444,17 @@
         margin: 0;
         font-size: 5rem;
         text-shadow: 0 0 6px v.$doradoST;
-
     }
 
     &__heading-ta {
-
         letter-spacing: inherit;
         text-align: center;
         width: 100%;
         margin: 0;
         font-size: 3rem;
-
     }
 
     &__heading-bs {
-
         text-align: center;
         width: 100%;
         margin: 0;
@@ -537,17 +477,14 @@
 
     &__icono {
         font-size: 4rem;
-
         transition: color .5s ease, transform .5s ease;
 
         &:hover {
-
             color: v.$naranja !important;
             cursor: pointer;
         }
 
         &--oculto {
-
             opacity: 0;
             transition: opacity .5s ease;
             font-size: 4rem;
@@ -556,7 +493,6 @@
 
     &__text {
         height: 100%;
-
         display: flex;
         flex-direction: column;
         align-items: center;

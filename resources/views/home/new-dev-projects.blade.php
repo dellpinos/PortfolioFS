@@ -2,14 +2,7 @@
 
     <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">{{ __('text.main') }}</h2>
 
-
-
-
-
-
-
     <div class="new-dev-projects__contenedor"> {{--  Contenedor de proyectos  --}}
-
 
         {{-- Ticket Admin --}}
         <div class="new-dev-projects__contenedor-prin" id="dev-projects-slide-ta">
@@ -63,8 +56,6 @@
             </div>
         </div>
         {{-- Fin Ticket Admin --}}
-
-
 
 
         {{-- TusListas --}}
@@ -168,8 +159,6 @@
             </div>
         </div>
         {{-- Fin Stuff --}}
-
-
 
 
         {{-- Bakery Store --}}
