@@ -25,3 +25,5 @@ jobs:
                 "killall -u $USER"
               ]
             }
+
+# If there are any problems it's important update PHP (8.1 or latest) and use "composer update" to update the libreries
