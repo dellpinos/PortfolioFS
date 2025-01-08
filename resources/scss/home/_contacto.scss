@@ -11,14 +11,12 @@
         align-items: center;
         gap: 1rem;
         justify-content: flex-end;
+        box-shadow: 0 -5px 15px 10px v.$grisOscuro;
 
         &:hover {
-
             .contacto__work-together {
-
                 opacity: 1;
                 transition: opacity 2s ease;
-
             }
         }
 

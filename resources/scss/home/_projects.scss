@@ -1,15 +1,13 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
 .projects {
 
     &__heading {
         padding-top: 0rem;
-        
+
         @include m.tablet {
             padding-top: 7rem;
-            
         }
     }
 
@@ -20,7 +18,6 @@
         margin-bottom: 4rem;
 
         @include m.tablet {
-            
             padding-bottom: 6rem;
             margin-bottom: 15rem;
         }
@@ -30,10 +27,10 @@
 
         width: 95%;
         margin: 0 auto;
-        
+
         @include m.tablet {
             width: 80%;
-            
+
         }
     }
 
@@ -45,7 +42,6 @@
         grid-template-columns: 1fr 1fr;
         padding: 1rem;
 
-        
         @include m.phone {
             padding: 0;
             display: flex;
@@ -53,10 +49,9 @@
             align-items: center;
             flex-direction: row;
         }
-        
-        
+
         @include m.tablet {
-            
+
             justify-content: space-around;
             margin: 2rem 8rem;
             gap: 0;
@@ -76,6 +71,7 @@
         }
 
     }
+
     &__contenedor-filtro {
         display: flex;
         flex-direction: column;
@@ -86,19 +82,15 @@
             font-weight: v.$bold;
         }
 
-
         &--activo {
-            
             color: v.$blanco;
             background-color: v.$naranja;
             transition: color 1s ease, background-color 1s ease;
 
         }
-
     }
 
     &__grid {
-
         width: 95%;
         margin: 0 auto;
         display: flex;
@@ -108,16 +100,12 @@
 
         @include m.tablet {
             width: 70rem;
-            
             @include m.grid(2, 0);
-            
         }
 
         @include m.phoneHorizontal {
             width: 105rem;
-
             @include m.grid(3, 0);
-            
         }
     }
 
@@ -131,15 +119,13 @@
         position: relative;
 
         @include m.tablet {
-
             max-width: 35rem;
             max-height: 30rem;
-            
+
         }
     }
 
     &__img {
-
         width: auto;
         opacity: 1;
         transition: opacity .5s ease;
@@ -147,11 +133,9 @@
         &--oculto {
             opacity: 0;
         }
-
     }
 
     &__overlay {
-
         width: 100%;
         height: 100%;
         z-index: 10;
@@ -164,7 +148,6 @@
         left: center;
         opacity: 0;
         background-color: v.$blanco;
-
         transition: opacity .5s ease, gap .5s ease;
 
         &--visible {
@@ -175,11 +158,9 @@
     }
 
     &__info {
-
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     &__info-titulo {
@@ -188,7 +169,8 @@
 
     &__info-tecs {
         color: v.$naranja;
-
+        max-width: 90%;
+        text-align: center;
     }
 
     &__info-btn {
@@ -208,16 +190,13 @@
         }
 
         &:hover {
-
             cursor: pointer;
             background-color: v.$naranja;
             color: v.$blanco;
-
         }
     }
 
     &__overlay-gde {
-
         position: fixed;
         top: 0;
         left: 0;
@@ -228,18 +207,15 @@
         height: 100%;
         z-index: 20;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        background-color: rgb( 0 0 0 / 0.5);
-        
-
+        background-color: rgb(0 0 0 / 0.5);
     }
 
     &__slide-contenedor {
-
         background-color: rgba(v.$negro, .7);
 
         @include m.phoneHorizontal {
@@ -251,14 +227,12 @@
             justify-content: center;
             height: 25rem;
             max-width: 47rem;
-            
+
             @include m.phoneHorizontal {
                 height: 50rem;
                 max-width: 110rem;
-                
             }
         }
-
     }
 
     &__slide-info {
@@ -273,7 +247,6 @@
         padding: 1rem;
         gap: .5rem;
 
-        
         @include m.phoneHorizontal {
             align-items: inherit;
             flex-direction: column;
@@ -281,12 +254,11 @@
             padding: 2.5rem;
             gap: 1rem;
         }
+
         @include m.tablet {
             flex-direction: row;
             justify-content: space-between;
         }
-
-
     }
 
     &__slide-texto {
@@ -297,17 +269,15 @@
             display: block;
             gap: 0;
         }
-    } 
+    }
 
     &__slide-heading {
-
         color: v.$grisOscuro;
         font-size: 1.6rem;
         margin: 0;
-        
+
         @include m.tablet {
             font-size: 2.5rem;
-            
         }
     }
 
@@ -322,15 +292,10 @@
         flex-direction: column;
         align-items: center;
 
-        
-        @include m.tablet {
-
-            
-        }
+        @include m.tablet {}
     }
-    
+
     &__btn-cerrar {
-        
         line-height: 0;
         width: fit-content;
         font-size: 3.5rem;
@@ -338,18 +303,12 @@
         cursor: pointer;
         transition: color .3s ease;
 
-
-        
         @include m.tablet {
             font-size: 4rem;
-
         }
 
         &:hover {
             color: rgba(v.$gris, 0.5);
         }
-
     }
-
-
 }

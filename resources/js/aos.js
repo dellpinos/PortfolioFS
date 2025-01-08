@@ -1,12 +1,8 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-(function () {
-
-  document.addEventListener('DOMContentLoaded', () => {
-
+export default function aosInstance() {
     const anchoPantalla = window.innerWidth;
-
 
     // En pantalas pequeñas y móvil horizontal reemplaza los fade para evitar el desplzamiento horizontal
     if(anchoPantalla <= 900) {
@@ -46,7 +42,4 @@ import 'aos/dist/aos.css';
     };
 
     AOS.init(config);
-
-  });
-
-})();
+}

@@ -1,4 +1,5 @@
 <div id="contacto-contenedor" class="contacto__contenedor">
+
     <h2 class="contacto__heading" id="contacto" data-aos="fade-right">{{ __('text.contact') }}</h2>
 
     <form action="/" method="POST" class="contacto__formulario-contenedor">
