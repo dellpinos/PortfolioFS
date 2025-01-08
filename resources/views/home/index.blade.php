@@ -12,8 +12,10 @@
     <section class="projects__contenedor-xl">
 
         @include('home.projects')
+
+        @include('home.new-dev-projects')
         
-        @include('home.dev-projects')
+        {{-- @include('home.dev-projects') --}}
         
         {{-- @include('home.main-projects') --}}
 
