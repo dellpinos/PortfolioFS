@@ -15,7 +15,7 @@ export default function play() {
         '8': ['fa-brands', 'fa-node-js', 'c-green'],
         '9': ['fa-brands', 'fa-gulp', 'c-rojo'],
         '10': ['fa-brands', 'fa-xbox', 'c-green'],
-        '11': ['fa-brands', 'fa-apple', 'c-white'],
+        '11': ['fa-brands', 'fa-python', 'c-azul'],
         '12': ['fa-brands', 'fa-react', 'c-cyan'],
         '13': ['fa-brands', 'fa-docker', 'c-azul'],
         '14': ['fa-brands', 'fa-stack-overflow', 'c-orange'],
