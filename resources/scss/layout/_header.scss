@@ -263,12 +263,30 @@
 
     &__contenedor-derecha {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         gap: 3rem;
+
+
+        @include m.tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3rem;
+        }
     }
 
     &__contenedor-DM {
-        display: none;
+
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.6rem;
+        margin: 0 auto;
+
+
 
         border: 3px solid v.$grisOscuro;
         padding: 1.5rem;
@@ -305,5 +323,6 @@
         font-size: 2rem;
         color: v.$naranja;
         transition: color .3s ease;
+
     }
 }

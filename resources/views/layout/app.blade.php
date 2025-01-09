@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Portfolio developer web fullstack">
+    <meta name="description" content="Portfolio of a Full-Stack Web Developer">
 
     <link rel="icon" href="{{ asset('img/avatar.svg') }}" type="image/x-icon">
 
@@ -28,15 +28,14 @@
     <title>Martín del Pino</title>
 
     @vite('resources/scss/app.scss')
-
 </head>
 
 <body>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -79,7 +78,6 @@
                 <source src="video/circulo_azul_720.mp4" type="video/mp4">
                 <source src="video/circulo_azul_720.webm" type="video/webm">
             </video>
-
         </div>
 
         <div class="header__contenido-header">
@@ -105,7 +103,7 @@
                         <p class="header__nav-texto" id="header-texto">>MdP_</p>
                     </a>
 
-                    <div class="lang__container">
+                    <div class="lang__container" id="123">
                         @if (session('locale') == 'es')
 
                             <a href="{{ route('home.language', 'en') }}" class="lang__btn">
