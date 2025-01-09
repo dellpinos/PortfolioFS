@@ -24,13 +24,11 @@
     }
 
     &__contenedor {
-
         width: 95%;
         margin: 0 auto;
 
         @include m.tablet {
             width: 80%;
-
         }
     }
 
@@ -86,7 +84,6 @@
             color: v.$blanco;
             background-color: v.$naranja;
             transition: color 1s ease, background-color 1s ease;
-
         }
     }
 
@@ -121,7 +118,6 @@
         @include m.tablet {
             max-width: 35rem;
             max-height: 30rem;
-
         }
     }
 

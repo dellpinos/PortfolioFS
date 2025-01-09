@@ -129,21 +129,21 @@ export default function galeria() {
 
             enlace.addEventListener('click', (e) => {
 
-                // Al girar la pantalla centra el slide clickeado
-                window.addEventListener('resize', () => {
+                // // Al girar la pantalla centra el slide clickeado (no funciona correctamente)
+                // window.addEventListener('resize', () => {
 
-                    const slide = enlace.parentNode.parentNode;
-                    const rect = slide.getBoundingClientRect();
+                //     const slide = enlace.parentNode.parentNode;
+                //     const rect = slide.getBoundingClientRect();
 
-                    // Altura del elemento con respecto al documento
-                    const alturaConRespectoAlDocumento = rect.top + window.scrollY;
-                    const posicionCentrada = alturaConRespectoAlDocumento - window.innerHeight / 2 + rect.height / 2;
+                //     // Altura del elemento con respecto al documento
+                //     const alturaConRespectoAlDocumento = rect.top + window.scrollY;
+                //     const posicionCentrada = alturaConRespectoAlDocumento - window.innerHeight / 2 + rect.height / 2;
 
-                    window.scrollTo({
-                        top: posicionCentrada,
-                        behavior: 'smooth'
-                    });
-                });
+                //     window.scrollTo({
+                //         top: posicionCentrada,
+                //         behavior: 'smooth'
+                //     });
+                // });
 
                 // Condición que evita pantallas muy pequeñas
                 if (window.innerWidth < 480) {
@@ -155,8 +155,6 @@ export default function galeria() {
                     } else {
                         txt = "Rotate your device";
                     }
-
-
 
                     enlace.innerHTML = `
                             <p>${txt}</p>
