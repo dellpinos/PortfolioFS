@@ -15,36 +15,41 @@
     "file": "assets/fa-solid-900-886c8611.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
   },
-  "resources/img/bg_13.svg": {
+  "resources/img/porfolio/bg_13.svg": {
     "file": "assets/bg_13-7c508c59.svg",
-    "src": "resources/img/bg_13.svg"
+    "src": "resources/img/porfolio/bg_13.svg"
   },
-  "resources/img/bg_13_w.svg": {
+  "resources/img/porfolio/bg_13_w.svg": {
     "file": "assets/bg_13_w-917bf8c6.svg",
-    "src": "resources/img/bg_13_w.svg"
+    "src": "resources/img/porfolio/bg_13_w.svg"
   },
-  "resources/img/bg_8.png": {
+  "resources/img/porfolio/bg_8.png": {
     "file": "assets/bg_8-5b7daa49.png",
-    "src": "resources/img/bg_8.png"
+    "src": "resources/img/porfolio/bg_8.png"
   },
-  "resources/img/bg_stuff.svg": {
+  "resources/img/porfolio/bg_stuff.svg": {
     "file": "assets/bg_stuff-8ea5c8ea.svg",
-    "src": "resources/img/bg_stuff.svg"
+    "src": "resources/img/porfolio/bg_stuff.svg"
   },
-  "resources/js/app.css": {
-    "file": "assets/app-71c90e5d.css",
-    "src": "resources/js/app.css"
-  },
-  "resources/js/app.js": {
-    "css": [
-      "assets/app-71c90e5d.css"
-    ],
-    "file": "assets/app-86db86d5.js",
+  "resources/js/appHome.js": {
+    "file": "assets/appHome-15f15b43.js",
     "isEntry": true,
-    "src": "resources/js/app.js"
+    "src": "resources/js/appHome.js"
+  },
+  "resources/js/appPorfolio.css": {
+    "file": "assets/appPorfolio-71c90e5d.css",
+    "src": "resources/js/appPorfolio.css"
+  },
+  "resources/js/appPorfolio.js": {
+    "css": [
+      "assets/appPorfolio-71c90e5d.css"
+    ],
+    "file": "assets/appPorfolio-644d45b0.js",
+    "isEntry": true,
+    "src": "resources/js/appPorfolio.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-2f8d6926.css",
+    "file": "assets/app-8157b813.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }

@@ -27,11 +27,11 @@
 }
 
 .c-orange {
-    color: v.$naranja!important;
+    color: v.$naranja_past!important;
 }
 
 .c-ama {
-    color: v.$amarillo!important;
+    color: v.$amarillo_past!important;
 }
 
 .c-azulF {
@@ -39,7 +39,7 @@
 }
 
 .c-azul {
-    color: v.$azul!important;
+    color: v.$azul_past!important;
 }
 
 .c-gris {
@@ -80,7 +80,7 @@
 }
 
 .b-rojo {
-    border: 2px solid v.$naranja;
+    border: 2px solid v.$naranja_past;
 }
 .font-white {
     color: v.$blanco!important;

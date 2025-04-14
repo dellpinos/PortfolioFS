@@ -1,0 +1,62 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.home-hero {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 2rem;
+    background-image: image-set( url(../img/home/hero_1.avif) 1x, url( ../img/home/hero_1.webp) 1x, url( ../img/home/hero_1.jpg) 1x);
+
+    
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 80rem;
+    padding: 10rem;
+
+    background-color: v.$marfilOsc;
+    min-height: 80rem;
+
+    box-shadow: 0 25px 40px v.$marfilOsc;
+
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        gap: 6rem;
+
+        padding: 5rem 0;
+
+        h2 {
+            text-align: left;
+            color: v.$azul_past;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+            font-weight: v.$bold;
+            color: v.$grisOscuro;
+        }
+
+    }
+
+    &__btn-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        margin: 0 10rem 5rem 0;
+
+        button {
+            @include m.boton(v.$azul_past, v.$blanco);
+            border-radius: .5rem;
+        }
+    }
+
+
+
+}

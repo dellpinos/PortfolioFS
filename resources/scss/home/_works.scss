@@ -1,0 +1,52 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 8rem 12rem 8rem;
+    background-color: v.$amarillo_past;
+    color: v.$blanco;
+    
+    h2 {
+        color: v.$blanco;
+        
+    }
+    
+
+
+
+    &__grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        
+        gap: 2rem;
+
+    }
+
+    &__card {
+
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        padding: 3rem 3rem 6rem 3rem;
+        background-color: v.$blanco;
+        border-radius: 2rem;
+
+
+        h4 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-align: center;
+            color: v.$negro;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}

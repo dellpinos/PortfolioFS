@@ -35,7 +35,7 @@
     font-weight: 700;
     border: none;
     transition-property: background-color;
-    transition-duration: .3s;
+    transition-duration: .5s;
     text-align: center;
     display: block;
     width: 100%;
@@ -79,7 +79,7 @@
     margin-top: 1.5rem;
 
     > li {
-        background-color: v.$azul;
+        background-color: v.$azul_past;
         color: v.$blanco;
         padding: 1rem;
         border-radius: .5rem;

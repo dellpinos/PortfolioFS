@@ -28,7 +28,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: v.$naranja!important;
+    color: v.$naranja_past!important;
     display: none!important;
 
     @include m.tablet {

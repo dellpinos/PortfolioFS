@@ -1,31 +1,21 @@
-@extends('layout.app')
+@extends('layout.home')
 
 @section('contenido')
-    <section class="contenedor-xl" id="skills-contenedor"> {{-- contenedor principal --}}
 
-        @include('home.skills')
+    {{-- @include('home.includes.logo') --}}
 
-        @include('home.perfil')
+    @include('home.includes.logo_section')
 
-    </section>
+    @include('home.includes.hero')
 
-    <section class="projects__contenedor-xl">
+    @include('home.includes.about')
+    
+    @include('home.includes.marquee')
+    
+    @include('home.includes.works')
 
-        @include('home.projects')
-
-        @include('home.new-dev-projects')
-        
-        {{-- @include('home.dev-projects') --}}
-        
-        {{-- @include('home.main-projects') --}}
-
-    </section>
-
-
-    @include('home.contact')
-
-    @include('home.play')
-
-    @include('home.overlay')
+    @include('home.includes.about')
     
 @endsection
+
+

@@ -1,0 +1,23 @@
+.home-about {
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    padding: 3rem 25rem;
+
+    img {
+        width: 60rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        h3 {
+            text-align: start;
+        }
+    }
+
+}

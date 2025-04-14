@@ -1,0 +1,63 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.home-header {
+    
+    min-height: 10rem;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px v.$gris;
+    position: fixed;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    &__logo {
+
+        display: flex;
+        align-items: center;
+
+
+        h2 {
+            margin: 0;
+            text-align: left;
+            font-size: 3rem;
+
+            font-family: v.$fuente_cursiva;
+            color: v.$grisOscuro;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+
+        a {
+            font-size: 1.8rem;
+            font-weight: v.$bold;
+            color: v.$grisOscuro;
+            transition: color .3s ease;
+
+            &:hover {
+                color: v.$rojo_past;
+            }
+        }
+
+        button {
+            
+            @include m.boton(v.$rojo_past, v.$blanco);
+            border-radius: .5rem;
+        }
+
+
+    }
+
+
+
+    
+}
