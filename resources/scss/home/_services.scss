@@ -1,0 +1,124 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.services {
+
+    // border: 1px solid green;
+
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    margin: 10rem 6rem 6rem 6rem;
+
+    h3 {
+        margin-bottom: 8rem;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 46%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        z-index: 0;
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        // row-gap: 2rem;
+        // column-gap: 2.8rem;
+        gap: 2rem;
+        z-index: 5;
+
+
+    }
+
+    &__grid-item {
+        width: 300px;
+        height: 220px;
+
+
+
+
+
+        // border: 1px solid blue;
+
+
+        border-radius: 7rem;
+        padding: 0 2rem;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 1rem;
+
+        color: v.$blanco;
+
+        i {
+            font-size: 7rem;
+            margin-bottom: 1.5rem;
+            transition: font-size .5s ease, margin-bottom .5s ease;
+
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            margin: 0;
+            text-align: center;
+
+        }
+
+
+
+
+
+        &--not-empty {
+            // background-color: rgba(v.$naranja_past, .5);
+            position: relative;
+            transition: transform .5s ease, z-index .5s ease, background-color .5s ease, opacity .5s ease;
+            z-index: 6;
+            overflow: hidden;
+
+
+            p {
+                text-align: center;
+                font-size: 1.3rem;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: opacity .5s ease, max-height .5s ease;
+
+
+            }
+
+            &:hover {
+                transform: scale(1.2);
+                z-index: 10;
+                cursor: help;
+
+                i {
+                    font-size: 4rem;
+                    margin-bottom: .5rem;
+        
+                }
+
+                p {
+                    opacity: 1;
+                    max-height: 200px;
+                }
+            }
+        }
+    }
+}

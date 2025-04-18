@@ -5,14 +5,13 @@
 
 .home-logo-sec {
     width: 100%;
-    min-height: 73rem;
+    min-height: 86rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 6rem 0;
+    padding: 6rem 0;
+
+    background-color: v.$blancoOscuro;
+    box-shadow: -15px 0 35px 5px v.$blancoOscuro;
 }
 
-.magnetic {
-    transition: transform 0.2s ease;
-    will-change: transform;
-  }

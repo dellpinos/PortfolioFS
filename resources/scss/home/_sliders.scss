@@ -1,0 +1,29 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+// Sliders en la Home page
+
+.home-swiper {
+    width: 100%;
+    height: 65rem;
+}
+
+.home-swiper-slide {
+    width: 50rem !important;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.swiper-button-next.home-swiper-button-next,
+.swiper-button-prev.home-swiper-button-prev {
+    color: v.$naranja_past !important;
+    display: none !important;
+
+    @include m.tablet {
+        display: block !important;
+    }
+}

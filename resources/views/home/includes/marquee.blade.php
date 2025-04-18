@@ -12,7 +12,6 @@
                 <li><a class="marquee__item" href="#">HTML5</a></li>
                 <li><a class="marquee__item" href="#">SASS</a></li>
                 <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Vite</a></li>
                 <li><a class="marquee__item" href="#">Zod</a></li>
                 <li><a class="marquee__item" href="#">Selenium</a></li>
             </ul>
@@ -25,7 +24,6 @@
                 <li><a class="marquee__item" href="#">HTML5</a></li>
                 <li><a class="marquee__item" href="#">SASS</a></li>
                 <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Vite</a></li>
                 <li><a class="marquee__item" href="#">Zod</a></li>
                 <li><a class="marquee__item" href="#">Selenium</a></li>
             </ul>
@@ -38,7 +36,6 @@
                 <li><a class="marquee__item" href="#">HTML5</a></li>
                 <li><a class="marquee__item" href="#">SASS</a></li>
                 <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Vite</a></li>
                 <li><a class="marquee__item" href="#">Zod</a></li>
                 <li><a class="marquee__item" href="#">Selenium</a></li>
             </ul>
@@ -51,7 +48,6 @@
                 <li><a class="marquee__item" href="#">HTML5</a></li>
                 <li><a class="marquee__item" href="#">SASS</a></li>
                 <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Vite</a></li>
                 <li><a class="marquee__item" href="#">Zod</a></li>
                 <li><a class="marquee__item" href="#">Selenium</a></li>
             </ul>
@@ -65,12 +61,9 @@
                 <li><a class="marquee__item" href="#">Node.Js</a></li>
                 <li><a class="marquee__item" href="#">PostgreSQL</a></li>
                 <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">RestAPI</a></li>
                 <li><a class="marquee__item" href="#">SQLite</a></li>
                 <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">Docker</a></li>
                 <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">Testing</a></li>
                 <li><a class="marquee__item" href="#">PHP</a></li>
                 <li><a class="marquee__item" href="#">Django</a></li>
                 <li><a class="marquee__item" href="#">SQL</a></li>
@@ -84,12 +77,9 @@
                 <li><a class="marquee__item" href="#">Node.Js</a></li>
                 <li><a class="marquee__item" href="#">PostgreSQL</a></li>
                 <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">RestAPI</a></li>
                 <li><a class="marquee__item" href="#">SQLite</a></li>
                 <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">Docker</a></li>
                 <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">Testing</a></li>
                 <li><a class="marquee__item" href="#">PHP</a></li>
                 <li><a class="marquee__item" href="#">Django</a></li>
                 <li><a class="marquee__item" href="#">SQL</a></li>
@@ -103,12 +93,9 @@
                 <li><a class="marquee__item" href="#">Node.Js</a></li>
                 <li><a class="marquee__item" href="#">PostgreSQL</a></li>
                 <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">RestAPI</a></li>
                 <li><a class="marquee__item" href="#">SQLite</a></li>
                 <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">Docker</a></li>
                 <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">Testing</a></li>
                 <li><a class="marquee__item" href="#">PHP</a></li>
                 <li><a class="marquee__item" href="#">Django</a></li>
                 <li><a class="marquee__item" href="#">SQL</a></li>
@@ -122,12 +109,9 @@
                 <li><a class="marquee__item" href="#">Node.Js</a></li>
                 <li><a class="marquee__item" href="#">PostgreSQL</a></li>
                 <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">RestAPI</a></li>
                 <li><a class="marquee__item" href="#">SQLite</a></li>
                 <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">Docker</a></li>
                 <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">Testing</a></li>
                 <li><a class="marquee__item" href="#">PHP</a></li>
                 <li><a class="marquee__item" href="#">Django</a></li>
                 <li><a class="marquee__item" href="#">SQL</a></li>

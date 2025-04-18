@@ -4,6 +4,8 @@
 .home-header {
     
     min-height: 10rem;
+    max-height: 15rem;
+    overflow: hidden;
     padding: 2rem 5rem;
     display: flex;
     justify-content: space-between;
@@ -15,6 +17,18 @@
     left: 0;
     right: 0;
     z-index: 9;
+    background-color: v.$blancoOscuro;
+    opacity: 1;
+
+    transition: max-height .6s ease, padding .6s ease, opacity .3s ease;
+
+    &__hidden {
+        min-height: 0;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+
+    }
 
     &__logo {
 

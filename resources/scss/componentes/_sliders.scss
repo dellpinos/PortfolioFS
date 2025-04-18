@@ -2,6 +2,8 @@
 @use '../base/mixins' as m;
 
 
+// Sliders en el Porfolio
+
 .slider {
 
     // pantalla móvil horizontal
@@ -12,7 +14,7 @@
         max-height: 65rem;
         max-width: 95rem;
     }
-    
+
 
 
 
@@ -28,14 +30,16 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: v.$naranja_past!important;
-    display: none!important;
+    color: v.$naranja_past !important;
+    display: none !important;
 
     @include m.tablet {
-        display: block!important;
+        display: block !important;
     }
 
 }
+
 .swiper-pagination {
-    color: v.$blanco!important;
+    color: v.$blanco !important;
 }
+

@@ -86,7 +86,7 @@
     </header>
 
 
-    <main>
+    <main class="relative">
 
         @yield('contenido')
 

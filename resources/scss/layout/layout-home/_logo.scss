@@ -6,6 +6,9 @@
     // Factor para escalar
     --factor: 1;
 
+    // Opacidad final (solo para B & N como fondo, utiliza un important)
+    --opacity: 1;
+
     // Transición del contenedor principal (opacity)
     --tiempo_op: 1.5s;
 
@@ -15,7 +18,7 @@
 
     // Colores principales
     --cFondo: #fffff0;
-    --cPrim: #212936;;
+    --cPrim: #212936;
     --cSec: #6ca690;
     --cNegro: #212936;
     --cBlanco: #FFFFFF;
@@ -27,12 +30,15 @@
     --cPrim2: #e85d04;
     --cPrim3: #aa4f08;
     --cPrim4: #d00000;
+
+    // Gama de grises para logo B & N
+    --cBNgris: #7c7c7c;
+    --cBNgrisClaro: #dbdbdb;
+
+
 }
 
-
-
 .logo {
-
 
     &__contenedor {
         display: flex;
@@ -44,9 +50,11 @@
         color: var(--cSec);
         animation: fadeInUp var(--tiempo_op) ease-out both;
         background-color: inherit;
-        
 
-
+        &--bn {
+            opacity: var(--opacity)!important;
+            animation: none;
+        }
     }
 
     &__cuadro-up {
@@ -92,7 +100,6 @@
         p {
             font-size: calc(1.6rem * var(--factor));
             font-family: var(--fuente_sec);
-            
         }
     }
 
@@ -115,14 +122,22 @@
         padding: calc(2rem * var(--factor));
         border-radius: 50%;
         border: calc(.6rem * var(--factor)) solid var(--cFondo);
-
         transition: border 2s ease;
 
         &:hover {
             border: calc(.6rem * var(--factor)) solid var(--cPrim0);
         }
 
+        &--bn {
+            background-color: var(--cBNgris);
 
+            border: calc(.6rem * var(--factor)) solid var(--cBNgrisClaro);
+
+            &:hover {
+                border: calc(.6rem * var(--factor)) solid var(--cBNgrisClaro);
+            }
+
+        }
     }
 
     &__circulo-borde {
@@ -130,25 +145,37 @@
         border-radius: 50%;
         position: relative;
 
-        transition: border 2s ease;
+        transition: border 2s ease, background-color 2s ease;
 
         &:hover {
             border: calc(2rem * var(--factor)) solid var(--cPrim);
+            background-color: var(--cBNgris);
 
             .logo__border-circ {
                 background-color: var(--cPrim);
             }
         }
 
+
+        &--bn {
+            border: calc(2rem * var(--factor)) solid var(--cBNgrisClaro);
+            background-color: var(--cBNgris);
+
+            &:hover {
+                border: calc(2rem * var(--factor)) solid var(--cBNgrisClaro);
+                background-color: var(--cBNgris);
+
+                .logo__border-circ {
+                    background-color: --cBNgrisClaro;
+                }
+            }
+        }
     }
 
     &__borde-rotacion-interna {
         position: absolute;
         inset: 0;
         animation: reverseSpin 2s linear 0s;
-
-
-
     }
 
     @keyframes reverseSpin {
@@ -175,12 +202,17 @@
         position: absolute;
         width: calc(6rem * var(--factor));
         height: calc(6rem * var(--factor));
-        background-color: var(--cSec);
+        
         border-radius: 50%;
         border: calc(2rem * var(--factor)) solid var(--cPrim);
 
 
-        transition: background-color 2s ease;
+
+
+        
+
+        
+
 
 
     }
@@ -190,32 +222,80 @@
         right: 50%;
         top: calc(-4rem * var(--factor));
         left: 50%;
+
+        background-color: var(--cSec);
+        transition: background-color 1s ease;
+
         transform: translateX(-50%);
+        &--bn {
+            background-color: var(--cBNgrisClaro)!important;
+            border: calc(2rem * var(--factor)) solid var(--cBNgris);
+
+            &:hover {
+                border: calc(2rem * var(--factor)) solid var(--cBNgris);
+            }
+        }
     }
 
     &__borde-circ-right {
         @extend .logo__border-circ;
         top: 50%;
         right: calc(-4rem * var(--factor));
-        top: 50%;
+
+        background-color: var(--cSec);
+        transition: background-color 1s ease;
+
         transform: translateY(-50%);
+        &--bn {
+            background-color: var(--cBNgrisClaro)!important;
+            border: calc(2rem * var(--factor)) solid var(--cBNgris);
+
+            &:hover {
+                border: calc(2rem * var(--factor)) solid var(--cBNgris);
+            }
+        }
     }
 
     &__borde-circ-bottom {
         @extend .logo__border-circ;
+
+        background-color: var(--cSec);
+        transition: background-color 1s ease;
+
         right: 50%;
-        bottom: 0;
         bottom: calc(-4rem * var(--factor));
         left: 50%;
         transform: translateX(-50%);
+
+        &--bn {
+            background-color: var(--cBNgrisClaro)!important;
+            border: calc(2rem * var(--factor)) solid var(--cBNgris);
+
+            &:hover {
+                border: calc(2rem * var(--factor)) solid var(--cBNgris);
+            }
+        }
     }
 
     &__borde-circ-left {
         @extend .logo__border-circ;
+
+        background-color: var(--cSec);
+        transition: background-color 1s ease;
+
+
         top: 50%;
         left: calc(-4rem * var(--factor));
-        top: 50%;
         transform: translateY(-50%);
+
+        &--bn {
+            background-color: var(--cBNgrisClaro)!important;
+            border: calc(2rem * var(--factor)) solid var(--cBNgris);
+
+            &:hover {
+                border: calc(2rem * var(--factor)) solid var(--cBNgris);
+            }
+        }
     }
 
     &__circulo-central {
@@ -228,8 +308,7 @@
                 var(--cPrim0),
                 var(--cPrim1),
                 var(--cPrim2),
-                var(--cPrim4)
-            );
+                var(--cPrim4));
         background-repeat: no-repeat;
         background-attachment: fixed;
         overflow: hidden;
@@ -240,96 +319,115 @@
 
         animation: luzGirando .6s ease 0s 3;
 
+
         &:hover {
             animation: luzGirando-hover .6s ease 0s 3;
 
             box-shadow: 0 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) var(--cPrim0) inset,
-            0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cPrim0);
+                0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cPrim0);
+        }
+
+
+
+        &--bn {
+            animation: none;
+            background: var(--cBNgrisClaro);
+            box-shadow: 0 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) var(--cBNgris) inset,
+            0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cBNgrisClaro);
+
+            &:hover {
+                animation: none;
+                background: var(--cBNgrisClaro);
+                box-shadow: 0 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) var(--cBNgris) inset,
+                0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cBNgrisClaro);
+
+
+            }
         }
     }
 
     @keyframes luzGirando {
         0% {
             background: linear-gradient(175deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          10% {
+        }
+
+        10% {
             background: linear-gradient(211deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          20% {
+        }
+
+        20% {
             background: linear-gradient(247deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          30% {
+        }
+
+        30% {
             background: linear-gradient(283deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          40% {
+        }
+
+        40% {
             background: linear-gradient(319deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          50% {
+        }
+
+        50% {
             background: linear-gradient(355deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          60% {
+        }
+
+        60% {
             background: linear-gradient(31deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          70% {
+        }
+
+        70% {
             background: linear-gradient(67deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          80% {
+        }
+
+        80% {
             background: linear-gradient(103deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          90% {
+        }
+
+        90% {
             background: linear-gradient(139deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
+        }
     }
 
     @keyframes luzGirando-hover {
         0% {
             background: linear-gradient(175deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          10% {
+        }
+
+        10% {
             background: linear-gradient(211deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          20% {
+        }
+
+        20% {
             background: linear-gradient(247deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          30% {
+        }
+
+        30% {
             background: linear-gradient(283deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          40% {
+        }
+
+        40% {
             background: linear-gradient(319deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          50% {
+        }
+
+        50% {
             background: linear-gradient(355deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          60% {
+        }
+
+        60% {
             background: linear-gradient(31deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          70% {
+        }
+
+        70% {
             background: linear-gradient(67deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          80% {
+        }
+
+        80% {
             background: linear-gradient(103deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
-        
-          90% {
+        }
+
+        90% {
             background: linear-gradient(139deg, var(--cPrim0), var(--cPrim1), var(--cPrim2), var(--cPrim4));
-          }
+        }
     }
 
     &__circulo-central::before {
@@ -357,6 +455,8 @@
         height: calc(2.5rem * var(--factor));
         border-radius: 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) 0;
         background-color: var(--cPrim);
+
+
     }
 
     &__centro-linea-uno {
@@ -364,10 +464,18 @@
         width: calc(16rem * var(--factor));
         animation: pulso1 3s ease-in-out 2s 1;
         transition: box-shadow .4s ease;
-        
+
+
         &:hover {
             box-shadow: 0 0 calc(1rem * var(--factor)) calc(.2rem * var(--factor)) var(--cPrim);
             // background-color: lighten( var(--cPrim), 5% );
+        }
+
+        &--bn {
+            background-color: var(--cBNgris);
+            &:hover {
+                box-shadow: none!important  ;
+            }
         }
     }
 
@@ -376,9 +484,17 @@
         width: calc(12rem * var(--factor));
         animation: pulso2 3s ease-in-out 2s 1;
         transition: box-shadow .4s ease;
-        
+
+
         &:hover {
             box-shadow: 0 0 calc(1rem * var(--factor)) calc(.2rem * var(--factor)) var(--cPrim);
+        }
+
+        &--bn {
+            background-color: var(--cBNgris);
+            &:hover {
+                box-shadow: none!important  ;
+            }
         }
     }
 
@@ -387,9 +503,16 @@
         width: calc(12rem * var(--factor));
         animation: pulso1 3s ease-in-out 2s 1;
         transition: box-shadow .4s ease;
-        
+
         &:hover {
             box-shadow: 0 0 calc(1rem * var(--factor)) calc(.2rem * var(--factor)) var(--cPrim);
+        }
+
+        &--bn {
+            background-color: var(--cBNgris);
+            &:hover {
+                box-shadow: none!important  ;
+            }
         }
     }
 
@@ -398,9 +521,16 @@
         width: calc(20rem * var(--factor));
         animation: pulso2 3s ease-in-out 2s 1;
         transition: box-shadow .4s ease;
-        
+
         &:hover {
             box-shadow: 0 0 calc(1rem * var(--factor)) calc(.2rem * var(--factor)) var(--cPrim);
+        }
+
+        &--bn {
+            background-color: var(--cBNgris);
+            &:hover {
+                box-shadow: none!important  ;
+            }
         }
     }
 
@@ -482,10 +612,7 @@
 
 
 
-
-
-
-
+// SASS
 
 // @use '../../base/variables' as v;
 // @use '../../base/mixins' as m;
@@ -699,39 +826,39 @@
 //         0% {
 //             background: linear-gradient(175deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           10% {
 //             background: linear-gradient(211deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           20% {
 //             background: linear-gradient(247deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           30% {
 //             background: linear-gradient(283deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           40% {
 //             background: linear-gradient(319deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           50% {
 //             background: linear-gradient(355deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           60% {
 //             background: linear-gradient(31deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           70% {
 //             background: linear-gradient(67deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           80% {
 //             background: linear-gradient(103deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }
-        
+
 //           90% {
 //             background: linear-gradient(139deg, $cPrim0, $cPrim1, $cPrim2, $cPrim4);
 //           }

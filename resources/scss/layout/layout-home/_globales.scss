@@ -1,3 +1,6 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
 .home-heading {
 
     &__b {
@@ -10,7 +13,23 @@
         font-size: 4rem;
     }
 
-    &__s {
+    &__s {}
+}
 
+.body-overlay {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(v.$negro, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 1;
+
+
+    &--on {
+        opacity: 1;
+        z-index: 4;
     }
 }
