@@ -2,11 +2,6 @@
 @use '../base/mixins' as m;
 
 
-
-
-  
-
-
 .works {
     position: relative;
     display: flex;
@@ -14,7 +9,7 @@
     align-items: center;
     gap: 4rem;
     padding: 12rem 8rem;
-    background-color: lighten(v.$amarillo_past, 5%);
+    background-color: rgba(v.$amarillo_past, .8);
     margin: 10rem 0;
 
 
@@ -22,6 +17,8 @@
     background-repeat: no-repeat;
     background-size: 300rem 300rem;
     background-position: -30rem -125rem;
+
+    box-shadow: 0 0 15px v.$grisOscuro;
 
 
     &__bg-logo {

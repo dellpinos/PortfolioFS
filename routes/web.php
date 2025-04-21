@@ -4,19 +4,62 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SendEmailController;
 
-// Vista principal
+/* Homepage */
+Route::get('/', function () {
+    return view('home.index');
+});
+
+/* Works - Apps */
+Route::get('/apps/ecommerce', function() {
+    return view('home.apps.ecommerce');
+});
+
+Route::get('/apps/corporation', function() {
+    return view('home.apps.corporation');
+});
+
+Route::get('/apps/landing', function() {
+    return view('home.apps.landing');
+});
+
+Route::get('/apps/porfolio', function() {
+    return view('home.apps.porfolio');
+});
+
+Route::get('/apps/management', function() {
+    return view('home.apps.management');
+});
+
+Route::get('/apps/reservation', function() {
+    return view('home.apps.reservation');
+});
+
+Route::get('/apps/blog', function() {
+    return view('home.apps.blog');
+});
+
+Route::get('/apps/api', function() {
+    return view('home.apps.api');
+});
+
+Route::get('/apps/industry', function() {
+    return view('home.apps.industry');
+});
+// Fin Works - Apps
+
+/* Porfolio */
 Route::get('/porfolio', function () {
     $locale = session('locale', 'en'); // Obtener el locale de la sesión o 'en' por defecto
     App::setLocale($locale);
     return view('porfolio.index');
 });
 
-// Enviar Email
+/* Enviar Email Porfolio */
 Route::post('/', function () {
     return app()->call([SendEmailController::class, 'index']);
 });
 
-// Idioma
+/* Cambiar Idioma Porfolio */
 Route::get('/languages/{locale}', function ($locale) {
         // Guardar el idioma en la sesión
         session(['locale' => $locale]);
@@ -27,8 +70,3 @@ Route::get('/languages/{locale}', function ($locale) {
         // Redirigir al usuario a la página anterior
         return redirect()->back();
 })->name('home.language');
-
-// Nueva vista
-Route::get('/', function () {
-    return view('home.index');
-});

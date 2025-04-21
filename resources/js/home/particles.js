@@ -1,4 +1,3 @@
-
 export default function homeParticles () {
     tsParticles.load("tsparticles", {
         fullScreen: { enable: false },
@@ -25,4 +24,3 @@ export default function homeParticles () {
         }
     });
 }
-

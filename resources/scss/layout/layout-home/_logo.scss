@@ -20,7 +20,7 @@
     --cFondo: #fffff0;
     --cPrim: #212936;
     --cSec: #6ca690;
-    --cNegro: #212936;
+    --cNegro: #000000;
     --cBlanco: #FFFFFF;
     --cGris: #444444;
 
@@ -46,10 +46,9 @@
         width: fit-content;
         gap: calc(1.5rem * var(--factor));
         padding: calc(2rem * var(--factor));
-        background-color: var(--cFondo);
         color: var(--cSec);
         animation: fadeInUp var(--tiempo_op) ease-out both;
-        background-color: inherit;
+        z-index: 1;
 
         &--bn {
             opacity: var(--opacity)!important;

@@ -6,15 +6,41 @@
     &__b {
         margin: 0;
         font-size: 7rem;
+        text-align: center;
+        color: v.$grisOscuro;
     }
-
+    
     &__m {
         margin: 0;
-        font-size: 4rem;
+        font-size: 5rem;
+        text-align: center;
+        color: v.$grisOscuro;
     }
 
     &__s {}
 }
+
+.home-bg {
+
+
+    // &__container {
+    //     position: relative;
+    //     height: 100vh;
+    //     overflow: scroll;
+    // }
+
+    // &__logo {
+    //     position: sticky;
+    //     top: 59%;
+    //     left: 50%;
+    
+    //     transform: translate(-50%, -50%);
+    //     z-index: 0;
+    // }
+}
+
+
+
 
 .body-overlay {
 
@@ -33,3 +59,4 @@
         z-index: 4;
     }
 }
+

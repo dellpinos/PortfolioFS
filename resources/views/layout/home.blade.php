@@ -48,7 +48,7 @@
 <body class="home-body">
 
     {{-- Particles --}}
-    <div id="tsparticles" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+    
     {{-- Particles --}}
 
 
@@ -92,10 +92,18 @@
 
     </main>
 
-    <footer>
+    <footer class="home-footer">
+        {{-- <a href="#home-header" class="scroll-smooth">
+            <i class="home-footer__icono fa-solid fa-circle-arrow-up"></i>
+        </a> --}}
+        <div class="home-footer__logo">
+            <div style="--factor: .12; --tiempo_op: 3s;">
+                @include('home.includes.logo_simple')
+            </div>
+            <h2>DellPinos</h2>
+        </div>
 
-
-        {{-- <p><span >Martín del Pino</span> - {{ __('text.copyright' ) }} {{ now()->year }}</p> --}}
+        <p>- {{ __('text.copyright' ) }} {{ now()->year }} -</p>
 
     </footer>
     {{-- <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script> --}}

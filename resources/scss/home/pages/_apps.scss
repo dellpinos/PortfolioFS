@@ -1,0 +1,31 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.apps {
+    
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 6rem 10rem;
+
+
+    img {
+        width: 90rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    &__item {
+
+        h4 {
+            font-size: 2rem;
+        }
+    }
+
+
+}
