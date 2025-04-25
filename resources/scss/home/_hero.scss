@@ -44,9 +44,6 @@
 
         margin: 0 10rem 5rem 0;
 
-        button {
-            @include m.boton(lighten(v.$amarillo_past, 5%), v.$blanco);
-            border-radius: .5rem;
-        }
+
     }
 }

@@ -10,34 +10,12 @@
 
     <link rel="icon" href="{{ asset('img/home/dp_logo.png') }}" type="image/x-icon">
 
-    {{-- <link rel="preload" href="video/circulo_azul_720.mp4" as="video">
-    <link rel="preload" as="image" href="img/porfolio/perfil.webp"> --}}
-
-
-
-    {{-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'"> --}}
-
-    {{-- <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet"> --}}
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
-    {{-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> --}}
-
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-
     <link
-        href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
-
 
 
     <title>Dellpinos — Desarrollo Web & Soluciones Digitales</title>
@@ -47,25 +25,24 @@
 
 <body class="home-body">
 
-    {{-- Particles --}}
-    
-    {{-- Particles --}}
-
-
     <!-- Google Analytics -->
-    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
 
         gtag('config', 'G-TT2K6QN74N');
-    </script> --}}
+    </script>
+
     <!-- Google Analytics -->
 
-    <header class="home-header">
+
+    <header class="home-header home-header__visible">
 
         <div class="home-header__logo">
             <div style="--factor: .12; --tiempo_op: 3s;">
@@ -75,12 +52,12 @@
         </div>
 
         <nav class="home-header__nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="#" class="home-header__enlace">Home</a>
+            <a href="#" class="home-header__enlace">About</a>
+            <a href="#" class="home-header__enlace">Services</a>
+            <a href="#" class="home-header__enlace">Contact</a>
 
-            <button>Texto</button>
+            <a href="#" class="btn-grad">Contactarme</a>
         </nav>
 
     </header>
@@ -103,11 +80,11 @@
             <h2>DellPinos</h2>
         </div>
 
-        <p>- {{ __('text.copyright' ) }} {{ now()->year }} -</p>
+        <p>- {{ __('text.copyright') }} {{ now()->year }} -</p>
 
     </footer>
-    {{-- <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script> --}}
     @vite('resources/js/appHome.js')
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 
 </body>

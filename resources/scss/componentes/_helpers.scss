@@ -75,6 +75,19 @@
 .c-dor {
     color: v.$doradoST!important;
 }
+.font-white {
+    color: v.$blanco!important;
+}
+.hover-white {
+    &:hover {
+        color: v.$blanco!important;
+    }
+}
+
+.bold {
+    font-weight: v.$bold;
+}
+
 .t-y {
     transform: translateY(-2rem);
 }
@@ -108,16 +121,6 @@
 }
 
 
-
-
-.font-white {
-    color: v.$blanco!important;
-}
-.hover-white {
-    &:hover {
-        color: v.$blanco!important;
-    }
-}
 
 .relative {
     position: relative;

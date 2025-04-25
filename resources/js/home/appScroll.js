@@ -11,8 +11,11 @@ export default function appScroll() {
         if (currentScroll < lastScroll && currentScroll >= positionY) {
             // Si el usuario sube después de haber pasado los 1500px
             header.classList.remove('home-header__hidden');
+            void header.offsetHeight;
+            header.classList.add('home-header__visible');
         } else if (currentScroll >= positionY) {
             // Si el usuario baja después de los 1500px
+            header.classList.remove('home-header__visible');
             header.classList.add('home-header__hidden');
         }
 

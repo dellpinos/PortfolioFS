@@ -6,12 +6,18 @@
     width: 100%;
 
     padding: 2.5rem 0;
-    margin: 10rem 0 15rem 0;
+    margin: 10rem 0;
     font-size: 4.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+
+    p {
+        color: v.$verde_past;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
 
 
     &__section {

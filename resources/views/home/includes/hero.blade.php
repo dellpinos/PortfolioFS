@@ -6,7 +6,7 @@
         </div>
 
         <div class="home-hero__btn-cont">
-            <button>Empecemos</button>
+            <a href="#" class="btn-grad">Empecemos</a>
         </div>
     </div>
 

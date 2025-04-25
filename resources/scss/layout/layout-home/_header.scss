@@ -2,39 +2,49 @@
 @use '../../base/mixins' as m;
 
 .home-header {
-    
-    min-height: 10rem;
-    max-height: 15rem;
-    overflow: hidden;
+
+    transition: transform .6s ease, opacity .6s ease, padding .6s ease;
+    transform: translateY(0);
+    opacity: 1;
     padding: 2rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px v.$gris;
     position: fixed;
-    background-color: inherit;
+    background-color: v.$blanco;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9;
-    background-color: v.$blanco;
-    opacity: 1;
 
-    transition: max-height .6s ease, padding .6s ease, opacity .3s ease;
+    animation: fadeIn 1s ease-out both;
+
+    @keyframes fadeIn {
+        from {
+            transform: translateY(-100%)
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
 
     &__hidden {
-        min-height: 0;
-        max-height: 0;
-        padding: 0;
+        transform: translateY(-100%);
         opacity: 0;
+        padding: 0 5rem;
+    }
 
+    &__visible {
+        transform: translateY(0);
+        opacity: 1;
+        padding: 2rem 5rem;
     }
 
     &__logo {
-
         display: flex;
         align-items: center;
-
 
         h2 {
             margin: 0;
@@ -50,28 +60,16 @@
         display: flex;
         gap: 3rem;
         align-items: center;
-
-        a {
-            font-size: 1.8rem;
-            font-weight: v.$bold;
-            color: v.$grisOscuro;
-            transition: color .3s ease;
-
-            &:hover {
-                color: v.$rojo_past;
-            }
-        }
-
-        button {
-            
-            @include m.boton(v.$rojo_past, v.$blanco);
-            border-radius: .5rem;
-        }
-
-
     }
 
+    &__enlace {
+        font-size: 1.8rem;
+        font-weight: v.$bold;
+        color: v.$grisOscuro;
+        transition: color .3s ease;
 
-
-    
+        &:hover {
+            color: v.$naranja_past;
+        }
+    }
 }

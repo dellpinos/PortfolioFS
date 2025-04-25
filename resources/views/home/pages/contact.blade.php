@@ -1,3 +1,6 @@
+@extends('layout.home')
+
+@section('contenido')
 <div class="home-contacto__contenedor">
 
     <div class="home-contacto__text">
@@ -8,18 +11,18 @@
     <form action="/" method="POST" class="home-contacto__formulario-contenedor">
         @csrf
         <input type="text" placeholder="{{ __('text.ph_name') }}" name="name"
-            class="home-contacto__campo @error('name') borde__error @enderror" value="{{ old('name') }}" required>
+            class="home-contacto__campo home-contacto__campo--activo home-contacto__campo--activo @error('name') borde__error @enderror" value="{{ old('name') }}" required>
         @error('name')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
         <input type="text" placeholder="{{ __('text.ph_email') }}" name="email"
-            class="home-contacto__campo @error('email') borde__error @enderror" value="{{ old('email') }}" required>
+            class="home-contacto__campo home-contacto__campo--activo @error('email') borde__error @enderror" value="{{ old('email') }}" required>
         @error('email')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
-        <textarea class="home-contacto__campo" cols="30" rows="10" placeholder="{{ __('text.ph_msg') }}" name="mensaje"
+        <textarea class="home-contacto__campo home-contacto__campo--activo" cols="30" rows="10" placeholder="{{ __('text.ph_msg') }}" name="mensaje"
             required>{{ old('mensaje') }}</textarea>
         @error('mensaje')
             <p class=" alerta__error">{{ $message }}</p>
@@ -28,7 +31,8 @@
         <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 
         <div class="home-contacto__btn-contenedor">
-            <input type="submit" class="home-contacto__btn" value="{{ __('text.btn_send') }}">
+            <input type="submit" class="home-contacto__btn home-contacto__btn--activo" value="{{ __('text.btn_send') }}">
         </div>
     </form>
 </div>
+@endsection

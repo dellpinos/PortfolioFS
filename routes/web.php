@@ -9,6 +9,11 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+/* Pages */
+Route::get('/contact', function() {
+    return view('home.pages.contact');
+});
+
 /* Works - Apps */
 Route::get('/apps/ecommerce', function() {
     return view('home.apps.ecommerce');

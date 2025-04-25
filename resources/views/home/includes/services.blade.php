@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <div class="services__bg" style="--factor: 2.2; --opacity: .3;">
+    <div class="services__bg" style="--factor: 2.2; --opacity: .2;">
         @include('home.includes.logo_simple_bn')
     </div>
 
