@@ -1,4 +1,14 @@
 {
+  "_navigation-5a2ab3dc.js": {
+    "css": [
+      "assets/navigation-3a5b0a22.css"
+    ],
+    "file": "assets/navigation-5a2ab3dc.js"
+  },
+  "navigation.css": {
+    "file": "assets/navigation-3a5b0a22.css",
+    "src": "navigation.css"
+  },
   "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf": {
     "file": "assets/fa-brands-400-003f1154.ttf",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
@@ -14,6 +24,30 @@
   "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2": {
     "file": "assets/fa-solid-900-886c8611.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
+  },
+  "resources/img/home/bg_about.svg": {
+    "file": "assets/bg_about-8d586cdd.svg",
+    "src": "resources/img/home/bg_about.svg"
+  },
+  "resources/img/home/bg_calendar.svg": {
+    "file": "assets/bg_calendar-c1b43d22.svg",
+    "src": "resources/img/home/bg_calendar.svg"
+  },
+  "resources/img/home/bg_cloud.svg": {
+    "file": "assets/bg_cloud-6fa43093.svg",
+    "src": "resources/img/home/bg_cloud.svg"
+  },
+  "resources/img/home/bg_hosting.svg": {
+    "file": "assets/bg_hosting-4094002e.svg",
+    "src": "resources/img/home/bg_hosting.svg"
+  },
+  "resources/img/home/bg_responsive.svg": {
+    "file": "assets/bg_responsive-0e54795d.svg",
+    "src": "resources/img/home/bg_responsive.svg"
+  },
+  "resources/img/home/hero_1.svg": {
+    "file": "assets/hero_1-c8524865.svg",
+    "src": "resources/img/home/hero_1.svg"
   },
   "resources/img/porfolio/bg_13.svg": {
     "file": "assets/bg_13-7c508c59.svg",
@@ -31,25 +65,38 @@
     "file": "assets/bg_stuff-8ea5c8ea.svg",
     "src": "resources/img/porfolio/bg_stuff.svg"
   },
+  "resources/js/appHome.css": {
+    "file": "assets/appHome-d6fc63cb.css",
+    "src": "resources/js/appHome.css"
+  },
   "resources/js/appHome.js": {
-    "file": "assets/appHome-15f15b43.js",
+    "css": [
+      "assets/appHome-d6fc63cb.css"
+    ],
+    "file": "assets/appHome-915713dc.js",
+    "imports": [
+      "_navigation-5a2ab3dc.js"
+    ],
     "isEntry": true,
     "src": "resources/js/appHome.js"
   },
   "resources/js/appPorfolio.css": {
-    "file": "assets/appPorfolio-71c90e5d.css",
+    "file": "assets/appPorfolio-38b18944.css",
     "src": "resources/js/appPorfolio.css"
   },
   "resources/js/appPorfolio.js": {
     "css": [
-      "assets/appPorfolio-71c90e5d.css"
+      "assets/appPorfolio-38b18944.css"
     ],
-    "file": "assets/appPorfolio-644d45b0.js",
+    "file": "assets/appPorfolio-0c33e6a8.js",
+    "imports": [
+      "_navigation-5a2ab3dc.js"
+    ],
     "isEntry": true,
     "src": "resources/js/appPorfolio.js"
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-8157b813.css",
+    "file": "assets/app-cfc53f86.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
   }

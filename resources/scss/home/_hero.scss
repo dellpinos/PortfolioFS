@@ -1,38 +1,69 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
 .home-hero {
-    display: grid;
-    grid-template-columns: 6fr 4fr;
-    gap: 2rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
     background-image: url(../img/home/hero_1.svg);
-    background-position: center right;
+    background-position: center bottom -14rem;
     background-repeat: no-repeat;
-    background-size: 80rem;
-    padding: 10rem;
-    min-height: 80rem;
+    background-size: 45rem;
+    padding: 1rem;
+    margin-top: 5rem;
+    
+
+    @include m.phone {
+        
+        background-size: 80rem;
+        min-height: 80rem;
+        background-position: center right;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 10rem;
+    }
 
     &__text {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         justify-content: center;
-        gap: 6rem;
-        padding: 5rem 0;
+        width: 100%;
         
-
+        @include m.phone {
+            align-items: left;
+            justify-content: center;
+            padding: 5rem 0;
+            width: 60%;
+        }
+        
         h2 {
             text-align: left;
             color: v.$naranja_past;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-size: 4rem;
+
+            @include m.phone {
+                font-size: 7rem;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
         }
 
         p {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: v.$bold;
             color: v.$grisOscuro;
             background-color: rgba(v.$blanco, .8);
+            
+            @include m.phone {
+                font-size: 2.5rem;
+                width: 100%;
+                
+            }
         }
     }
 
@@ -41,9 +72,27 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
+        margin: 5rem 0 0 0;
+        height: auto;
+        width: 100%;
 
-        margin: 0 10rem 5rem 0;
+        a {
+            width: 100%;
+            margin: 0;
+        }
+        
+        @include m.phone {
+            margin: 0;
+            height: 100%;
+            width: 50%;
+            align-items: flex-end;
+            justify-content: flex-start;
 
-
+            a {
+                padding: 1.5rem 8rem;
+                width: fit-content;
+            }
+            
+        }
     }
 }

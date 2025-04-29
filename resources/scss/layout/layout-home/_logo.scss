@@ -12,6 +12,9 @@
     // Transición del contenedor principal (opacity)
     --tiempo_op: 1.5s;
 
+    // Delay animación principal
+    --tiempo_delay: 0;
+
     // Fuentes
     --fuente_prim: "Pacifico", cursive;
     --fuente_sec: "Quicksand", sans-serif;
@@ -48,10 +51,11 @@
         padding: calc(2rem * var(--factor));
         color: var(--cSec);
         animation: fadeInUp var(--tiempo_op) ease-out both;
+        animation-delay: var(--tiempo_delay);
         z-index: 1;
 
         &--bn {
-            opacity: var(--opacity)!important;
+            opacity: var(--opacity) !important;
             animation: none;
         }
     }
@@ -201,16 +205,16 @@
         position: absolute;
         width: calc(6rem * var(--factor));
         height: calc(6rem * var(--factor));
-        
+
         border-radius: 50%;
         border: calc(2rem * var(--factor)) solid var(--cPrim);
 
 
 
 
-        
 
-        
+
+
 
 
 
@@ -226,8 +230,9 @@
         transition: background-color 1s ease;
 
         transform: translateX(-50%);
+
         &--bn {
-            background-color: var(--cBNgrisClaro)!important;
+            background-color: var(--cBNgrisClaro) !important;
             border: calc(2rem * var(--factor)) solid var(--cBNgris);
 
             &:hover {
@@ -245,8 +250,9 @@
         transition: background-color 1s ease;
 
         transform: translateY(-50%);
+
         &--bn {
-            background-color: var(--cBNgrisClaro)!important;
+            background-color: var(--cBNgrisClaro) !important;
             border: calc(2rem * var(--factor)) solid var(--cBNgris);
 
             &:hover {
@@ -267,7 +273,7 @@
         transform: translateX(-50%);
 
         &--bn {
-            background-color: var(--cBNgrisClaro)!important;
+            background-color: var(--cBNgrisClaro) !important;
             border: calc(2rem * var(--factor)) solid var(--cBNgris);
 
             &:hover {
@@ -288,7 +294,7 @@
         transform: translateY(-50%);
 
         &--bn {
-            background-color: var(--cBNgrisClaro)!important;
+            background-color: var(--cBNgrisClaro) !important;
             border: calc(2rem * var(--factor)) solid var(--cBNgris);
 
             &:hover {
@@ -332,13 +338,13 @@
             animation: none;
             background: var(--cBNgrisClaro);
             box-shadow: 0 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) var(--cBNgris) inset,
-            0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cBNgrisClaro);
+                0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cBNgrisClaro);
 
             &:hover {
                 animation: none;
                 background: var(--cBNgrisClaro);
                 box-shadow: 0 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) var(--cBNgris) inset,
-                0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cBNgrisClaro);
+                    0 0 calc(3rem * var(--factor)) calc(1.5rem * var(--factor)) var(--cBNgrisClaro);
 
 
             }
@@ -472,8 +478,9 @@
 
         &--bn {
             background-color: var(--cBNgris);
+
             &:hover {
-                box-shadow: none!important  ;
+                box-shadow: none !important;
             }
         }
     }
@@ -491,8 +498,9 @@
 
         &--bn {
             background-color: var(--cBNgris);
+
             &:hover {
-                box-shadow: none!important  ;
+                box-shadow: none !important;
             }
         }
     }
@@ -509,8 +517,9 @@
 
         &--bn {
             background-color: var(--cBNgris);
+
             &:hover {
-                box-shadow: none!important  ;
+                box-shadow: none !important;
             }
         }
     }
@@ -527,8 +536,9 @@
 
         &--bn {
             background-color: var(--cBNgris);
+
             &:hover {
-                box-shadow: none!important  ;
+                box-shadow: none !important;
             }
         }
     }

@@ -14,6 +14,14 @@ Route::get('/contact', function() {
     return view('home.pages.contact');
 });
 
+Route::get('/info', function() {
+    return view('home.pages.tec_info');
+});
+
+// Route::get('/planning', function() {
+//     return view('home.pages.planning');
+// });
+
 /* Works - Apps */
 Route::get('/apps/ecommerce', function() {
     return view('home.apps.ecommerce');

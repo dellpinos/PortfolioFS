@@ -3,21 +3,19 @@
 
 
 .works {
+    
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    padding: 6rem 8rem;
-    margin: 10rem 0 0 0;
-    
+    padding: 5rem 1rem;
+    margin: 8rem 0 0 0;
 
-
-    // background-color: #FBAB7E;
-    // background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-
-    
-
+    @include m.phone {
+        padding: 10rem 8rem 2rem 8rem;
+        margin: 10rem 0 0 0;
+    }
 
     &__bg-logo {
         position: absolute;
@@ -25,74 +23,64 @@
         left: 1rem;
         z-index: 0;
     }
-    
 
-    
     &__text {
 
         z-index: 6;
-        
+
         h2 {
             color: v.$blanco;
-            
+            font-size: 3rem;
         }
+
         p {
             color: v.$blanco;
             margin: 2rem 0;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        @include m.phone {
+
+            h2 {
+                font-size: 5rem;
+            }
+
+            p {
+
+                margin: 2rem 0;
+            }
         }
     }
 
-
-
-    // &__grid {
-    //     z-index: 6;
-    //     display: grid;
-    //     width: 100%;
-    //     grid-template-columns: 1fr 1fr 1fr 1fr;
-
-        
-    //     gap: 2rem;
-
-    // }
-
     &__card {
 
-
-        height: 45rem;
-        // margin-top: 4rem;
-
-
+        height: 30rem;
+        width: auto;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 6rem;
-        padding: 6rem 3rem;
+        gap: 2rem;
+        padding: 2rem;
         background-color: v.$blanco;
         border-radius: 2rem;
-        // box-shadow: 
-        // 0 0 10px 5px v.$rojo_past inset,
-        // 0 0 0px 0px v.$rojo_past;
-      
-      transition: box-shadow 0.5s ease;
-      
-      &:hover {
-        cursor: pointer;
-        box-shadow: 
-          0 0 0 0 v.$gris inset,
-          0 0 10px 5px v.$gris;
-      }
+        transition: box-shadow 0.5s ease;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: none;
+        }
 
         img {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
-            width: 100%;
         }
 
         h4 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             margin: 0;
             text-align: center;
             color: v.$negro;
@@ -102,6 +90,25 @@
             font-size: 1.4rem;
         }
 
+        @include m.phone {
+            height: 45rem;
+            padding: 6rem 3rem;
+            gap: 6rem;
 
+            &:hover {
+                box-shadow:
+                0 0 0 0 v.$gris inset,
+                0 0 10px 5px v.$gris;
+            }
+
+            h4 {
+                font-size: 2.5rem;
+            }
+
+            img {
+                width: 100%;
+            }
+
+        }
     }
 }

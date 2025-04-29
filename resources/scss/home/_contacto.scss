@@ -3,46 +3,63 @@
 
 .home-contacto {
 
-    // &__heading {
-    //     font-size: 5rem;
-    //     text-align: center;
-    //     color: v.$grisOscuro;
-    // }
-
     &__contenedor {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        // Solo se utiliza esta clase en la ruta "contacto"
+        margin: 10rem 0 0 0;
+    }
+
+    &__principal {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-
-
-
         gap: 1rem;
+        padding: 5rem 1rem 0rem 1rem;
 
-        padding: 15rem 8rem;
-        margin: 0 0 10rem 0;
+        background-image: url(../img/home/bg_calendar.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 60rem;
 
 
+        @include m.phone {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 5rem 8rem 0rem 8rem;
+        }
     }
 
     &__text {
 
-        padding: 3rem;
+        padding: 1rem;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         h2 {
-            font-size: 4.2rem;
-            text-align: start;
+            font-size: 2.5rem;
+            text-align: center;
             margin: 0 0 1rem 0;
             color: v.$amarillo_past;
-
         }
 
         p {
-            font-size: 3rem;
+            font-size: 1.8rem;
             color: v.$grisOscuro;
+            text-align: center;
+        }
+
+        @include m.phone {
+            padding: 3rem;
+            h2 {
+                font-size: 4.2rem;
+                text-align: start;
+            }
+    
+            p {
+                font-size: 3rem;
+                text-align: start;
+            }
         }
     }
 

@@ -1,6 +1,6 @@
 <div class="marquee">
     <h2 class="home-heading__m">Nuestro stack</h2>
-    <p>Texto sobre las tecnologías y más texto</p>
+    <p>Texto sobre las tecnologías y más texto - <a href="#" class="marquee__enlace">Que es esto?</a></p>
     <div class="marquee__section">
         <div class="marquee__track">
             <ul>
@@ -122,4 +122,5 @@
             </ul>
         </div>
     </div>
+    
 </div>

@@ -42,9 +42,13 @@ p {
     font-family: v.$fuente_prin;
     background-color: v.$blanco;
     position: relative;
-    padding-top: 10rem;
+    padding-top: 0;
     textarea, input, label, a {
         font-family: v.$fuente_prin;
+    }
+
+    @include m.phone {
+        padding-top: 10rem;
     }
 }
 

@@ -1,24 +1,28 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
 .marquee {
     width: 100%;
-
     padding: 2.5rem 0;
-    margin: 10rem 0;
-    font-size: 4.5rem;
+    margin: 10rem 0 3rem 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
+    @include m.phone {
+        margin: 10rem 0 5rem 0;
+    }
+
     p {
         color: v.$verde_past;
         font-size: 2rem;
-        margin-bottom: 3rem;
-    }
+        margin-bottom: 1rem;
 
+        @include m.phone {
+            margin-bottom: 3rem;
+        }
+    }
 
     &__section {
         overflow: hidden;
@@ -39,9 +43,13 @@
     
     &__track ul {
         display: flex;
-        padding: 1rem 0;
+        padding: 0;
         margin: 0;
         list-style: none;
+
+        @include m.phone {
+            padding: 1rem 0;
+        }
     }
 
     &__item {
@@ -49,12 +57,16 @@
         white-space: nowrap;
         color: v.$grisClaro;
     
-        font-size: 5rem;
+        font-size: 2.5rem;
         // text-transform: uppercase;
         font-weight: v.$bold;
-    
+        
         &:hover {
             color: v.$verde_past;
+        }
+        
+        @include m.phone {
+            font-size: 5rem;
         }
     }
     
@@ -75,6 +87,16 @@
     
         100% {
             transform: translateX(0);
+        }
+    }
+
+    &__enlace {
+        color: v.$naranja_past;
+        font-size: 1.8rem;
+        font-weight: v.$bold;
+
+        &:hover {
+            color: darken(v.$naranja_past, 15%);
         }
     }
 }

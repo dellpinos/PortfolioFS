@@ -3,27 +3,34 @@
 
 
 // Sliders en la Home page
-
 .home-swiper {
     width: 100%;
-    height: 65rem;
+    
+    @include m.phone {
+        height: 65rem;
+    }
 }
 
 .home-swiper-slide {
-    width: 50rem !important;
-    padding: 3rem;
+    width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    @include m.phone {
+        padding: 3rem;
+        width: 50rem !important;
+    }
 }
 
 .swiper-button-next.home-swiper-button-next,
 .swiper-button-prev.home-swiper-button-prev {
     color: v.$naranja_past !important;
-    display: none !important;
+    display: block !important;
+    font-weight: bold;
 
-    @include m.tablet {
-        display: block !important;
+    @include m.phone {
+        font-weight: normal;
     }
 }

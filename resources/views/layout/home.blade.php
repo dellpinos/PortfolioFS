@@ -25,6 +25,21 @@
 
 <body class="home-body">
 
+    {{-- Preloader --}}
+
+    {{-- <div id="preloader">
+        <div class="spinner"></div>
+    </div> --}}
+
+    <div id="preloader">
+        <div style="--factor: .12; --tiempo_op: 0s; --tiempo_delay: 0s;">
+            @include('home.includes.logo_simple')
+        </div>
+        <h2 class="home-header__logo-text">DellPinos</h2>
+    </div>
+
+    {{-- Preloader --}}
+
     <!-- Google Analytics -->
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
@@ -42,14 +57,14 @@
     <!-- Google Analytics -->
 
 
-    <header class="home-header home-header__visible">
+    <header class="home-header">
 
-        <div class="home-header__logo">
+        <a class="home-header__logo" href="#">
             <div style="--factor: .12; --tiempo_op: 3s;">
                 @include('home.includes.logo_simple')
             </div>
-            <h2>DellPinos</h2>
-        </div>
+            <h2 class="home-header__logo-text">DellPinos</h2>
+        </a>
 
         <nav class="home-header__nav">
             <a href="#" class="home-header__enlace">Home</a>

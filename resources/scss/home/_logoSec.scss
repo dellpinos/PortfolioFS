@@ -5,14 +5,17 @@
 
 .home-logo-sec {
     width: 100%;
-    min-height: 86rem;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6rem 0;
-
     background-color: v.$blanco;
-    // box-shadow: -15px 0 35px 5px v.$blancoOscuro;
+
+    @include m.phone {
+        min-height: 86rem;
+    }
+
 
 
     &__particles {

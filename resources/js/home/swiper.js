@@ -8,13 +8,17 @@ import 'swiper/css/navigation';
 
 Swiper.use([EffectCoverflow, Navigation]);
 
+// Cambia el efecto dependiendo del tamaño de la pantalla
+let effectType = window.innerWidth <= 480 ? 'slide' : 'coverflow';
+
 export const swiper = () => {
     new Swiper('.swiper', {
-        effect: 'coverflow',
+        effect: effectType,
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 'auto',
         loop: true,
+        speed: 700,
+        freeMode: false,
 
         coverflowEffect: {
             rotate: 50,
@@ -25,13 +29,25 @@ export const swiper = () => {
         },
 
         // Navigation arrows
-
         navigation: {
             nextEl: '.home-swiper-button-next',
             prevEl: '.home-swiper-button-prev',
             hideOnClick: false,
     
+        },
+
+        // Responsive
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 'auto',
+            }
         }
+
+        
 
     });
 };
