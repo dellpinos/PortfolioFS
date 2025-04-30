@@ -18,13 +18,14 @@
         background-image: url(../img/home/bg_calendar.svg);
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: 60rem;
+        background-size: 40rem;
 
 
         @include m.phone {
             display: grid;
             grid-template-columns: 1fr 1fr;
             padding: 5rem 8rem 0rem 8rem;
+            background-size: 60rem;
         }
     }
 

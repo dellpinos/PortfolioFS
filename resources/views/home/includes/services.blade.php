@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div class="services__bg" style="--factor: 2.2; --opacity: .2;" id="home-logo-bg-services">
+    <div class="services__bg" style="--factor: 2; --opacity: .2;" id="home-logo-bg-services">
         @include('home.includes.logo_simple_bn')
     </div>
 

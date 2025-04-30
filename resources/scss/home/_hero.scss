@@ -41,12 +41,12 @@
         }
         
         h2 {
-            text-align: left;
             color: v.$naranja_past;
             margin-bottom: 2rem;
             font-size: 4rem;
-
+            
             @include m.phone {
+                text-align: left;
                 font-size: 7rem;
                 margin-bottom: 1rem;
                 width: 100%;
@@ -54,12 +54,14 @@
         }
 
         p {
+            text-align: center;
             font-size: 2rem;
             font-weight: v.$bold;
             color: v.$grisOscuro;
             background-color: rgba(v.$blanco, .8);
             
             @include m.phone {
+                text-align: left;
                 font-size: 2.5rem;
                 width: 100%;
                 

@@ -18,7 +18,7 @@ export default function logoResponsive() {
 
         } else {
             logo.style.setProperty('--factor', '1');
-            bgLogo.style.setProperty('--factor', '2.2');
+            bgLogo.style.setProperty('--factor', '2');
         }
     }
 
