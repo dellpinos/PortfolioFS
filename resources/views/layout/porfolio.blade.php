@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Encode+Sans+SC&family=Raleway:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Encode+Sans+SC&family=Pacifico&family=Raleway:wght@400;700&display=swap"
         rel="stylesheet">
 
 
@@ -27,6 +27,17 @@
 </head>
 
 <body class="porfolio-body">
+
+    {{-- Preloader --}}
+
+    <div id="preloader-portfolio">
+        <div style="--factor: .12; --tiempo_op: 0s; --tiempo_delay: 0s;">
+            @include('home.includes.logo_simple')
+        </div>
+        <h2 class="porfolio-preloader__logo-text">DellPinos</h2>
+    </div>
+
+    {{-- Preloader --}}
 
     <!-- Google Analytics -->
 

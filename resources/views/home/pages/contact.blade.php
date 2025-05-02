@@ -7,8 +7,7 @@
 
             <div class="home-contacto__text">
                 <h2>Agenda una Consulta</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ab dignissimos hic ullam delectus
-                    quisquam neque.</p>
+                <p>Contáctanos y te ayudamos a dar el siguiente paso en tu proyecto</p>
             </div>
 
             <form action="/" method="POST" class="home-contacto__formulario-contenedor">

@@ -1,6 +1,6 @@
 <div class="marquee">
-    <h2 class="home-heading__m">Nuestro stack</h2>
-    <p>Texto sobre las tecnologías y más texto - <a href="#" class="marquee__enlace">Que es esto?</a></p>
+    <h2 class="home-heading__m">Nuestro stack tecnológico</h2>
+    <p>Trabajamos con un amplio stack tecnológico moderno y en constante evolución, nos adaptamos a distintos proyectos y necesidades - <a href="#" class="marquee__enlace">Te lo explicamos fácil</a></p>
     <div class="marquee__section">
         <div class="marquee__track">
             <ul>

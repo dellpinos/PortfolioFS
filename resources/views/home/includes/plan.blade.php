@@ -1,27 +1,27 @@
 <div class="plan">
     <div class="plan__text">
-        <h3>Planeación. <span class="c-orange">Desarrollo.</span> Deployment.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque provident quam quaerat nulla facere non cumque, sint dignissimos earum ut similique aliquid laboriosam, iure dolorum autem. Qui facilis cumque debitis!</p>
+        <h3>Planeación. <span class="c-green-p">Desarrollo.</span> Deployment.</h3>
+        <p>Te acompañamos en cada etapa del camino digital: desde la idea inicial hasta una solución que impacta a tus usuarios.</p>
     </div>
 
 
     <div class="plan__grid">
-        <div class="plan__card plan__card--verde">
+        <div class="plan__card">
             <i class="fa-solid fa-compass-drafting"></i>
             <h3>Planeación</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            <p>Una buena estrategia para un desarrollo exitoso
             </p>
         </div>
-        <div class="plan__card plan__card--ama" >
+        <div class="plan__card" >
             <i class="fa-solid fa-laptop-code"></i>
             <h3>Desarrollo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            <p>Tu solución toma forma con tecnologías modernas y buenas prácticas
             </p>
         </div>
-        <div class="plan__card plan__card--naranja">
+        <div class="plan__card">
             <i class="fa-solid fa-rocket"></i>
             <h3>Deployment</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            <p>Tu aplicación lista para llegar a los usuarios y generar resultados
             </p>
         </div>
 

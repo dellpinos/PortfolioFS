@@ -2,12 +2,12 @@
 import appScroll from "./home/appScroll";
 import contactoVisible from "./home/contacto";
 import logoResponsive from "./home/logoResponsive";
-import logoScript from "./home/logoScript";
-import magneticHome from "./home/magnetic";
 import homeParticles from "./home/particles";
+import planStyles from "./home/planStyles";
 import services from "./home/services";
 import { swiper } from "./home/swiper";
 
+// Preloader
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     preloader.style.opacity = '0';
@@ -22,12 +22,11 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     logoResponsive();
-    magneticHome();
     homeParticles();
     swiper();
     services();
-    logoScript();
     contactoVisible();
     appScroll();
+    planStyles();
 
 });

@@ -15,18 +15,7 @@
         max-width: 95rem;
     }
 
-
-
-
 }
-
-// .swiper-slide {
-
-//     height: 100%;
-//     @include m.tablet {
-//         height: auto;
-//     }
-// }
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -36,7 +25,6 @@
     @include m.tablet {
         display: block !important;
     }
-
 }
 
 .swiper-pagination {

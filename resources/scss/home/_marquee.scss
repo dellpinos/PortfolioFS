@@ -4,7 +4,7 @@
 .marquee {
     width: 100%;
     padding: 2.5rem 0;
-    margin: 10rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -16,11 +16,13 @@
 
     p {
         color: v.$verde_past;
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        margin: 0 3rem 1rem 3rem;
 
         @include m.phone {
-            margin-bottom: 3rem;
+            margin: 0 auto 3rem auto;
+            width: 60%;
+            font-size: 2rem;
         }
     }
 

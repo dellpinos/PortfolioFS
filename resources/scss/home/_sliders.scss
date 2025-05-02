@@ -5,7 +5,7 @@
 // Sliders en la Home page
 .home-swiper {
     width: 100%;
-    
+
     @include m.phone {
         height: 65rem;
     }
@@ -24,13 +24,26 @@
     }
 }
 
-.swiper-button-next.home-swiper-button-next,
-.swiper-button-prev.home-swiper-button-prev {
+.home-swiper-button-next,
+.home-swiper-button-prev {
+    --swiper-navigation-size: 46px;
     color: v.$naranja_past !important;
     display: block !important;
     font-weight: bold;
 
+
     @include m.phone {
-        font-weight: normal;
+        --swiper-navigation-size: 76px;
     }
+}
+
+.home-swiper-pagination {
+    margin-bottom: 2rem !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #ff735c !important;
+
 }

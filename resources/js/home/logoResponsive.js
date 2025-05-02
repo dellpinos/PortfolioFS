@@ -13,12 +13,12 @@ export default function logoResponsive() {
     function changeSize() {
 
         if (window.innerWidth <= 768) {
-            logo.style.setProperty('--factor', '0.5');
-            bgLogo.style.setProperty('--factor', '1.5');
+            logo?.style.setProperty('--factor', '0.5');
+            bgLogo?.style.setProperty('--factor', '1.5');
 
         } else {
-            logo.style.setProperty('--factor', '1');
-            bgLogo.style.setProperty('--factor', '2');
+            logo?.style.setProperty('--factor', '1');
+            bgLogo?.style.setProperty('--factor', '2');
         }
     }
 

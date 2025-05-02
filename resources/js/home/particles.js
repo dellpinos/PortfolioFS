@@ -1,7 +1,6 @@
 export default function homeParticles() {
     if (document.querySelector('#tsparticles')) {
 
-
         tsParticles.load("tsparticles", {
             fullScreen: { enable: false },
             particles: {
@@ -31,24 +30,24 @@ export default function homeParticles() {
         tsParticles.load("tsparticles2", {
             fullScreen: { enable: false },
             particles: {
-              number: { value: 30 },
-              color: { value: "#6ca690" },
-              shape: { type: "circle" }, // o cualquier otro
-              size: { value: 2 },
-              links: {
-                enable: true,
-                color: "#7c7c7c",
-                distance: 150,
-                triangles: {
-                  enable: true,
-                  color: "#6ca690",
-                  opacity: 0.2
+                number: { value: 30 },
+                color: { value: "#6ca690" },
+                shape: { type: "circle" }, // o cualquier otro
+                size: { value: 2 },
+                links: {
+                    enable: true,
+                    color: "#7c7c7c",
+                    distance: 150,
+                    triangles: {
+                        enable: true,
+                        color: "#6ca690",
+                        opacity: 0.2
+                    }
+                },
+                move: {
+                    enable: true,
+                    speed: .5
                 }
-              },
-              move: {
-                enable: true,
-                speed: .5
-              }
             },
             interactivity: {
                 events: {

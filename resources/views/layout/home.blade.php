@@ -10,6 +10,8 @@
 
     <link rel="icon" href="{{ asset('img/home/dp_logo.png') }}" type="image/x-icon">
 
+    @yield('headers')
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -27,15 +29,11 @@
 
     {{-- Preloader --}}
 
-    {{-- <div id="preloader">
-        <div class="spinner"></div>
-    </div> --}}
-
     <div id="preloader">
         <div style="--factor: .12; --tiempo_op: 0s; --tiempo_delay: 0s;">
             @include('home.includes.logo_simple')
         </div>
-        <h2 class="home-header__logo-text">DellPinos</h2>
+        <h2 class="preloader-home__logo-text">DellPinos</h2>
     </div>
 
     {{-- Preloader --}}
@@ -59,7 +57,7 @@
 
     <header class="home-header">
 
-        <a class="home-header__logo" href="#">
+        <a class="home-header__logo" href="/">
             <div style="--factor: .12; --tiempo_op: 3s;">
                 @include('home.includes.logo_simple')
             </div>
@@ -67,12 +65,12 @@
         </a>
 
         <nav class="home-header__nav">
-            <a href="#" class="home-header__enlace">Home</a>
-            <a href="#" class="home-header__enlace">About</a>
-            <a href="#" class="home-header__enlace">Services</a>
-            <a href="#" class="home-header__enlace">Contact</a>
+            <a href="/" class="home-header__enlace">Home</a>
+            <a href="#home-works-container" class="home-header__enlace">Apps</a>
+            <a href="#home-logo-services-container" class="home-header__enlace">Servicios</a>
+            <a href="#" class="home-header__enlace">Nosotros</a>
 
-            <a href="#" class="btn-grad">Contactarme</a>
+            <a href="/contact" class="btn-grad">Contacto</a>
         </nav>
 
     </header>
@@ -95,7 +93,7 @@
             <h2>DellPinos</h2>
         </div>
 
-        <p>- {{ __('text.copyright') }} {{ now()->year }} -</p>
+        <p>- &copy; dellpinos - {{ __('text.copyright') }} {{ now()->year }} -</p>
 
     </footer>
     @vite('resources/js/appHome.js')

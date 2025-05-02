@@ -3,14 +3,7 @@
         <div class="home-info__text">
             <h3 class="home-heading__m">Responsive Desing</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde aliquid sapiente corporis!
-                Dolorem
-                quidem eos aut laborum sed rerum beatae id maiores. Natus nobis repellendus vero optio eligendi maxime.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At possimus eveniet iste debitis
-                exercitationem
-                officiis, beatae ex molestiae ab cumque vero blanditiis autem tempore saepe officia eligendi. Iste,
-                expedita
-                iure.
+                Un diseño responsive asegura que tu sitio web se vea bien en cualquier dispositivo, desde computadoras de escritorio hasta smartphones. Nosotros nos encargamos de que tu página se adapte perfectamente a todas las pantallas, mejorando la experiencia del usuario y el rendimiento en móviles.
             </p>
         </div>
     </div>
@@ -20,14 +13,7 @@
         <div class="home-info__text">
             <h3 class="home-heading__m">Hosting</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde aliquid sapiente corporis!
-                Dolorem
-                quidem eos aut laborum sed rerum beatae id maiores. Natus nobis repellendus vero optio eligendi maxime.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At possimus eveniet iste debitis
-                exercitationem
-                officiis, beatae ex molestiae ab cumque vero blanditiis autem tempore saepe officia eligendi. Iste,
-                expedita
-                iure.
+                Ofrecemos servicios de hosting rápidos y seguros, garantizando que tu sitio web esté siempre disponible y funcionando correctamente. Con nuestros servidores optimizados, tendrás la estabilidad y el rendimiento que tu proyecto necesita para crecer sin problemas.
             </p>
         </div>
 

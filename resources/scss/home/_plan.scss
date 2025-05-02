@@ -3,23 +3,27 @@
 
 .plan {
 
-    background-image: url(../img/home/bg_cloud.svg);
+    background-color: #0a0a0a;
+    background-image: 
+      url(../img/home/bg_cloud.svg),
+      linear-gradient(56deg, #0a0a0a 0%, #2f2e2e 46%, #3f3e3e 100%);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 40rem;
-    margin: 8rem 0 0 0;
-    padding: 1rem;
+    background-size: 40rem, cover;
+    margin: 10rem 1rem 0 1rem;
     border-radius: 3rem;
+    padding: 3rem 2rem;
 
     @include m.phone {
-        margin: 1rem 0 0 0;
+        margin: 1rem 5rem 0 5rem;
         padding: 5rem;
-        background-size: 100rem;
+        background-size: 70rem, cover;
     }
 
     &__text {
 
         h3 {
+            color: v.$marfil;
             font-size: 3rem;
             width: 100%;
             margin-bottom: 1rem;
@@ -27,6 +31,7 @@
         }
 
         p {
+            color: v.$marfil;
             font-size: 1.6rem;
             text-align: center;
         }
@@ -55,12 +60,16 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 1rem;
-        margin-top: 3rem;
+        margin: 1rem 0;
+
 
         @include m.phone {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 5rem;
-            padding: 5rem;
+            padding: 2rem;
+            width: 90%;
+            margin: 3rem auto 0 auto;
+
 
         }
     }
@@ -71,66 +80,97 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        padding: 2rem;
+        gap: .5rem;
+        padding: 1.5rem;
         border-radius: 2rem;
-        transition: box-shadow 1s ease;
-
-
-
-        &:hover {
-            box-shadow: none;
+        border: 1px solid v.$grisClaro;
+        transition: box-shadow 1.5s ease, color 1.5s ease, background-color 1.5s ease, border 1.5s ease, opacity 1.5s ease;
+        background-color: rgba(v.$grisClaro, .1);
+        box-shadow: none;
+        color: v.$grisClaro;
+        opacity: .6;
+        position: relative;
+        overflow: hidden;
+      
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          width: 0%;
+          background: rgba(v.$blanco, 0.2);
+          z-index: 0;
+          transition: width 7s ease;
+        }
+      
+        &--naranja::before {
+          width: 100%;
+        }
+      
+        // Evitar transición al quitar la clase
+        &:not(&--naranja)::before {
+          transition: none;
+          width: 0%;
+        }
+      
+        // Contenido encima del fondo
+        * {
+          position: relative;
+          z-index: 1;
         }
 
-        &--verde {
-            background-color: rgba(v.$verde_past, .1);
-            box-shadow: 0 0 10px 5px v.$verde_past;
-            color: v.$verde_past;
-        }
-
-        &--ama {
-            background-color: rgba(v.$amarillo_past, .1);
-            box-shadow: 0 0 10px 5px v.$amarillo_past;
-            color: v.$amarillo_past;
-        }
 
         &--naranja {
-            background-color: rgba(v.$naranja_past, .1);
-            box-shadow: 0 0 10px 5px v.$naranja_past;
-            color: v.$naranja_past;
+            // background-color: rgba(v.$blanco, .1);
+            box-shadow: 0 0 10px 5px v.$verde_past inset;
+            color: v.$verde_past;
+            border: 1px solid v.$verde_past;
+            opacity: 1;
+
         }
 
+
+        
+
+
+
+
+
         i {
-            font-size: 5rem;
+            font-size: 3rem;
         }
 
         h3 {
             padding: 0;
             margin: 0;
+            font-size: 2.2rem;
         }
 
         p {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             text-align: center;
             padding: 0;
             font-weight: v.$bold;
         }
 
         @include m.phone {
-            padding: 3rem 1rem;
+            padding: 2rem 1rem;
+            gap: 1rem;
 
             i {
-                font-size: 10rem;
+                font-size: 5rem;
             }
 
             h3 {
-                padding: 1.5rem;
+                padding: .5rem;
                 margin: 0;
+                font-size: 3rem;
             }
-    
+
             p {
-                font-size: 2.5rem;
-                padding: 2rem;
+                font-size: 1.8rem;
+                padding: .5rem;
             }
         }
     }

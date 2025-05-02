@@ -1,7 +1,7 @@
 @extends('layout.home')
 
 @section('headers')
-    <link rel="preload" href="{{ asset('img/home/commerce.svg') }}" as="image">
+    <link rel="preload" href="{{ asset('img/home/gestion.svg') }}" as="image">
 @endsection
 
 @section('contenido')
@@ -11,7 +11,7 @@
             <div id="tsparticles2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
             </div>
             <div class="apps__principal">
-                <img src="{{ asset('img/home/commerce.svg') }}" alt="Choose imagen" width="200">
+                <img src="{{ asset('img/home/gestion.svg') }}" alt="Choose imagen" width="200">
                 <div class="apps__text">
                     <h3>Soluciones para tu tienda online</h3>
 
