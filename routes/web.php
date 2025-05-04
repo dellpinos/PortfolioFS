@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SendEmailController;
 
+
+
+
 /* Homepage */
 Route::get('/', function () {
     return view('home.index');
@@ -16,6 +19,10 @@ Route::get('/contact', function() {
 
 Route::get('/info', function() {
     return view('home.pages.tec_info');
+});
+
+Route::get('/fuentes', function() {
+    return view('home.pages.fuentes');
 });
 
 // Route::get('/planning', function() {
@@ -83,3 +90,5 @@ Route::get('/languages/{locale}', function ($locale) {
         // Redirigir al usuario a la página anterior
         return redirect()->back();
 })->name('home.language');
+
+

@@ -1,4 +1,4 @@
-<div class="home-about">
+<div class="home-about" id="home-about-container">
     <div class="home-about__text">
         <h3>Sobre Nosotros</h3>
         <p>Somos un equipo de desarrollo web con base en Argentina, dedicado a ofrecer soluciones digitales

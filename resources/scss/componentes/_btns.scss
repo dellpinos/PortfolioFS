@@ -1,3 +1,5 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
 
 /* Botón con gradiente */
 
@@ -22,3 +24,5 @@
    color: #fff;
    text-decoration: none;
  }
+
+

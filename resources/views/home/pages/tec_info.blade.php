@@ -1,6 +1,8 @@
 @extends('layout.home')
 
-{{-- Hacer preload de la imagen?? --}}
+@section('headers')
+    <link rel="preload" href="{{ asset('img/home/team.png') }}" as="image">
+@endsection
 
 @section('contenido')
     <div class="apps">
@@ -9,7 +11,7 @@
             <div id="tsparticles2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
             </div>
             <div class="apps__principal">
-                <img src="{{ asset('img/home/team.png') }}" alt="Choose imagen">
+                <img src="{{ asset('img/home/team.png') }}" alt="Equipo imagen" width="200">
                 <div class="apps__text">
                     <h3>Que es un stack?</h3>
 

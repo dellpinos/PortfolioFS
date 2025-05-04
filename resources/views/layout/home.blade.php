@@ -19,7 +19,6 @@
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
-
     <title>Dellpinos — Desarrollo Web & Soluciones Digitales</title>
 
     @vite('resources/scss/app.scss')
@@ -68,7 +67,7 @@
             <a href="/" class="home-header__enlace">Home</a>
             <a href="#home-works-container" class="home-header__enlace">Apps</a>
             <a href="#home-logo-services-container" class="home-header__enlace">Servicios</a>
-            <a href="#" class="home-header__enlace">Nosotros</a>
+            <a href="#home-about-container" class="home-header__enlace">Nosotros</a>
 
             <a href="/contact" class="btn-grad">Contacto</a>
         </nav>
@@ -86,14 +85,35 @@
         {{-- <a href="#home-header" class="scroll-smooth">
             <i class="home-footer__icono fa-solid fa-circle-arrow-up"></i>
         </a> --}}
-        <div class="home-footer__logo">
+
+
+        <div class="home-footer__nav">
+            <div class="home-footer__btn-container">
+                <a href="/contact" class="home-footer__btn">Contacto</a>
+            </div>
+
+
+            <nav>
+                <div class="home-footer__link-wrapper">
+                    <a href="/contacto">Contacto</a>
+                    <a href="#home-logo-services-container">Servicios</a>
+                </div>
+                <div class="home-footer__link-wrapper">
+                    <a href="#home-works-container">Apps</a>
+                    <a href="/fuentes">Fuentes</a>
+                </div>
+
+            </nav>
+        </div>
+
+        <a class="home-footer__logo" href="/">
             <div style="--factor: .12; --tiempo_op: 3s;">
                 @include('home.includes.logo_simple')
             </div>
             <h2>DellPinos</h2>
-        </div>
+        </a>
 
-        <p>- &copy; dellpinos - {{ __('text.copyright') }} {{ now()->year }} -</p>
+        <p>- &copy; {{ __('text.copyright') }} {{ now()->year }} -</p>
 
     </footer>
     @vite('resources/js/appHome.js')

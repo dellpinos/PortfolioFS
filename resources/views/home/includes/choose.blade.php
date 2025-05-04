@@ -1,5 +1,5 @@
 <div class="home-choose">
-    <img src="{{ asset('img/home/bg_ideas.svg') }}" alt="Choose imagen">
+    <img src="{{ asset('img/home/bg_ideas.svg') }}" alt="Ideas imagen" width="200">
     <div>
         <h3>Por que elegirnos</h3>
 
