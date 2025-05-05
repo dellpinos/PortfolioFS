@@ -11,9 +11,9 @@
             </picture>
 
         </div>
-        <h4 class="dark-mode">{{ __('text.iam') }}</h4>
+        <h4 class="dark-mode">{{ __('portfolio_text.iam') }}</h4>
 
-        <p class="dark-mode">{{ __('text.iam_desc') }}</p>
+        <p class="dark-mode">{{ __('portfolio_text.iam_desc') }}</p>
 
     </div>
 

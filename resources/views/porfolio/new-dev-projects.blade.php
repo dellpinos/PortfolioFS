@@ -1,6 +1,6 @@
 <div class="new-dev-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">{{ __('text.main') }}</h2>
+    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">{{ __('portfolio_text.main') }}</h2>
 
     <div class="new-dev-projects__contenedor"> {{--  Contenedor de proyectos  --}}
 
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="new-dev-projects__text">
-                    {{-- <p>{{ __('text.ta_desc') }}</p> --}}
+                    {{-- <p>{{ __('portfolio_text.ta_desc') }}</p> --}}
 
                     <div class="tour__contenedor-card">
                         <div class="tour__card-ticket" id="tour-card-ticket">
@@ -40,19 +40,19 @@
                                 loading="lazy">
                             <div class="tour__card-contenedor-text">
 
-                                <h4 class="tour__card-heading">TicketAdmin<br> {{ __('text.view') }}</h4>
-                                <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                <h4 class="tour__card-heading">TicketAdmin<br> {{ __('portfolio_text.view') }}</h4>
+                                <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                             </div>
 
                         </div>
                     </div>
-                    <a href="https://ticketadmin.dellpinos.com/" target="_blank">{{ __('text.goto') }}
+                    <a href="https://ticketadmin.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }}
                         TicketAdmin</a>
                 </div>
             </div>
 
             <div class="new-dev-projects__contenedor-desc">
-                <p>{{ __('text.ta_desc') }}</p>
+                <p>{{ __('portfolio_text.ta_desc') }}</p>
             </div>
         </div>
         {{-- Fin Ticket Admin --}}
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="new-dev-projects__text">
-                    {{-- <p>{{ __('text.ta_desc') }}</p> --}}
+                    {{-- <p>{{ __('portfolio_text.ta_desc') }}</p> --}}
 
                     <div class="tour__contenedor-card">
                         <div class="tour__card" id="tour-card-tuslistas">
@@ -99,18 +99,18 @@
                                 loading="lazy">
                             <div class="tour__card-contenedor-text">
 
-                                <h4 class="tour__card-heading">TusListas<br> {{ __('text.view') }}</h4>
-                                <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                <h4 class="tour__card-heading">TusListas<br> {{ __('portfolio_text.view') }}</h4>
+                                <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                             </div>
 
                         </div>
                     </div>
-                    <a href="https://tuslistas.dellpinos.com/" target="_blank">{{ __('text.goto') }} TusListas</a>
+                    <a href="https://tuslistas.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }} TusListas</a>
                 </div>
             </div>
 
             <div class="new-dev-projects__contenedor-desc dark-mode">
-                <p class="c-azul">{{ __('text.tl_desc') }}</p>
+                <p class="c-azul">{{ __('portfolio_text.tl_desc') }}</p>
             </div>
         </div>
         {{-- Fin TusListas --}}
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="new-dev-projects__text">
-                    {{-- <p>{{ __('text.ta_desc') }}</p> --}}
+                    {{-- <p>{{ __('portfolio_text.ta_desc') }}</p> --}}
 
                     <div class="tour__contenedor-card">
                         <div class="tour__card-stuff" id="tour-card-stuff">
@@ -143,19 +143,19 @@
                             <i class="fa-solid fa-gears tour__card-logo-st"></i>
                             <div class="tour__card-contenedor-text">
 
-                                <h4 class="tour__card-heading">Stuff<br> {{ __('text.view') }}</h4>
-                                <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                <h4 class="tour__card-heading">Stuff<br> {{ __('portfolio_text.view') }}</h4>
+                                <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                             </div>
 
                         </div>
                     </div>
-                    <a href="https://stuffscripts.dellpinos.com/" target="_blank">{{ __('text.goto') }} Stuff &
+                    <a href="https://stuffscripts.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }} Stuff &
                         Scripts</a>
                 </div>
             </div>
 
             <div class="new-dev-projects__contenedor-desc">
-                <p class="c-dor">{{ __('text.ss_desc') }}</p>
+                <p class="c-dor">{{ __('portfolio_text.ss_desc') }}</p>
             </div>
         </div>
         {{-- Fin Stuff --}}
@@ -212,7 +212,7 @@
                 </div>
 
                 <div class="new-dev-projects__text">
-                    {{-- <p>{{ __('text.ta_desc') }}</p> --}}
+                    {{-- <p>{{ __('portfolio_text.ta_desc') }}</p> --}}
 
                     <div class="tour__contenedor-card">
                         <div class="tour__card-ticket" id="tour-card-store">
@@ -222,19 +222,19 @@
                                 alt="Logo Bakery Store" loading="lazy">
                             <div class="tour__card-contenedor-text">
 
-                                <h4 class="tour__card-heading">BakeryStore<br> {{ __('text.view') }}</h4>
-                                <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                <h4 class="tour__card-heading">BakeryStore<br> {{ __('portfolio_text.view') }}</h4>
+                                <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                             </div>
 
                         </div>
                     </div>
-                    <a href="https://store.dellpinos.com/" target="_blank">{{ __('text.goto') }}
+                    <a href="https://store.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }}
                         BakeryStore</a>
                 </div>
             </div>
 
             <div class="new-dev-projects__contenedor-desc">
-                <p>{{ __('text.bs_desc') }}</p>
+                <p>{{ __('portfolio_text.bs_desc') }}</p>
             </div>
         </div>
         {{-- Fin Bakery Store --}}

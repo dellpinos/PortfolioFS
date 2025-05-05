@@ -72,13 +72,13 @@
                 <div class="contenedor-xl header__contenido-video">
 
                     <div>
-                        <p class="header__texto">{{ __('text.hello') }} <span class="header__nombre">Martín del
+                        <p class="header__texto">{{ __('portfolio_text.hello') }} <span class="header__nombre">Martín del
                                 Pino</span></p>
-                        <p class="header__texto">{{ __('text.dev') }}</p>
+                        <p class="header__texto">{{ __('portfolio_text.dev') }}</p>
 
                     </div>
                     <div class="header__contenedor-boton">
-                        <a href="#skills" class="header__boton scroll-smooth">{{ __('text.job') }} <i href="#skills"
+                        <a href="#skills" class="header__boton scroll-smooth">{{ __('portfolio_text.job') }} <i href="#skills"
                                 class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
 
                     </div>
@@ -99,10 +99,10 @@
 
             <nav class="header__nav">
                 <div class="header__nav-enlaces">
-                    <a class="scroll-smooth" href="#skills">{{ __('text.profile') }}</a>
-                    <a class="scroll-smooth" href="#galeria">{{ __('text.portfolio') }}</a>
-                    <a class="scroll-smooth" href="#proyectos-personales">{{ __('text.projects') }}</a>
-                    <a class="scroll-smooth" href="#contacto">{{ __('text.contact') }}</a>
+                    <a class="scroll-smooth" href="#skills">{{ __('portfolio_text.profile') }}</a>
+                    <a class="scroll-smooth" href="#galeria">{{ __('portfolio_text.portfolio') }}</a>
+                    <a class="scroll-smooth" href="#proyectos-personales">{{ __('portfolio_text.projects') }}</a>
+                    <a class="scroll-smooth" href="#contacto">{{ __('portfolio_text.contact') }}</a>
                 </div>
 
                 <div class="header__contenedor-derecha">
@@ -146,7 +146,7 @@
             <i href="#header" class="footer__icono fa-solid fa-circle-arrow-up"></i>
         </a>
 
-        <p><span class="footer__nombre">Martín del Pino</span> - {{ __('text.copyright') }} {{ now()->year }}</p>
+        <p><span class="footer__nombre">Martín del Pino</span> - {{ __('portfolio_text.copyright') }} {{ now()->year }}</p>
 
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>

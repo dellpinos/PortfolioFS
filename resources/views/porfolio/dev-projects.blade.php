@@ -1,6 +1,6 @@
 <div class="dev-projects__contenedor-xl" id="proyectos-personales-contenedor">
 
-    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">{{ __('text.main') }}</h2>
+    <h2 id="proyectos-personales" data-aos="fade-right" class="dark-mode">{{ __('portfolio_text.main') }}</h2>
 
     <div class="swiperProjects mySwiper">
         <div class="swiper-wrapper">
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>{{ __('text.ta_desc') }}</p>
+                            <p>{{ __('portfolio_text.ta_desc') }}</p>
 
                             <div class="tour__contenedor-card">
                                 <div class="tour__card-ticket" id="tour-card-ticket">
@@ -45,13 +45,13 @@
                                         alt="Logo Ticket Admin" loading="lazy">
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">TicketAdmin<br> {{ __('text.view') }}</h4>
-                                        <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                        <h4 class="tour__card-heading">TicketAdmin<br> {{ __('portfolio_text.view') }}</h4>
+                                        <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://ticketadmin.dellpinos.com/" target="_blank">{{ __('text.goto') }} TicketAdmin</a>
+                            <a href="https://ticketadmin.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }} TicketAdmin</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>{{ __('text.tl_desc') }}</p>
+                            <p>{{ __('portfolio_text.tl_desc') }}</p>
 
                             <div class="tour__contenedor-card">
                                 <div class="tour__card" id="tour-card-tuslistas">
@@ -103,13 +103,13 @@
                                         alt="Logo Tus Listas" loading="lazy">
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">TusListas<br> {{ __('text.view') }}</h4>
-                                        <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                        <h4 class="tour__card-heading">TusListas<br> {{ __('portfolio_text.view') }}</h4>
+                                        <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://tuslistas.dellpinos.com/" target="_blank">{{ __('text.goto') }} TusListas</a>
+                            <a href="https://tuslistas.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }} TusListas</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                         </div>
 
                         <div class="dev-projects__text">
-                            <p>{{ __('text.ss_desc') }}</p>
+                            <p>{{ __('portfolio_text.ss_desc') }}</p>
 
                             <div class="tour__contenedor-card">
                                 <div class="tour__card-stuff" id="tour-card-stuff">
@@ -146,13 +146,13 @@
                                     <i class="fa-solid fa-gears tour__card-logo-st"></i>
                                     <div class="tour__card-contenedor-text">
 
-                                        <h4 class="tour__card-heading">Stuff<br> {{ __('text.view') }}</h4>
-                                        <p class="tour__card-text">{{ __('text.main_caract') }}</p>
+                                        <h4 class="tour__card-heading">Stuff<br> {{ __('portfolio_text.view') }}</h4>
+                                        <p class="tour__card-text">{{ __('portfolio_text.main_caract') }}</p>
                                     </div>
 
                                 </div>
                             </div>
-                            <a href="https://stuffscripts.dellpinos.com/" target="_blank">{{ __('text.goto') }} Stuff & Scripts</a>
+                            <a href="https://stuffscripts.dellpinos.com/" target="_blank">{{ __('portfolio_text.goto') }} Stuff & Scripts</a>
                         </div>
                     </div>
                 </div>

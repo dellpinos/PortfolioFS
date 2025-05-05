@@ -1,31 +1,33 @@
 <div id="contacto-contenedor" class="contacto__contenedor">
 
-    <h2 class="contacto__heading" id="contacto" data-aos="fade-right">{{ __('text.contact') }}</h2>
+    <h2 class="contacto__heading" id="contacto" data-aos="fade-right">{{ __('portfolio_text.contact') }}</h2>
 
-    <form action="/" method="POST" class="contacto__formulario-contenedor">
+    <form action="/contact" method="POST" class="contacto__formulario-contenedor">
         @csrf
-        <input type="text" placeholder="{{ __('text.ph_name') }}" name="name"
+        <input type="text" placeholder="{{ __('portfolio_text.ph_name') }}" name="name"
             class="contacto__campo @error('name') borde__error @enderror" value="{{ old('name') }}" required">
         @error('name')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
-        <input type="text" placeholder="{{ __('text.ph_email') }}" name="email"
+        <input type="text" placeholder="{{ __('portfolio_text.ph_email') }}" name="email"
             class="contacto__campo @error('email') borde__error @enderror" value="{{ old('email') }}" required>
         @error('email')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
-        <textarea class="contacto__campo" cols="30" rows="10" placeholder="{{ __('text.ph_msg') }}" name="mensaje"
+        <textarea class="contacto__campo" cols="30" rows="10" placeholder="{{ __('portfolio_text.ph_msg') }}" name="mensaje"
             required>{{ old('mensaje') }}</textarea>
         @error('mensaje')
             <p class=" alerta__error">{{ $message }}</p>
         @enderror
 
+        <input type="hidden" name="email_origin" value="porfolio">
+
         <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 
         <div class="contacto__btn-contenedor">
-            <input type="submit" class="contacto__btn" value="{{ __('text.btn_send') }}">
+            <input type="submit" class="contacto__btn" value="{{ __('portfolio_text.btn_send') }}">
         </div>
     </form>
 

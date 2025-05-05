@@ -1,6 +1,6 @@
 <div class="marquee">
-    <h2 class="home-heading__m">Nuestro stack tecnológico</h2>
-    <p>Trabajamos con un amplio stack tecnológico moderno y en constante evolución, nos adaptamos a distintos proyectos y necesidades - <a href="#" class="marquee__enlace">Te lo explicamos fácil</a></p>
+    <h2 class="home-heading__m">{{ __('home_text.marquee_heading') }}</h2>
+    <p>{{ __('home_text.marquee_desc') }} - <a href="{{ route('tec_info') }}" class="marquee__enlace">{{ __('home_text.marquee_link') }}</a></p>
     <div class="marquee__section">
         <div class="marquee__track">
             <ul>
