@@ -8,12 +8,9 @@
     align-items: center;
     padding: 2rem 0 3rem 0;
     margin: 10rem 0 0 0;
-
     z-index: 9;
-
     background-color: lighten(v.$amarillo_past, 8%);
     box-shadow: 0 0 15px v.$grisOscuro;
-
     color: v.$verde_past;
     font-weight: v.$bold;
 
@@ -22,14 +19,13 @@
     }
 
     &__nav {
-
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 1rem;
         gap: 2rem;
-        margin: 2rem 0;
+        margin: 1rem 0 2rem 0;
 
         @include m.phone {
             flex-direction: row;
@@ -40,7 +36,6 @@
 
         nav {
             display: flex;
-
             margin: 0 auto;
             gap: 2rem;
 
@@ -72,8 +67,16 @@
         display: flex;
         flex-direction: column;
         border-left: 1px solid v.$blancoOscuro;
+        border-bottom: 1px solid v.$blancoOscuro;
         padding: 1rem;
         gap: 1rem;
+        margin: 2rem 0;
+
+        @include m.phone {
+            border-left: 1px solid v.$blancoOscuro;
+            border-bottom: none;
+            margin: 0;
+        }
     }
 
     &__btn-container {
@@ -83,14 +86,12 @@
         align-items: center;
     }
 
-
-
     &__btn {
         text-transform: uppercase;
         color: v.$blancoOscuro;
         border: 3px solid v.$blancoOscuro;
         background-color: v.$amarillo_past;
-        padding: 1rem 2rem;
+        padding: 1.5rem 3rem;
         font-size: 1.6rem;
         transition: background-color .3s ease;
 
@@ -99,7 +100,6 @@
         }
 
         @include m.phone {
-            padding: 1.5rem 3rem;
             font-size: 1.8rem;
         }
     }
@@ -123,7 +123,6 @@
             margin: 0;
             text-align: left;
             font-size: 3rem;
-
             font-family: v.$fuente_cursiva;
             color: v.$grisOscuro;
             transition: color .5s ease;

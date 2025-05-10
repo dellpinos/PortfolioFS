@@ -13,28 +13,28 @@
             <div class="apps__principal">
                 <img src="{{ asset('img/home/porfolio.svg') }}" alt="Porfolio imagen" width="200">
                 <div class="apps__text">
-                    <h3>Mostrá tu trabajo al mundo</h3>
+                    <h3>{{ __('home_text.apps_porfolio_heading') }}</h3>
 
                     <div class="apps__grid">
 
-                        <p class="apps__legend">Diseñamos portfolios modernos, rápidos y personalizados para destacar tu perfil profesional</p>
+                        <p class="apps__legend">{{ __('home_text.apps_porfolio_sub') }}</p>
                         <ul class="apps__list">
-                            <li>Diseño adaptable a cualquier dispositivo <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Secciones personalizadas (proyectos, CV, contacto) <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Optimización para buscadores (SEO) <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Integración con redes sociales <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_porfolio_list0') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_porfolio_list1') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_porfolio_list2') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_porfolio_list3') }} <i class="c-green fa-solid fa-check"></i></li>
                         </ul>
                         <div class="apps__btn-cont">
-                            <a href="/contact" class="btn-grad w-full">Empecemos</a>
+                            <a href="{{ route('contact') }}" class="btn-grad w-full">{{ __('home_text.btn_to_contact') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="apps__description">
-                <p>Un portfolio online es la mejor forma de mostrar tus habilidades, proyectos y experiencia profesional. Te permite destacar tu perfil de forma clara y profesional, accesible desde cualquier lugar y en todo momento.</p>
-                <p>En un mundo digital, tener un portfolio no es solo una ventaja, es parte de tu identidad profesional. Ya seas desarrollador, diseñador, fotógrafo o freelancer, una buena presentación online puede abrirte muchas puertas.</p>
-                <p>Creamos portfolios visuales, funcionales y adaptados a vos, con un diseño pensado para resaltar lo que mejor sabés hacer. Tanto si estás empezando tu carrera como si querés renovar tu imagen, te ayudamos a construir una presencia online que hable por vos.</p>
+                <p>{{ __('home_text.apps_porfolio_desc0') }}</p>
+                <p>{{ __('home_text.apps_porfolio_desc1') }}</p>
+                <p>{{ __('home_text.apps_porfolio_desc2') }}</p>
             </div>
         </div>
 

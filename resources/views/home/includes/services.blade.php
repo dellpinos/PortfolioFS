@@ -39,7 +39,7 @@
         <div class="services__grid-item bg-verde-past">
             <div class="services__item-text">
                 <i class="fa-solid fa-user-graduate"></i>
-                <h4>{{ __('home_text.services_tec_heading') }}Consultoría Tecnológica</h4>
+                <h4>{{ __('home_text.services_tec_heading') }}</h4>
             </div>
             <p>{{ __('home_text.services_tec_desc') }}</p>
         </div>

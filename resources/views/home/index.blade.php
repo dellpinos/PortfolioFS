@@ -8,7 +8,9 @@
 
     @include('home.includes.plan')
 
-    @include('home.includes.choose')
+    <div class="home-mt-10">
+        @include('home.includes.choose')
+    </div>
 
     @include('home.includes.works')
 

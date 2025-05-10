@@ -1,23 +1,38 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
 .home-fuentes {
-
-
-    display: grid;
-    grid-template-columns: 1fr;
     margin-top: 15rem;
 
     @include m.phone {
-        grid-template-columns: 1fr 1fr;
         margin-top: 0;
     }
 
+    &__grid {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
 
+        @include m.phone {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        h2 {
+            // Solo se utiliza en mobile
+            font-size: 3.5rem;
+            text-align: center;
+            margin: 0 0 1rem 0;
+            color: v.$amarillo_past;
+
+            @include m.phone {
+                display: none;
+            }
+        }
+    }
 
     &__text {
-
         padding: 1rem;
         height: 100%;
         display: flex;
@@ -25,22 +40,20 @@
         justify-content: center;
 
         h2 {
-            font-size: 3.5rem;
-            text-align: center;
+            // Solo se utiliza en pantallas grandes
+            display: none;
+            font-size: 5rem;
+            text-align: start;
             margin: 0 0 1rem 0;
             color: v.$amarillo_past;
+
+            @include m.phone {
+                display: block;
+            }
         }
-
-
 
         @include m.phone {
             padding: 3rem;
-
-            h2 {
-                font-size: 5rem;
-                text-align: start;
-            }
-
         }
     }
 
@@ -48,29 +61,31 @@
         font-size: 1.8rem;
         color: v.$grisOscuro;
         font-weight: v.$bold;
-        // text-align: center;
 
         @include m.phone {
             font-size: 2.2rem;
             text-align: start;
-
         }
     }
 
     &__desc {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: v.$grisOscuro;
-        padding: 1rem;
-        // text-align: center;
+        padding: 0;
+        margin-top: 1rem;
 
         @include m.phone {
             font-size: 1.8rem;
             text-align: start;
-
+            padding: 1rem;
+            margin-top: 0;
         }
     }
 
     &__img {
         width: 100%;
+        @include m.phone {
+            padding: 3rem;
+        }
     }
 }

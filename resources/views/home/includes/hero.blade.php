@@ -5,6 +5,6 @@
         
     </div>
     <div class="home-hero__btn-cont">
-        <a href="#" class="btn-grad">{{ __('home_text.hero_btn') }}</a>
+        <a href="{{ route('contact') }}" class="btn-grad">{{ __('home_text.hero_btn') }}</a>
     </div>
 </div>

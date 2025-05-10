@@ -26,6 +26,18 @@
         }
     }
 
+    &__heading {
+        margin: 0;
+        font-size: 3rem;
+        text-align: center;
+        color: v.$grisOscuro;
+        font-family: v.$fuente_prin;
+
+        @include m.phone {
+            font-size: 5rem;
+        }
+    }
+
     &__section {
         overflow: hidden;
         white-space: nowrap;
@@ -65,6 +77,7 @@
         
         &:hover {
             color: v.$verde_past;
+            cursor: none;
         }
         
         @include m.phone {

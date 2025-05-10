@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Desarrollo Web & Soluciones Digitales">
+    <meta name="description" content="{{ __('home_text.meta_desc') }}">
 
     <link rel="icon" href="{{ asset('img/home/dp_logo.png') }}" type="image/x-icon">
 
@@ -74,7 +74,7 @@
 
         <div class="home-footer__nav">
             <div class="home-footer__btn-container">
-                <a href="/contact" class="home-footer__btn">{{ __('home_text.nav_contact') }}</a>
+                <a href="{{ route('contact') }}" class="home-footer__btn">{{ __('home_text.nav_contact') }}</a>
             </div>
             <nav>
                 <div class="home-footer__link-wrapper">
@@ -99,6 +99,22 @@
     @vite('resources/js/appHome.js')
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+    {{-- Botón Idioma --}}
+    <div class="home-lang__container" id="123">
+        @if (session('locale') == 'es')
+            <a href="{{ route('home.language', 'en') }}" class="home-lang__btn">
+                <p>ES</p>
+                <i class="home-lang__icon fa-solid fa-globe"></i>
+            </a>
+        @else
+            <a href="{{ route('home.language', 'es') }}" class="home-lang__btn">
+                <p>EN</p>
+                <i class="home-lang__icon fa-solid fa-globe"></i>
+            </a>
+        @endif
+    </div>
+    {{-- Botón Idioma --}}
 
 </body>
 </html>

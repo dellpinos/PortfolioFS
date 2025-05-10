@@ -18,13 +18,13 @@
 
                         <p class="apps__legend">{{ __('home_text.tec_info_sub') }}</p>
                         <ul class="apps__list">
-                            <li>{{ __('home_text.tec_info_list0') }}<i class="c-green fa-solid fa-check"></i></li>
-                            <li>{{ __('home_text.tec_info_list1') }}<i class="c-green fa-solid fa-check"></i></li>
-                            <li>{{ __('home_text.tec_info_list2') }}<i class="c-green fa-solid fa-check"></i></li>
-                            <li>{{ __('home_text.tec_info_list3') }}<i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.tec_info_list0') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.tec_info_list1') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.tec_info_list2') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.tec_info_list3') }} <i class="c-green fa-solid fa-check"></i></li>
                         </ul>
                         <div class="apps__btn-cont">
-                            <a href="{{ route('contact') }}" class="btn-grad w-full">{{ __('home_text.tec_info_btn') }}</a>
+                            <a href="{{ route('contact') }}" class="btn-grad w-full">{{ __('home_text.btn_to_contact') }}</a>
                         </div>
                     </div>
                 </div>

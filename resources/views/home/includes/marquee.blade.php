@@ -1,55 +1,55 @@
 <div class="marquee">
-    <h2 class="home-heading__m">{{ __('home_text.marquee_heading') }}</h2>
+    <h2 class="marquee__heading">{{ __('home_text.marquee_heading') }}</h2>
     <p>{{ __('home_text.marquee_desc') }} - <a href="{{ route('tec_info') }}" class="marquee__enlace">{{ __('home_text.marquee_link') }}</a></p>
     <div class="marquee__section">
         <div class="marquee__track">
             <ul>
-                <li><a class="marquee__item" href="#">TailwindCSS</a></li>
-                <li><a class="marquee__item" href="#">JavaScript</a></li>
-                <li><a class="marquee__item" href="#">React</a></li>
-                <li><a class="marquee__item" href="#">CSS3</a></li>
-                <li><a class="marquee__item" href="#">Zustand</a></li>
-                <li><a class="marquee__item" href="#">HTML5</a></li>
-                <li><a class="marquee__item" href="#">SASS</a></li>
-                <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Zod</a></li>
-                <li><a class="marquee__item" href="#">Selenium</a></li>
+                <li class="marquee__item">TailwindCSS</li>
+                <li class="marquee__item">JavaScript</li>
+                <li class="marquee__item">React</li>
+                <li class="marquee__item">CSS3</li>
+                <li class="marquee__item">Zustand</li>
+                <li class="marquee__item">HTML5</li>
+                <li class="marquee__item">SASS</li>
+                <li class="marquee__item">TypeScript</li>
+                <li class="marquee__item">Zod</li>
+                <li class="marquee__item">Selenium</li>
             </ul>
             <ul>
-                <li><a class="marquee__item" href="#">TailwindCSS</a></li>
-                <li><a class="marquee__item" href="#">JavaScript</a></li>
-                <li><a class="marquee__item" href="#">React</a></li>
-                <li><a class="marquee__item" href="#">CSS3</a></li>
-                <li><a class="marquee__item" href="#">Zustand</a></li>
-                <li><a class="marquee__item" href="#">HTML5</a></li>
-                <li><a class="marquee__item" href="#">SASS</a></li>
-                <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Zod</a></li>
-                <li><a class="marquee__item" href="#">Selenium</a></li>
+                <li class="marquee__item">TailwindCSS</li>
+                <li class="marquee__item">JavaScript</li>
+                <li class="marquee__item">React</li>
+                <li class="marquee__item">CSS3</li>
+                <li class="marquee__item">Zustand</li>
+                <li class="marquee__item">HTML5</li>
+                <li class="marquee__item">SASS</li>
+                <li class="marquee__item">TypeScript</li>
+                <li class="marquee__item">Zod</li>
+                <li class="marquee__item">Selenium</li>
             </ul>
             <ul>
-                <li><a class="marquee__item" href="#">TailwindCSS</a></li>
-                <li><a class="marquee__item" href="#">JavaScript</a></li>
-                <li><a class="marquee__item" href="#">React</a></li>
-                <li><a class="marquee__item" href="#">CSS3</a></li>
-                <li><a class="marquee__item" href="#">Zustand</a></li>
-                <li><a class="marquee__item" href="#">HTML5</a></li>
-                <li><a class="marquee__item" href="#">SASS</a></li>
-                <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Zod</a></li>
-                <li><a class="marquee__item" href="#">Selenium</a></li>
+                <li class="marquee__item">TailwindCSS</li>
+                <li class="marquee__item">JavaScript</li>
+                <li class="marquee__item">React</li>
+                <li class="marquee__item">CSS3</li>
+                <li class="marquee__item">Zustand</li>
+                <li class="marquee__item">HTML5</li>
+                <li class="marquee__item">SASS</li>
+                <li class="marquee__item">TypeScript</li>
+                <li class="marquee__item">Zod</li>
+                <li class="marquee__item">Selenium</li>
             </ul>
             <ul>
-                <li><a class="marquee__item" href="#">TailwindCSS</a></li>
-                <li><a class="marquee__item" href="#">JavaScript</a></li>
-                <li><a class="marquee__item" href="#">React</a></li>
-                <li><a class="marquee__item" href="#">CSS3</a></li>
-                <li><a class="marquee__item" href="#">Zustand</a></li>
-                <li><a class="marquee__item" href="#">HTML5</a></li>
-                <li><a class="marquee__item" href="#">SASS</a></li>
-                <li><a class="marquee__item" href="#">TypeScript</a></li>
-                <li><a class="marquee__item" href="#">Zod</a></li>
-                <li><a class="marquee__item" href="#">Selenium</a></li>
+                <li class="marquee__item">TailwindCSS</li>
+                <li class="marquee__item">JavaScript</li>
+                <li class="marquee__item">React</li>
+                <li class="marquee__item">CSS3</li>
+                <li class="marquee__item">Zustand</li>
+                <li class="marquee__item">HTML5</li>
+                <li class="marquee__item">SASS</li>
+                <li class="marquee__item">TypeScript</li>
+                <li class="marquee__item">Zod</li>
+                <li class="marquee__item">Selenium</li>
             </ul>
         </div>
     </div>
@@ -57,68 +57,68 @@
     <div class="marquee__section">
         <div class="marquee__track reverse">
             <ul>
-                <li><a class="marquee__item" href="#">Laravel</a></li>
-                <li><a class="marquee__item" href="#">Node.Js</a></li>
-                <li><a class="marquee__item" href="#">PostgreSQL</a></li>
-                <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">SQLite</a></li>
-                <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">PHP</a></li>
-                <li><a class="marquee__item" href="#">Django</a></li>
-                <li><a class="marquee__item" href="#">SQL</a></li>
-                <li><a class="marquee__item" href="#">CodeIgniter</a></li>
-                <li><a class="marquee__item" href="#">MySQL</a></li>
-                <li><a class="marquee__item" href="#">Python</a></li>
-                <li><a class="marquee__item" href="#">Next.Js</a></li>
+                <li class="marquee__item">Laravel</li>
+                <li class="marquee__item">Node.Js</li>
+                <li class="marquee__item">PostgreSQL</li>
+                <li class="marquee__item">NginX</li>
+                <li class="marquee__item">SQLite</li>
+                <li class="marquee__item">Express</li>
+                <li class="marquee__item">MongoDB</li>
+                <li class="marquee__item">PHP</li>
+                <li class="marquee__item">Django</li>
+                <li class="marquee__item">SQL</li>
+                <li class="marquee__item">CodeIgniter</li>
+                <li class="marquee__item">MySQL</li>
+                <li class="marquee__item">Python</li>
+                <li class="marquee__item">Next.Js</li>
             </ul>
             <ul>
-                <li><a class="marquee__item" href="#">Laravel</a></li>
-                <li><a class="marquee__item" href="#">Node.Js</a></li>
-                <li><a class="marquee__item" href="#">PostgreSQL</a></li>
-                <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">SQLite</a></li>
-                <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">PHP</a></li>
-                <li><a class="marquee__item" href="#">Django</a></li>
-                <li><a class="marquee__item" href="#">SQL</a></li>
-                <li><a class="marquee__item" href="#">CodeIgniter</a></li>
-                <li><a class="marquee__item" href="#">MySQL</a></li>
-                <li><a class="marquee__item" href="#">Python</a></li>
-                <li><a class="marquee__item" href="#">Next.Js</a></li>
+                <li class="marquee__item">Laravel</li>
+                <li class="marquee__item">Node.Js</li>
+                <li class="marquee__item">PostgreSQL</li>
+                <li class="marquee__item">NginX</li>
+                <li class="marquee__item">SQLite</li>
+                <li class="marquee__item">Express</li>
+                <li class="marquee__item">MongoDB</li>
+                <li class="marquee__item">PHP</li>
+                <li class="marquee__item">Django</li>
+                <li class="marquee__item">SQL</li>
+                <li class="marquee__item">CodeIgniter</li>
+                <li class="marquee__item">MySQL</li>
+                <li class="marquee__item">Python</li>
+                <li class="marquee__item">Next.Js</li>
             </ul>
             <ul>
-                <li><a class="marquee__item" href="#">Laravel</a></li>
-                <li><a class="marquee__item" href="#">Node.Js</a></li>
-                <li><a class="marquee__item" href="#">PostgreSQL</a></li>
-                <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">SQLite</a></li>
-                <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">PHP</a></li>
-                <li><a class="marquee__item" href="#">Django</a></li>
-                <li><a class="marquee__item" href="#">SQL</a></li>
-                <li><a class="marquee__item" href="#">CodeIgniter</a></li>
-                <li><a class="marquee__item" href="#">MySQL</a></li>
-                <li><a class="marquee__item" href="#">Python</a></li>
-                <li><a class="marquee__item" href="#">Next.Js</a></li>
+                <li class="marquee__item">Laravel</li>
+                <li class="marquee__item">Node.Js</li>
+                <li class="marquee__item">PostgreSQL</li>
+                <li class="marquee__item">NginX</li>
+                <li class="marquee__item">SQLite</li>
+                <li class="marquee__item">Express</li>
+                <li class="marquee__item">MongoDB</li>
+                <li class="marquee__item">PHP</li>
+                <li class="marquee__item">Django</li>
+                <li class="marquee__item">SQL</li>
+                <li class="marquee__item">CodeIgniter</li>
+                <li class="marquee__item">MySQL</li>
+                <li class="marquee__item">Python</li>
+                <li class="marquee__item">Next.Js</li>
             </ul>
             <ul>
-                <li><a class="marquee__item" href="#">Laravel</a></li>
-                <li><a class="marquee__item" href="#">Node.Js</a></li>
-                <li><a class="marquee__item" href="#">PostgreSQL</a></li>
-                <li><a class="marquee__item" href="#">NginX</a></li>
-                <li><a class="marquee__item" href="#">SQLite</a></li>
-                <li><a class="marquee__item" href="#">Express</a></li>
-                <li><a class="marquee__item" href="#">MongoDB</a></li>
-                <li><a class="marquee__item" href="#">PHP</a></li>
-                <li><a class="marquee__item" href="#">Django</a></li>
-                <li><a class="marquee__item" href="#">SQL</a></li>
-                <li><a class="marquee__item" href="#">CodeIgniter</a></li>
-                <li><a class="marquee__item" href="#">MySQL</a></li>
-                <li><a class="marquee__item" href="#">Python</a></li>
-                <li><a class="marquee__item" href="#">Next.Js</a></li>
+                <li class="marquee__item">Laravel</li>
+                <li class="marquee__item">Node.Js</li>
+                <li class="marquee__item">PostgreSQL</li>
+                <li class="marquee__item">NginX</li>
+                <li class="marquee__item">SQLite</li>
+                <li class="marquee__item">Express</li>
+                <li class="marquee__item">MongoDB</li>
+                <li class="marquee__item">PHP</li>
+                <li class="marquee__item">Django</li>
+                <li class="marquee__item">SQL</li>
+                <li class="marquee__item">CodeIgniter</li>
+                <li class="marquee__item">MySQL</li>
+                <li class="marquee__item">Python</li>
+                <li class="marquee__item">Next.Js</li>
             </ul>
         </div>
     </div>

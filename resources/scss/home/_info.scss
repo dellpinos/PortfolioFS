@@ -3,72 +3,100 @@
 
 .home-info {
 
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 0 3rem 0; 
-    min-height: 90rem;
+    margin: 0 0 3rem 0;
     padding: 5rem 1rem;
-    gap: 4rem;
-    
+    gap: 2rem;
+
     @include m.phone {
         padding: 5rem;
-        margin: 10rem 0 5rem 0;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
+        margin: 10rem 6rem 10rem 6rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
     }
 
-    &__item {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 35rem;
-        
-        @include m.phone {
-            background-size: 60rem;
-            
-        }
-    }
-
-    &__responsive {
-        background-image: url(../img/home/bg_responsive.svg);
-    }
-
-    &__text {
-        height: 45rem;
+    &__card {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin: 0;
         gap: 2rem;
-        
-        h3 {
-            padding: 1rem;
-            font-size: 3rem;
-
-        }
-
-        p {
-            color: v.$grisOscuro;
-            font-size: 1.6rem;
-
-            background-color: rgba(v.$blanco, .5);
-            padding: 1rem 2rem;
-            font-weight: v.$bold;
-            border-radius: 1.6rem;
-        }
+        padding: 1.5rem;
+        border: 1px solid rgba(v.$verde_past, .6);
+        border-radius: 2rem;
 
         @include m.phone {
-            height: 100%;
-            margin: 0 5rem;
-            gap: 0;
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+        }
+    }
 
-            p {
-                font-size: 2rem;
+    &__card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem 0 3rem;
+
+        @include m.phone {
+
+            img {
+                width: 100%;
             }
         }
     }
 
-    &__hosting {
-        background-image: url(../img/home/bg_hosting.svg);
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        background-color: rgba(v.$verde_past, .1);
+        padding: 1rem;
+        border-radius: 2rem;
+        color: v.$grisOscuro;
+
+        h3 {
+            font-size: 1.8rem;
+            font-family: v.$fuente_prin;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.4rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        }
+        
+        @include m.phone {
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 0rem;
+            }
+            
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__card-enlace {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 2rem 0 0;
+
+        a {
+            font-size: 1.4rem;
+            color: v.$naranja_past;
+            font-weight: v.$bold;
+            transition: color .3s ease;
+            margin: 1rem 1rem 0 0;
+
+            &:hover {
+                color: darken(v.$naranja_past, 15%);
+            }
+        }
     }
 }

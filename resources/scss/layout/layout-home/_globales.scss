@@ -1,6 +1,67 @@
 @use '../../base/variables' as v;
 @use '../../base/mixins' as m;
 
+// Margin opcional para secciones reutilizables
+.home-mt-10 {
+    margin-top: 5rem;
+    
+    @include m.phone {
+        margin-top: 10rem;
+    }
+}
+
+// Btn Idioma
+
+.home-lang {
+    &__container {
+        position: fixed;
+
+        bottom: 3rem;
+        right: 2rem;
+        z-index: 9;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    
+        @include m.phone {
+            margin: 0;
+            bottom: 5rem;
+            right: 5rem;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background-color: v.$blanco;
+
+        padding: 1rem;
+        transition: all .5s ease;
+        cursor: pointer;
+        color: v.$grisOscuro;
+
+        border: 2px solid v.$grisOscuro;
+        border-radius: 1rem;
+    
+        p {
+            margin: 0;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        &:hover {
+            color: v.$naranja_past;
+            border: 2px solid v.$naranja_past;
+        }
+    }
+
+    &__icon {
+        font-size: 2rem;
+    }
+}
 
 // Preloader
 #preloader {

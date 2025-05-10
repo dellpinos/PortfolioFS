@@ -13,28 +13,28 @@
             <div class="apps__principal">
                 <img src="{{ asset('img/home/landing.svg') }}" alt="Landing Page imagen" width="200">
                 <div class="apps__text">
-                    <h3>Primera impresión que genera impacto</h3>
+                    <h3>{{ __('home_text.apps_landing_heading') }}</h3>
 
                     <div class="apps__grid">
 
-                        <p class="apps__legend">Capturá la atención de tus visitantes con páginas optimizadas para convertir más y comunicar mejor tu propuesta</p>
+                        <p class="apps__legend">{{ __('home_text.apps_landing_sub') }}</p>
                         <ul class="apps__list">
-                            <li>Diseño atractivo y enfocado en objetivos <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Velocidad de carga optimizada <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Adaptadas a móviles <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Listas para conectar con tus campañas <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_landing_list0') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_landing_list1') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_landing_list2') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_landing_list3') }} <i class="c-green fa-solid fa-check"></i></li>
                         </ul>
                         <div class="apps__btn-cont">
-                            <a href="/contact" class="btn-grad w-full">Empecemos</a>
+                            <a href="{{ route('contact') }}" class="btn-grad w-full">{{ __('home_text.btn_to_contact') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="apps__description">
-                <p>Una landing page es una página pensada para cumplir un objetivo específico: generar leads, promocionar un producto o presentar una campaña. Es una herramienta clave en cualquier estrategia digital.</p>
-                <p>Diseñamos landing pages centradas en la conversión, con mensajes claros, llamados a la acción efectivos y un diseño que conecta con tu audiencia. Ya sea que necesites una página para una campaña puntual o un sistema para generar múltiples landings, tenemos la solución.</p>
-                <p>Te ayudamos a crear páginas que cargan rápido, se ven perfectas en todos los dispositivos y están listas para integrarse con tus herramientas de marketing.</p>
+                <p>{{ __('home_text.apps_landing_desc0') }}</p>
+                <p>{{ __('home_text.apps_landing_desc1') }}</p>
+                <p>{{ __('home_text.apps_landing_desc2') }}</p>
             </div>
         </div>
 

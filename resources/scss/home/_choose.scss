@@ -2,12 +2,10 @@
 @use '../base/mixins' as m;
 
 .home-choose {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem 0 1rem;
-
 
     img {
         width: 25rem;
@@ -16,13 +14,12 @@
     @include m.phone {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        padding: 10rem 15rem 0 15rem;
+        padding: 0 15rem;
 
         img {
             width: 60rem;
         }
     }
-
 
     h3 {
         display: none;
@@ -49,6 +46,7 @@
             font-size: 1.8rem;
             margin: 0 0 1rem 0;
             text-align: center;
+            
 
             @include m.phone {
                 font-size: 2rem;
@@ -61,11 +59,8 @@
             text-align: center;
 
             @include m.phone {
-
                 text-align: start;
             }
         }
     }
-
-
 }

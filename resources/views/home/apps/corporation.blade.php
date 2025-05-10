@@ -13,28 +13,28 @@
             <div class="apps__principal">
                 <img src="{{ asset('img/home/company.svg') }}" alt="Institucionales imagen" width="200">
                 <div class="apps__text">
-                    <h3>Soluciones para tu sitio institucional</h3>
+                    <h3>{{ __('home_text.apps_corp_heading') }}</h3>
 
                     <div class="apps__grid">
 
-                        <p class="apps__legend">Mostrá tu empresa con una web profesional, clara y alineada a tu identidad</p>
+                        <p class="apps__legend">{{ __('home_text.apps_corp_sub') }}</p>
                         <ul class="apps__list">
-                            <li>Diseño moderno y responsive <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Información de servicios y contacto <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Optimizado para buscadores (SEO) <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Enfocado en comunicar tus servicios <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_corp_list0') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_corp_list1') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_corp_list2') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_corp_list3') }} <i class="c-green fa-solid fa-check"></i></li>
                         </ul>
                         <div class="apps__btn-cont">
-                            <a href="/contact" class="btn-grad w-full">Empecemos</a>
+                            <a href="{{ route('contact') }}" class="btn-grad w-full">{{ __('home_text.btn_to_contact') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="apps__description">
-                <p>Un sitio web corporativo es la carta de presentación de tu empresa en Internet. Brinda confianza, comunica tus servicios y fortalece tu presencia profesional.</p>
-                <p>Hoy en día, tener un sitio institucional bien desarrollado es esencial para transmitir seriedad, captar nuevos clientes y destacarte frente a la competencia.</p>
-                <p>Diseñamos sitios web claros, rápidos y personalizados según tu rubro. Te ayudamos a mostrar lo que hacés, cómo lo hacés y por qué elegirte, con una solución digital a la medida de tu negocio.</p>
+                <p>{{ __('home_text.apps_corp_desc0') }}</p>
+                <p>{{ __('home_text.apps_corp_desc1') }}</p>
+                <p>{{ __('home_text.apps_corp_desc2') }}</p>
             </div>
         </div>
 

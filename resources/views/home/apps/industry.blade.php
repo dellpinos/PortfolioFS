@@ -13,28 +13,28 @@
             <div class="apps__principal">
                 <img src="{{ asset('img/home/delivery.svg') }}" alt="Industria imagen" width="200">
                 <div class="apps__text">
-                    <h3>Soluciones digitales para la industria</h3>
+                    <h3>{{ __('home_text.apps_industry_heading') }}</h3>
 
                     <div class="apps__grid">
 
-                        <p class="apps__legend">Optimizá tus procesos con herramientas digitales diseñadas para mejorar la eficiencia, trazabilidad y comunicación interna</p>
+                        <p class="apps__legend">{{ __('home_text.apps_industry_sub') }}</p>
                         <ul class="apps__list">
-                            <li>Automatización de tareas administrativas <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Paneles de control personalizados <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Integración con sistemas existentes <i class="c-green fa-solid fa-check"></i></li>
-                            <li>Acceso seguro desde cualquier dispositivo <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_industry_list0') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_industry_list1') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_industry_list2') }} <i class="c-green fa-solid fa-check"></i></li>
+                            <li>{{ __('home_text.apps_industry_list3') }} <i class="c-green fa-solid fa-check"></i></li>
                         </ul>
                         <div class="apps__btn-cont">
-                            <a href="/contact" class="btn-grad w-full">Empecemos</a>
+                            <a href="{{ route('contact') }}" class="btn-grad w-full">{{ __('home_text.btn_to_contact') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="apps__description">
-                <p>La transformación digital en la industria permite automatizar procesos, reducir errores y mejorar la productividad. Ya sea en logística, producción o gestión interna, la tecnología puede marcar una diferencia real.</p>
-                <p>Desarrollamos soluciones a medida que se adaptan a tus flujos de trabajo y necesidades específicas. Desde sistemas de gestión interna hasta plataformas de seguimiento y control, trabajamos para que tu empresa sea más eficiente y competitiva.</p>
-                <p>No importa si estás dando tus primeros pasos en lo digital o buscás escalar tus sistemas actuales, te ayudamos a construir herramientas robustas, escalables y seguras para el entorno industrial.</p>
+                <p>{{ __('home_text.apps_industry_desc0') }}</p>
+                <p>{{ __('home_text.apps_industry_desc1') }}</p>
+                <p>{{ __('home_text.apps_industry_desc2') }}</p>
             </div>
         </div>
 
