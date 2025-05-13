@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpFoundation\Response;
 
-class SetLangEN
+class SetLang
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,19 @@ class SetLangEN
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = session('locale', 'en'); // Obtener el locale de la sesión o 'en' por defecto
+
+        // Obtiene el idioma predeterminado de la ruta, si existe
+        $defaultLocale = $request->route()->defaults['locale'] ?? 'es';
+
+        // Si hay un valor en sesión, se usa; si no, el predeterminado
+        $locale = session('locale', $defaultLocale);
+
+        // Establece el idioma para la aplicación
         App::setLocale($locale);
-        
+
+        // Compartir el idioma para el tag <html>
+        view()->share('htmlLang', $locale);
+
         return $next($request);
     }
 }

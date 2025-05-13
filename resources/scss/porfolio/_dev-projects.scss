@@ -218,7 +218,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        background-image: url(../img/porfolio/bg_13.svg);
+        background-image: url(~img/porfolio/bg_13.svg);
         background-position: center;
         background-size: 200rem;
         background-repeat: no-repeat;
@@ -228,7 +228,7 @@
 
             @extend .dev-projects__contenedor;
             // Dark Mode
-            background-image: url(../img/porfolio/bg_13_w.svg);
+            background-image: url(~img/porfolio/bg_13_w.svg);
             background-position: center;
             background-size: 200rem;
             background-repeat: no-repeat;
@@ -249,7 +249,7 @@
 
 
         @include m.tablet {
-            background-image: url(../img/porfolio/bg_stuff.svg);
+            background-image: url(~img/porfolio/bg_stuff.svg);
             font-family: v.$fuente_stuff;
             background-size: auto;
             
@@ -261,7 +261,7 @@
     &__contenedor-ticket {
 
         @extend .dev-projects__contenedor;
-        background-image: url(../img/porfolio/bg_13_w.svg);
+        background-image: url(~img/porfolio/bg_13_w.svg);
         background-repeat: repeat;
         background-size: auto;
         
@@ -295,7 +295,7 @@
         box-shadow: 0 0 10px v.$naranja_past;
         border: .5px solid v.$negro;
         
-        background: url('../img/porfolio/l_arrow.svg') no-repeat center center, v.$naranja_past;
+        background: url(~img/porfolio/l_arrow.svg) no-repeat center center, v.$naranja_past;
         background-size: contain;
         
         @include m.tablet {
@@ -312,7 +312,7 @@
         border-radius: .5rem 0 0 .5rem;
         box-shadow: 0 0 10px v.$negro;
         
-        background: url('../img/porfolio/r_arrow.svg') no-repeat center center, v.$naranja_past;
+        background: url(~img/porfolio/r_arrow.svg) no-repeat center center, v.$naranja_past;
         background-size: contain;
         
         @include m.tablet {

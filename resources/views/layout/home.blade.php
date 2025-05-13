@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ $htmlLang ?? 'es' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -38,6 +38,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT2K6QN74N"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -56,9 +57,12 @@
         </a>
         <nav class="home-header__nav">
             <a href="{{ route('index') }}" class="home-header__enlace">{{ __('home_text.nav_home') }}</a>
-            <a href="{{ route('index') }}#home-works-container" class="home-header__enlace">{{ __('home_text.nav_apps') }}</a>
-            <a href="{{ route('index') }}#home-logo-services-container" class="home-header__enlace">{{ __('home_text.nav_services') }}</a>
-            <a href="{{ route('index') }}#home-about-container" class="home-header__enlace">{{ __('home_text.nav_about') }}</a>
+            <a href="{{ route('index') }}#home-works-container"
+                class="home-header__enlace">{{ __('home_text.nav_apps') }}</a>
+            <a href="{{ route('index') }}#home-logo-services-container"
+                class="home-header__enlace">{{ __('home_text.nav_services') }}</a>
+            <a href="{{ route('index') }}#home-about-container"
+                class="home-header__enlace">{{ __('home_text.nav_about') }}</a>
             <a href="{{ route('contact') }}" class="btn-grad">{{ __('home_text.nav_contact') }}</a>
         </nav>
 
@@ -100,9 +104,10 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 
+
     {{-- Botón Idioma --}}
-    <div class="home-lang__container" id="123">
-        @if (session('locale') == 'es')
+    <div class="home-lang__container">
+        @if (($htmlLang ?? 'es') === 'es')
             <a href="{{ route('home.language', 'en') }}" class="home-lang__btn">
                 <p>ES</p>
                 <i class="home-lang__icon fa-solid fa-globe"></i>
@@ -117,4 +122,5 @@
     {{-- Botón Idioma --}}
 
 </body>
+
 </html>

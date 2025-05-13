@@ -183,7 +183,7 @@
     }
 
     &__contenedor {
-        background-image: url(../img/porfolio/bg_13.svg);
+        background-image: url(~img/porfolio/bg_13.svg);
         background-position: center;
         background-size: 200rem;
         background-repeat: no-repeat;
@@ -204,7 +204,7 @@
         &--dark {
             @extend .new-dev-projects__contenedor;
             // Dark Mode
-            background-image: url(../img/porfolio/bg_13_w.svg);
+            background-image: url(~img/porfolio/bg_13_w.svg);
             background-position: center;
             background-size: 200rem;
             background-repeat: no-repeat;
@@ -318,7 +318,7 @@
         &--dark {
             @extend .new-dev-projects__contenedor;
             // Dark Mode
-            background-image: url(../img/porfolio/bg_13_w.svg);
+            background-image: url(~img/porfolio/bg_13_w.svg);
             background-position: center;
             background-size: 200rem;
             background-repeat: no-repeat;
@@ -389,7 +389,7 @@
         background: linear-gradient(354deg, rgba(31, 41, 55, .6) 1%, rgba(31, 41, 55, 1) 70%);
 
         @include m.tablet {
-            background-image: url(../img/porfolio/bg_stuff.svg);
+            background-image: url(~img/porfolio/bg_stuff.svg);
             font-family: v.$fuente_stuff;
             background-size: auto;
 

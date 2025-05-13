@@ -45,7 +45,7 @@ return [
 
 
     // Works
-    'works_heading' => "Tipos de Aplicaciones que Desarrollamos",
+    'works_heading' => "Áreas en las que Nos Destacamos",
     'works_card_commerce' => "E-commerce & Marketplace",
     'works_card_corp' => "Sitios web corporativos",
     'works_card_landing' => "Landing Pages",

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ $htmlLang ?? 'es' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -72,15 +72,14 @@
                 <div class="contenedor-xl header__contenido-video">
 
                     <div>
-                        <p class="header__texto">{{ __('portfolio_text.hello') }} <span class="header__nombre">Martín del
-                                Pino</span></p>
+                        <p class="header__texto">{{ __('portfolio_text.hello') }} <span class="header__nombre">Martín
+                                del Pino</span></p>
                         <p class="header__texto">{{ __('portfolio_text.dev') }}</p>
 
                     </div>
                     <div class="header__contenedor-boton">
-                        <a href="#skills" class="header__boton scroll-smooth">{{ __('portfolio_text.job') }} <i href="#skills"
-                                class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
-
+                        <a href="#skills" class="header__boton scroll-smooth">{{ __('portfolio_text.job') }} <i
+                                href="#skills" class=" header__icono fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -114,8 +113,9 @@
                         <p class="header__nav-texto" id="header-texto">>MdP_</p>
                     </a>
 
-                    <div class="lang__container" id="123">
-                        @if (session('locale') == 'es')
+                    <div class="lang__container">
+
+                        @if (($htmlLang ?? 'es') === 'es')
                             <a href="{{ route('home.language', 'en') }}" class="lang__btn">
                                 <p>ES</p>
                                 <i class="lang__icon fa-solid fa-globe"></i>
@@ -146,7 +146,8 @@
             <i href="#header" class="footer__icono fa-solid fa-circle-arrow-up"></i>
         </a>
 
-        <p><span class="footer__nombre">Martín del Pino</span> - {{ __('portfolio_text.copyright') }} {{ now()->year }}</p>
+        <p><span class="footer__nombre">Martín del Pino</span> - {{ __('portfolio_text.copyright') }}
+            {{ now()->year }}</p>
 
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>

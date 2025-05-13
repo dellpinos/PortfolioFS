@@ -16,7 +16,7 @@ return [
     'nav_fonts' => "Fonts",
 
     // Hero
-    'hero_heading' => "Tailored Digital Solutions",
+    'hero_heading' => "Custom Digital Solutions",
     'hero_text' => "Efficient, scalable developments ready to drive your business to the next level",
     'hero_btn' => "Let's Start",
 
@@ -35,7 +35,7 @@ return [
     'choose_desc_card0' => "We have a team of professionals with extensive experience in web development, technology, and digital solutions. We focus on providing concrete and personalized results for each client.",
 
     'choose_heading_card1' => "Personalized Approach",
-    'choose_desc_card1' => "We listen to your needs and design tailored solutions that drive your business. Every project is unique, and we treat it as such.",
+    'choose_desc_card1' => "We listen to your needs and design custom solutions that drive your business. Every project is unique, and we treat it as such.",
 
     'choose_heading_card2' => "Commitment to Quality",
     'choose_desc_card2' => "We use modern technologies and follow best practices to ensure efficiency, security, and scalability in every delivery.",
@@ -44,7 +44,7 @@ return [
     'choose_desc_card3' => "We don’t just develop; we support you. We offer continuous support and advice so your digital solutions evolve with your business.",
 
     // Works
-    'works_heading' => "Types of Applications We Develop",
+    'works_heading' => "What We Do Best",
     'works_card_commerce' => "E-commerce & Marketplace",
     'works_card_corp' => "Corporate Websites",
     'works_card_landing' => "Landing Pages",
@@ -150,7 +150,7 @@ return [
     'apps_api_list3' => "Integration with external services",
     'apps_api_desc0' => "An API is an essential tool for modernizing your business. It allows applications to connect, automate tasks, and share data in a structured and secure way.",
     'apps_api_desc1' => "In an increasingly interconnected digital environment, having a well-designed API improves efficiency, reduces errors, and enables your technological infrastructure to scale without complications.",
-    'apps_api_desc2' => "We develop secure, fast APIs tailored to your business needs. Whether you need to integrate internal systems, build your backend, or connect to other platforms, we help you implement the perfect solution for your project. Even if you need to set up a complex system like a multi-user platform or marketplace, we can support you in that challenge.",
+    'apps_api_desc2' => "We develop secure, fast APIs custom to your business needs. Whether you need to integrate internal systems, build your backend, or connect to other platforms, we help you implement the perfect solution for your project. Even if you need to set up a complex system like a multi-user platform or marketplace, we can support you in that challenge.",
 
     // Apps - Blog View
     'apps_blog_heading' => "Solutions for Your Personal or Professional Blog",
@@ -161,7 +161,7 @@ return [
     'apps_blog_list3' => "Visit statistics",
     'apps_blog_desc0' => "A blog is a powerful tool to share content, build a community, and position your personal or professional brand online.",
     'apps_blog_desc1' => "Having a well-designed blog allows you to express yourself, communicate with your audience, and appear organically in search results.",
-    'apps_blog_desc2' => "We develop fast, secure, and tailored blogs. Whether you want to start from scratch or update your current site, we can help you build a platform that makes your content stand out.",
+    'apps_blog_desc2' => "We develop fast, secure, and custom blogs. Whether you want to start from scratch or update your current site, we can help you build a platform that makes your content stand out.",
 
     // Apps - Corporation View
     'apps_corp_heading' => "Solutions for Your Corporate Website",
@@ -172,7 +172,7 @@ return [
     'apps_corp_list3' => "Focused on communicating your services",
     'apps_corp_desc0' => "A corporate website is your business's presentation card on the Internet. It builds trust, communicates your services, and strengthens your professional presence.",
     'apps_corp_desc1' => "Today, having a well-developed corporate site is essential to convey reliability, attract new clients, and stand out from the competition.",
-    'apps_corp_desc2' => "We design clear, fast, and tailored websites according to your industry. We help you showcase what you do, how you do it, and why choose you, with a digital solution perfectly aligned to your business.",
+    'apps_corp_desc2' => "We design clear, fast, and custom websites according to your industry. We help you showcase what you do, how you do it, and why choose you, with a digital solution perfectly aligned to your business.",
 
     // Apps - E-Commerce View
     'apps_ecomm_heading' => "Solutions for Your Online Store",
@@ -183,7 +183,7 @@ return [
     'apps_ecomm_list3' => "Sales statistics",
     'apps_ecomm_desc0' => "An e-commerce is an online store that allows you to sell physical or digital products anytime and from anywhere. It's a modern and agile way to grow your business without relying on a physical space.",
     'apps_ecomm_desc1' => "Nowadays, having an online presence is not optional; it’s a necessity. A well-developed e-commerce allows you to reach more customers, increase your sales, and compete equally with big brands, regardless of your business size.",
-    'apps_ecomm_desc2' => "We design secure, fast, and brand-tailored platforms with everything you need to manage your catalog, process online payments, and track your sales. Whether you are just starting or want to improve your current store, we help you create a custom solution. Even if you are thinking of something bigger, like a marketplace, we can help make it a reality.",
+    'apps_ecomm_desc2' => "We design secure, fast, and brand-custom platforms with everything you need to manage your catalog, process online payments, and track your sales. Whether you are just starting or want to improve your current store, we help you create a custom solution. Even if you are thinking of something bigger, like a marketplace, we can help make it a reality.",
 
     // Apps - Industry View
     'apps_industry_heading' => "Digital Solutions for the Industry",
@@ -216,7 +216,7 @@ return [
     'apps_manage_list3' => "Sales statistics",
     'apps_manage_desc0' => "An e-commerce is an online store that allows you to sell physical or digital products anytime and from anywhere. It's an agile and modern way to grow your business without relying on a physical space.",
     'apps_manage_desc1' => "Nowadays, having an online presence is not an option; it's a necessity. A well-developed e-commerce allows you to reach more clients, increase your sales, and compete on equal terms with big brands, regardless of the size of your business.",
-    'apps_manage_desc2' => "We design secure, fast, and brand-adapted platforms with everything you need to manage your catalog, process online payments, and track your sales. Whether you are just starting or want to improve your current store, we help you create a tailored solution. Even if you are thinking of something bigger, like a marketplace, we can help make it a reality.",
+    'apps_manage_desc2' => "We design secure, fast, and brand-adapted platforms with everything you need to manage your catalog, process online payments, and track your sales. Whether you are just starting or want to improve your current store, we help you create a custom solution. Even if you are thinking of something bigger, like a marketplace, we can help make it a reality.",
 
     // Apps - Portfolio View
     'apps_porfolio_heading' => "Show Your Work to the World",
@@ -227,7 +227,7 @@ return [
     'apps_porfolio_list3' => "Social media integration",
     'apps_porfolio_desc0' => "An online portfolio is the best way to showcase your skills, projects, and professional experience. It allows you to highlight your profile in a clear and professional way, accessible from anywhere at any time.",
     'apps_porfolio_desc1' => "In a digital world, having a portfolio is not just an advantage; it's part of your professional identity. Whether you are a developer, designer, photographer, or freelancer, a good online presence can open many doors.",
-    'apps_porfolio_desc2' => "We create visual, functional, and tailored portfolios with a design focused on highlighting what you do best. Whether you are starting your career or looking to refresh your image, we help you build an online presence that speaks for you.",
+    'apps_porfolio_desc2' => "We create visual, functional, and custom portfolios with a design focused on highlighting what you do best. Whether you are starting your career or looking to refresh your image, we help you build an online presence that speaks for you.",
 
     // Apps - Reservation View
     'apps_reservation_heading' => "Solutions to Manage Reservations and Appointments",
@@ -238,6 +238,6 @@ return [
     'apps_reservation_list3' => "Dashboard with reservation statistics",
     'apps_reservation_desc0' => "An online reservation platform allows you to manage appointments automatically, without phone calls or spreadsheets. Your clients can book from anywhere, anytime.",
     'apps_reservation_desc1' => "Today, offering a digital appointment system improves user experience and optimizes your team's time. It is ideal for professional services, medical centers, beauty salons, workshops, and more.",
-    'apps_reservation_desc2' => "We design secure, fast, and business-adapted solutions with features like automatic reminders, availability management, and activity reports. Whether you are just starting out or looking to modernize your current system, we help you implement an efficient, tailored platform.",
+    'apps_reservation_desc2' => "We design secure, fast, and business-adapted solutions with features like automatic reminders, availability management, and activity reports. Whether you are just starting out or looking to modernize your current system, we help you implement an efficient, custom platform.",
 
 ];
