@@ -3,18 +3,20 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+Route::get('/brand', function () {
+    return response()->view('api/brand')
+        ->header('Content-Type', 'text/html')
+        ->header('Access-Control-Allow-Origin', '*')
+        ->header('X-Content-Usage', 'This resource is intended to be public. Massive use is not recommended.')
+        ->header('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-ancestors 'none'; script-src 'none';")
+        ->header('Cache-Control', 'public, max-age=600, must-revalidate');
+})->middleware('throttle:3,1');
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
+Route::get('/simple-brand', function () {
+    return response()->view('api/simple-brand')
+        ->header('Content-Type', 'text/html')
+        ->header('Access-Control-Allow-Origin', '*')
+        ->header('X-Content-Usage', 'This resource is intended to be public. Massive use is not recommended.')
+        ->header('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-ancestors 'none'; script-src 'none';")
+        ->header('Cache-Control', 'public, max-age=600, must-revalidate');
+})->middleware('throttle:3,1');

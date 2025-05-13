@@ -1,0 +1,134 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.perfil {
+
+    &__contenedor {
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%; // <<<
+
+        @include m.tablet {
+            @include m.grid(2, 2rem)
+        }
+    }
+
+    &__contenedor-desc {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+            width: 100%;
+            font-size: 2rem;
+            margin: 2rem 0 0 0;
+            text-align: center;
+
+            @include m.tablet {
+                font-size: 3rem;
+
+            }
+        }
+
+
+        p {
+            padding: 1.4rem 0;
+            text-align: center;
+
+            @include m.tablet {
+                font-size: 2rem;
+
+            }
+        }
+    }
+
+    &__contenedor-img {
+
+        margin: 0 auto;
+        background-image: url(~img/porfolio/bg_8.png);
+        background-repeat: no-repeat;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+
+        @include m.tablet {
+            width: 50rem;
+            height: 50rem;
+
+        }
+
+        img {
+            width: 32rem;
+            height: 40rem;
+
+            @include m.tablet {
+                width: 40rem;
+                height: 50rem;
+
+
+
+            }
+        }
+
+    }
+
+    &__listado {
+
+        display: flex;
+        flex-direction: column;
+        margin: 4rem auto 3rem auto;
+        gap: 1rem;
+        font-size: 1.6rem;
+        width: 80%;
+        padding: 0;
+
+
+        @include m.tablet {
+
+            width: 80%;
+            font-size: 1.8rem;
+            padding-left: 4rem;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        li {
+            color: v.$blanco;
+            font-weight: v.$bold;
+            padding: .5rem;
+            border-radius: .5rem;
+
+            @include m.tablet {
+                padding: .5rem 1rem .5rem 2rem;
+
+            }
+        }
+
+        & :nth-child(odd) {
+            background-color: hsla(4, 75%, 47%, 1);
+            background-image:
+                radial-gradient(at 22% 7%, hsla(5, 75%, 47%, 1) 0px, transparent 50%),
+                radial-gradient(at 27% 89%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 65% 0%, hsla(0, 0%, 100%, 0.6) 0px, transparent 50%),
+                radial-gradient(at 1% 38%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(4, 75%, 47%, 1) 0px, transparent 50%);
+        }
+
+        & :nth-child(even) {
+
+            background-color: hsla(8, 100%, 68%, 1);
+            background-image:
+                radial-gradient(at 0% 50%, hsla(311, 0%, 100%, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 8%, hsla(5, 75%, 47%, 1) 0px, transparent 50%),
+                radial-gradient(at 42% 100%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 65% 0%, hsla(0, 0%, 100%, 0.6) 0px, transparent 50%),
+                radial-gradient(at 1% 38%, hsla(8, 100%, 68%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(4, 75%, 47%, 1) 0px, transparent 50%);
+        }
+
+    }
+}

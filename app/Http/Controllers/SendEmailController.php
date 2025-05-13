@@ -40,6 +40,9 @@ class SendEmailController extends Controller
         $result = json_decode($response);
 
 
+        dd($result);
+
+
         if ($result->success && $result->score >= 0.5) {
 
             // No es un bot
@@ -47,26 +50,31 @@ class SendEmailController extends Controller
                 'email' => 'required|string|max:60|email',
                 'name' => 'required|string|max:30|min:3',
                 'mensaje' => 'required|string|min:5|max:2000',
+                'email_origin' => 'required|string|in:consultora,porfolio'
             ]);
     
             if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput()->with('contact_error', __('text.email_fields'));
+                return redirect()->back()->withErrors($validator)->withInput()->with('contact_error', __('portfolio_text.email_fields'));
             }
     
-            $resultado =  Mail::to('dellpinos7@gmail.com')->send(new ContactoMail($request->email, $request->name, $request->mensaje)); // <<<< Como enviar emails
+            if ($request->email_origin === 'consultora') {
+                $resultado =  Mail::to('dellpinos7@gmail.com')->send(new ContactoMail($request->email, $request->name, $request->mensaje, $request->email_origin)); // <<<< Enviar mail a consultora
+            } elseif ($request->email_origin === 'porfolio') {
+                $resultado =  Mail::to('dellpinos7@gmail.com')->send(new ContactoMail($request->email, $request->name, $request->mensaje, $request->email_origin)); // <<<< Enviar mail a porfolio
+            }
     
             // Verifica el resultado
             if ($resultado) {
                 // Success
-                return redirect()->back()->with('contact_success', __('text.email_success') );
+                return redirect()->back()->with('contact_success', __('portfolio_text.email_success') );
             } else {
                 // Error
-                return redirect()->back()->with('contact_error', __('text.email_error') );
+                return redirect()->back()->with('contact_error', __('portfolio_text.email_error') );
             }
         } else {
 
             // Es un bot
-            return redirect()->back()->with('contact_error', __('text.email_error') );
+            return redirect()->back()->with('contact_error', __('portfolio_text.email_error') );
         }
 
     }

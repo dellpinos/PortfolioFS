@@ -7,7 +7,8 @@ export default defineConfig({
         laravel({
             input: [
             'resources/scss/app.scss',
-            'resources/js/app.js'
+            'resources/js/appPorfolio.js',
+            'resources/js/appHome.js'
         ],
             refresh: true,
         }),
@@ -16,6 +17,7 @@ export default defineConfig({
         alias: {
 
             '~fontawesome': path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free'),
+            '~img': path.resolve(__dirname, 'public/img'),
         }
     },
 });

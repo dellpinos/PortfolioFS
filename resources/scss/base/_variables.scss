@@ -1,56 +1,70 @@
 
-// Fuentes
+/* Fuentes */
+
+// Porfolio
 $fuente_textos: 'Raleway', sans-serif;
 $fuente_headings: 'Open Sans', sans-serif;
+$fuente_stuff:"Encode Sans SC", sans-serif;
 
+// Home
+$fuente_cursiva:"Pacifico", cursive;
+$fuente_prin: "Quicksand", sans-serif;
+
+// $fuente_cartel: "Bungee", sans-serif; // ??
+
+/* Font Weight */
 $regular: 400;
 $bold: 700;
 
-// Tamaño de Media Queries
+/* Tamaño de Media Queries */
 $phone: 480px;
 $tablet: 770px;
 $phoneHorizontal: 900px;
 $desktop: 1024px;
 
-// Colores
+$separacion: 5rem;
+
+/* Colores */
+
+// Principales
 $blanco: #FFFFFF;
+$blancoOscuro: #fffff5;
 $negro: #000;
 $negroLight: #222;
+$negroDM: #1e1e1e; // Este color se aplica desde Js (DarkMode), no desde aquí. Esta variable no cumple ninguna función.
 
-$amarillo: #fecd4d;
-$dorado: #ad9245;
-$violeta: #8c41e5;
-$rosa: #e772ef;
-$azul: #5e81b0;
-$azulF: #1857b5;
-$naranja: #ff735c;
-$cyan: #129ECA;
-
-$rojo: #ef4444;
-$verde: #078F22;
-
+// Grises
+$marfil: #fffff0;
+$marfilOsc: #fffbef;
 $grisClaro: #dbdbdb;
 $gris: #7c7c7c;
 $grisOscuro: #444444;
 
-$separacion: 5rem;
+// Pasteles
+$amarillo_past: #fecd4d;
+$azul_past: #5e81b0;
+$naranja_past: #ff735c;
+$rojo_past: #e8505b;
+$verde_past: #6ca690;
 
-// Dark Mode
-$negroDM: #1e1e1e; // Este color se aplica desde Js, no desde aquí. Esta varriable no cumple ninguna función
+// Alertas y mensajes
+$rojo: #ef4444;
+$verde: #078F22;
 
 // Otros colores
 $naranja2: #D52F1E;
 $naranja3: #CE2227;
 $magenta: #BB002C;
 $rosa: #CC3B6C;
+$dorado: #ad9245;
+$cyan: #129ECA;
+$azulF: #1857b5;
+
 // Paleta de TusListas
 $azulTL: #1f2937;
 $azulTLClaro: #0284C7;
 
-
-
 // Paleta de StuffScripts
-$fuenteStuff:"Encode Sans SC", sans-serif;
 $naranjaST: #d23e01;
 $grisOscuroST: #7D7470;
 $grisST: #696969;

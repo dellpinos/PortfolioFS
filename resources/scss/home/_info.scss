@@ -1,0 +1,102 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.home-info {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 0 3rem 0;
+    padding: 5rem 1rem;
+    gap: 2rem;
+
+    @include m.phone {
+        padding: 5rem;
+        margin: 10rem 6rem 10rem 6rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+        border: 1px solid rgba(v.$verde_past, .6);
+        border-radius: 2rem;
+
+        @include m.phone {
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+        }
+    }
+
+    &__card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem 0 3rem;
+
+        @include m.phone {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        background-color: rgba(v.$verde_past, .1);
+        padding: 1rem;
+        border-radius: 2rem;
+        color: v.$grisOscuro;
+
+        h3 {
+            font-size: 1.8rem;
+            font-family: v.$fuente_prin;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.4rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        }
+        
+        @include m.phone {
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 0rem;
+            }
+            
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__card-enlace {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 2rem 0 0;
+
+        a {
+            font-size: 1.4rem;
+            color: v.$naranja_past;
+            font-weight: v.$bold;
+            transition: color .3s ease;
+            margin: 1rem 1rem 0 0;
+
+            &:hover {
+                color: darken(v.$naranja_past, 15%);
+            }
+        }
+    }
+}

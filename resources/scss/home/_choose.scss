@@ -1,0 +1,66 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.home-choose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 0 1rem;
+
+    img {
+        width: 25rem;
+    }
+
+    @include m.phone {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 0 15rem;
+
+        img {
+            width: 60rem;
+        }
+    }
+
+    h3 {
+        display: none;
+
+        @include m.phone {
+            display: block;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        @include m.phone {
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+    }
+
+    &__item {
+
+        h4 {
+            font-size: 1.8rem;
+            margin: 0 0 1rem 0;
+            text-align: center;
+            
+
+            @include m.phone {
+                font-size: 2rem;
+                margin: 1rem 0;
+                text-align: start;
+            }
+        }
+
+        p {
+            text-align: center;
+
+            @include m.phone {
+                text-align: start;
+            }
+        }
+    }
+}
