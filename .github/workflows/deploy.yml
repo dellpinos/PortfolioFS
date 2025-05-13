@@ -29,7 +29,6 @@ jobs:
                 "git reset --hard origin/main",
                 "git pull",
                 "composer install --no-dev --optimize-autoloader",
-                "php artisan migrate --force",
                 "killall -u $USER"
               ]
             }
