@@ -5,7 +5,7 @@
         <p>{{ __('home_text.contact_desc') }}</p>
     </div>
 
-    <form action="/contact" method="POST" class="home-contacto__formulario-contenedor">
+    <form action="{{ route('contact.send') }}" method="POST" class="home-contacto__formulario-contenedor">
         @csrf
         <input type="text" placeholder="{{ __('portfolio_text.ph_name') }}" name="name"
             class="home-contacto__campo @error('name') borde__error @enderror" value="{{ old('name') }}" required>

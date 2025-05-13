@@ -39,10 +39,6 @@ class SendEmailController extends Controller
         $response = file_get_contents($url, false, $context);
         $result = json_decode($response);
 
-
-        dd($result);
-
-
         if ($result->success && $result->score >= 0.5) {
 
             // No es un bot
@@ -76,6 +72,5 @@ class SendEmailController extends Controller
             // Es un bot
             return redirect()->back()->with('contact_error', __('portfolio_text.email_error') );
         }
-
     }
 }
