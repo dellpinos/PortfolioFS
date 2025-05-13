@@ -1,0 +1,142 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contacto {
+
+    &__contenedor {
+        background-color: v.$grisOscuro;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-end;
+        box-shadow: 0 -5px 15px 10px v.$grisOscuro;
+
+        &:hover {
+            .contacto__work-together {
+                opacity: 1;
+                transition: opacity 2s ease;
+            }
+        }
+
+        .contacto__work-together {
+            opacity: 0;
+            overflow: hidden;
+            color: v.$naranja2;
+            transition: opacity 2s ease;
+
+        }
+    }
+
+    &__heading {
+        color: v.$blanco;
+        background-color: v.$grisOscuro;
+        padding: 4rem 0 2rem 0;
+        margin: 0;
+        
+        @include m.tablet {
+            padding: 7rem 0 2rem 0;
+            
+        }
+    }
+
+    &__formulario-contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 95%;
+        margin-bottom: 4rem;
+        
+        @include m.tablet {
+            width: 50rem;
+            
+        }
+
+    }
+
+    &__campo {
+        font-size: 1.6rem;
+        padding: 1rem;
+        background-color: v.$grisOscuro;
+        border: 3px solid v.$grisOscuro;
+        border-radius: 1rem;
+        color: v.$blanco;
+        opacity: 0;
+        transition: all 1s ease;
+
+        &--activo {
+
+            box-shadow: 3px 3px 10px 3px rgba(v.$negro, .2) inset,
+            10px 10px 15px 5px rgba(v.$negro, .1) inset,
+            3px 3px 15px 5px rgba(v.$negro, .2),
+            10px 10px 15px 5px rgba(v.$negro, .1);
+
+            opacity: 1;
+            transition: box-shadow 4s ease, opacity 1s ease;
+
+        }
+    }
+
+    &__btn-contenedor {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 1rem;
+        background-color: transparent;
+        border: 2px solid v.$naranja_past;
+        color: v.$naranja_past;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: v.$bold;
+        border-radius: 1rem;
+        opacity: 0;
+        transition: opacity 1s ease, box-shadow 1s ease,color .3s ease, background-color .3s ease;
+        
+        @include m.tablet {
+            width: auto;
+            
+        }
+        
+        &:hover {
+            color: v.$blanco;
+            background-color: rgba(v.$naranja_past, 40%);
+            cursor: pointer;
+        }
+
+        &--activo {
+
+            box-shadow: 1px 1px 5px 3px rgba(v.$naranja_past, .5);
+            opacity: 1;
+            transition: opacity 3s ease, box-shadow 3s ease, color .3s ease, background-color .3s ease;
+
+        }
+    }
+
+
+
+    &__iconos {
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+    &__icono {
+
+        font-size: 6rem;
+        color: v.$naranja2;
+        transition: color 1.5s ease, transform .5s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-10px);
+            color: v.$naranja_past;
+        }
+    }
+}

@@ -15,12 +15,9 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    font-family: v.$fuente_textos;
     margin: 0;
 }
-textarea, input, label, a {
-    font-family: v.$fuente_textos;
-}
+
 select, input[type="checkbox"] {
     cursor: pointer;
 }
@@ -39,4 +36,26 @@ li {
 }
 p {
     margin: 0;
+}
+
+.home-body {
+    font-family: v.$fuente_prin;
+    background-color: v.$blanco;
+    position: relative;
+    padding-top: 0;
+    textarea, input, label, a {
+        font-family: v.$fuente_prin;
+    }
+
+    @include m.phone {
+        padding-top: 10rem;
+    }
+}
+
+.porfolio-body {
+    font-family: v.$fuente_textos;
+    textarea, input, label, a {
+        font-family: v.$fuente_textos;
+    }
+    
 }

@@ -1,4 +1,4 @@
-name: Sync on DOMCloud
+name: Sync on DOMCloud - PRODUCTION
 on:
   workflow_dispatch: {}
   release:
@@ -10,6 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+      # 0 - Checkout del código
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 1 - Utilizo el webhook de DOMCloud para iniciar la secuencia de deployment
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v2
         env:
@@ -19,13 +25,39 @@ jobs:
           data: >
             {
               "commands": [
+                "git fetch origin main",
+                "git reset --hard origin/main",
                 "git pull",
                 "composer install --no-dev --optimize-autoloader",
+                "php artisan migrate --force",
                 "killall -u $USER"
               ]
             }
+  
+      # 2 - Configuro clave SSH para enviar el rsync
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ vars.DEPLOY_HOST }} >> ~/.ssh/known_hosts
 
-# If there are any problems it's important update PHP (8.1 or latest) and use "composer update" to update the libreries
+      # 3 - Instalar dependencias de NPM
+      - name: Install dependencies
+        run: |
+          npm install
 
-# This project doesn't have a database so it doesn't need this command:
-# "php artisan migrate --force",
+      # 4 - Crear el build para producción
+      - name: Build project
+        run: |
+          npm run build
+
+      # 5 - Listar archivos para que sean visibles en el log del action (solo es para debuguear en GitHub durante el deployment)
+      - name: Lists build files
+        run: ls -la ./public/build
+
+      # 6 - Transferir los archivos al servidor mediante rsync (copio el artifact para introducir el "build" dentro de "public/" en el host)
+      - name: Deploy via rsync
+        run: |
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" ./public/build ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/public_html/public
+        

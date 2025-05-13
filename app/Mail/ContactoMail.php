@@ -16,15 +16,17 @@ class ContactoMail extends Mailable
     public $email;
     public $nombre;
     public $mensaje;
+    public $email_origin;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($email, $nombre, $mensaje)
+    public function __construct($email, $nombre, $mensaje, $email_origin)
     {
         $this->email = $email;
         $this->nombre = $nombre;
         $this->mensaje = $mensaje;
+        $this->email_origin = $email_origin;
     }
 
     /**
@@ -33,7 +35,7 @@ class ContactoMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contacto desde el Portfolio',
+            subject: 'Revisar ASAP - Contacto desde dellpinos.com',
         );
     }
 

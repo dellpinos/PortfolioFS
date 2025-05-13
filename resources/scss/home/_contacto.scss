@@ -1,76 +1,103 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.contacto {
+.home-contacto {
 
     &__contenedor {
-        background-color: v.$grisOscuro;
+        // Solo se utiliza esta clase en la ruta "contacto"
+        margin: 10rem 0 0 0;
+    }
 
+    &__principal {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        justify-content: flex-end;
-        box-shadow: 0 -5px 15px 10px v.$grisOscuro;
+        padding: 5rem 1rem 0rem 1rem;
 
-        &:hover {
-            .contacto__work-together {
-                opacity: 1;
-                transition: opacity 2s ease;
-            }
-        }
+        background-image: url(~img/home/bg_calendar.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 40rem;
 
-        .contacto__work-together {
-            opacity: 0;
-            overflow: hidden;
-            color: v.$naranja2;
-            transition: opacity 2s ease;
 
-        }
-    }
-
-    &__heading {
-        color: v.$blanco;
-        background-color: v.$grisOscuro;
-        padding: 4rem 0 2rem 0;
-        margin: 0;
-        
-        @include m.tablet {
-            padding: 7rem 0 2rem 0;
+        @include m.phone {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 5rem 8rem 0rem 8rem;
+            background-size: 60rem;
             
         }
     }
+
+    &__text {
+
+        padding: 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 0 0 1rem 0;
+            color: v.$amarillo_past;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: v.$grisOscuro;
+            text-align: center;
+        }
+
+        @include m.phone {
+            padding: 3rem;
+            h2 {
+                font-size: 4.2rem;
+                text-align: start;
+            }
+    
+            p {
+                font-size: 3rem;
+                text-align: start;
+            }
+        }
+    }
+
+
 
     &__formulario-contenedor {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 2rem;
         width: 95%;
-        margin-bottom: 4rem;
-        
+        margin: 0 auto;
+        padding: 5rem 0;
+
         @include m.tablet {
             width: 50rem;
-            
-        }
 
+        }
     }
 
     &__campo {
         font-size: 1.6rem;
         padding: 1rem;
-        background-color: v.$grisOscuro;
-        border: 3px solid v.$grisOscuro;
+        // background-color: v.$grisOscuro;
+        border: 3px solid v.$blanco;
         border-radius: 1rem;
-        color: v.$blanco;
+        color: v.$grisOscuro;
         opacity: 0;
         transition: all 1s ease;
 
         &--activo {
 
-            box-shadow: 3px 3px 10px 3px rgba(v.$negro, .2) inset,
-            10px 10px 15px 5px rgba(v.$negro, .1) inset,
-            3px 3px 15px 5px rgba(v.$negro, .2),
-            10px 10px 15px 5px rgba(v.$negro, .1);
+            box-shadow: 3px 3px 10px 3px rgba(v.$grisOscuro, .2) inset,
+                10px 10px 15px 5px rgba(v.$grisOscuro, .1) inset,
+                3px 3px 15px 5px rgba(v.$grisOscuro, .2),
+                10px 10px 15px 5px rgba(v.$grisOscuro, .1);
 
             opacity: 1;
             transition: box-shadow 4s ease, opacity 1s ease;
@@ -80,63 +107,42 @@
 
     &__btn-contenedor {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
 
     }
 
     &__btn {
         width: 100%;
-        padding: 1rem;
-        background-color: transparent;
-        border: 2px solid v.$naranja;
-        color: v.$naranja;
+        padding: 1rem 4rem;
+        margin-top: 2rem;
+        color: v.$blanco;
+        background-color: rgba(v.$verde_past, 60%);
+        border: 2px solid v.$verde_past;
         text-transform: uppercase;
         font-size: 1.6rem;
         font-weight: v.$bold;
         border-radius: 1rem;
         opacity: 0;
-        transition: opacity 1s ease, box-shadow 1s ease,color .3s ease, background-color .3s ease;
-        
+        transition: opacity 1s ease, box-shadow 1s ease, color .3s ease, background-color .3s ease;
+
         @include m.tablet {
             width: auto;
-            
         }
-        
+
         &:hover {
-            color: v.$blanco;
-            background-color: rgba(v.$naranja, 40%);
+
+            background-color: rgba(v.$verde_past, 80%);
+            box-shadow: none;
+
             cursor: pointer;
         }
 
         &--activo {
 
-            box-shadow: 1px 1px 5px 3px rgba(v.$naranja, .5);
+            box-shadow: 1px 1px 5px 3px rgba(v.$verde_past, .5);
             opacity: 1;
-            transition: opacity 3s ease, box-shadow 3s ease, color .3s ease, background-color .3s ease;
+            transition: opacity 2s ease, box-shadow .6s ease, color .3s ease, background-color .3s ease;
 
-        }
-    }
-
-
-
-    &__iconos {
-        display: flex;
-        gap: 4rem;
-        justify-content: center;
-        align-items: flex-end;
-
-    }
-
-    &__icono {
-
-        font-size: 6rem;
-        color: v.$naranja2;
-        transition: color 1.5s ease, transform .5s ease;
-
-        &:hover {
-            cursor: pointer;
-            transform: translateY(-10px);
-            color: v.$naranja;
         }
     }
 }

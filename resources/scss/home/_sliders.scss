@@ -1,0 +1,49 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+// Sliders en la Home page
+.home-swiper {
+    width: 100%;
+
+    @include m.phone {
+        height: 65rem;
+    }
+}
+
+.home-swiper-slide {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include m.phone {
+        padding: 3rem;
+        width: 50rem !important;
+    }
+}
+
+.home-swiper-button-next,
+.home-swiper-button-prev {
+    --swiper-navigation-size: 46px;
+    color: v.$naranja_past !important;
+    display: block !important;
+    font-weight: bold;
+
+
+    @include m.phone {
+        --swiper-navigation-size: 76px;
+    }
+}
+
+.home-swiper-pagination {
+    margin-bottom: 2rem !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #ff735c !important;
+
+}

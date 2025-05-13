@@ -1,0 +1,117 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.marquee {
+    width: 100%;
+    padding: 2.5rem 0;
+    margin: 2rem 0 3rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include m.phone {
+        margin: 10rem 0 5rem 0;
+    }
+
+    p {
+        color: v.$verde_past;
+        font-size: 1.6rem;
+        margin: 0 3rem 1rem 3rem;
+
+        @include m.phone {
+            margin: 0 auto 3rem auto;
+            width: 60%;
+            font-size: 2rem;
+        }
+    }
+
+    &__heading {
+        margin: 0;
+        font-size: 3rem;
+        text-align: center;
+        color: v.$grisOscuro;
+        font-family: v.$fuente_prin;
+
+        @include m.phone {
+            font-size: 5rem;
+        }
+    }
+
+    &__section {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    &__track {
+        display: flex;
+        width: max-content;
+        animation: scroll-left 90s linear infinite;
+        will-change: transform;
+    }
+    
+    &__track.reverse {
+        animation: scroll-right 90s linear infinite;
+        transform: translateX(-50%);
+    }
+    
+    &__track ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @include m.phone {
+            padding: 1rem 0;
+        }
+    }
+
+    &__item {
+        padding: 0 3rem;
+        white-space: nowrap;
+        color: v.$grisClaro;
+    
+        font-size: 2.5rem;
+        // text-transform: uppercase;
+        font-weight: v.$bold;
+        
+        &:hover {
+            color: v.$verde_past;
+            cursor: none;
+        }
+        
+        @include m.phone {
+            font-size: 5rem;
+        }
+    }
+    
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(-50%);
+        }
+    
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    &__enlace {
+        color: v.$naranja_past;
+        font-size: 1.8rem;
+        font-weight: v.$bold;
+
+        &:hover {
+            color: darken(v.$naranja_past, 15%);
+        }
+    }
+}
