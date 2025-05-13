@@ -13,9 +13,9 @@ export default function planStyles () {
 
         for( const card of cards) {
 
-            card.classList.add('plan__card--naranja');
+            card.classList.add('plan__card--verde');
             await delay(7000);
-            card.classList.remove('plan__card--naranja');
+            card.classList.remove('plan__card--verde');
 
         }
     }

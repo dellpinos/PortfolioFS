@@ -88,9 +88,11 @@
         background-color: rgba(v.$grisClaro, .1);
         box-shadow: none;
         color: v.$grisClaro;
-        opacity: .6;
+        opacity: 1;
         position: relative;
         overflow: hidden;
+
+        text-shadow: 0 0 5px v.$negro;
       
         &::before {
           content: "";
@@ -104,12 +106,12 @@
           transition: width 7s ease;
         }
       
-        &--naranja::before {
+        &--verde::before {
           width: 100%;
         }
       
         // Evitar transición al quitar la clase
-        &:not(&--naranja)::before {
+        &:not(&--verde)::before {
           transition: none;
           width: 0%;
         }
@@ -120,8 +122,7 @@
           z-index: 1;
         }
 
-
-        &--naranja {
+        &--verde {
             // background-color: rgba(v.$blanco, .1);
             box-shadow: 0 0 10px 5px v.$verde_past inset;
             color: v.$verde_past;
@@ -129,13 +130,6 @@
             opacity: 1;
 
         }
-
-
-        
-
-
-
-
 
         i {
             font-size: 3rem;
