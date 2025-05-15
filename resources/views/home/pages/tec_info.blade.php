@@ -1,7 +1,7 @@
 @extends('layout.home')
 
 @section('headers')
-    <link rel="preload" href="{{ asset('img/home/team.png') }}" as="image">
+    <link rel="preload" href="{{ asset('img/home/teamHosting.svg') }}" as="image">
 @endsection
 
 @section('contenido')
@@ -10,7 +10,7 @@
             <div id="tsparticles2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
             </div>
             <div class="apps__principal">
-                <img src="{{ asset('img/home/team.png') }}" alt="Equipo imagen" width="200">
+                <img src="{{ asset('img/home/teamHosting.svg') }}" alt="Equipo imagen" width="200" height="300">
                 <div class="apps__text">
                     <h3>{{ __('home_text.tec_info_heading') }}</h3>
 

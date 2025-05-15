@@ -20,7 +20,7 @@
         }
 
         h2 {
-            // Solo se utiliza en mobile
+            // Este elemento solo se utiliza en mobile
             font-size: 3.5rem;
             text-align: center;
             margin: 0 0 1rem 0;
@@ -40,7 +40,7 @@
         justify-content: center;
 
         h2 {
-            // Solo se utiliza en pantallas grandes
+            // Este elemento solo se utiliza en pantallas grandes
             display: none;
             font-size: 5rem;
             text-align: start;
@@ -84,6 +84,9 @@
 
     &__img {
         width: 100%;
+        height: auto;
+        object-fit: contain;
+        
         @include m.phone {
             padding: 3rem;
         }
