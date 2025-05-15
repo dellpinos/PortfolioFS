@@ -1,5 +1,5 @@
 <div class="home-choose">
-    <img src="{{ asset('img/home/bg_ideas.svg') }}" alt="Ideas imagen" width="200">
+    <img src="{{ asset('img/home/bg_ideas.svg') }}" alt="Ideas imagen" width="200" height="300" loading="lazy">
     <div>
         <h3>{{ __('home_text.choose_heading') }}</h3>
 

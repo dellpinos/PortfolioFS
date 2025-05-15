@@ -2,7 +2,7 @@
 
     <h2 class="contacto__heading" id="contacto" data-aos="fade-right">{{ __('portfolio_text.contact') }}</h2>
 
-    <form action="/contact" method="POST" class="contacto__formulario-contenedor">
+    <form action="{{ route('contact.send') }}" method="POST" class="contacto__formulario-contenedor">
         @csrf
         <input type="text" placeholder="{{ __('portfolio_text.ph_name') }}" name="name"
             class="contacto__campo @error('name') borde__error @enderror" value="{{ old('name') }}" required">

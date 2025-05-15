@@ -11,7 +11,7 @@
             <div id="tsparticles2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
             </div>
             <div class="apps__principal">
-                <img src="{{ asset('img/home/gestion.svg') }}" alt="Gestion imagen" width="200">
+                <img src="{{ asset('img/home/gestion.svg') }}" alt="Gestion imagen" width="200" height="300">
                 <div class="apps__text">
                     <h3>{{ __('home_text.apps_manage_heading') }}</h3>
 

@@ -14,6 +14,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Pacifico&family=Quicksand:wght@300;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
@@ -21,7 +22,35 @@
 
     <title>Dellpinos — {{ __('home_text.title') }}</title>
 
+
     @vite('resources/scss/app.scss')
+
+    {{-- Estilos del Preloader --}}
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+    
+        .preloader-home__logo-text {
+            margin: 0;
+            text-align: left;
+            font-size: 3rem;
+            font-family: "Pacifico", cursive;
+            color: #333; /* Un color de fallback si no carga el CSS principal */
+            transition: all 0.5s ease;
+        }
+    </style>
+    {{-- Estilos del Preloader --}}
+    
 </head>
 
 <body class="home-body">
@@ -102,7 +131,7 @@
     </footer>
     @vite('resources/js/appHome.js')
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" defer></script>
 
 
     {{-- Botón Idioma --}}
