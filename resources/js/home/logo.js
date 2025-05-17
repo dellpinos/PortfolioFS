@@ -46,6 +46,12 @@ export const logoResponsive = () => {
     const logo = document.querySelector('#home-logo-sec');
     const bgLogo = document.querySelector('#home-logo-bg-services');
 
+    const phoneSize = 480;
+    const tabletSize = 770;
+    const desktopSize = 1140;
+    const desktopXLSize = 1400;
+
+
     changeSize();
 
     window.addEventListener('resize', function () {
@@ -53,15 +59,21 @@ export const logoResponsive = () => {
     });
 
     function changeSize() {
-
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= phoneSize) {
             logo?.style.setProperty('--factor', '0.5');
             bgLogo?.style.setProperty('--factor', '1.5');
-
+        } else if (window.innerWidth <= tabletSize) {
+            logo?.style.setProperty('--factor', '0.7');
+            bgLogo?.style.setProperty('--factor', '1.6');
+        } else if (window.innerWidth <= desktopSize) {
+            logo?.style.setProperty('--factor', '0.8');
+            bgLogo?.style.setProperty('--factor', '1.7');
+        } else if (window.innerWidth <= desktopXLSize) {
+            logo?.style.setProperty('--factor', '.7');
+            bgLogo?.style.setProperty('--factor', '1.8');
         } else {
-            logo?.style.setProperty('--factor', '1');
-            bgLogo?.style.setProperty('--factor', '2');
+            logo?.style.setProperty('--factor', '.9');
+            bgLogo?.style.setProperty('--factor', '1.8');
         }
     }
-
 }

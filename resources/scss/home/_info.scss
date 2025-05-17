@@ -8,11 +8,15 @@
     padding: 5rem 1rem;
     gap: 2rem;
 
-    @include m.phone {
+    @include m.tablet {
         padding: 5rem;
-        margin: 10rem 6rem 10rem 6rem;
+        margin: 10rem 0;
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
+    }
+
+    @include m.desktopXL {
+        margin: 10rem 4rem;
     }
 
     &__card {
@@ -24,6 +28,10 @@
         border-radius: 2rem;
 
         @include m.phone {
+            flex-direction: row;
+        }
+
+        @include m.tablet {
             display: grid;
             grid-template-rows: 2fr 1fr;
         }
@@ -40,8 +48,15 @@
             object-fit: contain;
 
             @include m.phone {
+                width: 20rem;
+                height: 20rem;
+                object-fit: auto;
+            }
 
+            @include m.tablet {
                 width: 100%;
+                height: auto;
+                object-fit: contain;
             }
         }
     }
@@ -69,7 +84,6 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-
         }
 
         @include m.phone {

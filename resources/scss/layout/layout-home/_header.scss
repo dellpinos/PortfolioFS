@@ -2,7 +2,6 @@
 @use '../../base/mixins' as m;
 
 .home-header {
-
     transition: transform .6s ease, opacity .6s ease, padding .6s ease;
     display: flex;
     justify-content: space-between;
@@ -22,6 +21,10 @@
         animation: fadeIn 2s ease-out both;
         transform: translateY(0);
         opacity: 1;
+        padding: 2rem 1rem;
+    }
+    
+    @include m.tablet {
         padding: 2rem 5rem;
     }
 
@@ -45,6 +48,14 @@
         transform: translateY(0);
         opacity: 1;
         padding: 2rem 5rem;
+
+        @include m.phone {
+            padding: 2rem 1rem;
+        }
+        
+        @include m.tablet {
+            padding: 2rem 5rem;
+        }
     }
 
     &__logo {
@@ -52,12 +63,10 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-        
+
         @include m.phone {
             width: auto;
         }
-        
-
 
         &:hover {
             .home-header__logo-text {
@@ -68,40 +77,46 @@
     }
 
     &__logo-text {
-            // Texto del Logo
-            margin: 0;
-            text-align: left;
-            font-size: 3rem;
-            font-family: v.$fuente_cursiva;
-            color: v.$grisOscuro;
-            background: linear-gradient(to right, v.$naranja_past, v.$amarillo_past);
-            background-size: 100% 100%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: currentColor;
-            transition: all 0.5s ease;
+        // Texto del Logo
+        margin: 0;
+        text-align: left;
+        font-size: 3rem;
+        font-family: v.$fuente_cursiva;
+        color: v.$grisOscuro;
+        background: linear-gradient(to right, v.$naranja_past, v.$amarillo_past);
+        background-size: 100% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: currentColor;
+        transition: all 0.5s ease;
     }
-
-
 
     &__nav {
         display: none;
 
         @include m.phone {
             display: flex;
-            gap: 3rem;
+            gap: 1.5rem;
             align-items: center;
+        }
+
+        @include m.tablet {
+            gap: 3rem;
         }
     }
 
     &__enlace {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: v.$bold;
         color: v.$grisOscuro;
         transition: color .3s ease;
 
         &:hover {
             color: v.$naranja_past;
+        }
+
+        @include m.tablet {
+            font-size: 1.8rem;
         }
     }
 }

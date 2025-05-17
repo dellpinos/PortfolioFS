@@ -14,7 +14,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Pacifico&family=Quicksand:wght@300;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Pacifico&family=Quicksand:wght@300;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
@@ -39,18 +41,19 @@
             justify-content: center;
             z-index: 9999;
         }
-    
+
         .preloader-home__logo-text {
             margin: 0;
             text-align: left;
             font-size: 3rem;
             font-family: "Pacifico", cursive;
-            color: #333; /* Un color de fallback si no carga el CSS principal */
+            color: #333;
+            /* Un color de fallback si no carga el CSS principal */
             transition: all 0.5s ease;
         }
     </style>
     {{-- Estilos del Preloader --}}
-    
+
 </head>
 
 <body class="home-body">
@@ -77,6 +80,16 @@
     <!-- Google Analytics -->
 
     <header class="home-header">
+
+        @if (session('contact_success'))
+            <div class="header__alert header__alert--success">
+                {{ session('contact_success') }}
+            </div>
+        @elseif (session('contact_error'))
+            <div class="header__alert header__alert--error">
+                {{ session('contact_error') }}
+            </div>
+        @endif
 
         <a class="home-header__logo" href="{{ route('index') }}">
             <div style="--factor: .12; --tiempo_op: 3s;">

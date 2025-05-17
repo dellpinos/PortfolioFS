@@ -2,7 +2,6 @@
 @use '../base/mixins' as m;
 
 .services {
-
     position: relative;
     display: flex;
     flex-direction: column;
@@ -10,8 +9,9 @@
     justify-content: center;
     padding: 2rem 1rem;
     margin: 0 0 8rem 0;
+    overflow: hidden;
 
-    @include m.phone {
+    @include m.tablet {
         padding: 10rem 5rem;
         height: auto;
         margin: 5rem 0 10rem 0;
@@ -23,10 +23,8 @@
         z-index: 5;
         font-size: 7rem;
         background-color: rgba(v.$blanco, .5);
-
     }
 
-    overflow: hidden;
 
     &__bg {
         position: absolute;
@@ -40,26 +38,30 @@
             top: 50%;
             left: 50%;
         }
-
     }
 
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
         gap: 1rem;
         z-index: 5;
 
-
         @include m.phone {
+            gap: 4rem;
+        }
+
+        @include m.tablet {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        @include m.desktopXL {
             gap: 5rem;
         }
     }
 
     &__grid-item {
-
         width: 100%;
         height: auto;
         min-height: 15rem;
@@ -71,29 +73,24 @@
         justify-content: center;
         gap: 1rem;
         color: v.$blanco;
-
         position: relative;
         transition: transform .5s ease, z-index .5s ease, background-color .5s ease, opacity .5s ease;
         z-index: 6;
         overflow: hidden;
-
 
         p {
             text-align: center;
             font-size: 1.3rem;
             max-height: 0;
             opacity: 0;
-
             transition: opacity .5s ease, max-height .5s ease;
             overflow: hidden;
             line-height: 1.2;
-
-
         }
 
         @include m.phone {
 
-            width: 30rem;
+            width: 32rem;
             height: 22rem;
             border-radius: 7rem;
             padding: 0 2rem;
@@ -106,7 +103,6 @@
                 i {
                     font-size: 4rem;
                     margin-bottom: .5rem;
-
                 }
 
                 p {
@@ -115,10 +111,19 @@
                 }
             }
         }
+
+        @include m.tablet {
+            width: 28rem;
+            height: 19rem;
+        }
+
+        @include m.desktopXL {
+            width: 30rem;
+            height: 22rem;
+        }
     }
 
     &__item-text {
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,7 +134,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            
             transition: font-size .5s ease, margin-bottom .5s ease;
         }
 
@@ -152,7 +156,18 @@
                 font-size: 1.8rem;
                 margin: 0;
                 text-align: center;
-    
+
+            }
+        }
+
+        @include m.desktop {
+            i {
+                font-size: 6rem;
+            }
+        }
+        @include m.desktopXL {
+            i {
+                font-size: 7rem;
             }
         }
     }
