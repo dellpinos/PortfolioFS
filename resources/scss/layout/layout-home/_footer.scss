@@ -14,8 +14,14 @@
     color: v.$verde_past;
     font-weight: v.$bold;
 
+    @include m.phone {
+        padding: 6rem 0;
+        gap: 2rem;
+    }
+
     @include m.tablet {
         padding: 3rem 0;
+        gap: 0;
     }
 
     &__nav {
@@ -38,7 +44,6 @@
             display: flex;
             margin: 0 auto;
             gap: 2rem;
-
 
             a {
                 color: v.$blancoOscuro;

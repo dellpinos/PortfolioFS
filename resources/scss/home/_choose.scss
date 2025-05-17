@@ -14,9 +14,20 @@
     }
 
     @include m.phone {
+        padding: 0 1rem 0 1rem;
+        img {
+            width: 45rem;
+        }
+    }
+
+    @include m.tablet {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        padding: 0 15rem;
+        padding: 0 5rem;
+    }
+
+    @include m.desktopXL {
+        padding: 0 10rem;
 
         img {
             width: 60rem;
@@ -26,7 +37,7 @@
     h3 {
         display: none;
 
-        @include m.phone {
+        @include m.tablet {
             display: block;
         }
     }
@@ -36,7 +47,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
 
-        @include m.phone {
+        @include m.tablet {
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
@@ -48,8 +59,8 @@
             font-size: 1.8rem;
             margin: 0 0 1rem 0;
             text-align: center;
-            
-            @include m.phone {
+
+            @include m.tablet {
                 font-size: 2rem;
                 margin: 1rem 0;
                 text-align: start;
@@ -58,9 +69,23 @@
 
         p {
             text-align: center;
-
+            // margin: 0 auto;
+            // width: 90%;
+            margin: 0 3rem;
+            
             @include m.phone {
+                // width: 80%;
+                margin: 0 6rem;
+
+            }
+
+            @include m.tablet {
                 text-align: start;
+                margin: 0;
+                // width: 100%;
+
+            }
+            @include m.desktop {
             }
         }
     }

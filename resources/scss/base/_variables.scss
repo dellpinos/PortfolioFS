@@ -19,8 +19,9 @@ $bold: 700;
 /* Tamaño de Media Queries */
 $phone: 480px;
 $tablet: 770px;
+$desktop: 1140px;
+$desktopXL: 1400px;
 $phoneHorizontal: 900px;
-$desktop: 1024px;
 
 $separacion: 5rem;
 
@@ -32,6 +33,7 @@ $blancoOscuro: #fffff5;
 $negro: #000;
 $negroLight: #222;
 $negroDM: #1e1e1e; // Este color se aplica desde Js (DarkMode), no desde aquí. Esta variable no cumple ninguna función.
+$negroGris: #0a0a0a;
 
 // Grises
 $marfil: #fffff0;

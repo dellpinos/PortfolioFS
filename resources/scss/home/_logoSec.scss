@@ -1,22 +1,29 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
-
 .home-logo-sec {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 0;
     background-color: v.$blanco;
 
     @include m.phone {
-        min-height: 86rem;
+        min-height: 90dvh;
     }
 
+    @include m.tablet {
+        min-height: 80dvh;
+    }
 
+    @include m.desktop {
+        min-height: 85dvh;
+    }
+
+    @include m.desktopXL {
+        min-height: 90dvh;
+    }
 
     &__particles {
         position: absolute;
@@ -25,9 +32,7 @@
         width: 100%;
         height: 100vh;
         z-index: 1;
-
         animation: fadeIn 4s ease-out both;
-        
     }
 
     @keyframes fadeIn {
@@ -40,4 +45,3 @@
         }
     }
 }
-

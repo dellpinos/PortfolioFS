@@ -55,7 +55,7 @@
     }
 
     &__card {
-        height: 30rem;
+        // height: 30rem;
         width: auto;
         display: flex;
         flex-direction: column;
@@ -76,7 +76,6 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 100%;
             object-fit: contain;
         }
 
@@ -92,7 +91,6 @@
         }
 
         @include m.phone {
-            height: 45rem;
             padding: 6rem 3rem;
             gap: 6rem;
 

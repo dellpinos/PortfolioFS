@@ -2,11 +2,10 @@
 @use '../base/mixins' as m;
 
 .plan {
-
-    background-color: #0a0a0a;
-    background-image: 
-      url(~img/home/bg_cloud.svg),
-      linear-gradient(56deg, #0a0a0a 0%, #2f2e2e 46%, #3f3e3e 100%);
+    background-color: v.$negroGris;
+    background-image:
+        url(~img/home/bg_cloud.svg),
+        linear-gradient(56deg, v.$negroGris 0%, #2f2e2e 46%, #3f3e3e 100%);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 40rem, cover;
@@ -16,8 +15,12 @@
 
     @include m.phone {
         margin: 1rem 5rem 0 5rem;
-        padding: 5rem;
+        padding: 5rem 2rem;
         background-size: 65rem, cover;
+    }
+
+    @include m.desktopXL {
+        padding: 5rem;
     }
 
     &__text {
@@ -54,7 +57,6 @@
     }
 
     &__grid {
-
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
@@ -62,20 +64,28 @@
         padding: 1rem;
         margin: 1rem 0;
 
-
         @include m.phone {
+            padding: 2rem 5rem;
+        }
+
+        @include m.tablet {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 5rem;
             padding: 2rem;
             width: 90%;
             margin: 3rem auto 0 auto;
+        }
 
+        @include m.desktop {
+            padding: 2rem 0;
+        }
 
+        @include m.desktopXL {
+            padding: 2rem;
         }
     }
 
     &__card {
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -91,35 +101,34 @@
         opacity: 1;
         position: relative;
         overflow: hidden;
-
         text-shadow: 0 0 5px v.$negro;
-      
+
         &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 100%;
-          width: 0%;
-          background: rgba(v.$blanco, 0.2);
-          z-index: 0;
-          transition: width 7s ease;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: rgba(v.$blanco, 0.2);
+            z-index: 0;
+            transition: width 7s ease;
         }
-      
+
         &--verde::before {
-          width: 100%;
+            width: 100%;
         }
-      
+
         // Evitar transición al quitar la clase
         &:not(&--verde)::before {
-          transition: none;
-          width: 0%;
+            transition: none;
+            width: 0%;
         }
-      
+
         // Contenido encima del fondo
         * {
-          position: relative;
-          z-index: 1;
+            position: relative;
+            z-index: 1;
         }
 
         &--verde {
@@ -128,7 +137,6 @@
             color: v.$verde_past;
             border: 1px solid v.$verde_past;
             opacity: 1;
-
         }
 
         i {

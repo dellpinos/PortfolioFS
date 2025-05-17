@@ -28,7 +28,7 @@
 
     <div class=" home-info__card">
         <div class="home-info__card-img">
-            <img src="{{ asset('img/home/team.png') }}" alt="Imagen equipo" width="200" height="300" loading="lazy">
+            <img src="{{ asset('img/home/teamHosting.svg') }}" alt="Imagen equipo" width="200" height="300" loading="lazy">
         </div>
         <div class="home-info__text">
             <h3 class="home-heading__m">{{ __('home_text.info_advice_heading') }}</h3>
