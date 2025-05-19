@@ -24,7 +24,6 @@
 
     <title>Dellpinos — {{ __('home_text.title') }}</title>
 
-
     @vite('resources/scss/app.scss')
 
     {{-- Estilos del Preloader --}}
@@ -48,7 +47,6 @@
             font-size: 3rem;
             font-family: "Pacifico", cursive;
             color: #333;
-            /* Un color de fallback si no carga el CSS principal */
             transition: all 0.5s ease;
         }
     </style>
@@ -79,18 +77,17 @@
     </script>
     <!-- Google Analytics -->
 
+    @if (session('contact_success'))
+        <div class="header__alert header__alert--success">
+            {{ session('contact_success') }}
+        </div>
+    @elseif (session('contact_error'))
+        <div class="header__alert header__alert--error">
+            {{ session('contact_error') }}
+        </div>
+    @endif
+
     <header class="home-header">
-
-        @if (session('contact_success'))
-            <div class="header__alert header__alert--success">
-                {{ session('contact_success') }}
-            </div>
-        @elseif (session('contact_error'))
-            <div class="header__alert header__alert--error">
-                {{ session('contact_error') }}
-            </div>
-        @endif
-
         <a class="home-header__logo" href="{{ route('index') }}">
             <div style="--factor: .12; --tiempo_op: 3s;">
                 @include('home.includes.logo_simple')
@@ -107,7 +104,6 @@
                 class="home-header__enlace">{{ __('home_text.nav_about') }}</a>
             <a href="{{ route('contact') }}" class="btn-grad">{{ __('home_text.nav_contact') }}</a>
         </nav>
-
     </header>
 
     <main class="relative">
@@ -145,7 +141,6 @@
     @vite('resources/js/appHome.js')
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" defer></script>
-
 
     {{-- Botón Idioma --}}
     <div class="home-lang__container">

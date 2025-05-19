@@ -95,6 +95,10 @@
         }
     }
 
+    &__campo, textarea {
+        resize: none;
+    }
+
     &__btn-contenedor {
         display: flex;
         justify-content: center;
