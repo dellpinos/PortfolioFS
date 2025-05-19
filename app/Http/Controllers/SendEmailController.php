@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactoMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,9 +13,12 @@ class SendEmailController extends Controller
     static function index(Request $request)
     {
 
+
         // reCaptcha
         $secretKey = env('CAPTCHA_PRIVATE');
         $recaptchaResponse = $request->recaptcha_response;
+
+        Log::info('Request reCaptcha', $request->recaptcha_response);
     
         // Configurar la solicitud
         $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -38,6 +42,10 @@ class SendEmailController extends Controller
         // Enviar la solicitud y recibir la respuesta
         $response = file_get_contents($url, false, $context);
         $result = json_decode($response);
+
+        Log::info('Reapuesta de google', $response);
+        Log::info('Reapuesta - score', $result->score);
+
 
         if ($result->success && $result->score >= 0.5) {
 
