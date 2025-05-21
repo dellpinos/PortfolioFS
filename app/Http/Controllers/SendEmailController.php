@@ -15,7 +15,7 @@ class SendEmailController extends Controller
 
 
         // reCaptcha
-        $secretKey = env('CAPTCHA_PRIVATE');
+        $secretKey = config('services.recaptcha.private');
         $recaptchaResponse = $request->recaptcha_response;
 
         Log::info('Request reCaptcha', $request->recaptcha_response);

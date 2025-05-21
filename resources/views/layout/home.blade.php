@@ -22,8 +22,6 @@
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
-
     <title>Dellpinos — {{ __('home_text.title') }}</title>
 
     @vite('resources/scss/app.scss')
@@ -142,6 +140,7 @@
     </footer>
     @vite('resources/js/appHome.js')
 
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.public') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" defer></script>
 
     {{-- Botón Idioma --}}

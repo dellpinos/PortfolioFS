@@ -150,8 +150,8 @@
             {{ now()->year }}</p>
 
     </footer>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld_PxYqAAAAAPnzJAv6j0s62YqfpCJHstnYbxqE"></script>
     @vite('resources/js/appPorfolio.js')
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.public') }}"></script>
 
 </body>
 

@@ -42,7 +42,7 @@
                     <tr>
                         <td class="header"
                             style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; padding: 25px 0; text-align: center;">
-                            <a href="{{ env('APP_URL') }}"
+                            <a href="{{ config('app.url') }}"
                                 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 19px; font-weight: bold; text-decoration: none; display: inline-block;">
 
                                 @if ($email_origin === 'consultora')
@@ -92,7 +92,7 @@
                                         </p>
                                         <p
                                             style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
-                                            Saludos,<br>{{ env('APP_NAME') }}</p>
+                                            Saludos,<br>{{ config('app.name') }}</p>
                                     </td>
                                 </tr>
                             </table>
@@ -109,7 +109,7 @@
                                         style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
                                         <p
                                             style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; color: #b0adc5; font-size: 12px; text-align: center;">
-                                            &copy; {{ date('Y') }} {{ env('APP_NAME') }}. Todos los derechos
+                                            &copy; {{ date('Y') }} {{ config('app.name') }}. Todos los derechos
                                             reservados.</p>
                                     </td>
                                 </tr>
