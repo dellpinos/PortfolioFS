@@ -18,7 +18,7 @@ class SendEmailController extends Controller
         $secretKey = config('services.recaptcha.private');
         $recaptchaResponse = $request->recaptcha_response;
 
-        Log::info('Request reCaptcha', $request->recaptcha_response);
+        Log::info('Request reCaptcha', ['reCaptcha', $request->recaptcha_response]);
     
         // Configurar la solicitud
         $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -43,8 +43,8 @@ class SendEmailController extends Controller
         $response = file_get_contents($url, false, $context);
         $result = json_decode($response);
 
-        Log::info('Reapuesta de google', $response);
-        Log::info('Reapuesta - score', $result->score);
+        Log::info('Reapuesta de google', ['response' => $response]);
+        Log::info('Reapuesta - score', ['score' => $result->score]);
 
 
         if ($result->success && $result->score >= 0.5) {
