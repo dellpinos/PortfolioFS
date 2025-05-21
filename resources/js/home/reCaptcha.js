@@ -23,6 +23,7 @@ export default function consultarCaptcha() {
 
         const intervalId = setInterval(() => {
             console.log(`Otros intentos, Ciclo: ${counter + 1}`);
+            console.log(`clave pública - Js reCaptcha - Ciclo: ${counter + 1}`, clavePublica);
             counter++;
 
             grecaptcha.ready(function () {
@@ -39,7 +40,7 @@ export default function consultarCaptcha() {
                 clearInterval(intervalId);
                 console.log('Intervalo detenido.');
             }
-        }, 1000);
+        }, 2000);
 
 
     }
