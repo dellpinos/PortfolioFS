@@ -12,12 +12,15 @@
     background-repeat: no-repeat;
     background-size: 100rem;
     padding: 0 0 2rem 0;
-    
+
+    // Aplica solo cuando este elemento es buscado por medio de algun scroll
+    scroll-margin-top: 12rem;
+
     @include m.phone {
         min-height: 80rem;
         background-size: 180rem;
     }
-    
+
     @include m.tablet {
         justify-content: center;
         padding: 0;
@@ -35,6 +38,7 @@
         border-radius: 2rem;
         color: v.$blanco;
         text-shadow: 0 0 5px v.$negro;
+
         h3 {
             text-align: start;
             margin-bottom: 1rem;
@@ -48,7 +52,7 @@
         @include m.phone {
             margin: 0 10rem 10rem 10rem;
         }
-        
+
         @include m.tablet {
             width: 30%;
             margin: 0 8rem;

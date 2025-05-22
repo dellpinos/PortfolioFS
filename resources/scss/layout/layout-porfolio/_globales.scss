@@ -1,6 +1,13 @@
 @use '../../base/variables' as v;
 @use '../../base/mixins' as m;
 
+.porfolio-body {
+    font-family: v.$fuente_textos;
+    textarea, input, label, a {
+        font-family: v.$fuente_textos;
+    }
+}
+
 // Preloader
 #preloader-portfolio {
     position: fixed;

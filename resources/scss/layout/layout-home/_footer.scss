@@ -29,9 +29,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1rem;
-        gap: 2rem;
-        margin: 1rem 0 2rem 0;
+        margin: 0 0 2rem 0;
 
         @include m.phone {
             flex-direction: row;
@@ -44,25 +42,26 @@
             display: flex;
             margin: 0 auto;
             gap: 2rem;
-
+            
             a {
                 color: v.$blancoOscuro;
                 font-size: 1.6rem;
                 transition: color .5s ease;
-                text-align: start;
-                margin: 1rem;
-
+                text-align: center;
+                
                 &:hover {
                     color: v.$naranja_past;
                 }
             }
-
+            
             @include m.phone {
+                gap: 2rem;
                 margin: 0;
 
                 a {
                     font-size: 1.4rem;
                     margin: 0;
+                    text-align: start;
                 }
             }
         }
@@ -71,16 +70,14 @@
     &__link-wrapper {
         display: flex;
         flex-direction: column;
-        border-left: 1px solid v.$blancoOscuro;
-        border-bottom: 1px solid v.$blancoOscuro;
         padding: 1rem;
-        gap: 1rem;
-        margin: 2rem 0;
+        gap: 2rem;
 
         @include m.phone {
             border-left: 1px solid v.$blancoOscuro;
             border-bottom: none;
             margin: 0;
+            gap: 1rem;
         }
     }
 
@@ -92,6 +89,7 @@
     }
 
     &__btn {
+        display: none;  // No es visible en mobiles
         text-transform: uppercase;
         color: v.$blancoOscuro;
         border: 3px solid v.$blancoOscuro;
@@ -105,6 +103,7 @@
         }
 
         @include m.phone {
+            display: block;
             font-size: 1.8rem;
         }
     }

@@ -1,10 +1,36 @@
 @use '../../base/variables' as v;
 @use '../../base/mixins' as m;
 
+.home-body {
+    font-family: v.$fuente_prin;
+    background-color: v.$blanco;
+    position: relative;
+    padding-top: 0;
+
+    textarea,
+    input,
+    label,
+    a {
+        font-family: v.$fuente_prin;
+    }
+
+    @include m.phone {
+        padding-top: 11rem;
+    }
+
+    @include m.desktop {
+        padding-top: 8rem;
+    }
+
+    @include m.desktopXL {
+        padding-top: 11rem;
+    }
+}
+
 // Margin opcional para secciones reutilizables
 .home-mt-10 {
     margin-top: 5rem;
-    
+
     @include m.phone {
         margin-top: 10rem;
     }
@@ -24,7 +50,7 @@
         align-items: center;
         justify-content: center;
         margin-right: 1rem;
-    
+
         @include m.phone {
             margin: 0;
             bottom: 5rem;
@@ -45,13 +71,13 @@
 
         border: 2px solid v.$grisOscuro;
         border-radius: 1rem;
-    
+
         p {
             margin: 0;
             font-size: 1.4rem;
             text-align: center;
         }
-        
+
         &:hover {
             color: v.$naranja_past;
             border: 2px solid v.$naranja_past;

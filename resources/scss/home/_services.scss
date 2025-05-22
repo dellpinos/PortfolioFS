@@ -11,6 +11,9 @@
     margin: 0 0 8rem 0;
     overflow: hidden;
 
+    // Aplica solo cuando este elemento es buscado por medio de algun scroll
+    scroll-margin-top: 5rem;
+
     @include m.tablet {
         padding: 10rem 5rem;
         height: auto;

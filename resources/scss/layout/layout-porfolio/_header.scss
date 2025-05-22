@@ -14,7 +14,7 @@
     &__video {
         width: 100%;
         position: relative;
-        max-height: 100vh;
+        max-height: 100dvh;
         min-height: 50rem;
         overflow: hidden;
         display: flex;
@@ -116,7 +116,7 @@
 
         &--activo {
 
-            // height: 100vh;
+            // height: 100dvh;
         }
     }
 
