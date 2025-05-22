@@ -3,6 +3,8 @@
 
 .works {
     margin: 4rem 0 0 0;
+    // Aplica solo cuando este elemento es buscado por medio de algun scroll
+    scroll-margin-top: 5rem;
 
     @include m.phone {
         margin: 15rem 0 0 0;

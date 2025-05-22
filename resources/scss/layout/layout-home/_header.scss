@@ -23,8 +23,16 @@
         opacity: 1;
         padding: 2rem 1rem;
     }
-    
+
     @include m.tablet {
+        padding: 2rem 5rem;
+    }
+
+    @include m.desktop {
+        padding: 1rem 5rem;
+    }
+
+    @include m.desktopXL {
         padding: 2rem 5rem;
     }
 
@@ -52,8 +60,16 @@
         @include m.phone {
             padding: 2rem 1rem;
         }
-        
+
         @include m.tablet {
+            padding: 2rem 5rem;
+        }
+
+        @include m.desktop {
+            padding: 1rem 4rem;
+        }
+
+        @include m.desktopXL {
             padding: 2rem 5rem;
         }
     }
@@ -102,6 +118,18 @@
 
         @include m.tablet {
             gap: 3rem;
+        }
+
+        @include m.desktop {
+            .btn-grad {
+                margin: 0;
+            }
+        }
+
+        @include m.desktopXL {
+            .btn-grad {
+                margin: 1rem;
+            }
         }
     }
 

@@ -9,7 +9,6 @@ export default function consultarCaptcha() {
 
                 // Inserta el token en el campo oculto
                 document.querySelector('#recaptchaResponse').value = token;
-                console.log(document.querySelector('#recaptchaResponse').value)
             });
         });
     }

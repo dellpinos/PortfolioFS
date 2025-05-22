@@ -8,7 +8,7 @@
     <div class="apps">
         <div class="apps__container">
 
-            <div id="tsparticles2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
+            <div id="tsparticles2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; z-index: -1;">
             </div>
             <div class="apps__principal">
                 <img src="{{ asset('img/home/landing.svg') }}" alt="Landing Page imagen" width="200" height="300">
