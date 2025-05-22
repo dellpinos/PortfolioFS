@@ -78,11 +78,11 @@
     <!-- Google Analytics -->
 
     @if (session('contact_success'))
-        <div class="header__alert header__alert--success">
+        <div class="header__alert header__alert--fix header__alert--success">
             {{ session('contact_success') }}
         </div>
     @elseif (session('contact_error'))
-        <div class="header__alert header__alert--error">
+        <div class="header__alert header__alert--fix header__alert--error">
             {{ session('contact_error') }}
         </div>
     @endif
