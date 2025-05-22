@@ -13,12 +13,9 @@ class SendEmailController extends Controller
     static function index(Request $request)
     {
 
-
         // reCaptcha
         $secretKey = config('services.recaptcha.private');
         $recaptchaResponse = $request->recaptcha_response;
-
-        Log::info('Request reCaptcha', ['reCaptcha', $request->recaptcha_response]);
     
         // Configurar la solicitud
         $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -43,9 +40,7 @@ class SendEmailController extends Controller
         $response = file_get_contents($url, false, $context);
         $result = json_decode($response);
 
-        Log::info('Reapuesta de google', ['response' => $response]);
-        Log::info('Reapuesta - score', ['score' => $result->score]);
-
+        Log::info('Intento de envio de email, el score minimo para enviarlo es 0.5', ['Score de recaptcha: ' => $result->score]);
 
         if ($result->success && $result->score >= 0.5) {
 
@@ -70,10 +65,20 @@ class SendEmailController extends Controller
             // Verifica el resultado
             if ($resultado) {
                 // Success
+                Log::info('Email enviado con éxito', ['Datos del mail: ' => [
+                    'Remitente' => $request->email,
+                    'Name' => $request->name,
+                    'Msj' => $request->mensaje
+                ]]);
+
                 return redirect()->back()->with('contact_success', __('portfolio_text.email_success') );
+
             } else {
                 // Error
+                Log::error('El email no fue enviado', ['Error: ', $resultado]);
+
                 return redirect()->back()->with('contact_error', __('portfolio_text.email_error') );
+
             }
         } else {
 
