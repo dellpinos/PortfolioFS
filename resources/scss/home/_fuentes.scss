@@ -13,7 +13,7 @@
     @include m.desktop {
         padding: 0 2rem;
     }
-    
+
     @include m.desktopXL {
         margin-top: 0;
     }
@@ -101,10 +101,18 @@
         @include m.phone {
             width: 50%;
         }
-        
+
         @include m.tablet {
             width: auto;
             padding: 3rem;
+        }
+
+        @include m.desktop {
+            max-width: 60rem;
+        }
+
+        @include m.desktopXL {
+            max-width: 75rem;
         }
     }
 }
