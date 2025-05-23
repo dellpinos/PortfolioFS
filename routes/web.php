@@ -10,65 +10,65 @@ use App\Http\Controllers\SendEmailController;
     /* Homepage */
     Route::get('/', function () {
         return view('home.index');
-    })->defaults('locale', 'en')->name('index');
+    })->defaults('locale', 'es')->name('index');
 
     /* Pages */
     Route::get('/contact', function () {
         return view('home.pages.contact');
-    })->defaults('locale', 'en')->name('contact');
+    })->defaults('locale', 'es')->name('contact');
 
     Route::get('/tec_info', function () {
         return view('home.pages.tec_info');
-    })->defaults('locale', 'en')->name('tec_info');
+    })->defaults('locale', 'es')->name('tec_info');
 
     Route::get('/fuentes', function () {
         return view('home.pages.fuentes');
-    })->defaults('locale', 'en')->name('fuentes');
+    })->defaults('locale', 'es')->name('fuentes');
 
     Route::get('/responsive', function () {
         return view('home.pages.responsive');
-    })->defaults('locale', 'en')->name('responsive');
+    })->defaults('locale', 'es')->name('responsive');
 
     Route::get('/hosting', function () {
         return view('home.pages.hosting');
-    })->defaults('locale', 'en')->name('hosting');
+    })->defaults('locale', 'es')->name('hosting');
 
     /* Works - Apps */
     Route::get('/apps/ecommerce', function () {
         return view('home.apps.ecommerce');
-    })->defaults('locale', 'en')->name('apps.ecommerce');
+    })->defaults('locale', 'es')->name('apps.ecommerce');
 
     Route::get('/apps/corporation', function () {
         return view('home.apps.corporation');
-    })->defaults('locale', 'en')->name('apps.corporation');
+    })->defaults('locale', 'es')->name('apps.corporation');
 
     Route::get('/apps/landing', function () {
         return view('home.apps.landing');
-    })->defaults('locale', 'en')->name('apps.landing');
+    })->defaults('locale', 'es')->name('apps.landing');
 
     Route::get('/apps/porfolio', function () {
         return view('home.apps.porfolio');
-    })->defaults('locale', 'en')->name('apps.porfolio');
+    })->defaults('locale', 'es')->name('apps.porfolio');
 
     Route::get('/apps/management', function () {
         return view('home.apps.management');
-    })->defaults('locale', 'en')->name('apps.management');
+    })->defaults('locale', 'es')->name('apps.management');
 
     Route::get('/apps/reservation', function () {
         return view('home.apps.reservation');
-    })->defaults('locale', 'en')->name('apps.reservation');
+    })->defaults('locale', 'es')->name('apps.reservation');
 
     Route::get('/apps/blog', function () {
         return view('home.apps.blog');
-    })->defaults('locale', 'en')->name('apps.blog');
+    })->defaults('locale', 'es')->name('apps.blog');
 
     Route::get('/apps/api', function () {
         return view('home.apps.api');
-    })->defaults('locale', 'en')->name('apps.api');
+    })->defaults('locale', 'es')->name('apps.api');
 
     Route::get('/apps/industry', function () {
         return view('home.apps.industry');
-    })->defaults('locale', 'en')->name('apps.industry');
+    })->defaults('locale', 'es')->name('apps.industry');
     // Fin Works - Apps
 
 
