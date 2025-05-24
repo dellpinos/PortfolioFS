@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     logoFadeUp();
     consultarCaptcha();
     logoResponsive();
-    homeParticles();
     swiper();
     services();
     contactoVisible();
     appScroll();
     planStyles();
+    setTimeout(homeParticles, 300); // pequeño delay
 
 });
