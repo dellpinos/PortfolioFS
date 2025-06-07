@@ -1,7 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <div class="dp-brand-contenedor">
-    <p>Engineered by</p>
     <a class="dp-brand-enlace" href="https://dellpinos.com" target="_blank" rel="noopener noreferrer">
         <div class="dp-brand-logo__contenedor" style="--dp-brand-factor: .07; --dp-brand-tiempo_op: 3s;">
             <div class="dp-brand-logo__cuadro-centro">
@@ -74,17 +73,6 @@
             flex-direction: row;
             justify-content: flex-end;
         }
-    }
-
-    .dp-brand-contenedor p {
-        margin: 0;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: var(--dp-brand-cBlanco);
-        font-size: 14px;
-        font-family: "Verdana", sans-serif;
     }
 
     .dp-brand-enlace {

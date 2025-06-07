@@ -23,13 +23,23 @@
     .dp-brand-contenedor {
         box-sizing: border-box;
         margin: 0;
-        padding: 5px 60px;
+        padding: 5px 20px;
         width: 100%;
         background-color: var(--dp-brand-cGris);
         display: flex;
+        flex-direction: column;
         align-content: center;
-        justify-content: flex-end;
+        justify-content: center;
         gap: 10px;
+
+    }
+
+    @media(min-width: 480px) {
+        .dp-brand-contenedor {
+            padding: 5px 60px;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
     }
 
     .dp-brand-contenedor p {

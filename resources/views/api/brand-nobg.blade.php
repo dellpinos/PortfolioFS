@@ -59,7 +59,6 @@
         margin: 0;
         padding: 5px 20px;
         width: 100%;
-        background-color: var(--dp-brand-cGris);
         display: flex;
         flex-direction: column;
         align-content: center;
