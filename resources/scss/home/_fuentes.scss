@@ -3,8 +3,18 @@
 
 .home-fuentes {
     margin-top: 15rem;
+    padding: 0 2rem;
 
     @include m.phone {
+        margin-top: 5rem;
+        padding: 0;
+    }
+
+    @include m.desktop {
+        padding: 0 2rem;
+    }
+
+    @include m.desktopXL {
         margin-top: 0;
     }
 
@@ -13,20 +23,20 @@
         flex-direction: column-reverse;
         gap: 2rem;
 
-        @include m.phone {
+        @include m.tablet {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
         }
 
         h2 {
-            // Solo se utiliza en mobile
+            // Este elemento solo se utiliza en mobile
             font-size: 3.5rem;
             text-align: center;
             margin: 0 0 1rem 0;
             color: v.$amarillo_past;
 
-            @include m.phone {
+            @include m.tablet {
                 display: none;
             }
         }
@@ -40,14 +50,14 @@
         justify-content: center;
 
         h2 {
-            // Solo se utiliza en pantallas grandes
+            // Este elemento solo se utiliza en pantallas grandes
             display: none;
             font-size: 5rem;
             text-align: start;
             margin: 0 0 1rem 0;
             color: v.$amarillo_past;
 
-            @include m.phone {
+            @include m.tablet {
                 display: block;
             }
         }
@@ -84,8 +94,25 @@
 
     &__img {
         width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+
         @include m.phone {
+            width: 50%;
+        }
+
+        @include m.tablet {
+            width: auto;
             padding: 3rem;
+        }
+
+        @include m.desktop {
+            max-width: 60rem;
+        }
+
+        @include m.desktopXL {
+            max-width: 75rem;
         }
     }
 }

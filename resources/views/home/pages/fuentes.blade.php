@@ -17,7 +17,7 @@
                 </div>
             </div>
             
-            <img src="{{ asset('img/home/art.svg') }}" class="home-fuentes__img" alt="Imagen Art" width="200">
+            <img src="{{ asset('img/home/art.svg') }}" class="home-fuentes__img" alt="Imagen Art" width="200" height="300">
             <h2>{{ __('home_text.fonts_heading') }}</h2>
         </div>
     </div>

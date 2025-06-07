@@ -4,8 +4,7 @@
 // These are the error pages styles: #400 | #500
 
 .error-page {
-
-    min-height: 80vh;
+    min-height: 80dvh;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@
     padding: 0 2rem;
 
     @include m.phone {
-        min-height: 100vh;
+        min-height: 100dvh;
     }
 
     h3 {
@@ -44,19 +43,21 @@
 
     &__img--b {
         width: 30rem;
+        height: auto;
+        object-fit: contain;
         
         @include m.phone {
             width: 80rem;
-            
         }
     }
 
     &__img--s {
         width: 30rem;
+        height: auto;
+        object-fit: contain;
         
         @include m.phone {
             width: 60rem;
-            
         }
     }
 }

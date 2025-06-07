@@ -1,5 +1,14 @@
 export default function homeParticles() {
+    const getParticleCount = () => {
+        if (window.innerWidth < 600) return { prinNum: 20, secNum: 15 };
+        return { prinNum: 50, secNum: 30 };
+    };
+
+    // Destruir todas las instancias existentes antes de cargar nuevas
+    tsParticles.dom().forEach((instance) => instance.destroy());
+
     if (document.querySelector('#tsparticles')) {
+        const { prinNum, secNum } = getParticleCount();
 
         tsParticles.load("tsparticles", {
             fullScreen: { enable: false },
@@ -11,7 +20,7 @@ export default function homeParticles() {
                     distance: 150
                 },
                 move: { enable: true, speed: 1.5 },
-                number: { value: 50 },
+                number: { value: prinNum },
                 size: { value: 2 }
             },
             interactivity: {
@@ -27,12 +36,14 @@ export default function homeParticles() {
         });
     }
     if (document.querySelector('#tsparticles2')) {
+        const { prinNum, secNum } = getParticleCount();
+
         tsParticles.load("tsparticles2", {
             fullScreen: { enable: false },
             particles: {
-                number: { value: 30 },
+                number: { value: secNum },
                 color: { value: "#6ca690" },
-                shape: { type: "circle" }, // o cualquier otro
+                shape: { type: "circle" },
                 size: { value: 2 },
                 links: {
                     enable: true,

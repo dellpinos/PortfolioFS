@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactoMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -13,7 +14,7 @@ class SendEmailController extends Controller
     {
 
         // reCaptcha
-        $secretKey = env('CAPTCHA_PRIVATE');
+        $secretKey = config('services.recaptcha.private');
         $recaptchaResponse = $request->recaptcha_response;
     
         // Configurar la solicitud
@@ -39,9 +40,7 @@ class SendEmailController extends Controller
         $response = file_get_contents($url, false, $context);
         $result = json_decode($response);
 
-
-        dd($result);
-
+        Log::info('Intento de envio de email, el score minimo para enviarlo es 0.5', ['Score de recaptcha: ' => $result->score]);
 
         if ($result->success && $result->score >= 0.5) {
 
@@ -66,16 +65,25 @@ class SendEmailController extends Controller
             // Verifica el resultado
             if ($resultado) {
                 // Success
+                Log::info('Email enviado con éxito', ['Datos del mail: ' => [
+                    'Remitente' => $request->email,
+                    'Name' => $request->name,
+                    'Msj' => $request->mensaje
+                ]]);
+
                 return redirect()->back()->with('contact_success', __('portfolio_text.email_success') );
+
             } else {
                 // Error
+                Log::error('El email no fue enviado', ['Error: ', $resultado]);
+
                 return redirect()->back()->with('contact_error', __('portfolio_text.email_error') );
+
             }
         } else {
 
             // Es un bot
             return redirect()->back()->with('contact_error', __('portfolio_text.email_error') );
         }
-
     }
 }

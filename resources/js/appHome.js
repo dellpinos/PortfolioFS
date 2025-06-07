@@ -1,7 +1,7 @@
 
 import appScroll from "./home/appScroll";
 import contactoVisible from "./home/contacto";
-import logoResponsive from "./home/logoResponsive";
+import { logoResponsive, logoFadeUp } from "./home/logo";
 import homeParticles from "./home/particles";
 import planStyles from "./home/planStyles";
 import consultarCaptcha from "./home/reCaptcha";
@@ -22,13 +22,14 @@ window.addEventListener('load', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    logoFadeUp();
     consultarCaptcha();
     logoResponsive();
-    homeParticles();
     swiper();
     services();
     contactoVisible();
     appScroll();
     planStyles();
+    setTimeout(homeParticles, 300); // pequeño delay
 
 });

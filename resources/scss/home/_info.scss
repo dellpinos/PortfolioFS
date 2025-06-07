@@ -2,18 +2,21 @@
 @use '../base/mixins' as m;
 
 .home-info {
-
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 0 3rem 0;
     padding: 5rem 1rem;
     gap: 2rem;
 
-    @include m.phone {
+    @include m.tablet {
         padding: 5rem;
-        margin: 10rem 6rem 10rem 6rem;
+        margin: 10rem 0;
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
+    }
+
+    @include m.desktopXL {
+        margin: 10rem 4rem;
     }
 
     &__card {
@@ -25,6 +28,10 @@
         border-radius: 2rem;
 
         @include m.phone {
+            flex-direction: row;
+        }
+
+        @include m.tablet {
             display: grid;
             grid-template-rows: 2fr 1fr;
         }
@@ -36,10 +43,20 @@
         align-items: center;
         padding: 1rem 3rem 0 3rem;
 
-        @include m.phone {
+        img {
+            height: auto;
+            object-fit: contain;
 
-            img {
+            @include m.phone {
+                width: 20rem;
+                height: 20rem;
+                object-fit: auto;
+            }
+
+            @include m.tablet {
                 width: 100%;
+                height: auto;
+                object-fit: contain;
             }
         }
     }
@@ -59,7 +76,7 @@
             font-family: v.$fuente_prin;
             margin-bottom: 1rem;
         }
-        
+
         p {
             font-size: 1.4rem;
             display: -webkit-box;
@@ -67,15 +84,14 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            
         }
-        
+
         @include m.phone {
             h3 {
                 font-size: 2rem;
                 margin-bottom: 0rem;
             }
-            
+
             p {
                 font-size: 1.6rem;
             }

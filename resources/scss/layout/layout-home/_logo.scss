@@ -32,8 +32,16 @@
     color: var(--cSec);
     animation: fadeInUp var(--tiempo_op) ease-out both;
     animation-delay: var(--tiempo_delay);
+    animation-play-state: paused;
+    /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
     z-index: 1;
 }
+
+.logo__visible {
+    animation-play-state: running;
+    /* Se activa la animación - Este cambio utiliza Js, no está en CSS puro */
+}
+
 
 .logo__contenedor--bn {
     opacity: var(--opacity) !important;
@@ -159,6 +167,8 @@
     position: absolute;
     inset: 0;
     animation: reverseSpin 2s linear 0s;
+    animation-play-state: paused;
+    /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
 }
 
 @keyframes reverseSpin {
@@ -275,7 +285,8 @@
     overflow: hidden;
     box-shadow: 0 0 calc(2rem * var(--factor)) calc(2rem * var(--factor)) var(--cPrim1) inset, 0 0 calc(1.5rem * var(--factor)) calc(.2rem * var(--factor)) var(--cPrim3);
     transition: box-shadow 0.6s ease;
-    animation: luzGirando 0.6s ease 0s 3;
+    animation: luzGirando 0.6s ease 0s 5;
+    animation-play-state: paused; /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
 }
 
 .logo__circulo-central:hover {
@@ -414,6 +425,7 @@
     width: calc(16rem * var(--factor));
     animation: pulso1 3s ease-in-out 2s 1;
     transition: box-shadow 0.4s ease;
+    animation-play-state: paused; /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
 }
 
 .logo__centro-linea-uno:hover {
@@ -432,6 +444,7 @@
     width: calc(12rem * var(--factor));
     animation: pulso2 3s ease-in-out 2s 1;
     transition: box-shadow 0.4s ease;
+    animation-play-state: paused; /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
 }
 
 .logo__centro-linea-dos:hover {
@@ -450,6 +463,7 @@
     width: calc(12rem * var(--factor));
     animation: pulso1 3s ease-in-out 2s 1;
     transition: box-shadow 0.4s ease;
+    animation-play-state: paused; /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
 }
 
 .logo__centro-linea-tres:hover {
@@ -468,6 +482,7 @@
     width: calc(20rem * var(--factor));
     animation: pulso2 3s ease-in-out 2s 1;
     transition: box-shadow 0.4s ease;
+    animation-play-state: paused; /* Empieza pausada - Este cambio utiliza Js, no está en CSS puro */
 }
 
 .logo__centro-linea-cuatro:hover {
@@ -552,6 +567,7 @@
         padding: calc(1rem * var(--factor)) 0;
     }
 }
+
 // :root {
 
 //     // Factor para escalar

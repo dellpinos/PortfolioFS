@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <img src="{{ asset('img/home/bg_hosting.svg') }}" class="home-fuentes__img" alt="Imagen Hosting" width="200">
+            <img src="{{ asset('img/home/bg_hosting.svg') }}" class="home-fuentes__img" alt="Imagen Hosting" width="200" height="300">
             <h2>{{ __('home_text.host_heading') }}</h2>
         </div>
 

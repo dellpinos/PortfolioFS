@@ -83,8 +83,7 @@ Route::get('/porfolio', function () {
 /* Otras rutas */
 
 /* Enviar Emails Porfolio - Homepage */
-Route::post('/contact', function () {
-
+Route::post('/contact/send', function () {
     return app()->call([SendEmailController::class, 'index']);
 })->name('contact.send');
 

@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         preloader.style.display = 'none';
-    }, 3000);
+    }, 500);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
