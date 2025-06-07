@@ -1,4 +1,5 @@
 
+import { preloader } from "./home/preloader";
 import appScroll from "./home/appScroll";
 import contactoVisible from "./home/contacto";
 import { logoResponsive, logoFadeUp } from "./home/logo";
@@ -9,15 +10,7 @@ import services from "./home/services";
 import { swiper } from "./home/swiper";
 
 // Preloader
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    preloader.style.pointerEvents = 'none';
-
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, 500);
-});
+preloader();
 
 
 document.addEventListener('DOMContentLoaded', () => {

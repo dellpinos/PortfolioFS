@@ -138,6 +138,7 @@
         <p>- &copy; {{ __('home_text.copyright') }} {{ now()->year }} -</p>
 
     </footer>
+
     @vite('resources/js/appHome.js')
 
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.public') }}"></script>
